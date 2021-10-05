@@ -1,0 +1,12 @@
+export const routes = {
+  ONBOARD: 'ONBOARD',
+  SPLASH: 'SPLASH',
+  LOGIN: 'LOGIN',
+  REGISTER: 'REGISTER',
+  COMMON: 'COMMON',
+  HOME: 'HOME',
+  EXPLORE: 'EXPLORE',
+  CART: 'CART',
+  OFFER: 'OFFER',
+  ACCOUNT: 'ACCOUNT',
+};
