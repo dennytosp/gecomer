@@ -1,23 +1,18 @@
 import {StyleSheet} from 'react-native';
-import {getSize} from '../../../utils/reponsive';
-import {COLORS} from '../../../constants/theme';
+import {getSize, height, width} from '../../../utils/reponsive';
+import {COLORS, FONTS} from '../../../constants/theme';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-    paddingHorizontal: getSize.m(12),
+    paddingHorizontal: getSize.m(16),
   },
-  wrapperHeader: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  wrapperCenter: {
-
-  },
-  wrapperContent: {
-
+  wrapperLines: {
+    borderWidth: getSize.s(1),
+    borderColor: COLORS.border,
+    marginVertical: getSize.m(16),
+    marginHorizontal: getSize.m(-16),
   },
 });
 export default styles;

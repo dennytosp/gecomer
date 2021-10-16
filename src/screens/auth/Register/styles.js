@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {getSize} from '../../../utils/reponsive';
-import {COLORS} from '../../../constants/theme';
+import {getSize, width} from '../../../utils/reponsive';
+import {COLORS, FONTS} from '../../../constants/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,15 +9,20 @@ export const styles = StyleSheet.create({
     paddingHorizontal: getSize.m(12),
   },
   wrapperHeader: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
   },
-  wrapperCenter: {
-
+  wrapperLogo: {
+    marginBottom: 16,
   },
-  wrapperContent: {
-
+  
+  wrapperCenter: {},
+  wrapperFooter: {
+    marginTop: 24,
+  },
+  wrapperTextFooter: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 export default styles;

@@ -3,7 +3,6 @@ import {getSize} from '../../utils/reponsive';
 import {COLORS, FONTS} from '../../constants/theme';
 
 export const styles = StyleSheet.create({
-  container: {},
   text: (
     marginHorizontal,
     marginVertical,
@@ -28,6 +27,12 @@ export const styles = StyleSheet.create({
     borderWidth,
     alignItems,
     justifyContent,
+    lineHeight,
+    flex,
+    width,
+    height,
+    textDecorationLine,
+    textDecorationStyle,
   ) => ({
     marginHorizontal: marginHorizontal,
     marginVertical: marginVertical,
@@ -52,6 +57,12 @@ export const styles = StyleSheet.create({
     borderWidth: borderWidth,
     alignItems: alignItems,
     justifyContent: justifyContent,
+    lineHeight: lineHeight,
+    flex: flex,
+    width: width,
+    height: height,
+    textDecorationLine: textDecorationLine,
+    textDecorationStyle: textDecorationStyle,
   }),
 });
 export default styles;

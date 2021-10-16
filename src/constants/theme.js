@@ -1,4 +1,5 @@
 import {Dimensions} from 'react-native';
+import {getSize} from '../utils/reponsive';
 const {width, height} = Dimensions.get('window');
 
 export const COLORS = {
@@ -7,19 +8,21 @@ export const COLORS = {
   white: '#FFFFFF',
   dark: '#000',
 
-  green: '#2AA952',
+  purple: '#5C61F4',
+  green: '#53D1B6',
   red: '#EB001B',
-  yellow: '#FFCC00',
+  yellow: '#FFC833',
 
   primary: '#40BFFF',
   pale_red: '#FB7181',
   secondary: '#223263',
+  border: '#EBF0FF',
   grey: '#9098B1',
 };
 
 export const SIZES = {
-  base: 10,
-  radius: 20,
+  base: getSize.m(10),
+  radius: getSize.m(20),
   width,
   height,
 };

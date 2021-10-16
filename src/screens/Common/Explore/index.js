@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
+import Texting from '../../../components/Texting';
 
 const Explore = () => {
   const {top} = useSafeAreaInsets();
@@ -11,7 +12,7 @@ const Explore = () => {
   const _renderHeader = () => {
     return (
       <View style={styles.wrapperHeader}>
-        <Text>Explore</Text>
+        <Texting title="Explore" />
       </View>
     );
   };

@@ -5,7 +5,7 @@ import {common, authen} from './../screens';
 import {StatusBar} from 'react-native';
 
 import {StackStep} from './';
-import { routes } from './routes';
+import {routes} from './routes';
 const Stack = createNativeStackNavigator();
 
 const MainStackNavigator = () => {
@@ -65,13 +65,18 @@ const MainStackNavigator = () => {
           <Stack.Screen name={routes.LOGIN} component={authen.Login} />
           <Stack.Screen name={routes.REGISTER} component={authen.Register} />
 
-          <Stack.Screen name={routes.COMMON} component={StackStep.TabNavigation} />
+          <Stack.Screen
+            name={routes.COMMON}
+            component={StackStep.TabNavigation}
+          />
           <Stack.Screen name={routes.HOME} component={common.Home} />
           <Stack.Screen name={routes.EXPLORE} component={common.Explore} />
           <Stack.Screen name={routes.CART} component={common.Cart} />
           <Stack.Screen name={routes.OFFER} component={common.Offer} />
           <Stack.Screen name={routes.ACCOUNT} component={common.Account} />
-          
+          <Stack.Screen name={routes.FLASH_SALE} component={common.FlashSale} />
+          <Stack.Screen name={routes.FAVORITE} component={common.Favorite} />
+          <Stack.Screen name={routes.DETAILS} component={common.Details} />
         </>
       </Stack.Navigator>
     </>

@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import Texting from '../../../components/Texting';
 import styles from './styles';
 
 const Offer = () => {
@@ -11,7 +12,7 @@ const Offer = () => {
   const _renderHeader = () => {
     return (
       <View style={styles.wrapperHeader}>
-        <Text>Offer</Text>
+        <Texting title="Offer"/>
       </View>
     );
   };

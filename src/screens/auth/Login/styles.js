@@ -9,15 +9,29 @@ export const styles = StyleSheet.create({
     paddingHorizontal: getSize.m(12),
   },
   wrapperHeader: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
   },
-  wrapperCenter: {
-
+  wrapperLogo: {
+    marginBottom: 16,
   },
-  wrapperContent: {
-
+  wrapperOr: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 24,
+  },
+  line: {
+    height: 1,
+    flex: 1,
+    backgroundColor: COLORS.border,
+  },
+  wrapperCenter: {},
+  wrapperFooter: {
+    marginTop: 16,
+  },
+  wrapperTextFooter: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 export default styles;

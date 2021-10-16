@@ -1,8 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
 import styles from './styles';
-import {COLORS, FONTS} from '../../constants/theme';
 
 const Texting = ({
   title,
@@ -30,13 +28,19 @@ const Texting = ({
   borderWidth,
   alignItems,
   justifyContent,
+  lineHeight,
+  flex,
+  handleOnpress,
+  width,
+  height,
+  textDecorationLine,
+  textDecorationStyle,
   style,
 }) => {
-  const navigation = useNavigation();
-
   return (
     <View style={{...style, ...styles.container}}>
       <Text
+        onPress={handleOnpress}
         numberOfLines={numberOfLines}
         style={styles.text(
           marginHorizontal,
@@ -62,6 +66,12 @@ const Texting = ({
           borderWidth,
           alignItems,
           justifyContent,
+          lineHeight,
+          flex,
+          width,
+          height,
+          textDecorationLine,
+          textDecorationStyle,
         )}>
         {title}
       </Text>

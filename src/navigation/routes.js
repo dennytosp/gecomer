@@ -9,4 +9,7 @@ export const routes = {
   CART: 'CART',
   OFFER: 'OFFER',
   ACCOUNT: 'ACCOUNT',
+  FLASH_SALE: 'FLASH_SALE',
+  FAVORITE: 'FAVORITE',
+  DETAILS: 'DETAILS',
 };
