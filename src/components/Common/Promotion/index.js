@@ -1,20 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Pressable, Image} from 'react-native';
 import styles from './styles';
-import {Texting} from '../../../../../components';
-import {photos} from './../../../../../assets';
-import {COLORS, FONTS} from './../../../../../constants';
-import {getSize} from '../../../../../utils/reponsive';
+import {Texting} from '../..';
+import {getSize} from '../../../utils/reponsive';
+import {COLORS, FONTS} from '../../../constants';
 
-const Promotion = ({handleOnpress, marginBottom}) => {
+const Promotion = ({
+  title,
+  hours,
+  minutes,
+  seconds,
+  image,
+  handleOnpress,
+  marginBottom,
+  style,
+}) => {
+  const [count, setCount] = useState(3);
+  const [timerCount, setTimer] = useState(60);
+
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setTimer(lastTimerCount => {
+        lastTimerCount <= 1 && clearInterval(interval);
+        return lastTimerCount - 1;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Pressable
       onPress={handleOnpress}
-      style={styles.wrapperPromotion(marginBottom)}>
-      <Image source={photos.promotion01} style={styles.imagePromotion} />
+      style={{...styles.wrapperPromotion(marginBottom), ...style}}>
+      <Image source={image} style={styles.imagePromotion} />
       <View style={styles.wrapperContentPromotion}>
         <Texting
-          title={'Super Flash Sale \n50% Off'}
+          title={title}
           fontSize={getSize.m(24)}
           color={COLORS.white}
           fontFamily={FONTS.bold}
@@ -23,7 +44,7 @@ const Promotion = ({handleOnpress, marginBottom}) => {
       <View style={styles.wrapperTime}>
         <Pressable style={styles.wrapperCardTime}>
           <Texting
-            title="08"
+            title={hours}
             fontSize={getSize.m(16)}
             color={COLORS.secondary}
             fontFamily={FONTS.bold}
@@ -38,7 +59,7 @@ const Promotion = ({handleOnpress, marginBottom}) => {
         />
         <Pressable style={styles.wrapperCardTime}>
           <Texting
-            title="34"
+            title={minutes}
             fontSize={getSize.m(16)}
             color={COLORS.secondary}
             fontFamily={FONTS.bold}
@@ -53,7 +74,7 @@ const Promotion = ({handleOnpress, marginBottom}) => {
         />
         <Pressable style={styles.wrapperCardTime}>
           <Texting
-            title="52"
+            title={seconds}
             fontSize={getSize.m(16)}
             color={COLORS.secondary}
             fontFamily={FONTS.bold}

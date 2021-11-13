@@ -56,7 +56,7 @@ const Onboard = ({navigation}) => {
   };
 
   const handleDone = () => {
-    navigation.navigate(routes.COMMON);
+    navigation.navigate(routes.REGISTER);
   };
 
   return (

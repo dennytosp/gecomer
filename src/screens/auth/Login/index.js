@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {BackHandler, Pressable, View} from 'react-native';
+import React from 'react';
+import {Pressable, ScrollView, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
@@ -102,9 +102,13 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      <_renderHeader />
-      <_renderCenter />
-      <_renderFooter />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled">
+        <_renderHeader />
+        <_renderCenter />
+        <_renderFooter />
+      </ScrollView>
     </View>
   );
 };

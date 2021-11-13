@@ -77,6 +77,51 @@ const MainStackNavigator = () => {
           <Stack.Screen name={routes.FLASH_SALE} component={common.FlashSale} />
           <Stack.Screen name={routes.FAVORITE} component={common.Favorite} />
           <Stack.Screen name={routes.DETAILS} component={common.Details} />
+          <Stack.Screen name={routes.REVIEWS} component={common.Reviews} />
+          <Stack.Screen
+            name={routes.WRITE_REVIEW}
+            component={common.WriteReview}
+          />
+          <Stack.Screen
+            name={routes.NOTIFICATIONS}
+            component={common.Notifications}
+          />
+          <Stack.Screen
+            name={routes.OFFER_NOTIFICATION}
+            component={common.OfferNotification}
+          />
+          <Stack.Screen
+            name={routes.FEED_NOTIFICATION}
+            component={common.FeedNotification}
+          />
+          <Stack.Screen
+            name={routes.ACTIVITY_NOTIFICATION}
+            component={common.ActivityNotification}
+          />
+          <Stack.Screen
+            name={routes.SEARCH_PAGE}
+            component={common.SearchPage}
+          />
+          <Stack.Screen
+            name={routes.SEARCH_RESULT}
+            component={common.SearchResults}
+          />
+          <Stack.Screen name={routes.CATEGORY} component={common.Category} />
+          <Stack.Screen name={routes.SOFT_BY} component={common.SoftBy} />
+          <Stack.Screen
+            name={routes.FILTER_SEARCH}
+            component={common.FilterSearch}
+          />
+          <Stack.Screen name={routes.SHIP_TO} component={common.ShipTo} />
+          <Stack.Screen name={routes.PAYMENT_METHOD} component={common.PaymentMethod} />
+          <Stack.Screen name={routes.CARD} component={common.Card} />
+          <Stack.Screen name={routes.PURCHASE_SUCCESS} component={common.PurchaseSuccess} />
+
+          {/* Dự án từ Ants - Reviews */}
+          <Stack.Screen
+            name={routes.DUAN_REVIEWS}
+            component={common.DuAn_Reviews}
+          />
         </>
       </Stack.Navigator>
     </>

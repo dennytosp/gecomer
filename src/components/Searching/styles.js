@@ -10,8 +10,8 @@ export const styles = StyleSheet.create({
   wrapperSearch: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 5,
-    borderWidth: 1,
+    borderRadius: getSize.m(5),
+    borderWidth: getSize.s(1),
     borderColor: COLORS.border,
     flex: 1,
     paddingHorizontal: getSize.m(16),
@@ -22,10 +22,16 @@ export const styles = StyleSheet.create({
     fontSize: getSize.m(12),
     marginTop: getSize.m(3.5),
     paddingHorizontal: getSize.m(8),
-    color: COLORS.black,
+    color: COLORS.secondary,
   },
   wrapperFavorite: {
     paddingHorizontal: getSize.m(16),
+  },
+  wrapperLines: {
+    borderWidth: getSize.s(1),
+    borderColor: COLORS.border,
+    marginTop: getSize.m(16),
+    marginHorizontal: getSize.m(-16),
   },
 });
 export default styles;

@@ -1,23 +1,18 @@
 import {StyleSheet} from 'react-native';
-import {COLORS, FONTS} from '../../../constants';
-import {getSize, width, height} from '../../../utils/reponsive';
+import {COLORS} from '../../../constants';
+import {getSize} from '../../../utils/reponsive';
 
 export const styles = StyleSheet.create({
-  wrapperHeaderTitling: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: getSize.m(12),
-  },
   wrapperProducsing: marginBottom => ({
     marginBottom: !marginBottom ? getSize.m(12) : marginBottom,
-    borderRadius: getSize.m(5),
+    borderRadius: getSize.s(5),
     borderColor: COLORS.border,
-    borderWidth: 1,
+    borderWidth: 3 / 2,
     padding: getSize.m(16),
   }),
   imageProducts: columns => ({
-    width: columns ? getSize.s(140) : getSize.s(110),
-    height: columns ? getSize.v(140) : getSize.v(110),
+    width: columns ? getSize.s(266 / 2) : getSize.s(110),
+    height: columns ? getSize.v(266 / 2) : getSize.v(110),
     marginBottom: getSize.m(8),
   }),
   wrapperRowPrice: {

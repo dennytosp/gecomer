@@ -18,6 +18,7 @@ export const COLORS = {
   secondary: '#223263',
   border: '#EBF0FF',
   grey: '#9098B1',
+  gray: '#E0E0E0',
 };
 
 export const SIZES = {

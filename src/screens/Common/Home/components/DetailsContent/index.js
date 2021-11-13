@@ -17,97 +17,12 @@ import {
   DATA_COLORS,
   PRODUCTS_DATA,
 } from './../../../../../assets/data';
+import {photos} from '../../../../../assets';
+import {useNavigation} from '@react-navigation/core';
+import {routes} from './../../../../../navigation/routes';
 
 const DetailsContent = () => {
-  const _renderContent = () => {
-    return (
-      <View style={styles.wrapperContent}>
-        <View style={styles.wrapperTitleTexting}>
-          <Texting
-            title="Nike Air Zoom Pegasus 36 Miamdi"
-            fontFamily={FONTS.bold}
-            fontSize={getSize.m(20)}
-            width={width - 70}
-            numberOfLines={2}
-            color={COLORS.secondary}
-          />
-          <Pressable style={{marginTop: getSize.m(0)}}>
-            <Favorite />
-          </Pressable>
-        </View>
-
-        <StarRating startingValue={5} marginVertical={12} imageSize={16} />
-
-        <Texting
-          title="$299,43"
-          fontFamily={FONTS.bold}
-          fontSize={getSize.m(20)}
-          color={COLORS.primary}
-          marginBottom={getSize.m(24)}
-        />
-
-        <Texting
-          title="Select Size"
-          fontFamily={FONTS.bold}
-          fontSize={getSize.m(14)}
-          marginBottom={getSize.m(12)}
-          color={COLORS.secondary}
-        />
-
-        <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={DATA_SIZES}
-          renderItem={_renderSelectSizes}
-          keyExtractor={item => item.id.toString()}
-        />
-
-        <Texting
-          title="Select Color"
-          fontFamily={FONTS.bold}
-          fontSize={getSize.m(14)}
-          marginBottom={getSize.m(12)}
-          color={COLORS.secondary}
-        />
-
-        <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={DATA_COLORS}
-          renderItem={_renderSelectColors}
-          keyExtractor={item => item.id.toString()}
-        />
-
-        <Texting
-          title="Specification"
-          fontFamily={FONTS.bold}
-          fontSize={getSize.m(14)}
-          marginBottom={getSize.m(12)}
-          color={COLORS.secondary}
-        />
-
-        <_renderSpecification />
-        <_renderReviewProducts />
-        <Texting
-          title="You Might Also Like"
-          fontFamily={FONTS.bold}
-          fontSize={getSize.m(14)}
-          marginTop={getSize.m(24)}
-          color={COLORS.secondary}
-        />
-
-        <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={PRODUCTS_DATA}
-          renderItem={_renderProducts}
-          keyExtractor={item => item.id.toString()}
-        />
-
-        <ButtonPrimary title="Add To Cart" marginTop={getSize.m(20)} />
-      </View>
-    );
-  };
+  const navigation = useNavigation();
 
   const _renderSelectSizes = ({item, index}) => {
     return (
@@ -161,10 +76,14 @@ const DetailsContent = () => {
     );
   };
 
-  const _renderReviewProducts = ({item, index}) => {
+  const _renderReviewProducts = () => {
     return (
       <View style={styles.wrapperReviewProducts}>
-        <Titling title="Review Product" more="See More" />
+        <Titling
+          title="Review Product"
+          more="See More"
+          handleOnpress={() => navigation.navigate(routes.REVIEWS)}
+        />
 
         <View style={styles.wrapperSubTitleStar}>
           <StarRating startingValue={4.5} imageSize={16} />
@@ -178,7 +97,14 @@ const DetailsContent = () => {
           <Texting title="(5 Reviews)" fontSize={getSize.m(10)} />
         </View>
 
-        <ReviewsProduct />
+        <ReviewsProduct
+          name="Dinh Tien Phong"
+          star={4}
+          description="Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites."
+          avatar={photos.avatar}
+          time="December 10, 2016"
+          imageReviews
+        />
       </View>
     );
   };
@@ -200,8 +126,69 @@ const DetailsContent = () => {
   };
 
   return (
-    <View>
-      <_renderContent />
+    <View style={styles.wrapperContent}>
+      <View style={styles.wrapperTitleTexting}>
+        <Texting
+          title="Nike Air Zoom Pegasus 36 Miamdi"
+          fontFamily={FONTS.bold}
+          fontSize={getSize.m(20)}
+          width={width - 70}
+          numberOfLines={2}
+          color={COLORS.secondary}
+        />
+        <Pressable style={{marginTop: getSize.m(5)}}>
+          <Favorite />
+        </Pressable>
+      </View>
+
+      <StarRating startingValue={5} marginVertical={12} imageSize={16} />
+
+      <Texting
+        title="$299,43"
+        fontFamily={FONTS.bold}
+        fontSize={getSize.m(20)}
+        color={COLORS.primary}
+        marginBottom={getSize.m(24)}
+      />
+
+      <Titling title="Select Size" />
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={DATA_SIZES}
+        renderItem={_renderSelectSizes}
+        keyExtractor={item => item.id.toString()}
+      />
+
+      <Titling title="Select Color" />
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={DATA_COLORS}
+        renderItem={_renderSelectColors}
+        keyExtractor={item => item.id.toString()}
+      />
+
+      <Titling title="Specification" />
+
+      <_renderSpecification />
+      <_renderReviewProducts />
+
+      <Titling
+        title="You Might Also Like"
+        marginTop={getSize.m(24)}
+        marginBottom={getSize.m(1 / 10000)}
+      />
+
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={PRODUCTS_DATA}
+        renderItem={_renderProducts}
+        keyExtractor={item => item.id.toString()}
+      />
+
+      <ButtonPrimary title="Add To Cart" marginTop={getSize.m(24)} />
     </View>
   );
 };

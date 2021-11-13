@@ -4,8 +4,7 @@ import styles from './styles';
 import {ProductsHorizontal, Header} from '../../../../../components';
 import {Promotion} from './../../components';
 import {PRODUCTS_DATA_VERTICOLUMNS} from '../../../../../assets/data';
-import {Forward, Search} from '../../../../../assets/svg';
-import {routes} from './../../../../../navigation/routes';
+import {Search} from '../../../../../assets/svg';
 
 const FlashSale = ({navigation}) => {
   const _renderProductsVerticalColumns = ({item}) => {
@@ -27,7 +26,6 @@ const FlashSale = ({navigation}) => {
     <View style={styles.container}>
       <Header
         title="Super Flash Sale"
-        iconBack={Forward}
         iconRight02={Search}
         handleOnpressRight02={() => console.log('Search')}
       />

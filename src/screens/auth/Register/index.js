@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable, View} from 'react-native';
+import {Pressable, ScrollView, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
@@ -60,7 +60,7 @@ const Register = () => {
         <View style={styles.wrapperTextFooter}>
           <Texting title="Have an account?" fontSize={12} />
           <Texting
-            handleOnpress={() => navigation.goBack()}
+            handleOnpress={() => navigation.navigate(routes.LOGIN)}
             title="Sign In"
             fontFamily={FONTS.bold}
             fontSize={12}
@@ -74,9 +74,13 @@ const Register = () => {
 
   return (
     <View style={styles.container}>
-      <_renderHeader />
-      <_renderCenter />
-      <_renderFooter />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled">
+        <_renderHeader />
+        <_renderCenter />
+        <_renderFooter />
+      </ScrollView>
     </View>
   );
 };

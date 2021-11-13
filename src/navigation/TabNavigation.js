@@ -9,7 +9,7 @@ const BottomTabNavigation = () => {
   return (
     <Tab.Navigator
       screenOptions={{headerShown: false}}
-      tabBar={props => <CustomTabBar {...props} screen />}>
+      tabBar={props => <CustomTabBar {...props} />}>
       <Tab.Screen
         name="Home"
         component={common.Home}

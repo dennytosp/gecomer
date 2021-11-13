@@ -33,6 +33,8 @@ export const styles = StyleSheet.create({
     height,
     textDecorationLine,
     textDecorationStyle,
+    zIndex,
+    flexWrap,
   ) => ({
     marginHorizontal: marginHorizontal,
     marginVertical: marginVertical,
@@ -63,6 +65,8 @@ export const styles = StyleSheet.create({
     height: height,
     textDecorationLine: textDecorationLine,
     textDecorationStyle: textDecorationStyle,
+    zIndex: zIndex,
+    flexWrap: flexWrap,
   }),
 });
 export default styles;

@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     lineHeight: 16.41,
   },
   dotStyle: {
-    backgroundColor: COLORS.gray05,
+    backgroundColor: COLORS.gray,
   },
   activeDotStyle: {
     backgroundColor: COLORS.black,

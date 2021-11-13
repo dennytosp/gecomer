@@ -1,16 +1,36 @@
 import React from 'react';
 import {View, FlatList, ScrollView} from 'react-native';
 import styles from './styles';
-import {ProductsHorizontal, Searching, Titling} from '../../../components';
+import {
+  ProductsHorizontal,
+  Searching,
+  Titling,
+  Categories,
+  Promotion,
+  RecommendProduct,
+} from '../../../components';
 import {Favorite, Notifications} from './../../../assets/svg';
 import {getSize} from '../../../utils/reponsive';
-import {Promotion, Categories, RecommendProduct} from './components';
-import {PRODUCTS_DATA, PRODUCTS_DATA_VERTICOLUMNS} from '../../../assets/data';
+import {
+  PRODUCTS_DATA,
+  PRODUCTS_DATA_VERTICOLUMNS,
+  CATEGORIES_DATA,
+} from '../../../assets/data';
 import {routes} from './../../../navigation/routes';
+import {photos} from '../../../assets';
+import {useNavigation} from '@react-navigation/core';
 
-const Home = ({navigation}) => {
-  const _renderLines = () => {
-    return <View style={styles.wrapperLines}></View>;
+const Home = () => {
+  const navigation = useNavigation();
+  const _renderCategories = ({item, index}) => {
+    return (
+      <Categories
+        handleOnpress={() => navigation.navigate(item.navigation)}
+        image={item.image}
+        title={item.title}
+        index={index === 0 ? getSize.m(0) : getSize.m(12)}
+      />
+    );
   };
 
   const _renderProducts = ({item, index}) => {
@@ -29,7 +49,7 @@ const Home = ({navigation}) => {
     );
   };
 
-  const _renderProductsVerticalColumns = ({item}) => {
+  const _renderProductsVerticalColumns = ({item, index}) => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
@@ -50,17 +70,30 @@ const Home = ({navigation}) => {
         iconRight={Favorite}
         handleOnpressRight={() => navigation.navigate(routes.FAVORITE)}
         iconRight01={Notifications}
+        handleOnpressRight01={() => navigation.navigate(routes.NOTIFICATIONS)}
         placeholder="Search Product"
+        handleOnpressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
       />
-
-      <_renderLines />
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="on-drag">
         <Promotion
           handleOnpress={() => navigation.navigate(routes.FLASH_SALE)}
+          style={styles.onScroll}
+          title={'Super Flash Sale\n50% Off'}
+          hours="08"
+          minutes="34"
+          seconds="52"
+          image={photos.promotion01}
         />
-        <Categories />
+        <Titling title="Category" more="More Category" />
+        <FlatList
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          data={CATEGORIES_DATA}
+          renderItem={_renderCategories}
+          keyExtractor={item => item.id.toString()}
+        />
 
         <Titling
           title="Flash Sale"
@@ -84,7 +117,11 @@ const Home = ({navigation}) => {
           keyExtractor={item => item.id.toString()}
         />
 
-        <RecommendProduct />
+        <RecommendProduct
+          title={'Recommend\nProduct'}
+          subtitle="We recommend the best for you"
+          image={photos.promotion02}
+        />
 
         <FlatList
           numColumns={2}

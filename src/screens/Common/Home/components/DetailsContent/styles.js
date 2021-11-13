@@ -5,12 +5,11 @@ import {COLORS} from '../../../../../constants';
 export const styles = StyleSheet.create({
   wrapperContent: {
     paddingHorizontal: getSize.m(16),
-    marginBottom: getSize.m(16),
+    marginBottom: getSize.m(12),
   },
   wrapperTitleTexting: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
   wrapperSelectSizes: {
     marginBottom: getSize.m(24),
@@ -43,7 +42,7 @@ export const styles = StyleSheet.create({
     marginBottom: getSize.m(16),
   },
   wrapperProducts: {
-    marginTop: getSize.m(24),
+    marginTop: getSize.m(12),
   },
 });
 export default styles;

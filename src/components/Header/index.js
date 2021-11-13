@@ -7,11 +7,13 @@ import {Texting} from '..';
 import {FONTS} from './../../constants/theme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {getSize} from '../../utils/reponsive';
+import {Forward} from '../../assets/svg';
 
 const Header = ({
   style,
   title,
-  iconBack,
+  iconLeft,
+  disableIconLeft,
   iconRight01,
   iconRight02,
   handleOnpressBack,
@@ -21,25 +23,28 @@ const Header = ({
   topline,
 }) => {
   const navigation = useNavigation();
-  const {top} = useSafeAreaInsets();
+  const insets = useSafeAreaInsets();
 
   return (
-    <View style={styles.wrapperFullHeader}>
+    <View style={{...styles.wrapperFullHeader, ...style}}>
       <View
         style={{
-          marginTop: top,
+          marginTop: insets.top + 20,
           paddingHorizontal: paddingHorizontal,
           ...styles.wrapperHeader,
-          ...style,
         }}>
         <Pressable style={styles.wrapperLeft}>
-          <Pressable onPress={() => navigation.goBack()}>{iconBack}</Pressable>
+          {disableIconLeft ? null : (
+            <Pressable onPress={() => navigation.goBack()}>
+              {iconLeft ? iconLeft : <Forward />}
+            </Pressable>
+          )}
           <Texting
             title={title}
             fontFamily={FONTS.bold}
             fontSize={16}
             color={COLORS.secondary}
-            marginHorizontal={getSize.m(16)}
+            marginHorizontal={disableIconLeft ? getSize.m(0) : getSize.m(16)}
             marginTop={getSize.m(7 / 2)}
           />
         </Pressable>

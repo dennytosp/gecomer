@@ -21,6 +21,10 @@ import product_reviews01 from './images/photos/product_reviews01.png';
 import product_reviews02 from './images/photos/product_reviews02.png';
 import product_reviews03 from './images/photos/product_reviews03.png';
 import avatar from './images/photos/avatar.jpg';
+import user from './images/photos/user.jpg';
+import user2 from './images/photos/user02.jpg';
+import user3 from './images/photos/user03.jpg';
+import user4 from './images/photos/user04.jpg';
 
 export const photos = {
   onboard01,
@@ -41,6 +45,10 @@ export const photos = {
   product_reviews02,
   product_reviews03,
   avatar,
+  user,
+  user2,
+  user3,
+  user4,
 };
 export const icons = {
   home,

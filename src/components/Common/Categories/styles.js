@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {getSize} from '../../../../../utils/reponsive';
-import {COLORS} from '../../../../../constants';
+import {COLORS} from '../../../constants';
+import {getSize} from '../../../utils/reponsive';
 
 export const styles = StyleSheet.create({
   wrapperCategories: {
@@ -13,11 +13,12 @@ export const styles = StyleSheet.create({
   },
   wrapperEventCategories: {
     justifyContent: 'center',
+    alignItems: 'center',
   },
   wrapperImageEvent: {
     width: getSize.s(70),
     height: getSize.v(70),
-    borderRadius: getSize.s(70 / 2),
+    borderRadius: getSize.s(100 / 2),
     borderColor: COLORS.border,
     borderWidth: 1,
     alignItems: 'center',

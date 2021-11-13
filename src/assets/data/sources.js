@@ -1,13 +1,24 @@
 import {COLORS} from '../../constants';
 import {photos} from '../../assets';
 import {
+  Activity,
+  Bikini,
   Dress,
+  Feed,
   HighHeels,
+  ManPant,
   ManShirt,
   ManShoes,
+  ManTShirt,
+  ManUnderwear,
   ManWorkEquipment,
+  Offer,
+  Skirt,
   WomanBag,
+  WomanPants,
+  WomanTShirt,
 } from '../../assets/svg';
+import {routes} from '../../navigation/routes';
 
 export const ONBOARD_DATA = [
   {
@@ -35,33 +46,40 @@ export const CATEGORIES_DATA = [
     id: '01',
     image: ManShirt,
     title: 'Man Shirt',
+    navigation: routes.DUAN_REVIEWS,
   },
   {
     id: '02',
     image: Dress,
     title: 'Dress',
+    navigation: routes.SHIP_TO,
   },
   {
     id: '03',
     image: ManWorkEquipment,
     title: 'Man Work Equipment',
+    navigation: routes.PAYMENT_METHOD,
   },
   {
     id: '04',
     image: WomanBag,
     title: 'Woman Bag',
+    navigation: routes.CARD,
   },
   {
     id: '05',
     image: ManShoes,
     title: 'Man Shoes',
+    navigation: routes.PURCHASE_SUCCESS,
   },
   {
     id: '06',
     image: HighHeels,
     title: 'High Heels',
+    navigation: routes.PURCHASE_SUCCESS,
   },
 ];
+
 export const PRODUCTS_DATA = [
   {
     id: '01',
@@ -96,6 +114,7 @@ export const PRODUCTS_DATA = [
     promotion: '40% Off',
   },
 ];
+
 export const PRODUCTS_DATA_VERTICOLUMNS = [
   {
     id: '01',
@@ -213,34 +232,463 @@ export const DATA_REVIEWS = [
   {
     id: '01',
     name: 'Dinh Tien Phong',
-    image: photos.avatar && photos.avatar && photos.avatar,
-    star: '4',
+    avatar: photos.avatar,
+    star: '4.5',
+    time: 'December 05, 2020',
     description:
       'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
   },
   {
     id: '02',
-    name: 'Dinh Tien Phong',
-    image: photos.avatar && photos.avatar && photos.avatar,
+    name: 'Nguyen Van Tam',
+    avatar: photos.user2,
     star: '4',
+    time: 'December 06, 2020',
     description:
       'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
   },
   {
     id: '03',
-    name: 'Dinh Tien Phong',
-    image: photos.avatar && photos.avatar && photos.avatar,
-    star: '4',
+    name: 'Le Chi Vinh',
+    avatar: photos.user3,
+    star: '3.5',
+    time: 'December 07, 2020',
     description:
       'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
   },
   {
     id: '04',
-    name: 'Dinh Tien Phong',
-    image: photos.avatar && photos.avatar && photos.avatar,
+    name: 'Le Huynh Yen Nhi',
+    avatar: photos.user4,
     star: '4',
+    time: 'December 08, 2020',
     description:
       'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
+  },
+];
+
+export const DATA_STAR_REVIEWS = [
+  {
+    id: '01',
+    number: '1',
+  },
+  {
+    id: '02',
+    number: '2',
+  },
+  {
+    id: '03',
+    number: '3',
+  },
+  {
+    id: '04',
+    number: '4',
+  },
+  {
+    id: '05',
+    number: '5',
+  },
+];
+
+export const DATA_LIST_NOTI = [
+  {
+    id: '01',
+    name: 'Offer',
+    image: Offer,
+    number: 3,
+    navigation: routes.OFFER_NOTIFICATION,
+  },
+  {
+    id: '02',
+    name: 'Feed',
+    image: Feed,
+    number: 3,
+    navigation: routes.FEED_NOTIFICATION,
+  },
+  {
+    id: '03',
+    name: 'Activity',
+    image: Activity,
+    number: 3,
+    navigation: routes.ACTIVITY_NOTIFICATION,
+  },
+];
+
+export const DATA_OFFER_NOTI = [
+  {
+    id: '01',
+    title: 'The Best Title',
+    content:
+      'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor amet deserunt ex proident commodo',
+    time: 'April 30, 2020 1:03 PM',
+  },
+  {
+    id: '02',
+    title: 'SUMMER OFFER 98% Cashback',
+    content:
+      'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor',
+    time: 'April 29, 2020 1:02 PM',
+  },
+  {
+    id: '03',
+    title: 'Special Offer 25% OFF',
+    content:
+      'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor amet deserunt ex proident commodo',
+    time: 'April 28, 2020 1:01 PM',
+  },
+];
+
+export const DATA_ACTIVITY_NOTI = [
+  {
+    id: '01',
+    title: 'Transaction Nike Air Zoom Product',
+    content:
+      'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor amet deserunt ex proident commodo',
+    time: 'April 30, 2020 1:03 PM',
+  },
+  {
+    id: '02',
+    title: 'Transaction Nike Air Zoom Pegasus 36 Miami',
+    content:
+      'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor',
+    time: 'April 29, 2020 1:02 PM',
+  },
+  {
+    id: '03',
+    title: 'Transaction Nike Air Max',
+    content:
+      'Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor amet deserunt ex proident commodo',
+    time: 'April 28, 2020 1:01 PM',
+  },
+];
+
+export const DATA_FEED_NOTI = [
+  {
+    id: '01',
+    image: photos.product01,
+    title: 'New Product',
+    content: 'Nike Air Zoom Pegasus 36 Miami - Special For your Activity',
+    time: 'June 3, 2020 5:06 PM',
+  },
+  {
+    id: '02',
+    image: photos.product09,
+    title: 'Best Product',
+    content: 'Nike Air Zoom Pegasus 36 Miami - Special For your Activity',
+    time: 'June 3, 2020 4:25 PM',
+  },
+  {
+    id: '03',
+    image: photos.product03,
+    title: 'New Product',
+    content: 'Nike Air Zoom Pegasus 36 Miami - Special For your Activity',
+    time: 'June 3, 20120 4:05 PM',
+  },
+];
+
+export const DATA_DU_AN_REVIEWS = [
+  {
+    id: '01',
+    name: 'Dinh Tien Phong',
+    avatar: photos.avatar,
+    star: '4',
+    time: 'August 05, 2021',
+    like: '24',
+    image01: photos.user4,
+    image02: photos.user2,
+    image03: photos.user3,
+    description:
+      'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
+  },
+  {
+    id: '02',
+    name: 'Nguyen Van Tam',
+    avatar: photos.user2,
+    star: '5',
+    time: 'August 06, 2021',
+    like: '25',
+    image01: photos.user,
+    image02: photos.user3,
+    image03: photos.user4,
+    description:
+      'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
+  },
+  {
+    id: '03',
+    name: 'Le Chi Vinh',
+    avatar: photos.user3,
+    star: '5',
+    time: 'August 07, 2021',
+    like: '26',
+    image01: photos.user2,
+    image02: photos.user4,
+    image03: photos.user,
+    description:
+      'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
+  },
+  {
+    id: '04',
+    name: 'Le Huynh Yen Nhi',
+    avatar: photos.user4,
+    star: '4',
+    time: 'August 08, 2021',
+    like: '28',
+    image01: photos.user3,
+    image02: photos.user,
+    image03: photos.user2,
+    description:
+      'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
+  },
+];
+
+export const MAN_FASHION_DATA = [
+  {
+    id: '01',
+    image: ManShirt,
+    title: 'Man Shirt',
+  },
+  {
+    id: '02',
+    image: ManWorkEquipment,
+    title: 'Man Work Equipment',
+  },
+  {
+    id: '03',
+    image: ManTShirt,
+    title: 'Man T-Shirt',
+  },
+  {
+    id: '04',
+    image: ManShoes,
+    title: 'Man Shoes',
+  },
+  {
+    id: '05',
+    image: ManPant,
+    title: 'Man Pants',
+  },
+  {
+    id: '06',
+    image: ManUnderwear,
+    title: 'Man Underwear',
+  },
+];
+
+export const WOMAN_FASHION_DATA = [
+  {
+    id: '01',
+    image: Dress,
+    title: 'Dress',
+  },
+  {
+    id: '02',
+    image: WomanTShirt,
+    title: 'Woman T-Shirt',
+  },
+  {
+    id: '03',
+    image: WomanPants,
+    title: 'Woman Pants',
+  },
+  {
+    id: '04',
+    image: Skirt,
+    title: 'Skirt',
+  },
+  {
+    id: '05',
+    image: WomanBag,
+    title: 'Woman Bag',
+  },
+  {
+    id: '06',
+    image: HighHeels,
+    title: 'High Heels',
+  },
+  {
+    id: '07',
+    image: Bikini,
+    title: 'Bikini',
+  },
+];
+
+export const DATA_SEARCH = [
+  {
+    id: '01',
+    name: 'Nike Air Max 270 React ENG',
+    navigation: routes.SEARCH_RESULT,
+  },
+  {
+    id: '02',
+    name: 'Nike Air Vapormax 360',
+    navigation: routes.SEARCH_RESULT,
+  },
+  {
+    id: '03',
+    name: 'Nike Air Max 335 Flut VIE',
+    navigation: routes.SEARCH_RESULT,
+  },
+  {
+    id: '04',
+    name: 'Nike Air Max 320 Sonsine',
+    navigation: routes.SEARCH_RESULT,
+  },
+  {
+    id: '05',
+    name: 'Nike Air VaporMax Flyknit 3',
+    navigation: routes.SEARCH_RESULT,
+  },
+  {
+    id: '06',
+    name: 'Nike Air Max 97 Utility',
+    navigation: routes.SEARCH_RESULT,
+  },
+];
+
+export const DATA_CATEGORY_SOFT = [
+  {
+    id: '01',
+    image: ManShirt,
+    title: 'Shirt',
+  },
+  {
+    id: '02',
+    image: ManShirt,
+    title: 'Bikini',
+  },
+  {
+    id: '03',
+    image: ManShirt,
+    title: 'Dress',
+  },
+  {
+    id: '04',
+    image: ManShirt,
+    title: 'Work Equipment',
+  },
+  {
+    id: '05',
+    image: ManShirt,
+    title: 'Man Pants',
+  },
+  {
+    id: '06',
+    image: ManShirt,
+    title: 'Man Shoes',
+  },
+  {
+    id: '07',
+    image: ManShirt,
+    title: 'Man Underwear',
+  },
+  {
+    id: '08',
+    image: ManShirt,
+    title: 'Man T-Shirt',
+  },
+  {
+    id: '09',
+    image: ManShirt,
+    title: 'Woman Bag',
+  },
+  {
+    id: '10',
+    image: ManShirt,
+    title: 'Woman Pants',
+  },
+  {
+    id: '11',
+    image: ManShirt,
+    title: 'High Heels',
+  },
+  {
+    id: '12',
+    image: ManShirt,
+    title: 'Woman T-Shirt',
+  },
+  {
+    id: '13',
+    image: ManShirt,
+    title: 'Skirt',
+  },
+];
+
+export const DATA_SOFT_BY = [
+  {
+    id: '01',
+    title: 'Best Match',
+  },
+  {
+    id: '02',
+    title: 'Time: ending soonest',
+  },
+  {
+    id: '03',
+    title: 'Time: newly listed',
+  },
+  {
+    id: '04',
+    title: 'Price + Shipping: lowest first',
+  },
+  {
+    id: '05',
+    title: 'Price + Shipping: highest first',
+  },
+  {
+    id: '06',
+    title: 'Distance: nearest first',
+  },
+];
+
+export const DATA_CART = [
+  {
+    id: '01',
+    image: photos.product09,
+    title: 'Nike Air Max 270 React VIE',
+    price: '$299,00',
+    quantity: '1',
+    favorite: true,
+  },
+  {
+    id: '02',
+    image: photos.product03,
+    title: 'Nike Provie Alan 200',
+    price: '$359,00',
+    quantity: '1',
+    favorite: false,
+  },
+  // {
+  //   id: '03',
+  //   image: photos.product01,
+  //   title: 'Nike Sunies Rovin 205',
+  //   price: '$445,00',
+  //   quantity: '1',
+  //   favorite: true,
+  // },
+  // {
+  //   id: '04',
+  //   image: photos.product05,
+  //   title: 'Nike Sunshet Join 207',
+  //   price: '$447,00',
+  //   quantity: '1',
+  //   favorite: true,
+  // },
+];
+
+export const DATA_ADDRESS = [
+  {
+    id: '01',
+    name: 'Priscekila',
+    address:
+      '3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States',
+    phonenumber: '+99 1234567890',
+  },
+  {
+    id: '02',
+    name: 'Ahmad Khaidir',
+    address:
+      '3712 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States',
+    phonenumber: '+84 1234567890',
   },
 ];
 
@@ -251,5 +699,18 @@ const sources = {
   PRODUCTS_DATA_VERTICOLUMNS,
   DATA_SIZES,
   DATA_COLORS,
+  DATA_STAR_REVIEWS,
+  DATA_LIST_NOTI,
+  DATA_OFFER_NOTI,
+  DATA_ACTIVITY_NOTI,
+  DATA_FEED_NOTI,
+  DATA_DU_AN_REVIEWS,
+  MAN_FASHION_DATA,
+  WOMAN_FASHION_DATA,
+  DATA_SEARCH,
+  DATA_CATEGORY_SOFT,
+  DATA_SOFT_BY,
+  DATA_CART,
+  DATA_ADDRESS,
 };
 export default sources;

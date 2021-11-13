@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {getSize, height, width} from '../../../../../utils/reponsive';
+import {COLORS} from '../../../constants';
+import {getSize, height, width} from '../../../utils/reponsive';
 
 export const styles = StyleSheet.create({
   wrapperRecommendProduct: {
-    marginBottom: 24,
+    marginBottom: 18,
   },
   wrapperTitle: {
     position: 'absolute',

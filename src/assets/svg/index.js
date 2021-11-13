@@ -54,6 +54,42 @@ export const Logo = ({width = 25, height = 24}) => {
   );
 };
 
+export const Like = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M6 19.3594H8.36364V11.5594H6V19.3594ZM19 12.2094C19 11.4944 18.4682 10.9094 17.8182 10.9094H14.0895L14.6509 7.93887L14.6686 7.73087C14.6686 7.46437 14.5682 7.21737 14.4086 7.04187L13.7823 6.35938L9.89409 10.6429C9.67545 10.8769 9.54545 11.2019 9.54545 11.5594V18.0594C9.54545 18.7744 10.0773 19.3594 10.7273 19.3594H16.0455C16.5359 19.3594 16.9555 19.0344 17.1327 18.5664L18.9173 13.9839C18.9705 13.8344 19 13.6784 19 13.5094V12.2679L18.9941 12.2614L19 12.2094Z"
+        fill="#9B9B9B"
+      />
+    </Svg>
+  );
+};
+
+export const Plus_Ants = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M11 5V11H5V13H11V19H13V13H19V11H13V5H11Z"
+        fill="white"
+      />
+    </Svg>
+  );
+};
+
 export const LogoPrimary = ({width = 25, height = 24}) => {
   return (
     <Svg
@@ -83,7 +119,173 @@ export const Plus = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M13 8H8V13C8 13.55 7.55 14 7 14C6.45 14 6 13.55 6 13V8H1C0.45 8 0 7.55 0 7C0 6.45 0.45 6 1 6H6V1C6 0.45 6.45 0 7 0C7.55 0 8 0.45 8 1V6H13C13.55 6 14 6.45 14 7C14 7.55 13.55 8 13 8Z"
-        fill="#909090"
+        fill="#40BFFF"
+      />
+    </Svg>
+  );
+};
+
+export const Add_Ship = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M12 5V19"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M5 12H19"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const Offer = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M8.0625 8.625C8.37316 8.625 8.625 8.37316 8.625 8.0625C8.625 7.75184 8.37316 7.5 8.0625 7.5C7.75184 7.5 7.5 7.75184 7.5 8.0625C7.5 8.37316 7.75184 8.625 8.0625 8.625Z"
+        fill="#40BFFF"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M21 13.0001L13.0001 21L3 10.9999V3H10.9999L21 13.0001Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const ActivityListNotifi = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M20.9994 16.4922V9.73047H14.3008"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M21.0001 9.73047L9.73047 21.0001"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 7.50781V14.2696H9.69753"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 14.2696L14.2696 3"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const Feed = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M21 3H3V21H21V3Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M8.625 7.5H15.375"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M8.625 12H15.375"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M8.625 16.5H15.375"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const Activity = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 4C8.66879 4 5.96876 6.70004 5.96876 10.0312V15.2816C5.96876 15.3971 5.94875 15.5117 5.90963 15.6204L5.54791 16.625H18.4521L18.0904 15.6204C18.0513 15.5117 18.0313 15.3971 18.0313 15.2816V10.0312C18.0313 6.70004 15.3312 4 12 4ZM3.96876 10.0312C3.96876 5.59547 7.56422 2 12 2C16.4358 2 20.0313 5.59547 20.0313 10.0312V15.1071L20.8159 17.2862C20.9262 17.5926 20.8804 17.9336 20.6932 18.2C20.5059 18.4664 20.2007 18.625 19.875 18.625H4.12501C3.79935 18.625 3.4941 18.4664 3.30685 18.2C3.1196 17.9336 3.07382 17.5926 3.18414 17.2862L3.96876 15.1071V10.0312Z"
+        fill="#40BFFF"
+      />
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M8.625 16.625C9.17728 16.625 9.625 17.0727 9.625 17.625C9.625 18.9368 10.6882 20 12 20C13.3118 20 14.375 18.9368 14.375 17.625C14.375 17.0727 14.8227 16.625 15.375 16.625C15.9273 16.625 16.375 17.0727 16.375 17.625C16.375 20.0414 14.4164 22 12 22C9.58359 22 7.625 20.0414 7.625 17.625C7.625 17.0727 8.07272 16.625 8.625 16.625Z"
+        fill="#40BFFF"
       />
     </Svg>
   );
@@ -245,8 +447,8 @@ export const Notifications = ({width = 25, height = 24}) => {
 export const Star = ({width = 25, height = 24}) => {
   return (
     <Svg
-      width="12"
-      height="11"
+      width="16"
+      height="16"
       viewBox="0 0 12 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -495,6 +697,188 @@ export const WomanBag = ({width = 25, height = 24}) => {
   );
 };
 
+export const ManTShirt = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M8.66667 3C8.66667 3 9.77778 5.25 12 5.25C14.2222 5.25 15.3333 3 15.3333 3L22 8.625L19.7778 12L17.5556 10.875V21H6.44444V10.875L4.22222 12L2 8.625L8.66667 3Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const ManPant = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M5.875 2H17.125L19 22H15.25L11.5 9.5L7.75 22H4L5.875 2Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M6 6L17 6"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const ManUnderwear = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M19.875 5.25H4.125V8.44387L3 18.75H8.625L12 13.125L15.375 18.75H21L19.875 8.625V5.25Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M4.125 8.625H19.875"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const WomanTShirt = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M8.625 3C8.625 3 9.75 5.25 12 5.25C14.25 5.25 15.375 3 15.375 3L21 4.125L19.875 8.625H17.625C17.625 8.625 18.75 10.875 18.75 12C18.75 12.9889 17.8331 14.7315 17.625 16.5C17.2976 19.2844 17.625 21 17.625 21H6.375C6.375 21 6.69788 19.2349 6.375 16.5C6.15563 14.6438 5.25 12.9101 5.25 12C5.25 10.875 6.375 8.625 6.375 8.625H4.125L3 4.125L8.625 3Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const WomanPants = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M6.90903 2H17.091C17.091 2 18.7877 5.105 18.7877 7.21C18.7877 8.5925 17.6566 10.42 17.6566 13.5787C17.6566 16.7375 19 22 19 22H15.0839L13.5423 14.73L12.0007 7.46L8.91613 22H5C5 22 6.34344 16.7362 6.34344 13.5787C6.34344 10.4212 5.21226 8.56625 5.21226 7.21C5.21226 5.105 6.90903 2 6.90903 2Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const Skirt = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M19.7775 3.99951H4.2225V7.27242L2 17.837C2 17.837 4.5 19.9995 12 19.9995C19.5 19.9995 22 17.837 22 17.837L19.7775 7.45922V3.99951Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M4 6.99951H20"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M16 13.9995L15 7.99951"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M8 13.9995L9 7.99951"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
+export const Bikini = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M5 16H19V18.8C16.2 18.8 13.4 20.2 13.4 23H10.6C10.6 20.2 7.8 18.8 5 18.8V16Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M5 1V6.33143C5 8.91 7.0482 11 9.5752 11H14.4234C16.9518 11 19 8.91 19 6.33143V1"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M5 5C10.6 5 12 11 12 11C12 11 12 5 19 5"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+
 export const ManShoes = ({width = 25, height = 24}) => {
   return (
     <Svg
@@ -723,8 +1107,18 @@ export const PlusAdding = ({width = 25, height = 24}) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <Path
-        d="M21.9166 10.5834H13.4166V2.08335C13.4166 1.29994 12.782 0.666687 12 0.666687C11.218 0.666687 10.5833 1.29994 10.5833 2.08335V10.5834H2.08329C1.30129 10.5834 0.666626 11.2166 0.666626 12C0.666626 12.7834 1.30129 13.4167 2.08329 13.4167H10.5833V21.9167C10.5833 22.7001 11.218 23.3333 12 23.3333C12.782 23.3333 13.4166 22.7001 13.4166 21.9167V13.4167H21.9166C22.6986 13.4167 23.3333 12.7834 23.3333 12C23.3333 11.2166 22.6986 10.5834 21.9166 10.5834"
-        fill="#303030"
+        d="M12 5V19"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M5 12H19"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </Svg>
   );
@@ -913,6 +1307,666 @@ export const PurchaseSuccess = ({width = 25, height = 24}) => {
         clip-rule="evenodd"
         d="M115.167 230.001C115.167 218.495 124.495 209.168 136.001 209.168C147.507 209.168 156.834 218.495 156.834 230.001C156.834 241.505 147.507 250.834 136.001 250.834C124.495 250.834 115.167 241.505 115.167 230.001ZM135.333 238.111L146.499 224.612C147.318 223.624 147.11 222.214 146.037 221.46C144.959 220.706 143.427 220.9 142.61 221.887L133.361 233.067L129.369 228.374C128.538 227.393 126.998 227.222 125.937 227.989C124.874 228.754 124.688 230.169 125.519 231.146L131.464 238.136C131.928 238.68 132.637 239 133.388 239H133.405C134.163 238.995 134.874 238.667 135.333 238.111Z"
         fill="#27AE60"
+      />
+    </Svg>
+  );
+};
+export const Mic = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M11.998 12.2959C10.4286 12.2959 9.15625 11.0235 9.15625 9.45412V5.84175C9.15625 4.27238 10.4286 3 11.998 3C13.5674 3 14.8398 4.27238 14.8398 5.84175V9.45412C14.8398 11.0235 13.5674 12.2959 11.998 12.2959Z"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M12 17.625V21"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M5.25 9.75C5.25 13.4782 8.27175 16.5 12 16.5C15.7282 16.5 18.75 13.4782 18.75 9.75"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Filterist = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M14.25 17.625V12L21 3H3L9.75 12V21"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Soft = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3 12H8.625"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M17.625 3V21L21 17.625"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 5H13.125"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 19H6.375"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M17.625 21L14.25 17.625"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const DownPress = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M16 10L12 14L8 10"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const RemoveEmpty = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3 19L19 3"
+        stroke="white"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 3L19 19"
+        stroke="white"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Tick = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="29"
+      height="21"
+      viewBox="0 0 29 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3 10.5L10.6667 18L26 3"
+        stroke="white"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Delete = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3 6.375H21"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M8.625 3H15.375"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M18.75 6.375H5.25V21H18.75V6.375Z"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Favorited = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M4.54444 12.7754L11.9996 20.0631L19.4548 12.7754L19.4951 12.736C21.5558 10.7215 21.5558 7.46185 19.4951 5.44831C17.4343 3.43478 14.0997 3.43384 12.0399 5.44831L11.9996 5.48767L11.9584 5.44738C9.89765 3.43291 6.56304 3.43291 4.50322 5.44738C2.44341 7.46185 2.44246 10.7215 4.50322 12.7351L4.54444 12.7754Z"
+        fill="#FB7181"
+        stroke="#FB7181"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const CancelFavorite = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M4.54444 12.7754L11.9996 20.0631L19.4548 12.7754L19.4951 12.736C21.5558 10.7215 21.5558 7.46185 19.4951 5.44831C17.4343 3.43478 14.0997 3.43384 12.0399 5.44831L11.9996 5.48767L11.9584 5.44738C9.89765 3.43291 6.56304 3.43291 4.50322 5.44738C2.44341 7.46185 2.44246 10.7215 4.50322 12.7351L4.54444 12.7754Z"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Plus_Cart = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M8 3.3335V12.6668"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3.33301 8H12.6663"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Less_Cart = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3.33301 8H12.6663"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Credit = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M21 5.25H3V18.75H21V5.25Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 9.75H21"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Paypal = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M9.35045 6.8835L9.35295 6.8845C9.40495 6.663 9.59395 6.5 9.83045 6.5H16.5665C16.575 6.5 16.5835 6.4965 16.592 6.497C16.4485 4.1075 14.444 3 12.6755 3H5.93945C5.70245 3 5.51345 3.1675 5.46195 3.3885L5.45945 3.3875L2.51495 16.9065L2.52145 16.907C2.51445 16.939 2.50195 16.9695 2.50195 17.004C2.50195 17.2805 2.72545 17.4995 3.00195 17.4995H7.03745L9.35045 6.8835Z"
+        fill="#1565C0"
+      />
+      <Path
+        d="M16.5911 6.49707C16.6176 6.93507 16.5886 7.41157 16.4766 7.93807C15.8361 10.9356 13.5206 12.4956 10.6591 12.4956C10.6591 12.4956 8.92408 12.4956 8.50258 12.4956C8.24208 12.4956 8.11908 12.6486 8.06258 12.7656L7.19258 16.7901L7.04008 17.5046H7.03708L6.40558 20.4026L6.41208 20.4031C6.40508 20.4351 6.39258 20.4656 6.39258 20.5001C6.39258 20.7766 6.61608 21.0001 6.89258 21.0001H10.5591L10.5656 20.9951C10.8016 20.9916 10.9891 20.8231 11.0381 20.6011L11.0471 20.5936L11.9531 16.3856C11.9531 16.3856 12.0161 15.9841 12.4381 15.9841C12.8601 15.9841 14.5271 15.9841 14.5271 15.9841C17.3886 15.9841 19.7276 14.4311 20.3686 11.4331C21.0896 8.05307 18.6786 6.50957 16.5911 6.49707Z"
+        fill="#039BE5"
+      />
+      <Path
+        d="M9.83 6.49975C9.593 6.49975 9.404 6.66275 9.3525 6.88425L9.35 6.88325L8.0625 12.7658C8.119 12.6488 8.242 12.4958 8.5025 12.4958C8.9245 12.4958 10.62 12.4958 10.62 12.4958C13.4815 12.4958 15.836 10.9358 16.4765 7.93825C16.589 7.41175 16.6175 6.93525 16.591 6.49725C16.583 6.49625 16.574 6.49975 16.566 6.49975H9.83Z"
+        fill="#283593"
+      />
+    </Svg>
+  );
+};
+export const Bank_Transfer = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3 6.375L12 3L21 6.375"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 21H21"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M12 16.5V9.75"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M18.75 16.5V9.75"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M5.25 16.5V9.75"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Method = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="36"
+      height="22"
+      viewBox="0 0 36 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <G style="mix-blend-mode:multiply">
+        <Circle cx="11" cy="11" r="11" fill="#C4C4C4" />
+      </G>
+      <G style="mix-blend-mode:multiply">
+        <Circle cx="25" cy="11" r="11" fill="#C4C4C4" />
+      </G>
+    </Svg>
+  );
+};
+export const Profile = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 4.00098C10.3971 4.00098 9.09766 5.30042 9.09766 6.90336C9.09766 8.5063 10.3971 9.80574 12 9.80574C13.603 9.80574 14.9024 8.5063 14.9024 6.90336C14.9024 5.30042 13.603 4.00098 12 4.00098ZM7.09766 6.90336C7.09766 4.19585 9.29253 2.00098 12 2.00098C14.7075 2.00098 16.9024 4.19585 16.9024 6.90336C16.9024 9.61087 14.7075 11.8057 12 11.8057C9.29253 11.8057 7.09766 9.61087 7.09766 6.90336Z"
+        fill="#40BFFF"
+      />
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.51784 15.3906C6.47035 15.3906 4 17.861 4 20.9085V20.9996C4 21.5519 3.55228 21.9996 3 21.9996C2.44772 21.9996 2 21.5519 2 20.9996V20.9085C2 16.7564 5.36578 13.3906 9.51784 13.3906H14.4822C18.6342 13.3906 22 16.7564 22 20.9085V20.9996C22 21.5519 21.5523 21.9996 21 21.9996C20.4477 21.9996 20 21.5519 20 20.9996V20.9085C20 17.861 17.5296 15.3906 14.4822 15.3906H9.51784Z"
+        fill="#40BFFF"
+      />
+    </Svg>
+  );
+};
+export const Order = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M21 6.17676H3V20.9998H21V6.17676Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M21 6.177H3L5.11725 3H18.8828L21 6.177Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M14.3824 10.6768C14.3824 11.9919 13.3159 13.0584 12.0008 13.0584C10.6856 13.0584 9.61914 11.9919 9.61914 10.6768"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Address = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M19 9.7775C19 14.0738 11.5 22 11.5 22C11.5 22 4 14.0738 4 9.7775C4 5.48125 7.3575 2 11.5 2C15.6425 2 19 5.4825 19 9.7775Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M13.5 9.5C13.5 10.6046 12.6046 11.5 11.5 11.5C10.3954 11.5 9.5 10.6046 9.5 9.5C9.5 8.39543 10.3954 7.5 11.5 7.5C12.6046 7.5 13.5 8.39543 13.5 9.5Z"
+        fill="#40BFFF"
+        stroke="#40BFFF"
+      />
+    </Svg>
+  );
+};
+export const Payment = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M21 5.25H3V18.75H21V5.25Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M3 9.75H21"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Gender = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M12 14C15.3137 14 18 11.3137 18 8C18 4.68629 15.3137 2 12 2C8.68629 2 6 4.68629 6 8C6 11.3137 8.68629 14 12 14Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M12 14V22"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M9 18H15"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Birthday = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3 10.875H21M16.5 7.5V3M7.5 7.5V3M3 5.25H21V21H3V5.25Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const EmailProfile = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 4.00098C10.3971 4.00098 9.09766 5.30042 9.09766 6.90336C9.09766 8.5063 10.3971 9.80574 12 9.80574C13.603 9.80574 14.9024 8.5063 14.9024 6.90336C14.9024 5.30042 13.603 4.00098 12 4.00098ZM7.09766 6.90336C7.09766 4.19585 9.29253 2.00098 12 2.00098C14.7075 2.00098 16.9024 4.19585 16.9024 6.90336C16.9024 9.61087 14.7075 11.8057 12 11.8057C9.29253 11.8057 7.09766 9.61087 7.09766 6.90336Z"
+        fill="#40BFFF"
+      />
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.51784 15.3906C6.47035 15.3906 4 17.861 4 20.9085V20.9996C4 21.5519 3.55228 21.9996 3 21.9996C2.44772 21.9996 2 21.5519 2 20.9996V20.9085C2 16.7564 5.36578 13.3906 9.51784 13.3906H14.4822C18.6342 13.3906 22 16.7564 22 20.9085V20.9996C22 21.5519 21.5523 21.9996 21 21.9996C20.4477 21.9996 20 21.5519 20 20.9996V20.9085C20 17.861 17.5296 15.3906 14.4822 15.3906H9.51784Z"
+        fill="#40BFFF"
+      />
+    </Svg>
+  );
+};
+export const PhoneNumber = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M17.625 3H6.375V21H17.625V3Z"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <Path
+        d="M11.9941 17.625H12.0054"
+        stroke="#40BFFF"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const ChangePassword = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M2 9.75C2 9.19772 2.44772 8.75 3 8.75H21C21.5523 8.75 22 9.19772 22 9.75V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V9.75ZM4 10.75V20H20V10.75H4Z"
+        fill="#40BFFF"
+      />
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 4C9.48134 4 7.375 6.13206 7.375 8.841C7.375 9.39328 6.92728 9.841 6.375 9.841C5.82272 9.841 5.375 9.39328 5.375 8.841C5.375 5.09919 8.30641 2 12 2C15.6936 2 18.625 5.09919 18.625 8.841C18.625 9.39328 18.1773 9.841 17.625 9.841C17.0727 9.841 16.625 9.39328 16.625 8.841C16.625 6.13206 14.5187 4 12 4Z"
+        fill="#40BFFF"
+      />
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 13.7256C12.5523 13.7256 13 14.1733 13 14.7256V15.8506C13 16.4029 12.5523 16.8506 12 16.8506C11.4477 16.8506 11 16.4029 11 15.8506V14.7256C11 14.1733 11.4477 13.7256 12 13.7256Z"
+        fill="#40BFFF"
+      />
+    </Svg>
+  );
+};
+export const ForwardNext = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M9 6L15 12L9 18"
+        stroke="#9098B1"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
+export const Confirmation = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="6"
+      height="33"
+      viewBox="0 0 6 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        d="M3 3V20"
+        stroke="white"
+        stroke-width="6"
+        stroke-linecap="round"
+      />
+      <Path
+        d="M3 29V30"
+        stroke="white"
+        stroke-width="6"
+        stroke-linecap="round"
       />
     </Svg>
   );

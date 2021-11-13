@@ -1,9 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {COLORS, FONTS} from '../../../constants';
-import {getSize, width, height} from '../../../utils/reponsive';
+import {getSize} from '../../../utils/reponsive';
 
 export const styles = StyleSheet.create({
-  wrapperCardReviews: {},
   wrapperInfor: {
     flexDirection: 'row',
     marginBottom: getSize.m(16),
@@ -21,6 +19,10 @@ export const styles = StyleSheet.create({
     width: getSize.s(72),
     height: getSize.v(72),
     borderRadius: getSize.s(8),
+  },
+  wrapperImageReviews: {
+    flexDirection: 'row',
+    marginBottom: getSize.m(16),
   },
 });
 export default styles;

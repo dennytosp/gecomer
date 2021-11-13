@@ -5,22 +5,50 @@ import {COLORS, FONTS} from '../../constants/theme';
 import {Texting} from '..';
 import {getSize} from '../../utils/reponsive';
 
-const Titling = ({style, title, more, marginTop, handleOnpress}) => {
+const Titling = ({
+  style,
+  title,
+  more,
+  fontSize,
+  marginLeft,
+  marginRight,
+  marginTop,
+  marginBottom,
+  paddingHorizontal,
+  paddingVertical,
+  textAlign,
+  color,
+  handleOnpress,
+}) => {
   return (
-    <View style={styles.wrapperHeaderTitling(marginTop)}>
+    <View
+      style={{
+        ...styles.wrapperHeaderTitling(
+          marginLeft,
+          marginRight,
+          marginTop,
+          marginBottom,
+          paddingHorizontal,
+          paddingVertical,
+        ),
+        ...style,
+      }}>
       <Texting
         title={title}
-        color={COLORS.secondary}
-        fontSize={getSize.m(14)}
+        color={color ? color : COLORS.secondary}
+        textAlign={textAlign}
+        fontSize={fontSize ? fontSize : getSize.m(14)}
         fontFamily={FONTS.bold}
       />
-      <Texting
-        title={more}
-        handleOnpress={handleOnpress}
-        color={COLORS.primary}
-        fontSize={getSize.m(14)}
-        fontFamily={FONTS.bold}
-      />
+      {more ? (
+        <Texting
+          title={more}
+          handleOnpress={handleOnpress}
+          color={COLORS.primary}
+          fontSize={fontSize ? fontSize : getSize.m(14)}
+          fontFamily={FONTS.bold}
+        />
+      ) : null}
     </View>
   );
 };
