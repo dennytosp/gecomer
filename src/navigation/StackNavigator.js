@@ -1,15 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {
-  authen,
-  home,
-  explore,
-  cart,
-  offer,
-  account,
-  common,
-} from './../screens';
+import {authen, home, explore, cart, account, common} from './../screens';
 import {StatusBar} from 'react-native';
 
 import {StackStep} from './';
@@ -143,7 +135,10 @@ const MainStackNavigator = () => {
           />
           <Stack.Screen name={routes.ADD_CARD} component={account.AddCard} />
           <Stack.Screen name={routes.ADDRESS} component={account.Address} />
-          <Stack.Screen name={routes.CONFIRMATION} component={account.Confirmation} />
+          <Stack.Screen
+            name={routes.CONFIRMATION}
+            component={account.Confirmation}
+          />
           <Stack.Screen
             name={routes.COMPLETED_CARD}
             component={account.CompletedCard}

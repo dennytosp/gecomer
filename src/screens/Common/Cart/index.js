@@ -20,6 +20,7 @@ const Offer = () => {
         title={item.title}
         price={item.price}
         favorited={item.favorite}
+        handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
       />
     );
   };

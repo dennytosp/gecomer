@@ -12,7 +12,7 @@ import {
   Plus_Cart,
 } from '../../../assets/svg';
 
-const Cart = ({image, title, price, favorited, marginTop, style}) => {
+const Cart = ({image, title, price, favorited, handleDelete, style}) => {
   return (
     <View style={{...styles.wrapperHeader, ...style}}>
       <Image source={image} style={styles.product} />
@@ -32,7 +32,7 @@ const Cart = ({image, title, price, favorited, marginTop, style}) => {
             <Pressable style={styles.iconFavorited}>
               {favorited ? Favorited : CancelFavorite}
             </Pressable>
-            <Pressable style={styles.iconDelete}>
+            <Pressable onPress={handleDelete} style={styles.iconDelete}>
               <Delete />
             </Pressable>
           </View>
