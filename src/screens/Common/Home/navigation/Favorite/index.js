@@ -22,10 +22,7 @@ const Favorite = () => {
 
   return (
     <View style={styles.container}>
-      <Header
-        title="Favorite Product"
-        handleOnpressRight02={() => console.log('Search')}
-      />
+      <Header topline title="Favorite Product" />
       <FlatList
         numColumns={2}
         showsVerticalScrollIndicator={false}
