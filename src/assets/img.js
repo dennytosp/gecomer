@@ -21,6 +21,8 @@ import product_reviews01 from './images/photos/product_reviews01.png';
 import product_reviews02 from './images/photos/product_reviews02.png';
 import product_reviews03 from './images/photos/product_reviews03.png';
 import avatar from './images/photos/avatar.jpg';
+import avatar01 from './images/photos/avatar01.jpg';
+import avatar02 from './images/photos/avatar02.jpg';
 import user from './images/photos/user.jpg';
 import user2 from './images/photos/user02.jpg';
 import user3 from './images/photos/user03.jpg';
@@ -45,6 +47,8 @@ export const photos = {
   product_reviews02,
   product_reviews03,
   avatar,
+  avatar01,
+  avatar02,
   user,
   user2,
   user3,

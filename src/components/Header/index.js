@@ -16,7 +16,11 @@ const Header = ({
   disableIconLeft,
   iconRight01,
   iconRight02,
-  handleOnpressBack,
+  numberOfLines,
+  backgroundColor,
+  widthHeader,
+  heightHeader,
+  maxWidth,
   handleOnpressRight01,
   handleOnpressRight02,
   paddingHorizontal,
@@ -46,6 +50,11 @@ const Header = ({
             color={COLORS.secondary}
             marginHorizontal={disableIconLeft ? getSize.m(0) : getSize.m(16)}
             marginTop={getSize.m(7 / 2)}
+            numberOfLines={numberOfLines}
+            backgroundColor={backgroundColor}
+            width={widthHeader}
+            height={heightHeader}
+            maxWidth={maxWidth}
           />
         </Pressable>
         <View style={styles.wrapperRight}>

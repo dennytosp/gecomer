@@ -2,9 +2,16 @@ import {COLORS} from '../../constants';
 import {photos} from '../../assets';
 import {
   Activity,
+  Address,
+  Bank_Transfer,
   Bikini,
+  Birthday,
+  ChangePasswording,
+  Credit,
   Dress,
+  EmailProfile,
   Feed,
+  Gender,
   HighHeels,
   ManPant,
   ManShirt,
@@ -13,6 +20,11 @@ import {
   ManUnderwear,
   ManWorkEquipment,
   Offer,
+  Order,
+  Payment,
+  Paypal,
+  PhoneNumber,
+  Profile,
   Skirt,
   WomanBag,
   WomanPants,
@@ -555,6 +567,7 @@ export const DATA_CATEGORY_SOFT = [
     id: '02',
     image: ManShirt,
     title: 'Bikini',
+    backgroundColor: COLORS.border,
   },
   {
     id: '03',
@@ -617,26 +630,33 @@ export const DATA_SOFT_BY = [
   {
     id: '01',
     title: 'Best Match',
+    colors: COLORS.primary,
   },
   {
     id: '02',
     title: 'Time: ending soonest',
+    backgroundColor: COLORS.border,
+    colors: COLORS.secondary,
   },
   {
     id: '03',
     title: 'Time: newly listed',
+    colors: COLORS.secondary,
   },
   {
     id: '04',
     title: 'Price + Shipping: lowest first',
+    colors: COLORS.secondary,
   },
   {
     id: '05',
     title: 'Price + Shipping: highest first',
+    colors: COLORS.secondary,
   },
   {
     id: '06',
     title: 'Distance: nearest first',
+    colors: COLORS.secondary,
   },
 ];
 
@@ -692,6 +712,113 @@ export const DATA_ADDRESS = [
   },
 ];
 
+export const DATA_PAYMENT = [
+  {
+    id: '01',
+    icon: Credit,
+    name: 'Credit Card Or Debit',
+    backgroundColor: COLORS.border,
+    navigation: routes.CREDIT_CARD,
+  },
+  {
+    id: '02',
+    icon: Paypal,
+    name: 'Paypal',
+    navigation: routes.CARD,
+  },
+  {
+    id: '03',
+    icon: Bank_Transfer,
+    name: 'Bank Transfer',
+    navigation: routes.CHECK_CARD,
+  },
+];
+
+export const DATA_ACCOUNT = [
+  {
+    id: '01',
+    icon: Profile,
+    name: 'Profile',
+    navigation: routes.PROFILE,
+  },
+  {
+    id: '02',
+    icon: Order,
+    name: 'Order',
+    backgroundColor: COLORS.border,
+    navigation: routes.ORDER,
+  },
+  {
+    id: '03',
+    icon: Address,
+    name: 'Address',
+    navigation: routes.ADDRESS,
+  },
+  {
+    id: '04',
+    icon: Payment,
+    name: 'Payment',
+    navigation: routes.PAYMENT_METHOD,
+  },
+];
+
+export const DATA_PROFILE = [
+  {
+    id: '01',
+    icon: Gender,
+    title: 'Gender',
+    content: 'Male',
+    navigation: routes.EDIT_USER_INFORMATION,
+  },
+  {
+    id: '02',
+    icon: Birthday,
+    title: 'Birthday',
+    content: '21-08-2001',
+    navigation: routes.EDIT_USER_INFORMATION,
+  },
+  {
+    id: '03',
+    icon: EmailProfile,
+    title: 'Email ',
+    content: 'ginphone@gmail.com',
+    navigation: routes.EDIT_USER_INFORMATION,
+  },
+  {
+    id: '04',
+    icon: PhoneNumber,
+    title: 'Phone Number',
+    content: '(307) 555-0133',
+    navigation: routes.EDIT_USER_INFORMATION,
+  },
+  {
+    id: '05',
+    icon: ChangePasswording,
+    title: 'Change Password',
+    content: '•••••••••••••••••',
+    navigation: routes.CHANGE_PASSWORD,
+  },
+];
+
+export const DATA_ORDER = [
+  {
+    id: '01',
+    code: 'LQNSU346JK',
+    time: 'August 1, 2017',
+    status: 'Shipping',
+    quantity: '2 Items purchased',
+    price: '$299,43',
+  },
+  {
+    id: '02',
+    code: 'LQNSU346JK',
+    time: 'October 2, 2017',
+    status: 'Shipping',
+    quantity: '1 Items purchased',
+    price: '$355,32',
+  },
+];
+
 const sources = {
   ONBOARD_DATA,
   CATEGORIES_DATA,
@@ -712,5 +839,9 @@ const sources = {
   DATA_SOFT_BY,
   DATA_CART,
   DATA_ADDRESS,
+  DATA_PAYMENT,
+  DATA_ACCOUNT,
+  DATA_PROFILE,
+  DATA_ORDER,
 };
 export default sources;

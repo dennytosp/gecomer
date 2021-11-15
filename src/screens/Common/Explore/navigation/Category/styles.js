@@ -6,12 +6,13 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-    paddingHorizontal: getSize.m(16),
+  },
+  icon: {
+    paddingVertical: getSize.m(16),
   },
   wrapperCenter: {
     flexDirection: 'row',
-    paddingTop: getSize.m(10),
-    marginBottom: getSize.m(16),
+    paddingHorizontal: getSize.m(16),
   },
 });
 export default styles;

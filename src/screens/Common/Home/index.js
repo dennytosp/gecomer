@@ -37,7 +37,7 @@ const Home = () => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
-          handleOnpress={() => navigation.navigate(routes.DETAILS)}
+          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
           index={index === 0 ? getSize.m(0) : getSize.m(12)}
           image={item.image}
           name={item.name}
@@ -85,6 +85,7 @@ const Home = () => {
           minutes="34"
           seconds="52"
           image={photos.promotion01}
+          marginBottom={getSize.m(24)}
         />
         <Titling title="Category" more="More Category" />
         <FlatList
@@ -98,6 +99,7 @@ const Home = () => {
         <Titling
           title="Flash Sale"
           more="See More"
+          marginTop={getSize.m(24)}
           handleOnpress={() => console.log('See more Flash Sale')}
         />
         <FlatList

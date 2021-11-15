@@ -21,7 +21,7 @@ import {photos} from '../../../../../assets';
 import {useNavigation} from '@react-navigation/core';
 import {routes} from './../../../../../navigation/routes';
 
-const DetailsContent = () => {
+const DetailsContent = ({name, price}) => {
   const navigation = useNavigation();
 
   const _renderSelectSizes = ({item, index}) => {
@@ -129,7 +129,7 @@ const DetailsContent = () => {
     <View style={styles.wrapperContent}>
       <View style={styles.wrapperTitleTexting}>
         <Texting
-          title="Nike Air Zoom Pegasus 36 Miamdi"
+          title={name}
           fontFamily={FONTS.bold}
           fontSize={getSize.m(20)}
           width={width - 70}
@@ -144,7 +144,7 @@ const DetailsContent = () => {
       <StarRating startingValue={5} marginVertical={12} imageSize={16} />
 
       <Texting
-        title="$299,43"
+        title={price}
         fontFamily={FONTS.bold}
         fontSize={getSize.m(20)}
         color={COLORS.primary}

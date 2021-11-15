@@ -5,21 +5,22 @@ import {Texting} from '../../../../../components';
 import {DATA_SOFT_BY} from '../../../../../assets/data';
 import {getSize} from '../../../../../utils/reponsive';
 import {Header} from '../../../../../components';
-import {COLORS, FONTS} from '../../../../../constants';
+import {FONTS} from '../../../../../constants';
 
 const SoftBy = () => {
-  const _renderCenter = ({item, index}) => {
+  const _renderCenter = ({item}) => {
     return (
       <View
         style={{
           ...styles.wrapperCenter,
-          marginTop: index === 0 ? getSize.m(0) : getSize.m(10),
+          backgroundColor: item.backgroundColor,
         }}>
         <Texting
           marginHorizontal={getSize.m(16)}
           title={item.title}
           fontFamily={FONTS.bold}
-          color={COLORS.secondary}
+          paddingVertical={getSize.m(16)}
+          color={item.colors}
         />
       </View>
     );
@@ -27,7 +28,7 @@ const SoftBy = () => {
 
   return (
     <View style={styles.container}>
-      <Header title="Soft By" paddingHorizontal={getSize.m(16)} />
+      <Header title="Soft By" paddingHorizontal={getSize.m(16)} topline />
       <FlatList
         showsVerticalScrollIndicator={false}
         data={DATA_SOFT_BY}

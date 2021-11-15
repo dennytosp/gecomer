@@ -26,6 +26,18 @@ import ShipTo from './Common/Cart/navigation/ShipTo';
 import PaymentMethod from './Common/Cart/navigation/PaymentMethod';
 import Card from './Common/Cart/navigation/Card';
 import PurchaseSuccess from './Common/Cart/navigation/PurchaseSuccess';
+import AddAddress from './Common/Account/navigation/AddAddress';
+import AddCard from './Common/Account/navigation/AddCard';
+import Address from './Common/Account/navigation/Address';
+import CompletedCard from './Common/Account/navigation/CompletedCard';
+import CreditCard from './Common/Account/navigation/CreditCard';
+import EditUserInformation from './Common/Account/navigation/EditUserInformation';
+import Order from './Common/Account/navigation/Order';
+import OrderDetails from './Common/Account/navigation/OrderDetails';
+import Profile from './Common/Account/navigation/Profile';
+import ChangePassword from './Common/Account/navigation/ChangePassword';
+import Confirmation from './Common/Account/navigation/Confirmation';
+import CheckCard from './Common/Account/navigation/CheckCard';
 
 export const common = {
   Home,
@@ -33,6 +45,9 @@ export const common = {
   Cart,
   Offer,
   Account,
+};
+
+export const home = {
   FlashSale,
   Favorite,
   Details,
@@ -43,15 +58,39 @@ export const common = {
   FeedNotification,
   ActivityNotification,
   DuAn_Reviews,
+};
+
+export const explore = {
   SearchPage,
   SearchResults,
   Category,
   SoftBy,
   FilterSearch,
+};
+
+export const cart = {
   ShipTo,
   PaymentMethod,
   Card,
   PurchaseSuccess,
 };
 
+export const offer = {
+  Offer,
+};
+
+export const account = {
+  AddAddress,
+  AddCard,
+  Address,
+  CompletedCard,
+  CreditCard,
+  EditUserInformation,
+  ChangePassword,
+  Order,
+  OrderDetails,
+  Profile,
+  Confirmation,
+  CheckCard,
+};
 export const authen = {Onboard, Splash, Login, Register};

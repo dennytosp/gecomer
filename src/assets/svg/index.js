@@ -151,6 +151,24 @@ export const Add_Ship = ({width = 25, height = 24}) => {
   );
 };
 
+export const Editing = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M4.29263 17.6855C4.08263 17.4755 3.97763 17.1835 4.00363 16.8875L4.38263 12.7175C4.42463 12.2605 4.62663 11.8295 4.95263 11.5035L13.9486 2.50752C14.6506 1.80252 15.9236 1.83752 16.6646 2.57652L19.4026 5.31452L19.4036 5.31552C20.1686 6.08152 20.1996 7.29952 19.4716 8.02952L10.4746 17.0265C10.1496 17.3515 9.71863 17.5535 9.26063 17.5955L5.09063 17.9745C5.06063 17.9765 5.03063 17.9775 4.99963 17.9775C4.73663 17.9775 4.48163 17.8735 4.29263 17.6855ZM16.0186 8.65652L13.3236 5.96152L15.2716 4.01252L17.9656 6.70652L16.0186 8.65652ZM9.07963 15.6025L6.10263 15.8735L6.36663 12.9175L11.9836 7.30052L14.6796 9.99752L9.07963 15.6025ZM18.9996 21.9775C19.5496 21.9775 19.9996 21.5275 19.9996 20.9775C19.9996 20.4285 19.5496 19.9775 18.9996 19.9775H4.99963C4.45063 19.9775 3.99963 20.4285 3.99963 20.9775C3.99963 21.5275 4.45063 21.9775 4.99963 21.9775H18.9996Z"
+        fill="#40BFFF"
+      />
+    </Svg>
+  );
+};
+
 export const Offer = ({width = 25, height = 24}) => {
   return (
     <Svg
@@ -1901,7 +1919,7 @@ export const PhoneNumber = ({width = 25, height = 24}) => {
     </Svg>
   );
 };
-export const ChangePassword = ({width = 25, height = 24}) => {
+export const ChangePasswording = ({width = 25, height = 24}) => {
   return (
     <Svg
       width="24"
@@ -1948,7 +1966,7 @@ export const ForwardNext = ({width = 25, height = 24}) => {
     </Svg>
   );
 };
-export const Confirmation = ({width = 25, height = 24}) => {
+export const Confirmationion = ({width = 25, height = 24}) => {
   return (
     <Svg
       width="6"
@@ -1967,6 +1985,24 @@ export const Confirmation = ({width = 25, height = 24}) => {
         stroke="white"
         stroke-width="6"
         stroke-linecap="round"
+      />
+    </Svg>
+  );
+};
+export const Lineborder = ({width = 25, height = 24}) => {
+  return (
+    <Svg
+      width="312"
+      height="1"
+      viewBox="0 0 312 1"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <Line
+        y1="0.5"
+        x2="312"
+        y2="0.5"
+        stroke="#EBF0FF"
+        stroke-dasharray="5 5"
       />
     </Svg>
   );

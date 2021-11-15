@@ -37,6 +37,7 @@ const Texting = ({
   textDecorationStyle,
   zIndex,
   flexWrap,
+  maxWidth,
   style,
 }) => {
   return (
@@ -76,6 +77,7 @@ const Texting = ({
           textDecorationStyle,
           zIndex,
           flexWrap,
+          maxWidth,
         )}>
         {title}
       </Text>

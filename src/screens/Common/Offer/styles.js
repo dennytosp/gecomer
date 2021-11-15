@@ -6,14 +6,16 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-    paddingHorizontal: getSize.m(12),
+    paddingHorizontal: getSize.m(16),
   },
   wrapperHeader: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: COLORS.primary,
+    padding: getSize.m(16),
+    borderRadius: getSize.m(5),
+    marginTop: getSize.m(16),
   },
   wrapperCenter: {
+    marginVertical: getSize.m(16),
 
   },
   wrapperContent: {

@@ -4,7 +4,6 @@ import {getSize} from '../../../utils/reponsive';
 
 export const styles = StyleSheet.create({
   wrapperHeader: {
-    marginTop: getSize.m(16),
     padding: getSize.m(16),
     borderRadius: getSize.s(5),
     borderColor: COLORS.border,

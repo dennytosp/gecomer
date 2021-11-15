@@ -15,7 +15,10 @@ import Remind from './Remind';
 import Promotion from './Common/Promotion';
 import RecommendProduct from './Common/RecomendProduct';
 import Cart from './Common/Cart';
-import Iteming from './Common/Iteming/';
+import Iteming from './Common/Iteming';
+import Eventlist from './Common/Eventlist';
+import CardATM from './Common/CardATM';
+import Addressing from './Common/Addressing';
 
 export {
   Texting,
@@ -36,4 +39,7 @@ export {
   RecommendProduct,
   Cart,
   Iteming,
+  Eventlist,
+  CardATM,
+  Addressing,
 };

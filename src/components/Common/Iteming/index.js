@@ -2,8 +2,8 @@ import React from 'react';
 import {View} from 'react-native';
 import {Texting} from '../..';
 import styles from './styles';
-import {width} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants';
+import {getSize, width} from '../../../utils/reponsive';
+import {COLORS} from '../../../constants';
 const Iteming = ({
   left01,
   left02,
@@ -13,35 +13,39 @@ const Iteming = ({
   right02,
   right03,
   right04,
-  fontBold,
+  colorLeft04,
+  colorRight04,
+  fontLef04,
+  fontRight04,
   style,
 }) => {
+  const marginBottom = getSize.m(12);
   return (
     <View style={{...styles.wrapperFooter, ...style}}>
-      <View style={styles.rowFooter}>
+      <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
         <Texting title={left01} />
         <Texting title={right01} color={COLORS.secondary} />
       </View>
-      <View style={styles.rowFooter}>
+      <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
         <Texting title={left02} />
         <Texting title={right02} color={COLORS.secondary} />
       </View>
-      <View style={styles.rowFooter}>
+      <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
         <Texting title={left03} />
         <Texting title={right03} color={COLORS.secondary} />
       </View>
       <View style={{...styles.rowFooter}}>
         <Texting
-          color={fontBold && COLORS.secondary}
-          fontFamily={fontBold && FONTS.bold}
+          color={colorLeft04 && colorLeft04}
+          fontFamily={fontLef04 && fontLef04}
           title={left04}
         />
         <Texting
           title={right04}
-          color={fontBold ? COLORS.primary : COLORS.secondary}
-          width={width / 3}
+          color={colorRight04 ? colorRight04 : COLORS.secondary}
+          width={width / 2}
           textAlign="right"
-          fontFamily={fontBold ? FONTS.bold : FONTS.regular}
+          fontFamily={fontRight04 && fontRight04}
         />
       </View>
     </View>

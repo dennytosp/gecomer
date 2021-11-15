@@ -35,6 +35,7 @@ export const styles = StyleSheet.create({
     textDecorationStyle,
     zIndex,
     flexWrap,
+    maxWidth,
   ) => ({
     marginHorizontal: marginHorizontal,
     marginVertical: marginVertical,
@@ -67,6 +68,7 @@ export const styles = StyleSheet.create({
     textDecorationStyle: textDecorationStyle,
     zIndex: zIndex,
     flexWrap: flexWrap,
+    maxWidth: maxWidth,
   }),
 });
 export default styles;

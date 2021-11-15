@@ -6,12 +6,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-    // paddingHorizontal: getSize.m(16),
-  },
-  wrapperCenter: {
-    paddingVertical: getSize.m(10),
-    backgroundColor: COLORS.border,
-  
   },
 });
 export default styles;

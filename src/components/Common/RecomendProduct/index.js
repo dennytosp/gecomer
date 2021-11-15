@@ -5,9 +5,9 @@ import {Texting} from '../..';
 import {getSize} from '../../../utils/reponsive';
 import {COLORS, FONTS} from '../../../constants';
 
-const RecommendProduct = ({image, title, subtitle}) => {
+const RecommendProduct = ({image, title, subtitle, style}) => {
   return (
-    <View style={styles.wrapperRecommendProduct}>
+    <View style={{...styles.wrapperRecommendProduct, ...style}}>
       <Image source={image} style={styles.imageRecommend} />
       <View style={styles.wrapperTitle}>
         <Texting

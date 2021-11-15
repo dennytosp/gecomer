@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Pressable, TextInput} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
 import styles from './styles';
 import {COLORS} from '../../constants/theme';
 
@@ -11,16 +10,19 @@ const FormInput = ({
   secureTextEntry,
   onFocus,
   onChangeText,
+  right,
+  marginBottom,
   style,
 }) => {
-  const navigation = useNavigation();
-
   return (
-    <View style={styles.wrapperFormInput}>
+    <View
+      style={{
+        ...styles.wrapperFormInput,
+        marginBottom: marginBottom,
+        ...style,
+      }}>
       <View style={styles.wrapperContentInput}>
-        {icon ? (
-          <Pressable style={styles.wrapperIconInput}>{icon}</Pressable>
-        ) : null}
+        {icon && <Pressable style={styles.wrapperIconInput}>{icon}</Pressable>}
         <TextInput
           placeholder={placeholder}
           placeholderTextColor={COLORS.grey}
@@ -30,6 +32,7 @@ const FormInput = ({
           secureTextEntry={secureTextEntry}
           style={styles.txtInput}
         />
+        {right && <Pressable style={styles.wrapperRightInput}>{right}</Pressable>}
       </View>
     </View>
   );

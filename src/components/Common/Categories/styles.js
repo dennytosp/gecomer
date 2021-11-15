@@ -4,7 +4,6 @@ import {getSize} from '../../../utils/reponsive';
 
 export const styles = StyleSheet.create({
   wrapperCategories: {
-    marginBottom: getSize.m(24),
   },
   wrapperHeaderCategories: {
     flexDirection: 'row',

@@ -1,51 +1,50 @@
 import React from 'react';
-import {View, FlatList, Pressable} from 'react-native';
+import {View, FlatList} from 'react-native';
 import styles from './styles';
-import {ButtonPrimary, Texting, Titling} from '../../../../../components';
+import {Addressing, ButtonPrimary} from '../../../../../components';
 import {DATA_ADDRESS} from '../../../../../assets/data';
 import {getSize} from '../../../../../utils/reponsive';
 import {Header} from '../../../../../components';
-import {COLORS, FONTS} from '../../../../../constants';
-import {Add_Ship, Delete} from '../../../../../assets/svg';
+import {Add_Ship} from '../../../../../assets/svg';
 import {routes} from '../../../../../navigation/routes';
 import {useNavigation} from '@react-navigation/core';
 
 const ShipTo = () => {
   const navigation = useNavigation();
-  const _renderCenter = ({item, index}) => {
+  const _renderAddress = ({item, index}) => {
     return (
-      <View
+      <Addressing
         style={{
-          ...styles.wrapperCenter,
-          marginTop: index === 0 ? getSize.m(16) : 0,
-        }}>
-        <Texting
-          title={item.name}
-          color={COLORS.secondary}
-          fontFamily={FONTS.bold}
-          fontSize={getSize.m(14)}
-        />
-        <Texting title={item.address} marginVertical={getSize.m(16)} />
-        <Texting title={item.phonenumber} marginBottom={getSize.m(16)} />
-        <View style={styles.wrapperOnEvent}>
-          <Pressable style={styles.onEdit}>
-            <Titling title="Edit" color={COLORS.white} />
-          </Pressable>
-          <Pressable style={styles.onRemove}>
-            <Delete />
-          </Pressable>
-        </View>
-      </View>
+          marginTop: index === 0 ? getSize.m(16) : getSize.m(0),
+        }}
+        name={item.name}
+        address={item.address}
+        phonenumber={item.phonenumber}
+        titleEvent="Edit"
+        handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
+        handleEventEdit={() =>
+          navigation.navigate(routes.ADD_ADDRESS, {
+            edit_address: 'Edit Address',
+          })
+        }
+      />
     );
   };
 
   return (
     <View style={styles.container}>
-      <Header title="Ship To" iconRight02={Add_Ship} topline />
+      <Header
+        title="Ship To"
+        iconRight02={Add_Ship}
+        topline
+        handleOnpressRight02={() =>
+          navigation.navigate(routes.ADD_ADDRESS, {add_address: 'Add Address'})
+        }
+      />
       <FlatList
         showsVerticalScrollIndicator={false}
         data={DATA_ADDRESS}
-        renderItem={_renderCenter}
+        renderItem={_renderAddress}
         keyExtractor={item => item.id.toString()}
       />
       <ButtonPrimary

@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     borderColor: COLORS.border,
-    marginBottom: getSize.m(8),
   },
   wrapperContentInput: {
     flexDirection: 'row',
@@ -25,6 +24,9 @@ export const styles = StyleSheet.create({
     color: COLORS.secondary,
     flex: 1,
   },
-
+  wrapperRightInput: {
+    justifyContent: 'flex-end',
+    paddingRight: getSize.m(16),
+  },
 });
 export default styles;

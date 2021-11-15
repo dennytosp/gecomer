@@ -7,6 +7,7 @@ import {Email, Fullname, LogoPrimary, Password} from './../../../assets/svg';
 import {COLORS, FONTS} from '../../../constants/theme';
 import {ButtonPrimary, FormInput, Texting} from '../../../components';
 import {routes} from './../../../navigation/routes';
+import {getSize} from '../../../utils/reponsive';
 
 const Register = () => {
   const {top} = useSafeAreaInsets();
@@ -33,13 +34,23 @@ const Register = () => {
   const _renderCenter = () => {
     return (
       <View style={styles.wrapperCenter}>
-        <FormInput icon={Fullname} placeholder="Full Name" />
+        <FormInput
+          icon={Fullname}
+          placeholder="Full Name"
+          marginBottom={getSize.m(8)}
+        />
         <FormInput
           icon={Email}
           placeholder="Your Email"
           keyboardType="email-address"
+          marginBottom={getSize.m(8)}
         />
-        <FormInput icon={Password} placeholder="Password" secureTextEntry />
+        <FormInput
+          icon={Password}
+          placeholder="Password"
+          secureTextEntry
+          marginBottom={getSize.m(8)}
+        />
         <FormInput
           icon={Password}
           placeholder="Password Again"
@@ -47,7 +58,7 @@ const Register = () => {
         />
         <ButtonPrimary
           handleOnpress={() => navigation.navigate(routes.LOGIN)}
-          marginTop={8}
+          marginTop={16}
           title="Sign Up"
         />
       </View>

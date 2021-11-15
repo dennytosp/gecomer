@@ -6,6 +6,7 @@ import {Searching, Titling, Categories} from '../../../components';
 import {Favorite, Notifications} from '../../../assets/svg';
 import {routes} from '../../../navigation/routes';
 import {MAN_FASHION_DATA, WOMAN_FASHION_DATA} from './../../../assets/data';
+import { getSize } from '../../../utils/reponsive';
 
 const Explore = () => {
   const navigation = useNavigation();
@@ -33,6 +34,7 @@ const Explore = () => {
         image={item.image}
         title={item.title}
         vertiColumns
+        marginBottom={getSize.m(24)}
       />
     );
   };
@@ -44,6 +46,7 @@ const Explore = () => {
         image={item.image}
         title={item.title}
         vertiColumns
+        marginBottom={getSize.m(24)}
       />
     );
   };

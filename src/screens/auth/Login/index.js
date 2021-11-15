@@ -18,6 +18,7 @@ import {
   Texting,
 } from '../../../components';
 import {routes} from './../../../navigation/routes';
+import {getSize} from '../../../utils/reponsive';
 
 const Login = () => {
   const {top} = useSafeAreaInsets();
@@ -48,11 +49,12 @@ const Login = () => {
           icon={Email}
           placeholder="Your Email"
           keyboardType="email-address"
+          marginBottom={getSize.m(8)}
         />
         <FormInput icon={Password} placeholder="Password" secureTextEntry />
         <ButtonPrimary
           handleOnpress={() => navigation.navigate(routes.COMMON)}
-          marginTop={8}
+          marginTop={16}
           title="Sign In"
         />
         <View style={styles.wrapperOr}>

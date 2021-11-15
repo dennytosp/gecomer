@@ -4,7 +4,7 @@ import {getSize, height, width} from '../../../utils/reponsive';
 
 export const styles = StyleSheet.create({
   wrapperPromotion: marginBottom => ({
-    marginBottom: !marginBottom ? 24 : marginBottom,
+    marginBottom: marginBottom,
   }),
   wrapperContentPromotion: {
     position: 'absolute',
@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
     top: getSize.m(32),
   },
   imagePromotion: {
-    width: width - 32,
-    height: height / 4,
+    width: width - getSize.m(32),
+    height: height / getSize.m(4),
     borderRadius: 5,
   },
   wrapperTime: {

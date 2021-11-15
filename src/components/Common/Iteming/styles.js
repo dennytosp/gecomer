@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
   rowFooter: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: getSize.m(12),
   },
 });
 export default styles;

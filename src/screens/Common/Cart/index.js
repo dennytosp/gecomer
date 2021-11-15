@@ -1,30 +1,21 @@
 import React from 'react';
-import {
-  ScrollView,
-  Text,
-  View,
-  Image,
-  Pressable,
-  FlatList,
-  TextInput,
-} from 'react-native';
+import {ScrollView, View, Pressable, FlatList, TextInput} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import Texting from '../../../components/Texting';
 import styles from './styles';
 import {ButtonPrimary, Cart, Header, Iteming} from '../../../components';
-import {photos} from '../../../assets';
 import {COLORS, FONTS} from '../../../constants';
-import {getSize, width} from '../../../utils/reponsive';
+import {getSize} from '../../../utils/reponsive';
 import {DATA_CART} from './../../../assets/data';
 import {routes} from '../../../navigation/routes';
 
 const Offer = () => {
   const navigation = useNavigation();
-  const marginBottom = getSize.m(12);
 
-  const _renderHeader = ({item, index}) => {
+  const _renderHeader = ({item}) => {
     return (
       <Cart
+        style={{marginTop: getSize.m(16)}}
         image={item.image}
         title={item.title}
         price={item.price}
@@ -50,34 +41,20 @@ const Offer = () => {
 
   const _renderFooter = () => {
     return (
-      <View style={styles.wrapperFooter}>
-        <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
-          <Texting title="Items (3)" />
-          <Texting title="$598.86" color={COLORS.secondary} />
-        </View>
-        <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
-          <Texting title="Shipping" />
-          <Texting title="$40.00" color={COLORS.secondary} />
-        </View>
-        <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
-          <Texting title="Import charges" />
-          <Texting title="$128.00" color={COLORS.secondary} />
-        </View>
-        <View style={{...styles.rowFooter}}>
-          <Texting
-            title="Total Price"
-            fontFamily={FONTS.bold}
-            color={COLORS.secondary}
-          />
-          <Texting
-            title="$766.86"
-            fontFamily={FONTS.bold}
-            color={COLORS.primary}
-            width={width / 2}
-            textAlign="right"
-          />
-        </View>
-      </View>
+      <Iteming
+        left01="Items (3)"
+        left02="Shipping"
+        left03="Import charges"
+        left04="Total Price"
+        right01="$598.86"
+        right02="$40.00"
+        right03="$128.00"
+        right04="$766.86"
+        colorLeft04={COLORS.secondary}
+        fontLef04={FONTS.bold}
+        colorRight04={COLORS.primary}
+        fontRight04={FONTS.bold}
+      />
     );
   };
 

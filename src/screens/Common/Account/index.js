@@ -1,33 +1,42 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {FlatList, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
-import Texting from '../../../components/Texting';
+import {Header, Eventlist} from '../../../components';
+import {DATA_ACCOUNT} from './../../../assets/data';
+import {getSize, width} from '../../../utils/reponsive';
 
 const Account = () => {
-  const {top} = useSafeAreaInsets();
   const navigation = useNavigation();
-
-  const _renderHeader = () => {
+  const _renderEvent = ({item}) => {
     return (
-      <View style={styles.wrapperHeader}>
-        <Texting title="Account" />
+      <View style={styles.wrapperEvent}>
+        <Eventlist
+          icon={item.icon}
+          title={item.name}
+          widthing={width}
+          backgroundColor={item.backgroundColor}
+          paddingHorizontal={getSize.m(16)}
+          handleOnpress={() => navigation.navigate(item.navigation)}
+        />
       </View>
     );
   };
 
-  const _renderCenter = () => {
-    return <View style={styles.wrapperCenter}></View>;
-  };
-
-  const _renderContent = () => {
-    return <View style={styles.wrapperContent}></View>;
-  };
-
   return (
     <View style={styles.container}>
-      <_renderHeader />
+      <Header
+        title="Account"
+        disableIconLeft
+        topline
+        paddingHorizontal={getSize.m(16)}
+      />
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={DATA_ACCOUNT}
+        renderItem={_renderEvent}
+        keyExtractor={item => item.id.toString()}
+      />
     </View>
   );
 };

@@ -18,6 +18,7 @@ const Titling = ({
   paddingVertical,
   textAlign,
   color,
+  backgroundColor,
   handleOnpress,
 }) => {
   return (
@@ -39,6 +40,7 @@ const Titling = ({
         textAlign={textAlign}
         fontSize={fontSize ? fontSize : getSize.m(14)}
         fontFamily={FONTS.bold}
+        backgroundColor={backgroundColor}
       />
       {more ? (
         <Texting

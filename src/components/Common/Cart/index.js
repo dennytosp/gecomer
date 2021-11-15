@@ -12,11 +12,10 @@ import {
   Plus_Cart,
 } from '../../../assets/svg';
 
-const Cart = ({image, title, price, favorited, quantity, style}) => {
+const Cart = ({image, title, price, favorited, marginTop, style}) => {
   return (
     <View style={{...styles.wrapperHeader, ...style}}>
       <Image source={image} style={styles.product} />
-
       <View style={styles.wrapperContentCard}>
         <View style={styles.rowColumn01}>
           <View style={{}}>
@@ -27,7 +26,6 @@ const Cart = ({image, title, price, favorited, quantity, style}) => {
               fontFamily={FONTS.bold}
               fontSize={getSize.m(12)}
               width={(width - 56) / 2}
-              // width={120}
             />
           </View>
           <View style={styles.rowRight01}>

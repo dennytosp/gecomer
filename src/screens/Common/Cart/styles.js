@@ -32,15 +32,5 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: getSize.m(5),
     borderBottomRightRadius: getSize.m(5),
   },
-  wrapperFooter: {
-    borderColor: COLORS.border,
-    borderWidth: getSize.m(2 / 2),
-    borderRadius: getSize.m(5),
-    padding: getSize.m(16)
-  },
-  rowFooter: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
 });
 export default styles;

@@ -9,6 +9,7 @@ const Categories = ({
   image,
   title,
   handleOnpress,
+  marginBottom,
   vertiColumns,
   heightColumns,
   style,
@@ -18,6 +19,7 @@ const Categories = ({
   return (
     <View
       style={{
+        marginBottom: marginBottom,
         marginLeft: index,
         width: vertiColumns && widthReponsive,
         height: heightColumns,

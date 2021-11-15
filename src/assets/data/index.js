@@ -19,6 +19,10 @@ import {
   DATA_SOFT_BY,
   DATA_CART,
   DATA_ADDRESS,
+  DATA_PAYMENT,
+  DATA_ACCOUNT,
+  DATA_PROFILE,
+  DATA_ORDER,
 } from './sources';
 
 export {
@@ -42,4 +46,8 @@ export {
   DATA_SOFT_BY,
   DATA_CART,
   DATA_ADDRESS,
+  DATA_PAYMENT,
+  DATA_ACCOUNT,
+  DATA_PROFILE,
+  DATA_ORDER,
 };

@@ -6,18 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-    paddingHorizontal: getSize.m(12),
   },
-  wrapperHeader: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  wrapperCenter: {
-
-  },
-  wrapperContent: {
-
-  },
+  wrapperEvent: {},
 });
 export default styles;
