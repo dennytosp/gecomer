@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, FlatList, ScrollView} from 'react-native';
+import {View, FlatList} from 'react-native';
 import styles from './styles';
 import {ProductsHorizontal, Header} from '../../../../../components';
 import {PRODUCTS_DATA_VERTICOLUMNS} from '../../../../../assets/data';

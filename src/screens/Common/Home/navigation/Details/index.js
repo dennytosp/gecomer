@@ -3,10 +3,8 @@ import {View, ScrollView, Pressable, Image} from 'react-native';
 import styles from './styles';
 import {Header} from '../../../../../components';
 import {More, Search} from '../../../../../assets/svg';
-import {photos} from '../../../../../assets';
 import {getSize, width} from '../../../../../utils/reponsive';
 import DetailsContent from '../../components/DetailsContent';
-import { COLORS } from '../../../../../constants';
 
 const Details = ({route}) => {
   const {item: receive} = route.params;

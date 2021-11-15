@@ -25,7 +25,6 @@ const Home = () => {
   const _renderCategories = ({item, index}) => {
     return (
       <Categories
-        handleOnpress={() => navigation.navigate(item.navigation)}
         image={item.image}
         title={item.title}
         index={index === 0 ? getSize.m(0) : getSize.m(12)}
@@ -87,7 +86,11 @@ const Home = () => {
           image={photos.promotion01}
           marginBottom={getSize.m(24)}
         />
-        <Titling title="Category" more="More Category" />
+        <Titling
+          title="Category"
+          more="More Category"
+          handleOnpress={() => navigation.navigate(routes.EXPLORE)}
+        />
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -96,12 +99,7 @@ const Home = () => {
           keyExtractor={item => item.id.toString()}
         />
 
-        <Titling
-          title="Flash Sale"
-          more="See More"
-          marginTop={getSize.m(24)}
-          handleOnpress={() => console.log('See more Flash Sale')}
-        />
+        <Titling title="Flash Sale" more="See More" marginTop={getSize.m(24)} />
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}

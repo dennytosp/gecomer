@@ -1,11 +1,6 @@
 import React from 'react';
 import {View, FlatList, ScrollView, Pressable, Image} from 'react-native';
-import {
-  Header,
-  Titling,
-  StarRating,
-  Texting,
-} from '../../../../../components';
+import {Header, Titling, StarRating, Texting} from '../../../../../components';
 import {DATA_DU_AN_REVIEWS} from '../../../../../assets/data';
 import {Plus_Ants, Like} from '../../../../../assets/svg';
 import styles from './styles';
@@ -13,7 +8,7 @@ import {getSize} from '../../../../../utils/reponsive';
 import {COLORS} from '../../../../../constants';
 
 const DuAn_Reviews = () => {
-  const _renderTop = ({item}) => {
+  const _renderTop = () => {
     return (
       <View style={styles.wrapperTop}>
         <Titling fontSize={getSize.m(24)} title="2 đánh giá" />
@@ -80,10 +75,14 @@ const DuAn_Reviews = () => {
             }}
           />
         </ScrollView>
-        <View style={{flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
-        <Texting title={item.like} marginTop={getSize.m(7)} />
-        <Like />
-
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+          }}>
+          <Texting title={item.like} marginTop={getSize.m(7)} />
+          <Like />
         </View>
       </View>
     );
@@ -92,6 +91,7 @@ const DuAn_Reviews = () => {
   return (
     <View style={styles.container}>
       <Header
+        topline
         title="Đánh giá sản phẩm"
         handleOnpressRight02={() => console.log('Search')}
       />

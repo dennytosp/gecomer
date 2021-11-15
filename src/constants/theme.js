@@ -12,8 +12,11 @@ export const COLORS = {
   green: '#53D1B6',
   red: '#EB001B',
   yellow: '#FFC833',
-
-  primary: '#40BFFF',
+  
+  // #83CACD
+  // #0F9EA8
+  // #ADDAC3
+  primary: '#5AA7A7',
   pale_red: '#FB7181',
   secondary: '#223263',
   border: '#EBF0FF',

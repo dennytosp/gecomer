@@ -3,7 +3,7 @@ import {Pressable} from 'react-native';
 import styles from './styles';
 import {COLORS, FONTS} from '../../constants/theme';
 import Texting from '../Texting';
-import { getSize } from '../../utils/reponsive';
+import {getSize} from '../../utils/reponsive';
 
 const ButtonPrimary = ({
   title,

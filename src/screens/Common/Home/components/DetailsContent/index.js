@@ -188,7 +188,11 @@ const DetailsContent = ({name, price}) => {
         keyExtractor={item => item.id.toString()}
       />
 
-      <ButtonPrimary title="Add To Cart" marginTop={getSize.m(24)} />
+      <ButtonPrimary
+        title="Add To Cart"
+        marginTop={getSize.m(24)}
+        handleOnpress={() => navigation.navigate(routes.CART)}
+      />
     </View>
   );
 };

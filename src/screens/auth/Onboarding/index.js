@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import styles from './styles';
 import {ONBOARD_DATA} from '../../../assets/data';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import { routes } from '../../../navigation/routes';
+import {routes} from '../../../navigation/routes';
 
 const Onboard = ({navigation}) => {
   const {top} = useSafeAreaInsets();

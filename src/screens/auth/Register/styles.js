@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {getSize, width} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants/theme';
+import {getSize} from '../../../utils/reponsive';
+import {COLORS} from '../../../constants/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
   wrapperLogo: {
     marginBottom: 16,
   },
-  
+
   wrapperCenter: {},
   wrapperFooter: {
     marginTop: 24,

@@ -7,6 +7,7 @@ import {Search} from '../../../../../assets/svg';
 import {photos} from '../../../../../assets';
 import {useNavigation} from '@react-navigation/core';
 import {routes} from '../../../../../navigation/routes';
+import {getSize} from '../../../../../utils/reponsive';
 
 const FlashSale = () => {
   const navigation = useNavigation();
@@ -28,6 +29,7 @@ const FlashSale = () => {
   return (
     <View style={styles.container}>
       <Header
+        topline
         title="Super Flash Sale"
         iconRight02={Search}
         handleOnpressRight02={() => navigation.navigate(routes.SEARCH_PAGE)}
@@ -36,6 +38,7 @@ const FlashSale = () => {
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="on-drag">
         <Promotion
+          style={{marginTop: getSize.m(16)}}
           marginBottom={16}
           title={'Super Flash Sale\n50% Off'}
           hours="08"

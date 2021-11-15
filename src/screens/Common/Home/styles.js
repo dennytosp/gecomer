@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {getSize, height, width} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants/theme';
+import {getSize} from '../../../utils/reponsive';
+import {COLORS} from '../../../constants/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: getSize.m(16),
   },
   onScroll: {
-    marginTop: getSize.m(16)
-  }
+    marginTop: getSize.m(16),
+  },
 });
 export default styles;
