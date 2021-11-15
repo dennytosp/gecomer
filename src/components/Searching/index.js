@@ -4,7 +4,6 @@ import styles from './styles';
 import {COLORS} from '../../constants/theme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {SearchPrimary} from '../../assets/svg';
-import {getSize} from '../../utils/reponsive';
 
 const Searching = ({
   style,

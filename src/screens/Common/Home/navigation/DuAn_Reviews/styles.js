@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   wrapperTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginTop: getSize.m(16),
   },
   wrapperEventAddReviews: {
     width: getSize.s(40),

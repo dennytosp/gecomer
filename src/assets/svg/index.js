@@ -15,6 +15,7 @@ import Svg, {
   Mask,
   Ellipse,
 } from 'react-native-svg';
+import {COLORS} from '../../constants';
 
 export const Back = ({width = 25, height = 24}) => {
   return (
@@ -48,7 +49,7 @@ export const Logo = ({width = 25, height = 24}) => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M50.8284 33.1716C52.3905 34.7337 52.3905 37.2663 50.8284 38.8284L38.8284 50.8284C37.2663 52.3905 34.7337 52.3905 33.1716 50.8284L21.1716 38.8284C19.6095 37.2663 19.6095 34.7337 21.1716 33.1716L33.1716 21.1716C34.7337 19.6095 37.2663 19.6095 38.8284 21.1716L50.8284 33.1716ZM36 29.6569L29.6569 36L36 42.3431L42.3431 36L36 29.6569Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );
@@ -98,7 +99,7 @@ export const LogoPrimary = ({width = 25, height = 24}) => {
       viewBox="0 0 72 72"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <Rect width="72" height="72" rx="16" fill="#40BFFF" />
+      <Rect width="72" height="72" rx="16" fill={COLORS.primary} />
       <Path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -119,7 +120,7 @@ export const Plus = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M13 8H8V13C8 13.55 7.55 14 7 14C6.45 14 6 13.55 6 13V8H1C0.45 8 0 7.55 0 7C0 6.45 0.45 6 1 6H6V1C6 0.45 6.45 0 7 0C7.55 0 8 0.45 8 1V6H13C13.55 6 14 6.45 14 7C14 7.55 13.55 8 13 8Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );
@@ -135,14 +136,14 @@ export const Add_Ship = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M12 5V19"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M5 12H19"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -163,7 +164,7 @@ export const Editing = ({width = 25, height = 24}) => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M4.29263 17.6855C4.08263 17.4755 3.97763 17.1835 4.00363 16.8875L4.38263 12.7175C4.42463 12.2605 4.62663 11.8295 4.95263 11.5035L13.9486 2.50752C14.6506 1.80252 15.9236 1.83752 16.6646 2.57652L19.4026 5.31452L19.4036 5.31552C20.1686 6.08152 20.1996 7.29952 19.4716 8.02952L10.4746 17.0265C10.1496 17.3515 9.71863 17.5535 9.26063 17.5955L5.09063 17.9745C5.06063 17.9765 5.03063 17.9775 4.99963 17.9775C4.73663 17.9775 4.48163 17.8735 4.29263 17.6855ZM16.0186 8.65652L13.3236 5.96152L15.2716 4.01252L17.9656 6.70652L16.0186 8.65652ZM9.07963 15.6025L6.10263 15.8735L6.36663 12.9175L11.9836 7.30052L14.6796 9.99752L9.07963 15.6025ZM18.9996 21.9775C19.5496 21.9775 19.9996 21.5275 19.9996 20.9775C19.9996 20.4285 19.5496 19.9775 18.9996 19.9775H4.99963C4.45063 19.9775 3.99963 20.4285 3.99963 20.9775C3.99963 21.5275 4.45063 21.9775 4.99963 21.9775H18.9996Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );
@@ -179,8 +180,8 @@ export const Offer = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M8.0625 8.625C8.37316 8.625 8.625 8.37316 8.625 8.0625C8.625 7.75184 8.37316 7.5 8.0625 7.5C7.75184 7.5 7.5 7.75184 7.5 8.0625C7.5 8.37316 7.75184 8.625 8.0625 8.625Z"
-        fill="#40BFFF"
-        stroke="#40BFFF"
+        fill={COLORS.primary}
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -188,7 +189,7 @@ export const Offer = ({width = 25, height = 24}) => {
       />
       <Path
         d="M21 13.0001L13.0001 21L3 10.9999V3H10.9999L21 13.0001Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -207,7 +208,7 @@ export const ActivityListNotifi = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M20.9994 16.4922V9.73047H14.3008"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -215,7 +216,7 @@ export const ActivityListNotifi = ({width = 25, height = 24}) => {
       />
       <Path
         d="M21.0001 9.73047L9.73047 21.0001"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -223,7 +224,7 @@ export const ActivityListNotifi = ({width = 25, height = 24}) => {
       />
       <Path
         d="M3 7.50781V14.2696H9.69753"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -231,7 +232,7 @@ export const ActivityListNotifi = ({width = 25, height = 24}) => {
       />
       <Path
         d="M3 14.2696L14.2696 3"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -251,7 +252,7 @@ export const Feed = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M21 3H3V21H21V3Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -259,7 +260,7 @@ export const Feed = ({width = 25, height = 24}) => {
       />
       <Path
         d="M8.625 7.5H15.375"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -267,7 +268,7 @@ export const Feed = ({width = 25, height = 24}) => {
       />
       <Path
         d="M8.625 12H15.375"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -275,7 +276,7 @@ export const Feed = ({width = 25, height = 24}) => {
       />
       <Path
         d="M8.625 16.5H15.375"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -297,13 +298,13 @@ export const Activity = ({width = 25, height = 24}) => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12 4C8.66879 4 5.96876 6.70004 5.96876 10.0312V15.2816C5.96876 15.3971 5.94875 15.5117 5.90963 15.6204L5.54791 16.625H18.4521L18.0904 15.6204C18.0513 15.5117 18.0313 15.3971 18.0313 15.2816V10.0312C18.0313 6.70004 15.3312 4 12 4ZM3.96876 10.0312C3.96876 5.59547 7.56422 2 12 2C16.4358 2 20.0313 5.59547 20.0313 10.0312V15.1071L20.8159 17.2862C20.9262 17.5926 20.8804 17.9336 20.6932 18.2C20.5059 18.4664 20.2007 18.625 19.875 18.625H4.12501C3.79935 18.625 3.4941 18.4664 3.30685 18.2C3.1196 17.9336 3.07382 17.5926 3.18414 17.2862L3.96876 15.1071V10.0312Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
       <Path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M8.625 16.625C9.17728 16.625 9.625 17.0727 9.625 17.625C9.625 18.9368 10.6882 20 12 20C13.3118 20 14.375 18.9368 14.375 17.625C14.375 17.0727 14.8227 16.625 15.375 16.625C15.9273 16.625 16.375 17.0727 16.375 17.625C16.375 20.0414 14.4164 22 12 22C9.58359 22 7.625 20.0414 7.625 17.625C7.625 17.0727 8.07272 16.625 8.625 16.625Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );
@@ -489,13 +490,13 @@ export const SearchPrimary = ({width = 25, height = 24}) => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M6.25 2C3.90279 2 2 3.90279 2 6.25C2 8.59721 3.90279 10.5 6.25 10.5C8.59721 10.5 10.5 8.59721 10.5 6.25C10.5 3.90279 8.59721 2 6.25 2ZM0 6.25C0 2.79822 2.79822 0 6.25 0C9.70178 0 12.5 2.79822 12.5 6.25C12.5 9.70178 9.70178 12.5 6.25 12.5C2.79822 12.5 0 9.70178 0 6.25Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
       <Path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M9.29289 9.29289C9.68342 8.90237 10.3166 8.90237 10.7071 9.29289L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L9.29289 10.7071C8.90237 10.3166 8.90237 9.68342 9.29289 9.29289Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );
@@ -564,7 +565,7 @@ export const ManShirt = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M6.625 1H13.375L10 6.625L6.625 1Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -572,7 +573,7 @@ export const ManShirt = ({width = 25, height = 24}) => {
       />
       <Path
         d="M13.375 1L15.625 3.25L13.375 10L10 6.625"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -580,7 +581,7 @@ export const ManShirt = ({width = 25, height = 24}) => {
       />
       <Path
         d="M4.375 3.25L1 4.375V19H19V4.375L15.625 3.25"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -588,7 +589,7 @@ export const ManShirt = ({width = 25, height = 24}) => {
       />
       <Path
         d="M10 19V6.625L6.625 10L4.375 3.25L6.625 1"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -608,7 +609,7 @@ export const Dress = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M12.25 4.375L13.375 7.75L12.25 11.125L19 17.875C19 17.875 16.75 19 10 19C3.25 19 1 17.875 1 17.875L7.75 11.125L6.625 7.75L7.75 4.375H12.25Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -616,7 +617,7 @@ export const Dress = ({width = 25, height = 24}) => {
       />
       <Path
         d="M11.125 4.375H14.5L15.625 1H12.25L11.125 4.375Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -624,7 +625,7 @@ export const Dress = ({width = 25, height = 24}) => {
       />
       <Path
         d="M4.375 1H7.75L8.875 4.375H5.5L4.375 1Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -632,7 +633,7 @@ export const Dress = ({width = 25, height = 24}) => {
       />
       <Path
         d="M7.75 11.125H12.25"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -652,28 +653,28 @@ export const ManWorkEquipment = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M19 5.5H1V19H19V5.5Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M1 10.9844L10 13.375L19 11.125"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M6.29492 4.46838V1H14.4984V4.375"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M9.99609 9.625H10.0073"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -692,21 +693,21 @@ export const WomanBag = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M19 19H1L2.8322 8.0068C3.07329 6.56024 4.32486 5.5 5.79138 5.5H14.2086C15.6751 5.5 16.9267 6.56024 17.1678 8.0068L19 19Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M3.25 9.85938L16.75 10"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M6 4.46838V4.375C6 2.51088 7.51088 1 9.375 1H10.8285C12.5 1 14 2.63588 14 4.5"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -725,7 +726,7 @@ export const ManTShirt = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M8.66667 3C8.66667 3 9.77778 5.25 12 5.25C14.2222 5.25 15.3333 3 15.3333 3L22 8.625L19.7778 12L17.5556 10.875V21H6.44444V10.875L4.22222 12L2 8.625L8.66667 3Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -744,14 +745,14 @@ export const ManPant = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M5.875 2H17.125L19 22H15.25L11.5 9.5L7.75 22H4L5.875 2Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M6 6L17 6"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -770,14 +771,14 @@ export const ManUnderwear = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M19.875 5.25H4.125V8.44387L3 18.75H8.625L12 13.125L15.375 18.75H21L19.875 8.625V5.25Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M4.125 8.625H19.875"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -796,7 +797,7 @@ export const WomanTShirt = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M8.625 3C8.625 3 9.75 5.25 12 5.25C14.25 5.25 15.375 3 15.375 3L21 4.125L19.875 8.625H17.625C17.625 8.625 18.75 10.875 18.75 12C18.75 12.9889 17.8331 14.7315 17.625 16.5C17.2976 19.2844 17.625 21 17.625 21H6.375C6.375 21 6.69788 19.2349 6.375 16.5C6.15563 14.6438 5.25 12.9101 5.25 12C5.25 10.875 6.375 8.625 6.375 8.625H4.125L3 4.125L8.625 3Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -815,7 +816,7 @@ export const WomanPants = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M6.90903 2H17.091C17.091 2 18.7877 5.105 18.7877 7.21C18.7877 8.5925 17.6566 10.42 17.6566 13.5787C17.6566 16.7375 19 22 19 22H15.0839L13.5423 14.73L12.0007 7.46L8.91613 22H5C5 22 6.34344 16.7362 6.34344 13.5787C6.34344 10.4212 5.21226 8.56625 5.21226 7.21C5.21226 5.105 6.90903 2 6.90903 2Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -834,28 +835,28 @@ export const Skirt = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M19.7775 3.99951H4.2225V7.27242L2 17.837C2 17.837 4.5 19.9995 12 19.9995C19.5 19.9995 22 17.837 22 17.837L19.7775 7.45922V3.99951Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M4 6.99951H20"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M16 13.9995L15 7.99951"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M8 13.9995L9 7.99951"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -874,21 +875,21 @@ export const Bikini = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M5 16H19V18.8C16.2 18.8 13.4 20.2 13.4 23H10.6C10.6 20.2 7.8 18.8 5 18.8V16Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M5 1V6.33143C5 8.91 7.0482 11 9.5752 11H14.4234C16.9518 11 19 8.91 19 6.33143V1"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M5 5C10.6 5 12 11 12 11C12 11 12 5 19 5"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -907,21 +908,21 @@ export const ManShoes = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M2.6995 11H23V1C23 1 21.625 2.42857 18.875 2.42857C16.125 2.42857 14.75 1 14.75 1L1.93912 7.65429C1.36437 7.95429 1 8.56571 1 9.23429C1 10.21 1.76038 11 2.6995 11Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M12 3L14 6"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M8 5L9.19594 6.77289"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -940,7 +941,7 @@ export const HighHeels = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M18.0005 1.0796C18.0005 0.900498 22.0004 1.0796 22.0004 1.0796L23 6.69818L21.3748 17H20.25L18.875 7.7131L12.9996 17H2.92913C1.8635 17.0013 1 16.1668 1 15.14C1 14.5443 1.29562 13.9844 1.79475 13.6342L6.60312 10.263C12.2062 10.263 18.0005 5.01459 18.0005 1.0796Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -1374,7 +1375,7 @@ export const Filterist = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M14.25 17.625V12L21 3H3L9.75 12V21"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -1612,14 +1613,14 @@ export const Credit = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M21 5.25H3V18.75H21V5.25Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M3 9.75H21"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -1660,35 +1661,35 @@ export const Bank_Transfer = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M3 6.375L12 3L21 6.375"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M3 21H21"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M12 16.5V9.75"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M18.75 16.5V9.75"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M5.25 16.5V9.75"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -1725,13 +1726,13 @@ export const Profile = ({width = 25, height = 24}) => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12 4.00098C10.3971 4.00098 9.09766 5.30042 9.09766 6.90336C9.09766 8.5063 10.3971 9.80574 12 9.80574C13.603 9.80574 14.9024 8.5063 14.9024 6.90336C14.9024 5.30042 13.603 4.00098 12 4.00098ZM7.09766 6.90336C7.09766 4.19585 9.29253 2.00098 12 2.00098C14.7075 2.00098 16.9024 4.19585 16.9024 6.90336C16.9024 9.61087 14.7075 11.8057 12 11.8057C9.29253 11.8057 7.09766 9.61087 7.09766 6.90336Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
       <Path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M9.51784 15.3906C6.47035 15.3906 4 17.861 4 20.9085V20.9996C4 21.5519 3.55228 21.9996 3 21.9996C2.44772 21.9996 2 21.5519 2 20.9996V20.9085C2 16.7564 5.36578 13.3906 9.51784 13.3906H14.4822C18.6342 13.3906 22 16.7564 22 20.9085V20.9996C22 21.5519 21.5523 21.9996 21 21.9996C20.4477 21.9996 20 21.5519 20 20.9996V20.9085C20 17.861 17.5296 15.3906 14.4822 15.3906H9.51784Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );
@@ -1746,7 +1747,7 @@ export const Order = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M21 6.17676H3V20.9998H21V6.17676Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -1754,7 +1755,7 @@ export const Order = ({width = 25, height = 24}) => {
       />
       <Path
         d="M21 6.177H3L5.11725 3H18.8828L21 6.177Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -1762,7 +1763,7 @@ export const Order = ({width = 25, height = 24}) => {
       />
       <Path
         d="M14.3824 10.6768C14.3824 11.9919 13.3159 13.0584 12.0008 13.0584C10.6856 13.0584 9.61914 11.9919 9.61914 10.6768"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -1781,7 +1782,7 @@ export const Address = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M19 9.7775C19 14.0738 11.5 22 11.5 22C11.5 22 4 14.0738 4 9.7775C4 5.48125 7.3575 2 11.5 2C15.6425 2 19 5.4825 19 9.7775Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -1789,8 +1790,8 @@ export const Address = ({width = 25, height = 24}) => {
       />
       <Path
         d="M13.5 9.5C13.5 10.6046 12.6046 11.5 11.5 11.5C10.3954 11.5 9.5 10.6046 9.5 9.5C9.5 8.39543 10.3954 7.5 11.5 7.5C12.6046 7.5 13.5 8.39543 13.5 9.5Z"
-        fill="#40BFFF"
-        stroke="#40BFFF"
+        fill={COLORS.primary}
+        stroke={COLORS.primary}
       />
     </Svg>
   );
@@ -1805,14 +1806,14 @@ export const Payment = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M21 5.25H3V18.75H21V5.25Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M3 9.75H21"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -1830,21 +1831,21 @@ export const Gender = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M12 14C15.3137 14 18 11.3137 18 8C18 4.68629 15.3137 2 12 2C8.68629 2 6 4.68629 6 8C6 11.3137 8.68629 14 12 14Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M12 14V22"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M9 18H15"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -1862,7 +1863,7 @@ export const Birthday = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M3 10.875H21M16.5 7.5V3M7.5 7.5V3M3 5.25H21V21H3V5.25Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -1883,13 +1884,13 @@ export const EmailProfile = ({width = 25, height = 24}) => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12 4.00098C10.3971 4.00098 9.09766 5.30042 9.09766 6.90336C9.09766 8.5063 10.3971 9.80574 12 9.80574C13.603 9.80574 14.9024 8.5063 14.9024 6.90336C14.9024 5.30042 13.603 4.00098 12 4.00098ZM7.09766 6.90336C7.09766 4.19585 9.29253 2.00098 12 2.00098C14.7075 2.00098 16.9024 4.19585 16.9024 6.90336C16.9024 9.61087 14.7075 11.8057 12 11.8057C9.29253 11.8057 7.09766 9.61087 7.09766 6.90336Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
       <Path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M9.51784 15.3906C6.47035 15.3906 4 17.861 4 20.9085V20.9996C4 21.5519 3.55228 21.9996 3 21.9996C2.44772 21.9996 2 21.5519 2 20.9996V20.9085C2 16.7564 5.36578 13.3906 9.51784 13.3906H14.4822C18.6342 13.3906 22 16.7564 22 20.9085V20.9996C22 21.5519 21.5523 21.9996 21 21.9996C20.4477 21.9996 20 21.5519 20 20.9996V20.9085C20 17.861 17.5296 15.3906 14.4822 15.3906H9.51784Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );
@@ -1904,14 +1905,14 @@ export const PhoneNumber = ({width = 25, height = 24}) => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M17.625 3H6.375V21H17.625V3Z"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
         d="M11.9941 17.625H12.0054"
-        stroke="#40BFFF"
+        stroke={COLORS.primary}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -1931,19 +1932,19 @@ export const ChangePasswording = ({width = 25, height = 24}) => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M2 9.75C2 9.19772 2.44772 8.75 3 8.75H21C21.5523 8.75 22 9.19772 22 9.75V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V9.75ZM4 10.75V20H20V10.75H4Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
       <Path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12 4C9.48134 4 7.375 6.13206 7.375 8.841C7.375 9.39328 6.92728 9.841 6.375 9.841C5.82272 9.841 5.375 9.39328 5.375 8.841C5.375 5.09919 8.30641 2 12 2C15.6936 2 18.625 5.09919 18.625 8.841C18.625 9.39328 18.1773 9.841 17.625 9.841C17.0727 9.841 16.625 9.39328 16.625 8.841C16.625 6.13206 14.5187 4 12 4Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
       <Path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12 13.7256C12.5523 13.7256 13 14.1733 13 14.7256V15.8506C13 16.4029 12.5523 16.8506 12 16.8506C11.4477 16.8506 11 16.4029 11 15.8506V14.7256C11 14.1733 11.4477 13.7256 12 13.7256Z"
-        fill="#40BFFF"
+        fill={COLORS.primary}
       />
     </Svg>
   );

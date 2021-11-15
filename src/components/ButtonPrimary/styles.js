@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {COLORS} from '../../constants/theme';
-import { getSize } from '../../utils/reponsive';
+import {getSize} from '../../utils/reponsive';
 
 export const styles = StyleSheet.create({
   wrapperButton: (
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
       width: getSize.s(12),
       height: getSize.v(8),
     },
-    shadowOpacity: .8,
+    shadowOpacity: 0.8,
     shadowRadius: 12.35,
     elevation: getSize.m(0),
     marginVertical: marginVertical,

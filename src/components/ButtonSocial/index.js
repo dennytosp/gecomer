@@ -3,7 +3,7 @@ import {Pressable} from 'react-native';
 import styles from './styles';
 import {FONTS} from '../../constants/theme';
 import Texting from '../Texting';
-import { getSize } from '../../utils/reponsive';
+import {getSize} from '../../utils/reponsive';
 
 const ButtonSocial = ({
   icon,
@@ -42,7 +42,11 @@ const ButtonSocial = ({
         ),
       }}>
       <Pressable style={styles.wrapperIconSocial}>{icon}</Pressable>
-      <Texting title={title} fontFamily={FONTS.bold} paddingVertical={getSize.m(14)} />
+      <Texting
+        title={title}
+        fontFamily={FONTS.bold}
+        paddingVertical={getSize.m(14)}
+      />
     </Pressable>
   );
 };

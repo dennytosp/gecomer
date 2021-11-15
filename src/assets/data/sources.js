@@ -58,37 +58,31 @@ export const CATEGORIES_DATA = [
     id: '01',
     image: ManShirt,
     title: 'Man Shirt',
-    navigation: routes.DUAN_REVIEWS,
   },
   {
     id: '02',
     image: Dress,
     title: 'Dress',
-    navigation: routes.SHIP_TO,
   },
   {
     id: '03',
     image: ManWorkEquipment,
     title: 'Man Work Equipment',
-    navigation: routes.PAYMENT_METHOD,
   },
   {
     id: '04',
     image: WomanBag,
     title: 'Woman Bag',
-    navigation: routes.CARD,
   },
   {
     id: '05',
     image: ManShoes,
     title: 'Man Shoes',
-    navigation: routes.PURCHASE_SUCCESS,
   },
   {
     id: '06',
     image: HighHeels,
     title: 'High Heels',
-    navigation: routes.PURCHASE_SUCCESS,
   },
 ];
 
