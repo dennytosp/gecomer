@@ -3,7 +3,7 @@ import {View, Pressable, Image} from 'react-native';
 import {StarRating, Texting} from '../..';
 import styles from './styles';
 import {COLORS, FONTS} from '../../../constants';
-import {getSize, width} from '../../../utils/reponsive';
+import {getSize} from '../../../utils/reponsive';
 
 const ProductsHorizontal = ({
   image,
@@ -15,17 +15,15 @@ const ProductsHorizontal = ({
   promotion,
   marginBottom,
   handleOnpress,
+  style,
 }) => {
-  const paddingHorizonReponsive = 16 * 2 + 14;
-  const widthReponsive = (width - paddingHorizonReponsive) / 2;
   return (
     <View
       style={{
         marginLeft: index,
-        marginRight: columns && getSize.m(10),
-        width: columns && widthReponsive,
-        zIndex: 100,
-        ...styles.wrapperProducsing(marginBottom),
+        zIndex: getSize.m(1),
+        ...styles.wrapperProducsing(marginBottom, columns),
+        ...style,
       }}>
       <Pressable
         onPress={handleOnpress}

@@ -20,8 +20,10 @@ const OrderDetails = () => {
   const _renderProducts = ({item, index}) => {
     return (
       <Cart
+        handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
         style={{marginTop: index === 0 ? getSize.m(0) : getSize.m(8)}}
         image={item.image}
+        quantity={item.quantity}
         title={item.title}
         price={item.price}
         favorited={item.favorite}

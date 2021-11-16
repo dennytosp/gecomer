@@ -12,8 +12,5 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flex: 1,
   },
-  wrapperFlashSale: index => ({
-    marginTop: index <= 1 ? getSize.m(16) : getSize.m(0),
-  }),
 });
 export default styles;

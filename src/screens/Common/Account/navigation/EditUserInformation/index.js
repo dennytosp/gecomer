@@ -23,7 +23,7 @@ const EditUserInformation = () => {
           <Titling title="First Name" />
           <FormInput placeholder="Gin" marginBottom={getSize.m(24)} />
           <Titling title="Last Name" />
-          <FormInput placeholder="Phone" marginBottom={getSize.m(24)} />
+          <FormInput placeholder="Lonely" marginBottom={getSize.m(24)} />
           <Titling title="Choose Gender" />
           <FormInput
             placeholder="Male"
@@ -35,11 +35,13 @@ const EditUserInformation = () => {
             placeholder="21/08/2001"
             marginBottom={getSize.m(24)}
             right={Birthday}
+            keyboardType="numeric"
           />
           <Titling title="Email" />
           <FormInput
             placeholder="ginphone@gmail.com"
             marginBottom={getSize.m(24)}
+            keyboardType="email-address"
           />
           <Titling title="Phone Number" />
           <FormInput

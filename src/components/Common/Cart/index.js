@@ -12,7 +12,18 @@ import {
   Plus_Cart,
 } from '../../../assets/svg';
 
-const Cart = ({image, title, price, favorited, handleDelete, style}) => {
+const Cart = ({
+  image,
+  title,
+  price,
+  favorited,
+  quantity,
+  handleDelete,
+  handleFavorite,
+  handleLess,
+  hanldePlus,
+  style,
+}) => {
   return (
     <View style={{...styles.wrapperHeader, ...style}}>
       <Image source={image} style={styles.product} />
@@ -29,7 +40,7 @@ const Cart = ({image, title, price, favorited, handleDelete, style}) => {
             />
           </View>
           <View style={styles.rowRight01}>
-            <Pressable style={styles.iconFavorited}>
+            <Pressable onPress={handleFavorite} style={styles.iconFavorited}>
               {favorited ? Favorited : CancelFavorite}
             </Pressable>
             <Pressable onPress={handleDelete} style={styles.iconDelete}>
@@ -46,17 +57,17 @@ const Cart = ({image, title, price, favorited, handleDelete, style}) => {
             fontSize={getSize.m(12)}
           />
           <View style={styles.rowRight02}>
-            <Pressable style={styles.iconLess}>
+            <Pressable onPress={handleLess} style={styles.iconLess}>
               <Less_Cart />
             </Pressable>
             <Texting
-              title="1"
+              title={quantity}
               width={getSize.m(40)}
               textAlign="center"
               color={COLORS.secondary}
               backgroundColor={COLORS.border}
             />
-            <Pressable style={styles.iconPlus}>
+            <Pressable onPress={hanldePlus} style={styles.iconPlus}>
               <Plus_Cart />
             </Pressable>
           </View>

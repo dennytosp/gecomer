@@ -13,7 +13,7 @@ const PurchaseSuccess = () => {
       <Remind
         icon={Tick}
         title="Success"
-        subtitle="Thank you for shopping using Sherwin"
+        subtitle="Thank you for shopping using Gecomer"
         onEvent="Back To Order"
         handleOnEvent={() => navigation.navigate(routes.COMMON)}
         justAlign

@@ -49,10 +49,11 @@ const SearchResults = () => {
     );
   };
 
-  const _renderProducts = ({item, index}) => {
+  const _renderProducts = ({item}) => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
+          marginBottom={getSize.m(12)}
           image={item.image}
           name={item.name}
           discounted={item.discounted}
@@ -69,7 +70,7 @@ const SearchResults = () => {
       <Remind
         icon={RemoveEmpty}
         title="Product Not Found"
-        subtitle="Thank you for shopping using Sherwin"
+        subtitle="Thank you for shopping using Gecomer"
         onEvent="Back to Home"
         handleOnEvent={() => navigation.navigate(routes.COMMON)}
       />
@@ -90,6 +91,7 @@ const SearchResults = () => {
       <_renderCenter />
       {show ? (
         <FlatList
+          columnWrapperStyle={styles.columnWrapperStyle}
           showsVerticalScrollIndicator={false}
           numColumns={numColumns}
           data={PRODUCTS_DATA_VERTICOLUMNS}

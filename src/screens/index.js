@@ -7,7 +7,9 @@ import Account from './Common/Account';
 import Splash from './auth/Splash';
 import Login from './auth/Login';
 import Register from './auth/Register';
+import SuperFlashSale from './Common/Home/navigation/SuperFlashSale';
 import FlashSale from './Common/Home/navigation/FlashSale';
+import MegaSale from './Common/Home/navigation/MegaSale';
 import Favorite from './Common/Home/navigation/Favorite';
 import Details from './Common/Home/navigation/Details';
 import Reviews from './Common/Home/navigation/Reviews';
@@ -48,7 +50,9 @@ export const common = {
 };
 
 export const home = {
+  SuperFlashSale,
   FlashSale,
+  MegaSale,
   Favorite,
   Details,
   Reviews,

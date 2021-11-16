@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ScrollView, View, Pressable, FlatList, TextInput} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import Texting from '../../../components/Texting';
@@ -11,6 +11,7 @@ import {routes} from '../../../navigation/routes';
 
 const Offer = () => {
   const navigation = useNavigation();
+  const [count, setCount] = useState(1);
 
   const _renderHeader = ({item}) => {
     return (
@@ -19,8 +20,15 @@ const Offer = () => {
         image={item.image}
         title={item.title}
         price={item.price}
+        quantity={item.quantity && count}
         favorited={item.favorite}
         handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
+        hanldePlus={() => {
+          setCount(count + 1);
+        }}
+        handleLess={() => {
+          count <= 1 ? setCount(1) : setCount(count - 1);
+        }}
       />
     );
   };

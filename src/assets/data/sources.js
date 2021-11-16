@@ -35,7 +35,7 @@ import {routes} from '../../navigation/routes';
 export const ONBOARD_DATA = [
   {
     id: '01',
-    title: 'Welcome to Sherwin.',
+    title: 'Welcome to Gecomer.',
     text: 'I provide essential stuff for your ui designs every tuesday!.',
     image: photos.onboard01,
   },
@@ -98,7 +98,7 @@ export const PRODUCTS_DATA = [
   {
     id: '02',
     image: photos.product02,
-    name: 'FS - QUILTED MAXI CROS...',
+    name: 'FS - Rolling On The Hook 01 Texas',
     discounted: '$185,25',
     price: '$464,35',
     promotion: '35% Off',
@@ -118,6 +118,89 @@ export const PRODUCTS_DATA = [
     discounted: '$359,43',
     price: '$712,05',
     promotion: '40% Off',
+  },
+  {
+    id: '05',
+    image: photos.product05,
+    name: 'Daniim Rinem Tinim Force 012 Desin',
+    discounted: '$555,05',
+    price: '$895,05',
+    promotion: '45% Off',
+  },
+  {
+    id: '06',
+    image: photos.product06,
+    name: 'Genz Donce Meet Tools 19 Ginp',
+    discounted: '$444,05',
+    price: '$666,05',
+    promotion: '35% Off',
+  },
+  {
+    id: '07',
+    image: photos.product08,
+    name: 'Teninx Force Run Pegasus 20 Dian',
+    discounted: '$459,00',
+    price: '$585,05',
+    promotion: '32% Off',
+  },
+  {
+    id: '08',
+    image: photos.product09,
+    name: 'Rolling Force Zoom Pegasus 21 Kenin',
+    discounted: '$409,05',
+    price: '$512,05',
+    promotion: '30% Off',
+  },
+];
+
+export const DATA_MEGA_SALE = [
+  {
+    id: '01',
+    image: photos.product05,
+    name: 'FS - Airing Air 225 Chelsea',
+    discounted: '$458,55',
+    price: '$855,55',
+    promotion: '34% Off',
+  },
+  {
+    id: '02',
+    image: photos.product09,
+    name: 'F2 - Scroll Culition Cring',
+    discounted: '$285,25',
+    price: '$662,35',
+    promotion: '35% Off',
+  },
+  {
+    id: '03',
+    image: photos.product06,
+    name: 'JORDAN Air Crone Sun 22 Itan',
+    discounted: '$399,55',
+    price: '$782,05',
+    promotion: '44% Off',
+  },
+  {
+    id: '04',
+    image: photos.product08,
+    name: 'Summer Dance Jordan Ronaldo 07 Portugal',
+    discounted: '$777,77',
+    price: '$999,777',
+    promotion: '20% Off',
+  },
+  {
+    id: '05',
+    image: photos.product01,
+    name: 'Rolling Tino Vovin Seni 05 Coming',
+    discounted: '$555,55',
+    price: '$775,55',
+    promotion: '30% Off',
+  },
+  {
+    id: '06',
+    image: photos.product03,
+    name: 'Denim Catin To Sever 88 Port',
+    discounted: '$655,55',
+    price: '$888,55',
+    promotion: '35% Off',
   },
 ];
 
@@ -660,7 +743,7 @@ export const DATA_CART = [
     image: photos.product09,
     title: 'Nike Air Max 270 React VIE',
     price: '$299,00',
-    quantity: '1',
+    quantity: 1,
     favorite: true,
   },
   {
@@ -668,25 +751,25 @@ export const DATA_CART = [
     image: photos.product03,
     title: 'Nike Provie Alan 200',
     price: '$359,00',
-    quantity: '1',
+    quantity: 1,
     favorite: false,
   },
-  // {
-  //   id: '03',
-  //   image: photos.product01,
-  //   title: 'Nike Sunies Rovin 205',
-  //   price: '$445,00',
-  //   quantity: '1',
-  //   favorite: true,
-  // },
-  // {
-  //   id: '04',
-  //   image: photos.product05,
-  //   title: 'Nike Sunshet Join 207',
-  //   price: '$447,00',
-  //   quantity: '1',
-  //   favorite: true,
-  // },
+  {
+    id: '03',
+    image: photos.product01,
+    title: 'Nike Sunies Rovin 205',
+    price: '$445,00',
+    quantity: '1',
+    favorite: true,
+  },
+  {
+    id: '04',
+    image: photos.product05,
+    title: 'Nike Sunshet Join 207',
+    price: '$447,00',
+    quantity: '1',
+    favorite: true,
+  },
 ];
 
 export const DATA_ADDRESS = [
@@ -797,19 +880,35 @@ export const DATA_PROFILE = [
 export const DATA_ORDER = [
   {
     id: '01',
-    code: 'LQNSU346JK',
-    time: 'August 1, 2017',
+    code: 'LQNSU346JA',
+    time: 'August 1, 2021',
     status: 'Shipping',
     quantity: '2 Items purchased',
-    price: '$299,43',
+    price: '$299,00',
   },
   {
     id: '02',
-    code: 'LQNSU346JK',
-    time: 'October 2, 2017',
+    code: 'LQNSU346JB',
+    time: 'August 10, 2021',
+    status: 'Delivered',
+    quantity: '4 Items purchased',
+    price: '$355,00',
+  },
+  {
+    id: '03',
+    code: 'LQNSU346JC',
+    time: 'August 21, 2021',
+    status: 'Cancel',
+    quantity: '3 Items purchased',
+    price: '$455,00',
+  },
+  {
+    id: '04',
+    code: 'LQNSU346JD',
+    time: 'September 05, 2021',
     status: 'Shipping',
-    quantity: '1 Items purchased',
-    price: '$355,32',
+    quantity: '5 Items purchased',
+    price: '$567,00',
   },
 ];
 
@@ -837,5 +936,6 @@ const sources = {
   DATA_ACCOUNT,
   DATA_PROFILE,
   DATA_ORDER,
+  DATA_MEGA_SALE,
 };
 export default sources;

@@ -14,7 +14,7 @@ const FilterSearch = () => {
       <Header topline title="Filter Search" iconLeft={Remove} />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardDismissMode="on-drag">
         <PriceRange />
         <Condition />
       </ScrollView>

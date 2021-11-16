@@ -67,7 +67,7 @@ const Reviews = () => {
 
   return (
     <View style={styles.container}>
-      <Header title={DATA_REVIEWS.length + ' Reviews'} />
+      <Header title={DATA_REVIEWS.length + ' Reviews'} topline />
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="on-drag">
