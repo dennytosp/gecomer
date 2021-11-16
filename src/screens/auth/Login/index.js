@@ -32,7 +32,7 @@ const Login = () => {
         </Pressable>
         <Texting
           marginBottom={8}
-          title="Welcome to E-com"
+          title="Welcome to Gecomer"
           fontSize={16}
           fontFamily={FONTS.bold}
           color={COLORS.secondary}

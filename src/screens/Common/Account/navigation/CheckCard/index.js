@@ -30,12 +30,13 @@ const CheckCard = () => {
     return (
       <View style={styles.wrapperContent}>
         <Titling title="Card Number" />
-        <FormInput placeholder="Enter Card Number" />
+        <FormInput placeholder="Enter Card Number" keyboardType="number-pad" />
         <View style={styles.rowInput}>
           <View>
             <Titling title="Expiration Date" />
             <FormInput
               placeholder="Expiration Date"
+              keyboardType="numeric"
               style={styles.inputRowLeft}
             />
           </View>
@@ -45,6 +46,7 @@ const CheckCard = () => {
             <FormInput
               placeholder="Security Code"
               style={styles.inputRowRight}
+              keyboardType="number-pad"
             />
           </View>
         </View>

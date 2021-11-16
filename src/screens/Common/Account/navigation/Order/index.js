@@ -11,18 +11,24 @@ import {DATA_ORDER} from './../../../../../assets/data/sources';
 const Order = () => {
   const navigation = useNavigation();
 
-  const _renderOrder = ({item}) => {
+  const _renderOrder = ({item, index}) => {
     return (
       <Pressable
         onPress={() => navigation.navigate(routes.ORDER_DETAILS)}
-        style={styles.wrapperOrder}>
+        style={{
+          ...styles.wrapperOrder,
+          marginTop: index === 0 ? getSize.m(16) : 0,
+        }}>
         <Texting
           title={item.code}
           fontSize={getSize.m(14)}
           fontFamily={FONTS.bold}
           color={COLORS.secondary}
         />
-        <Texting title={'Order at E-comm: ' + item.time} marginVertical={getSize.m(12)} />
+        <Texting
+          title={'Order at Gecomer: ' + item.time}
+          marginVertical={getSize.m(12)}
+        />
         <View style={styles.line}></View>
         <View style={{...styles.rowOrder}}>
           <Texting title="Order Status" />
@@ -47,6 +53,7 @@ const Order = () => {
     <View style={styles.container}>
       <Header title="Order" topline />
       <FlatList
+        // style={{marginTop: getSize.m(16)}}
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
         data={DATA_ORDER}

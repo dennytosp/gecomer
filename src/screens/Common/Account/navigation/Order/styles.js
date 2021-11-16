@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: getSize.m(16),
   },
   wrapperOrder: {
-    marginTop: getSize.m(16),
+    marginBottom: getSize.m(16),
     borderRadius: getSize.m(5),
     borderWidth: getSize.m(1),
     borderColor: COLORS.border,

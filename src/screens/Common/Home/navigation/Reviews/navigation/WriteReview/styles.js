@@ -8,7 +8,9 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     paddingHorizontal: getSize.m(16),
   },
-  wrapperCenter: {},
+  wrapperCenter: {
+    marginTop: getSize.m(16),
+  },
   wrapperStar: {
     flexDirection: 'row',
     alignItems: 'center',

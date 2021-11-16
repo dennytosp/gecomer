@@ -8,8 +8,13 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     paddingHorizontal: getSize.m(16),
   },
-  wrapperProducts: {
-    marginTop: getSize.m(16),
+  wrapperProducts: {},
+  columnWrapperStyle: {
+    justifyContent: 'space-between',
+    flex: 1,
   },
+  wrapperFavoriteProducts: index => ({
+    marginTop: index <= 1 ? getSize.m(16) : getSize.m(0),
+  }),
 });
 export default styles;

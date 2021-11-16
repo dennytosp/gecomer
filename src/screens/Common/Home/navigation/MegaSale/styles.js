@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flex: 1,
   },
-  wrapperFlashSale: index => ({
+  wrapperMegaSale: index => ({
     marginTop: index <= 1 ? getSize.m(16) : getSize.m(0),
   }),
 });

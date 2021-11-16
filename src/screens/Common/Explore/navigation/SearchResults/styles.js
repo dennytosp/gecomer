@@ -19,5 +19,9 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  columnWrapperStyle: {
+    flex: 1,
+    justifyContent: 'space-between',
+  },
 });
 export default styles;

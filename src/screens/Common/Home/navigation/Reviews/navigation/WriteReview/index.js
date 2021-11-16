@@ -78,7 +78,7 @@ const WriteReview = () => {
 
   return (
     <View style={styles.container}>
-      <Header title="Write Reviews" />
+      <Header title="Write Reviews" topline />
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="on-drag">

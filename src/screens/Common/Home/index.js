@@ -15,6 +15,7 @@ import {
   PRODUCTS_DATA,
   PRODUCTS_DATA_VERTICOLUMNS,
   CATEGORIES_DATA,
+  DATA_MEGA_SALE,
 } from '../../../assets/data';
 import {routes} from './../../../navigation/routes';
 import {photos} from '../../../assets';
@@ -52,6 +53,7 @@ const Home = () => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
+          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
           image={item.image}
           name={item.name}
           discounted={item.discounted}
@@ -77,7 +79,7 @@ const Home = () => {
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="on-drag">
         <Promotion
-          handleOnpress={() => navigation.navigate(routes.FLASH_SALE)}
+          handleOnpress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
           style={styles.onScroll}
           title={'Super Flash Sale\n50% Off'}
           hours="08"
@@ -99,7 +101,12 @@ const Home = () => {
           keyExtractor={item => item.id.toString()}
         />
 
-        <Titling title="Flash Sale" more="See More" marginTop={getSize.m(24)} />
+        <Titling
+          title="Flash Sale"
+          more="See More"
+          marginTop={getSize.m(24)}
+          handleOnpress={() => navigation.navigate(routes.FLASH_SALE)}
+        />
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -108,11 +115,16 @@ const Home = () => {
           keyExtractor={item => item.id.toString()}
         />
 
-        <Titling title="Mega Sale" more="See More" marginTop={12} />
+        <Titling
+          title="Mega Sale"
+          more="See More"
+          marginTop={12}
+          handleOnpress={() => navigation.navigate(routes.MEGA_SALE)}
+        />
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
-          data={PRODUCTS_DATA}
+          data={DATA_MEGA_SALE}
           renderItem={_renderProducts}
           keyExtractor={item => item.id.toString()}
         />
@@ -127,8 +139,9 @@ const Home = () => {
           numColumns={2}
           showsVerticalScrollIndicator={false}
           data={PRODUCTS_DATA_VERTICOLUMNS}
+          columnWrapperStyle={styles.columnWrapperStyle}
           renderItem={_renderProductsVerticalColumns}
-          keyExtractor={(item, index) => item.id.toString()}
+          keyExtractor={item => item.id.toString()}
         />
       </ScrollView>
     </View>

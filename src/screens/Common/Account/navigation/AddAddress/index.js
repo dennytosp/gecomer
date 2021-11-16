@@ -7,9 +7,8 @@ import {
   Header,
   Titling,
 } from '../../../../../components';
-import {Add_Ship, DownPress} from '../../../../../assets/svg';
+import {DownPress} from '../../../../../assets/svg';
 import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
 import {getSize} from '../../../../../utils/reponsive';
 
 const AddAddress = ({route}) => {
@@ -28,7 +27,7 @@ const AddAddress = ({route}) => {
         <Titling title="First Name" />
         <FormInput placeholder="Gin" marginBottom={getSize.m(24)} />
         <Titling title="Last Name" />
-        <FormInput placeholder="Phoone" marginBottom={getSize.m(24)} />
+        <FormInput placeholder="Phone" marginBottom={getSize.m(24)} />
         <Titling title="Street Address" />
         <FormInput placeholder="205 Davida" marginBottom={getSize.m(24)} />
         <Titling title="Street Address 2 (Optional)" />

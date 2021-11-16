@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View, Pressable, FlatList} from 'react-native';
 import styles from './styles';
 import {
@@ -10,7 +10,7 @@ import {
   Titling,
 } from '../../../../../components';
 import {getSize, width} from '../../../../../utils/reponsive';
-import {Favorite} from '../../../../../assets/svg';
+import {Favorite, Favorited} from '../../../../../assets/svg';
 import {COLORS, FONTS} from '../../../../../constants';
 import {
   DATA_SIZES,
@@ -23,6 +23,11 @@ import {routes} from './../../../../../navigation/routes';
 
 const DetailsContent = ({name, price}) => {
   const navigation = useNavigation();
+  const [like, setLike] = useState(false);
+
+  const Liked = () => {
+    setLike(!like);
+  };
 
   const _renderSelectSizes = ({item, index}) => {
     return (
@@ -124,7 +129,6 @@ const DetailsContent = ({name, price}) => {
       </View>
     );
   };
-
   return (
     <View style={styles.wrapperContent}>
       <View style={styles.wrapperTitleTexting}>
@@ -136,8 +140,8 @@ const DetailsContent = ({name, price}) => {
           numberOfLines={2}
           color={COLORS.secondary}
         />
-        <Pressable style={{marginTop: getSize.m(5)}}>
-          <Favorite />
+        <Pressable onPress={() => Liked()} style={{marginTop: getSize.m(5)}}>
+       {like ? Favorited : Favorite}   
         </Pressable>
       </View>
 

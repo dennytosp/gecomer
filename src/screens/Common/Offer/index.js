@@ -30,7 +30,7 @@ const Offer = () => {
     return (
       <View style={styles.wrapperCenter}>
         <Promotion
-          handleOnpress={() => navigation.navigate(routes.FLASH_SALE)}
+          handleOnpress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
           title={'Super Flash Sale\n50% Off'}
           hours="08"
           minutes="34"

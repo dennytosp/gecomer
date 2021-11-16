@@ -5,8 +5,11 @@ import {Header} from '../../../../../components';
 import {More, Search} from '../../../../../assets/svg';
 import {getSize, width} from '../../../../../utils/reponsive';
 import DetailsContent from '../../components/DetailsContent';
+import {routes} from '../../../../../navigation/routes';
+import {useNavigation} from '@react-navigation/core';
 
 const Details = ({route}) => {
+  const navigation = useNavigation();
   const {item: receive} = route.params;
   const _renderImageContent = () => {
     return (
@@ -28,6 +31,8 @@ const Details = ({route}) => {
         title={receive.name}
         iconRight01={Search}
         iconRight02={More}
+        handleOnpressRight01={() => navigation.navigate(routes.SEARCH_PAGE)}
+        handleOnpressRight02={() => navigation.navigate(routes.ORDER)}
       />
       <ScrollView
         showsVerticalScrollIndicator={false}

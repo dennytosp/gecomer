@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
   wrapperCardTop: {
     flexDirection: 'row',
     marginBottom: getSize.m(24),
+    marginTop: getSize.m(16)
   },
 });
 export default styles;
