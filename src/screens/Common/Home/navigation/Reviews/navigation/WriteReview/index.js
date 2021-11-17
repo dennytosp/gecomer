@@ -18,7 +18,10 @@ const WriteReview = () => {
       <Image
         key={index}
         source={{uri: item.path}}
-        style={styles.photoReviews}
+        style={{
+          ...styles.photoReviews,
+          marginLeft: index === 0 ? getSize.m(0) : getSize.m(12),
+        }}
       />
     );
   };
@@ -65,7 +68,10 @@ const WriteReview = () => {
             <PlusAdding />
           </Pressable>
 
-          <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+          <ScrollView
+            style={{marginLeft: getSize.m(12)}}
+            showsHorizontalScrollIndicator={false}
+            horizontal>
             <View style={styles.wrapperPhotos}>
               {pictures?.map(_renderPhotosReviews)}
             </View>

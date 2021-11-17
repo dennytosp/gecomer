@@ -43,8 +43,8 @@ const ProductsHorizontal = ({
       <Texting
         title={discounted}
         color={COLORS.primary}
-        marginTop={columns ? 12 : 8}
-        marginBottom={columns ? 4 : 8}
+        marginTop={columns ? getSize.m(12) : getSize.m(8)}
+        marginBottom={columns ? getSize.m(4) : getSize.m(8)}
         fontFamily={FONTS.bold}
       />
       <View style={styles.wrapperRowPrice}>
@@ -55,7 +55,7 @@ const ProductsHorizontal = ({
         />
         <Texting
           title={promotion}
-          marginHorizontal={8}
+          marginHorizontal={getSize.m(8)}
           color={COLORS.pale_red}
           fontSize={getSize.m(10)}
           fontFamily={FONTS.bold}

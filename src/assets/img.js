@@ -27,6 +27,7 @@ import user from './images/photos/user.jpg';
 import user2 from './images/photos/user02.jpg';
 import user3 from './images/photos/user03.jpg';
 import user4 from './images/photos/user04.jpg';
+import not_avt from './images/photos/not_avt.png';
 
 export const photos = {
   onboard01,
@@ -53,6 +54,7 @@ export const photos = {
   user2,
   user3,
   user4,
+  not_avt,
 };
 export const icons = {
   home,

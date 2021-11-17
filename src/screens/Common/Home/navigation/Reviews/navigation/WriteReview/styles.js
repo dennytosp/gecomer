@@ -53,7 +53,6 @@ export const styles = StyleSheet.create({
     width: getSize.s(72),
     height: getSize.v(72),
     borderRadius: getSize.s(5),
-    marginLeft: getSize.m(12),
   },
 });
 export default styles;

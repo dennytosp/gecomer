@@ -9,16 +9,21 @@ import {photos} from '../../../../../assets';
 import {COLORS, FONTS} from '../../../../../constants';
 import {getSize, width} from '../../../../../utils/reponsive';
 import {DATA_PROFILE} from '../../../../../assets/data';
+import picker from '../../../../../utils/picker';
 
 const Profile = () => {
   const navigation = useNavigation();
+  const {openPicker, picture} = picker();
 
   const _renderHeader = () => {
     return (
       <View style={styles.wrapperHeader}>
         <Pressable style={styles.wrapperHeaderAvatar}>
-          <Pressable style={styles.borderAvatar}>
-            <Image source={photos.user} style={styles.avatar} />
+          <Pressable onPress={openPicker} style={styles.borderAvatar}>
+            <Image
+              source={picture ? {uri: picture.uri} : photos.not_avt}
+              style={styles.avatar}
+            />
           </Pressable>
           <View style={styles.rightAvatar}>
             <Texting
