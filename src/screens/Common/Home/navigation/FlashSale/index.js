@@ -21,6 +21,7 @@ const FlashSale = () => {
           price={item.price}
           promotion={item.promotion}
           columns
+          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
         />
       </View>
     );
@@ -41,7 +42,7 @@ const FlashSale = () => {
         showsVerticalScrollIndicator={false}
         data={PRODUCTS_DATA}
         renderItem={_renderFlashSaleProducts}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={index => index}
       />
     </View>
   );

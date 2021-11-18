@@ -110,9 +110,9 @@ const Home = () => {
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
-          data={PRODUCTS_DATA}
+          data={PRODUCTS_DATA.splice(1, 3)}
           renderItem={_renderProducts}
-          keyExtractor={item => item.id.toString()}
+          keyExtractor={index => index}
         />
 
         <Titling

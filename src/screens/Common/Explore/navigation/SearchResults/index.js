@@ -60,6 +60,7 @@ const SearchResults = () => {
           price={item.price}
           promotion={item.promotion}
           columns
+          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
         />
       </View>
     );

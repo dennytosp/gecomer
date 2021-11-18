@@ -3,24 +3,13 @@ import {Pressable, ScrollView, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
-import {
-  Email,
-  Facebook,
-  Google,
-  LogoPrimary,
-  Password,
-} from './../../../assets/svg';
+import {Email, Fullname, LogoPrimary, Password} from '../../../assets/svg';
 import {COLORS, FONTS} from '../../../constants/theme';
-import {
-  ButtonPrimary,
-  ButtonSocial,
-  FormInput,
-  Texting,
-} from '../../../components';
-import {routes} from './../../../navigation/routes';
+import {ButtonPrimary, FormInput, Texting} from '../../../components';
+import {routes} from '../../../navigation/routes';
 import {getSize} from '../../../utils/reponsive';
 
-const Login = () => {
+const ForgotPassword = () => {
   const {top} = useSafeAreaInsets();
   const navigation = useNavigation();
 
@@ -32,12 +21,12 @@ const Login = () => {
         </Pressable>
         <Texting
           marginBottom={8}
-          title="Welcome to Gecomer"
+          title="Password recovery"
           fontSize={16}
           fontFamily={FONTS.bold}
           color={COLORS.secondary}
         />
-        <Texting title="Sign in to continue" marginBottom={28} />
+        <Texting title="Retrieve password to login" marginBottom={28} />
       </View>
     );
   };
@@ -51,17 +40,11 @@ const Login = () => {
           keyboardType="email-address"
           marginBottom={getSize.m(8)}
         />
-        <FormInput icon={Password} placeholder="Password" secureTextEntry />
         <ButtonPrimary
-          handleOnpress={() => navigation.navigate(routes.COMMON)}
+          handleOnpress={() => navigation.navigate(routes.LOGIN)}
           marginTop={16}
-          title="Sign In"
+          title="Send"
         />
-        <View style={styles.wrapperOr}>
-          <View style={styles.line}></View>
-          <Texting title="OR" fontFamily={FONTS.bold} paddingHorizontal={25} />
-          <View style={styles.line}></View>
-        </View>
       </View>
     );
   };
@@ -69,30 +52,11 @@ const Login = () => {
   const _renderFooter = () => {
     return (
       <View style={styles.wrapperFooter}>
-        <ButtonSocial
-          icon={Google}
-          title="Login with Google"
-          marginBottom={8}
-        />
-        <ButtonSocial
-          icon={Facebook}
-          title="Login with Facebook"
-          marginBottom={16}
-        />
-        <Texting
-          handleOnpress={() => navigation.navigate(routes.FORGOT_PASSWORD)}
-          title="Forgot Password?"
-          fontFamily={FONTS.bold}
-          fontSize={12}
-          color={COLORS.primary}
-          textAlign="center"
-          marginBottom={8}
-        />
         <View style={styles.wrapperTextFooter}>
-          <Texting title="Don’t have an account?" fontSize={12} />
+          <Texting title="Did you remember the password?" fontSize={12} />
           <Texting
-            handleOnpress={() => navigation.navigate(routes.REGISTER)}
-            title="Register?"
+            handleOnpress={() => navigation.navigate(routes.LOGIN)}
+            title="Sign In"
             fontFamily={FONTS.bold}
             fontSize={12}
             color={COLORS.primary}
@@ -116,4 +80,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;

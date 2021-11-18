@@ -9,7 +9,7 @@ import {Titling} from './../../../../../../../components';
 import {Rating} from 'react-native-elements';
 import picker from './../../../../../../../utils/picker';
 
-const WriteReview = () => {
+const WriteReview = ({navigation}) => {
   const {openMultiPicker, pictures} = picker();
   const [rating, setRating] = useState();
 
@@ -18,7 +18,10 @@ const WriteReview = () => {
       <Image
         key={index}
         source={{uri: item.path}}
-        style={styles.photoReviews}
+        style={{
+          ...styles.photoReviews,
+          marginLeft: index === 0 ? getSize.m(0) : getSize.m(12),
+        }}
       />
     );
   };
@@ -37,12 +40,12 @@ const WriteReview = () => {
             type="custom"
             ratingColor={COLORS.yellow}
             ratingBackgroundColor={COLORS.border}
-            startingValue="5"
+            startingValue="0"
             onFinishRating={rating}
             style={{alignItems: 'flex-start'}}
           />
           <Texting
-            title="5/5"
+            title="0/5"
             fontSize={getSize.m(14)}
             marginHorizontal={getSize.m(16)}
             fontFamily={FONTS.bold}
@@ -65,13 +68,21 @@ const WriteReview = () => {
             <PlusAdding />
           </Pressable>
 
-          <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+          <ScrollView
+            style={{marginLeft: getSize.m(12)}}
+            showsHorizontalScrollIndicator={false}
+            horizontal>
             <View style={styles.wrapperPhotos}>
               {pictures?.map(_renderPhotosReviews)}
             </View>
           </ScrollView>
         </View>
-        <ButtonPrimary title="Post" marginTop={getSize.m(24)} />
+        <ButtonPrimary
+          title="Post"
+          marginTop={getSize.m(24)}
+          marginBottom={getSize.m(16)}
+          handleOnpress={() => navigation.goBack()}
+        />
       </View>
     );
   };

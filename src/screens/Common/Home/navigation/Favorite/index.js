@@ -4,8 +4,9 @@ import styles from './styles';
 import {ProductsHorizontal, Header} from '../../../../../components';
 import {PRODUCTS_DATA_VERTICOLUMNS} from '../../../../../assets/data';
 import {getSize} from '../../../../../utils/reponsive';
+import {routes} from '../../../../../navigation/routes';
 
-const Favorite = () => {
+const Favorite = ({navigation}) => {
   const _renderFavoriteProducts = ({item, index}) => {
     return (
       <View style={styles.wrapperFavoriteProducts(index)}>
@@ -17,6 +18,7 @@ const Favorite = () => {
           price={item.price}
           promotion={item.promotion}
           columns
+          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
         />
       </View>
     );

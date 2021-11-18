@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
     borderWidth: getSize.m(2),
     alignItems: 'center',
     justifyContent: 'center',
+    borderStyle: 'dashed',
   },
   avatar: {
     width: getSize.s(72),
