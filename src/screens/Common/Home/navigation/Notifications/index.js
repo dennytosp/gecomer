@@ -15,7 +15,7 @@ const Notifications = () => {
         icon={item.image}
         title={item.name}
         notifNumber={item.number}
-        maxWidth={width / 1.4}
+        widthing={width / 1.5}
         warning
       />
     );

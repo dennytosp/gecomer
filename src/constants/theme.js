@@ -16,7 +16,7 @@ export const COLORS = {
   // #83CACD
   // #0F9EA8
   // #ADDAC3
-  primary: '#5AA7A7',
+  primary: '#83CACD',
   pale_red: '#FB7181',
   secondary: '#223263',
   border: '#EBF0FF',

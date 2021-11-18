@@ -103,10 +103,10 @@ const DetailsContent = ({name, price}) => {
         </View>
 
         <ReviewsProduct
-          name="Dinh Tien Phong"
+          name="Nguyen Tuyet Trinh"
           star={4}
           description="Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites."
-          avatar={photos.avatar}
+          avatar={photos.user8}
           time="December 10, 2016"
           imageReviews
         />

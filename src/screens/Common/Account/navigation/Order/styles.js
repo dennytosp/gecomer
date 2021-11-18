@@ -16,9 +16,11 @@ export const styles = StyleSheet.create({
     padding: getSize.m(16),
   },
   line: {
-    backgroundColor: COLORS.border,
-    height: getSize.m(1),
+    borderWidth: getSize.m(1),
+    borderRadius: getSize.m(5),
+    borderColor: COLORS.border,
     marginBottom: getSize.m(12),
+    borderStyle: 'dotted'
   },
   rowOrder: {
     flexDirection: 'row',

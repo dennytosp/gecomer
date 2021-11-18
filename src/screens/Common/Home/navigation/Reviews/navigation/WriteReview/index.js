@@ -9,7 +9,7 @@ import {Titling} from './../../../../../../../components';
 import {Rating} from 'react-native-elements';
 import picker from './../../../../../../../utils/picker';
 
-const WriteReview = () => {
+const WriteReview = ({navigation}) => {
   const {openMultiPicker, pictures} = picker();
   const [rating, setRating] = useState();
 
@@ -40,12 +40,12 @@ const WriteReview = () => {
             type="custom"
             ratingColor={COLORS.yellow}
             ratingBackgroundColor={COLORS.border}
-            startingValue="5"
+            startingValue="0"
             onFinishRating={rating}
             style={{alignItems: 'flex-start'}}
           />
           <Texting
-            title="5/5"
+            title="0/5"
             fontSize={getSize.m(14)}
             marginHorizontal={getSize.m(16)}
             fontFamily={FONTS.bold}
@@ -77,7 +77,12 @@ const WriteReview = () => {
             </View>
           </ScrollView>
         </View>
-        <ButtonPrimary title="Post" marginTop={getSize.m(24)} />
+        <ButtonPrimary
+          title="Post"
+          marginTop={getSize.m(24)}
+          marginBottom={getSize.m(16)}
+          handleOnpress={() => navigation.goBack()}
+        />
       </View>
     );
   };

@@ -18,7 +18,9 @@ const ReviewsProduct = ({
   return (
     <View style={{marginBottom: marginBottom ? marginBottom : getSize.m(0)}}>
       <Pressable style={styles.wrapperInfor}>
-        <Image source={avatar} style={styles.imagePersonReviews} />
+        <Pressable style={styles.wrapperImagePersonReviews}>
+          <Image source={avatar} style={styles.imagePersonReviews} />
+        </Pressable>
 
         <View style={styles.rating0}>
           <Texting

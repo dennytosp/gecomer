@@ -63,6 +63,7 @@ const MainStackNavigator = () => {
           <Stack.Screen name={routes.ONBOARD} component={authen.Onboard} />
           <Stack.Screen name={routes.SPLASH} component={authen.Splash} />
           <Stack.Screen name={routes.LOGIN} component={authen.Login} />
+          <Stack.Screen name={routes.FORGOT_PASSWORD} component={authen.ForgotPassword} />
           <Stack.Screen name={routes.REGISTER} component={authen.Register} />
 
           <Stack.Screen

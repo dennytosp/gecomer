@@ -7,6 +7,7 @@ import Account from './Common/Account';
 import Splash from './auth/Splash';
 import Login from './auth/Login';
 import Register from './auth/Register';
+import ForgotPassword from './auth/ForgotPassword';
 import SuperFlashSale from './Common/Home/navigation/SuperFlashSale';
 import FlashSale from './Common/Home/navigation/FlashSale';
 import MegaSale from './Common/Home/navigation/MegaSale';
@@ -97,4 +98,4 @@ export const account = {
   Confirmation,
   CheckCard,
 };
-export const authen = {Onboard, Splash, Login, Register};
+export const authen = {Onboard, Splash, Login, Register, ForgotPassword};
