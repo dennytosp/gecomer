@@ -29,6 +29,7 @@ const Home = () => {
         image={item.image}
         title={item.title}
         index={index === 0 ? getSize.m(0) : getSize.m(12)}
+        // handleOnpress={() => navigation.navigate(item.navigation)}
       />
     );
   };

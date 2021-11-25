@@ -1,68 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ScrollView, View} from 'react-native';
 import styles from './styles';
-import {
-  ButtonPrimary,
-  FormInput,
-  Header,
-  Titling,
-} from '../../../../../components';
-import {Birthday, DownPress, PhoneNumber} from '../../../../../assets/svg';
+import {ButtonPrimary, Header} from '../../../../../components';
 import {useNavigation} from '@react-navigation/core';
 import {getSize} from '../../../../../utils/reponsive';
+import FormProfile from '../../components/FormProfile';
 
 const EditUserInformation = () => {
   const navigation = useNavigation();
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [gender, setGender] = useState();
+  const [birthday, setBirthday] = useState();
+  const [email, setEmail] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
 
-  const _renderContent = () => {
-    return (
+  return (
+    <View style={styles.container}>
+      <Header title="Edit Profile" topline />
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
-        <View style={styles.wrapperContent}>
-          <Titling title="First Name" />
-          <FormInput placeholder="Gin" marginBottom={getSize.m(24)} />
-          <Titling title="Last Name" />
-          <FormInput placeholder="Lonely" marginBottom={getSize.m(24)} />
-          <Titling title="Choose Gender" />
-          <FormInput
-            placeholder="Male"
-            marginBottom={getSize.m(24)}
-            right={DownPress}
-          />
-          <Titling title="Your Birhday" />
-          <FormInput
-            placeholder="21/08/2001"
-            marginBottom={getSize.m(24)}
-            right={Birthday}
-            keyboardType="numeric"
-          />
-          <Titling title="Email" />
-          <FormInput
-            placeholder="ginphone@gmail.com"
-            marginBottom={getSize.m(24)}
-            keyboardType="email-address"
-          />
-          <Titling title="Phone Number" />
-          <FormInput
-            placeholder="(307) 555-0133"
-            marginBottom={getSize.m(24)}
-            icon={PhoneNumber}
-            keyboardType="numeric"
-          />
-        </View>
+        <FormProfile
+          FirstName={[firstName, setFirstName]}
+          LastName={[lastName, setLastName]}
+          Gender={[gender, setGender]}
+          Birthdayng={[birthday, setBirthday]}
+          Email={[email, setEmail]}
+          PhoneNumbers={[phoneNumber, setPhoneNumber]}
+        />
         <ButtonPrimary
           title="Save"
           marginBottom={getSize.m(16)}
           handleOnpress={() => navigation.goBack()}
         />
       </ScrollView>
-    );
-  };
-  return (
-    <View style={styles.container}>
-      <Header title="Edit Profile" topline />
-      <_renderContent />
     </View>
   );
 };

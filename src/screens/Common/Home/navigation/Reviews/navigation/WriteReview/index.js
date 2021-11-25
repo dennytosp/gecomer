@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 import {View, ScrollView, Pressable, TextInput, Image} from 'react-native';
 import styles from './styles';
-import {ButtonPrimary, Header, Texting} from '../../../../../../../components';
+import {
+  ButtonPrimary,
+  Header,
+  StarRating,
+  Texting,
+} from '../../../../../../../components';
 import {PlusAdding} from '../../../../../../../assets/svg';
 import {COLORS, FONTS} from '../../../../../../../constants';
 import {getSize} from '../../../../../../../utils/reponsive';
@@ -11,7 +16,7 @@ import picker from './../../../../../../../utils/picker';
 
 const WriteReview = ({navigation}) => {
   const {openMultiPicker, pictures} = picker();
-  const [rating, setRating] = useState();
+  const [rating, setRating] = useState(0);
 
   const _renderPhotosReviews = (item, index) => {
     return (
@@ -35,17 +40,14 @@ const WriteReview = ({navigation}) => {
           marginBottom={getSize.m(16)}
         />
         <View style={styles.wrapperStar}>
-          <Rating
+          <StarRating
             imageSize={getSize.m(32)}
-            type="custom"
-            ratingColor={COLORS.yellow}
-            ratingBackgroundColor={COLORS.border}
-            startingValue="0"
-            onFinishRating={rating}
-            style={{alignItems: 'flex-start'}}
+            startingValue={rating}
+            readonly
+            onFinishRating={rating => setRating(rating)}
           />
           <Texting
-            title="0/5"
+            title={rating + '/5'}
             fontSize={getSize.m(14)}
             marginHorizontal={getSize.m(16)}
             fontFamily={FONTS.bold}

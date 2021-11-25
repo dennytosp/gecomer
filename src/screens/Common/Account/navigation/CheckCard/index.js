@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ScrollView, View} from 'react-native';
 import styles from './styles';
 import {
@@ -11,9 +11,14 @@ import {
 import {useNavigation} from '@react-navigation/core';
 import {getSize} from '../../../../../utils/reponsive';
 import {Method01} from '../../../../../assets/svg';
+import FormCarding from '../../components/FormCarding';
 
 const CheckCard = () => {
   const navigation = useNavigation();
+  const [cardNumber, setCardNumber] = useState();
+  const [expirationDate, setExpirationDate] = useState();
+  const [securityCode, setSecurityCode] = useState();
+  const [cardHolder, setCardHolder] = useState();
 
   const _renderCard = () => {
     return (
@@ -26,36 +31,7 @@ const CheckCard = () => {
       />
     );
   };
-  const _renderInputCard = () => {
-    return (
-      <View style={styles.wrapperContent}>
-        <Titling title="Card Number" />
-        <FormInput placeholder="Enter Card Number" keyboardType="number-pad" />
-        <View style={styles.rowInput}>
-          <View>
-            <Titling title="Expiration Date" />
-            <FormInput
-              placeholder="Expiration Date"
-              keyboardType="numeric"
-              style={styles.inputRowLeft}
-            />
-          </View>
 
-          <View>
-            <Titling title="Security Code" textAlign="left" />
-            <FormInput
-              placeholder="Security Code"
-              style={styles.inputRowRight}
-              keyboardType="number-pad"
-            />
-          </View>
-        </View>
-
-        <Titling title="Card Holder" marginTop={getSize.m(24)} />
-        <FormInput placeholder="Enter Card Number" />
-      </View>
-    );
-  };
   return (
     <View style={styles.container}>
       <Header title="Lailyfa Febrina Card" topline />
@@ -63,9 +39,13 @@ const CheckCard = () => {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
         <_renderCard />
-        <_renderInputCard />
+        <FormCarding
+          CardNumber={[cardNumber, setCardNumber]}
+          ExpirationDate={[expirationDate, setExpirationDate]}
+          SecurityCode={[securityCode, setSecurityCode]}
+          CardHolder={[cardHolder, setCardHolder]}
+        />
       </ScrollView>
-
       <ButtonPrimary
         title="Save"
         marginVertical={getSize.m(16)}

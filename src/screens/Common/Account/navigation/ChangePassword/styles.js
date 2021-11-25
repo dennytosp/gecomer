@@ -8,8 +8,5 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     paddingHorizontal: getSize.m(16),
   },
-  wrapperContent: {
-    marginTop: getSize.m(16),
-  },
 });
 export default styles;

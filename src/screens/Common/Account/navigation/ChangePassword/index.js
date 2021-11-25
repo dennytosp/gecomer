@@ -1,54 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View} from 'react-native';
 import styles from './styles';
-import {
-  ButtonPrimary,
-  FormInput,
-  Header,
-  Titling,
-} from '../../../../../components';
-import {ChangePasswording} from '../../../../../assets/svg';
+import {ButtonPrimary, Header} from '../../../../../components';
 import {getSize} from '../../../../../utils/reponsive';
 import {ScrollView} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
+import FormPassword from '../../components/FormPassword';
 
 const ChangePassword = () => {
   const navigation = useNavigation();
-  const _renderContent = () => {
-    return (
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
-        <View style={styles.wrapperContent}>
-          <Titling title="Old Password" />
-          <FormInput
-            placeholder="•••••••••••••••••"
-            marginBottom={getSize.m(24)}
-            icon={ChangePasswording}
-            secureTextEntry
-          />
-          <Titling title="New Password" />
-          <FormInput
-            placeholder="•••••••••••••••••"
-            marginBottom={getSize.m(24)}
-            icon={ChangePasswording}
-            secureTextEntry
-          />
-          <Titling title="New Password Again" />
-          <FormInput
-            placeholder="•••••••••••••••••"
-            marginBottom={getSize.m(24)}
-            icon={ChangePasswording}
-            secureTextEntry
-          />
-        </View>
-      </ScrollView>
-    );
-  };
+  const [oldPassword, setOldPassword] = useState();
+  const [newPassword, setNewPassword] = useState();
+
   return (
     <View style={styles.container}>
       <Header title="Change Password" topline />
-      <_renderContent />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled">
+        <FormPassword
+          OldPassword={[oldPassword, setOldPassword]}
+          NewPassword={[newPassword, setNewPassword]}
+        />
+      </ScrollView>
       <ButtonPrimary
         title="Save"
         marginVertical={getSize.m(16)}

@@ -1,13 +1,15 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, Pressable} from 'react-native';
 import styles from './styles';
 import {Texting} from '../..';
 import {getSize} from '../../../utils/reponsive';
 import {COLORS, FONTS} from '../../../constants';
 
-const RecommendProduct = ({image, title, subtitle, style}) => {
+const RecommendProduct = ({image, title, subtitle, handleOnpress, style}) => {
   return (
-    <View style={{...styles.wrapperRecommendProduct, ...style}}>
+    <Pressable
+      onPress={handleOnpress}
+      style={{...styles.wrapperRecommendProduct, ...style}}>
       <Image source={image} style={styles.imageRecommend} />
       <View style={styles.wrapperTitle}>
         <Texting
@@ -21,7 +23,7 @@ const RecommendProduct = ({image, title, subtitle, style}) => {
       <View style={styles.wrapperSubTitle}>
         <Texting title={subtitle} color={COLORS.white} />
       </View>
-    </View>
+    </Pressable>
   );
 };
 

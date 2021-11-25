@@ -3,7 +3,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {authen, home, explore, cart, account, common} from './../screens';
 import {StatusBar} from 'react-native';
-
 import {StackStep} from './';
 import {routes} from './routes';
 const Stack = createNativeStackNavigator();
@@ -52,7 +51,7 @@ const MainStackNavigator = () => {
   return (
     <>
       <StatusBar
-        barStyle="dark-content"
+        barStyle="light-content"
         translucent={true}
         backgroundColor="transparent"
       />

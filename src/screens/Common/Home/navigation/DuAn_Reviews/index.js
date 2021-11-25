@@ -1,7 +1,10 @@
 import React from 'react';
 import {View, FlatList, ScrollView, Pressable, Image} from 'react-native';
 import {Header, Titling, StarRating, Texting} from '../../../../../components';
-import {DATA_DU_AN_REVIEWS} from '../../../../../assets/data';
+import {
+  DATA_DU_AN_REVIEWS,
+  DATA_IMAGES_REVIEWS,
+} from '../../../../../assets/data';
 import {Plus_Ants, Like} from '../../../../../assets/svg';
 import styles from './styles';
 import {getSize} from '../../../../../utils/reponsive';
@@ -18,6 +21,27 @@ const DuAn_Reviews = () => {
       </View>
     );
   };
+
+  const _renderImage = (item, index) => {
+    return (
+      <View
+        key={index}
+        style={{
+          ...styles.wrapperImage,
+          marginLeft: index === 0 ? getSize.m(0) : getSize.m(12),
+        }}>
+        <Image
+          source={item.image}
+          style={{
+            width: getSize.s(104),
+            height: getSize.v(104),
+            borderRadius: getSize.s(4),
+          }}
+        />
+      </View>
+    );
+  };
+
   const _renderCardReviews = ({item}) => {
     return (
       <View style={styles.wrapperCardReviews}>
@@ -36,7 +60,7 @@ const DuAn_Reviews = () => {
             <Texting title={item.time} />
           </View>
         </View>
-
+        
         <Texting
           title={item.description}
           textAlign="justify"
@@ -49,31 +73,7 @@ const DuAn_Reviews = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
           style={{flexDirection: 'row', flex: 1, marginBottom: getSize.m(6)}}>
-          <Image
-            source={item.image01}
-            style={{
-              width: getSize.s(104),
-              height: getSize.v(104),
-              borderRadius: getSize.s(4),
-            }}
-          />
-          <Image
-            source={item.image02}
-            style={{
-              marginHorizontal: getSize.m(16),
-              width: getSize.s(104),
-              height: getSize.v(104),
-              borderRadius: getSize.s(4),
-            }}
-          />
-          <Image
-            source={item.image03}
-            style={{
-              width: getSize.s(104),
-              height: getSize.v(104),
-              borderRadius: getSize.s(4),
-            }}
-          />
+          {DATA_IMAGES_REVIEWS.map(_renderImage)}
         </ScrollView>
         <View
           style={{

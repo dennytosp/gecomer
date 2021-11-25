@@ -5,9 +5,9 @@ import styles from './styles';
 import {getSize} from '../../../utils/reponsive';
 import {COLORS} from '../../../constants';
 
-const NotifList = ({image, title, content, time}) => {
+const NotifList = ({image, title, content, time, style}) => {
   return (
-    <View style={styles.wrapperCenter}>
+    <View style={{...style, ...styles.wrapperCenter}}>
       <Pressable>{image}</Pressable>
       <View style={styles.wrapperContentCenter}>
         <Titling title={title} marginBottom={getSize.m(8)} />
