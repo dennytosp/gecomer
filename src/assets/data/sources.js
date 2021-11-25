@@ -58,6 +58,7 @@ export const CATEGORIES_DATA = [
     id: '01',
     image: ManShirt,
     title: 'Man Shirt',
+    navigation: routes.DUAN_REVIEWS,
   },
   {
     id: '02',
@@ -530,6 +531,22 @@ export const DATA_DU_AN_REVIEWS = [
   },
 ];
 
+export const DATA_IMAGES_REVIEWS = [
+  {
+    image: photos.user5,
+  },
+  {
+    image: photos.user6,
+  },
+  {
+    image: photos.user7,
+  },
+  {
+    image: photos.user8,
+  },
+];
+
+
 export const MAN_FASHION_DATA = [
   {
     id: '01',
@@ -851,7 +868,7 @@ export const DATA_PROFILE = [
     id: '02',
     icon: Birthday,
     title: 'Birthday',
-    content: '21-08-2001',
+    content: '21/08/2001',
     navigation: routes.EDIT_USER_INFORMATION,
   },
   {
@@ -925,6 +942,7 @@ const sources = {
   DATA_ACTIVITY_NOTI,
   DATA_FEED_NOTI,
   DATA_DU_AN_REVIEWS,
+  DATA_IMAGES_REVIEWS,
   MAN_FASHION_DATA,
   WOMAN_FASHION_DATA,
   DATA_SEARCH,

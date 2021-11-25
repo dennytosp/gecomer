@@ -12,6 +12,7 @@ import {routes} from '../../../navigation/routes';
 const Offer = () => {
   const navigation = useNavigation();
   const [count, setCount] = useState(1);
+  const [code, setCode] = useState();
 
   const _renderHeader = ({item}) => {
     return (
@@ -30,21 +31,6 @@ const Offer = () => {
           count <= 1 ? setCount(1) : setCount(count - 1);
         }}
       />
-    );
-  };
-
-  const _renderCenter = () => {
-    return (
-      <View style={styles.wrapperCenter}>
-        <TextInput
-          style={styles.input}
-          placeholder="Enter Cupon Code"
-          placeholderTextColor={COLORS.grey}
-        />
-        <Pressable style={styles.wrapperButtonApply}>
-          <Texting title="Apply" fontFamily={FONTS.bold} color={COLORS.white} />
-        </Pressable>
-      </View>
     );
   };
 
@@ -79,7 +65,23 @@ const Offer = () => {
           renderItem={_renderHeader}
           keyExtractor={item => item.id.toString()}
         />
-        <_renderCenter />
+
+        <View style={styles.wrapperCenter}>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter Cupon Code"
+            placeholderTextColor={COLORS.grey}
+            onChangeText={text => setCode(text)}
+          />
+          <Pressable style={styles.wrapperButtonApply}>
+            <Texting
+              title="Apply"
+              fontFamily={FONTS.bold}
+              color={COLORS.white}
+            />
+          </Pressable>
+        </View>
+
         <_renderFooter />
         <ButtonPrimary
           title="Check Out"

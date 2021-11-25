@@ -1,28 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Pressable, ScrollView, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
-import {
-  Email,
-  Facebook,
-  Google,
-  LogoPrimary,
-  Password,
-} from './../../../assets/svg';
+import {Facebook, Google, LogoPrimary} from './../../../assets/svg';
 import {COLORS, FONTS} from '../../../constants/theme';
-import {
-  ButtonPrimary,
-  ButtonSocial,
-  FormInput,
-  Texting,
-} from '../../../components';
+import {ButtonPrimary, ButtonSocial, Texting} from '../../../components';
 import {routes} from './../../../navigation/routes';
-import {getSize} from '../../../utils/reponsive';
+import FormLogin from '../components/FormLogin';
 
 const Login = () => {
   const {top} = useSafeAreaInsets();
   const navigation = useNavigation();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
   const _renderHeader = () => {
     return (
@@ -45,13 +36,6 @@ const Login = () => {
   const _renderCenter = () => {
     return (
       <View style={styles.wrapperCenter}>
-        <FormInput
-          icon={Email}
-          placeholder="Your Email"
-          keyboardType="email-address"
-          marginBottom={getSize.m(8)}
-        />
-        <FormInput icon={Password} placeholder="Password" secureTextEntry />
         <ButtonPrimary
           handleOnpress={() => navigation.navigate(routes.COMMON)}
           marginTop={16}
@@ -109,6 +93,10 @@ const Login = () => {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
         <_renderHeader />
+        <FormLogin
+          Emailing={[email, setEmail]}
+          Passworde={[password, setPassword]}
+        />
         <_renderCenter />
         <_renderFooter />
       </ScrollView>

@@ -5,7 +5,13 @@ import {getSize} from '../../utils/reponsive';
 import {Rating} from 'react-native-elements';
 import {COLORS} from '../../constants';
 
-const StarRating = ({startingValue, imageSize, marginVertical}) => {
+const StarRating = ({
+  startingValue,
+  imageSize,
+  readonly,
+  onFinishRating,
+  marginVertical,
+}) => {
   return (
     <View style={styles.wrapperStar}>
       <Rating
@@ -14,7 +20,8 @@ const StarRating = ({startingValue, imageSize, marginVertical}) => {
         imageSize={imageSize ? getSize.m(imageSize) : getSize.m(12)}
         ratingColor={COLORS.yellow}
         ratingBackgroundColor={COLORS.border}
-        readonly
+        onFinishRating={onFinishRating}
+        readonly={readonly ? false : true}
         style={{
           alignItems: 'flex-start',
           marginVertical: marginVertical ? getSize.m(marginVertical) : 0,

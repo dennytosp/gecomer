@@ -12,10 +12,6 @@ export const COLORS = {
   green: '#53D1B6',
   red: '#EB001B',
   yellow: '#FFC833',
-  
-  // #83CACD
-  // #0F9EA8
-  // #ADDAC3
   primary: '#83CACD',
   pale_red: '#FB7181',
   secondary: '#223263',
@@ -32,7 +28,6 @@ export const SIZES = {
 };
 
 export const FONTS = {
-  //Primary Fonts
   black: 'Poppins-Black',
   blackItalic: 'Poppins-BlackItalic',
   bold: 'Poppins-Bold',

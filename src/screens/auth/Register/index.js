@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Pressable, ScrollView, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
-import {Email, Fullname, LogoPrimary, Password} from './../../../assets/svg';
+import {LogoPrimary} from './../../../assets/svg';
 import {COLORS, FONTS} from '../../../constants/theme';
-import {ButtonPrimary, FormInput, Texting} from '../../../components';
+import {ButtonPrimary, Texting} from '../../../components';
 import {routes} from './../../../navigation/routes';
-import {getSize} from '../../../utils/reponsive';
+import FormRegister from '../components/FormRegister';
 
 const Register = () => {
   const {top} = useSafeAreaInsets();
   const navigation = useNavigation();
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
   const _renderHeader = () => {
     return (
@@ -34,28 +37,6 @@ const Register = () => {
   const _renderCenter = () => {
     return (
       <View style={styles.wrapperCenter}>
-        <FormInput
-          icon={Fullname}
-          placeholder="Full Name"
-          marginBottom={getSize.m(8)}
-        />
-        <FormInput
-          icon={Email}
-          placeholder="Your Email"
-          keyboardType="email-address"
-          marginBottom={getSize.m(8)}
-        />
-        <FormInput
-          icon={Password}
-          placeholder="Password"
-          secureTextEntry
-          marginBottom={getSize.m(8)}
-        />
-        <FormInput
-          icon={Password}
-          placeholder="Password Again"
-          secureTextEntry
-        />
         <ButtonPrimary
           handleOnpress={() => navigation.navigate(routes.LOGIN)}
           marginTop={16}
@@ -89,6 +70,11 @@ const Register = () => {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
         <_renderHeader />
+        <FormRegister
+          Fullnamemd={[name, setName]}
+          Emailing={[email, setEmail]}
+          Passworde={[password, setPassword]}
+        />
         <_renderCenter />
         <_renderFooter />
       </ScrollView>

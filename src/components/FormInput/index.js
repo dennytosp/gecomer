@@ -10,8 +10,13 @@ const FormInput = ({
   secureTextEntry,
   onFocus,
   onChangeText,
+  autoFocus,
+  onEndEditing,
+  value,
+  defaultValue,
   right,
   marginBottom,
+  editable,
   style,
 }) => {
   return (
@@ -25,14 +30,21 @@ const FormInput = ({
         {icon && <Pressable style={styles.wrapperIconInput}>{icon}</Pressable>}
         <TextInput
           placeholder={placeholder}
+          onChangeText={onChangeText}
           placeholderTextColor={COLORS.grey}
           keyboardType={keyboardType}
           onFocus={onFocus}
-          onChangeText={onChangeText}
           secureTextEntry={secureTextEntry}
+          autoFocus={autoFocus ? true : false}
+          onEndEditing={onEndEditing}
+          value={value}
+          defaultValue={defaultValue}
+          editable={!editable ? true : false}
           style={styles.txtInput}
         />
-        {right && <Pressable style={styles.wrapperRightInput}>{right}</Pressable>}
+        {right && (
+          <Pressable style={styles.wrapperRightInput}>{right}</Pressable>
+        )}
       </View>
     </View>
   );

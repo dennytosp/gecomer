@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, FlatList, ScrollView, Pressable, Keyboard} from 'react-native';
 import styles from './styles';
 import {Searching, Texting} from '../../../../../components';
@@ -9,6 +9,8 @@ import {useNavigation} from '@react-navigation/core';
 
 const SearchPage = () => {
   const navigation = useNavigation();
+  const [contentSearch, setContentSearch] = useState();
+
   const _renderCenter = ({item, index}) => {
     return (
       <Pressable
@@ -27,8 +29,9 @@ const SearchPage = () => {
     <View style={styles.container}>
       <Searching
         iconRight01={Mic}
-        iconRightInput={<Remove />}
+        iconRightInput={Remove}
         editable
+        onChangeText={value => setContentSearch(value)}
         placeholder="Enter your search term"
         handleOnpressRightInput={() => Keyboard.dismiss()}
       />

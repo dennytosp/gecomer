@@ -99,7 +99,7 @@ const DetailsContent = ({name, price}) => {
             marginRight={getSize.m(4)}
             fontSize={getSize.m(10)}
           />
-          <Texting title="(5 Reviews)" fontSize={getSize.m(10)} />
+          <Texting title="(4 Reviews)" fontSize={getSize.m(10)} />
         </View>
 
         <ReviewsProduct

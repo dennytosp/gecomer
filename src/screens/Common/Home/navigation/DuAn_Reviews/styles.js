@@ -48,5 +48,7 @@ export const styles = StyleSheet.create({
   wrapperRowRightInfor: {
     justifyContent: 'flex-end',
   },
+  wrapperImage: {
+  }
 });
 export default styles;

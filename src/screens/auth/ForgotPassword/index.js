@@ -1,9 +1,9 @@
-import React from 'react';
-import {Pressable, ScrollView, View} from 'react-native';
+import React, {useState} from 'react';
+import {Pressable, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
-import {Email, Fullname, LogoPrimary, Password} from '../../../assets/svg';
+import {Email, LogoPrimary} from '../../../assets/svg';
 import {COLORS, FONTS} from '../../../constants/theme';
 import {ButtonPrimary, FormInput, Texting} from '../../../components';
 import {routes} from '../../../navigation/routes';
@@ -12,6 +12,7 @@ import {getSize} from '../../../utils/reponsive';
 const ForgotPassword = () => {
   const {top} = useSafeAreaInsets();
   const navigation = useNavigation();
+  const [email, setEmail] = useState();
 
   const _renderHeader = () => {
     return (
@@ -34,12 +35,6 @@ const ForgotPassword = () => {
   const _renderCenter = () => {
     return (
       <View style={styles.wrapperCenter}>
-        <FormInput
-          icon={Email}
-          placeholder="Your Email"
-          keyboardType="email-address"
-          marginBottom={getSize.m(8)}
-        />
         <ButtonPrimary
           handleOnpress={() => navigation.navigate(routes.LOGIN)}
           marginTop={16}
@@ -69,13 +64,17 @@ const ForgotPassword = () => {
 
   return (
     <View style={styles.container}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
-        <_renderHeader />
-        <_renderCenter />
-        <_renderFooter />
-      </ScrollView>
+      <_renderHeader />
+      <FormInput
+        icon={Email}
+        placeholder="Your Email"
+        keyboardType="email-address"
+        marginBottom={getSize.m(8)}
+        onChangeText={email => setEmail(email)}
+        defaultValue={email}
+      />
+      <_renderCenter />
+      <_renderFooter />
     </View>
   );
 };

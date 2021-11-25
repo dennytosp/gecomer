@@ -14,9 +14,14 @@ const ReviewsProduct = ({
   avatar,
   imageReviews,
   marginBottom,
+  style,
 }) => {
   return (
-    <View style={{marginBottom: marginBottom ? marginBottom : getSize.m(0)}}>
+    <View
+      style={{
+        ...style,
+        marginBottom: marginBottom ? marginBottom : getSize.m(0),
+      }}>
       <Pressable style={styles.wrapperInfor}>
         <Pressable style={styles.wrapperImagePersonReviews}>
           <Image source={avatar} style={styles.imagePersonReviews} />
