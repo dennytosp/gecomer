@@ -1,9 +1,9 @@
-import React from 'react';
-import {Pressable} from 'react-native';
-import styles from './styles';
-import {COLORS, FONTS} from '../../constants/theme';
-import Texting from '../Texting';
-import {getSize} from '../../utils/reponsive';
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { Pressable } from 'react-native'
+import Texting from '../Texting'
+import styles from './styles'
 
 const ButtonPrimary = ({
   title,
@@ -18,12 +18,12 @@ const ButtonPrimary = ({
   paddingRight,
   paddingTop,
   paddingBottom,
-  handleOnpress,
+  onPress,
   style,
 }) => {
   return (
     <Pressable
-      onPress={handleOnpress}
+      onPress={onPress}
       style={{
         ...style,
         ...styles.wrapperButton(
@@ -39,7 +39,8 @@ const ButtonPrimary = ({
           paddingTop,
           paddingBottom,
         ),
-      }}>
+      }}
+    >
       <Texting
         title={title}
         fontFamily={FONTS.bold}
@@ -48,7 +49,7 @@ const ButtonPrimary = ({
         paddingVertical={getSize.m(16)}
       />
     </Pressable>
-  );
-};
+  )
+}
 
-export default ButtonPrimary;
+export default ButtonPrimary

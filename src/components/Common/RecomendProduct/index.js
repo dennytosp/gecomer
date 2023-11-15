@@ -1,15 +1,16 @@
-import React from 'react';
-import {View, Image, Pressable} from 'react-native';
-import styles from './styles';
-import {Texting} from '../..';
-import {getSize} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants';
+import Texting from '@/components/Texting'
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { Image, Pressable, View } from 'react-native'
+import styles from './styles'
 
-const RecommendProduct = ({image, title, subtitle, handleOnpress, style}) => {
+const RecommendProduct = ({ image, title, subtitle, onPress, style }) => {
   return (
     <Pressable
-      onPress={handleOnpress}
-      style={{...styles.wrapperRecommendProduct, ...style}}>
+      onPress={onPress}
+      style={{ ...styles.wrapperRecommendProduct, ...style }}
+    >
       <Image source={image} style={styles.imageRecommend} />
       <View style={styles.wrapperTitle}>
         <Texting
@@ -24,7 +25,7 @@ const RecommendProduct = ({image, title, subtitle, handleOnpress, style}) => {
         <Texting title={subtitle} color={COLORS.white} />
       </View>
     </Pressable>
-  );
-};
+  )
+}
 
-export default RecommendProduct;
+export default RecommendProduct

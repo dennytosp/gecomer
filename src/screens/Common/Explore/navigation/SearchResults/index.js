@@ -1,27 +1,22 @@
-import React, {useState} from 'react';
-import {View, FlatList, Pressable} from 'react-native';
-import styles from './styles';
-import {
-  ProductsHorizontal,
-  Remind,
-  Searching,
-  Texting,
-} from '../../../../../components';
-import {PRODUCTS_DATA_VERTICOLUMNS} from '../../../../../assets/data';
-import {DownPress, Filterist, Soft} from '../../../../../assets/svg';
-import {COLORS, FONTS} from '../../../../../constants';
-import {getSize} from '../../../../../utils/reponsive';
-import {RemoveEmpty} from './../../../../../assets/svg';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
+import React, { useState } from 'react'
+import { View, FlatList, Pressable } from 'react-native'
+import styles from './styles'
+import { ProductsHorizontal, Remind, Searching, Texting } from '@/components'
+import { PRODUCTS_DATA_VERTICOLUMNS } from '@/assets'
+import { DownPress, Filterist, Soft } from '@/assets'
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import { RemoveEmpty } from '@/assets'
+import { useNavigation } from '@react-navigation/native'
+import { routes } from '@/navigation/routes'
 
 const SearchResults = () => {
-  const navigation = useNavigation();
-  const numColumns = 2;
-  const emptyLength = [].length + ' Result';
-  const countLength = PRODUCTS_DATA_VERTICOLUMNS.length + ' Result';
-  const [show, setShow] = useState(true);
-  const [value, setValue] = useState('Nike Air Max');
+  const navigation = useNavigation()
+  const numColumns = 2
+  const emptyLength = [].length + ' Result'
+  const countLength = PRODUCTS_DATA_VERTICOLUMNS.length + ' Result'
+  const [show, setShow] = useState(true)
+  const [value, setValue] = useState('Nike Air Max')
 
   const _renderCenter = () => {
     return (
@@ -34,7 +29,8 @@ const SearchResults = () => {
         </Pressable>
         <Pressable
           onPress={() => navigation.navigate(routes.CATEGORY)}
-          style={styles.wrapperRightRows}>
+          style={styles.wrapperRightRows}
+        >
           <Texting
             title="Man Shoes"
             fontFamily={FONTS.bold}
@@ -46,10 +42,10 @@ const SearchResults = () => {
           </Pressable>
         </Pressable>
       </View>
-    );
-  };
+    )
+  }
 
-  const _renderProducts = ({item}) => {
+  const _renderProducts = ({ item }) => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
@@ -60,11 +56,11 @@ const SearchResults = () => {
           price={item.price}
           promotion={item.promotion}
           columns
-          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
+          onPress={() => navigation.navigate(routes.DETAILS, { item })}
         />
       </View>
-    );
-  };
+    )
+  }
 
   const _renderEmpty = () => {
     return (
@@ -75,16 +71,16 @@ const SearchResults = () => {
         onEvent="Back to Home"
         handleOnEvent={() => navigation.navigate(routes.COMMON)}
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Searching
         iconRight={Soft}
         iconRight01={Filterist}
-        handleOnpressRight={() => navigation.navigate(routes.SOFT_BY)}
-        handleOnpressRight01={() => navigation.navigate(routes.FILTER_SEARCH)}
+        onPressRight={() => navigation.navigate(routes.SOFT_BY)}
+        onPressRight01={() => navigation.navigate(routes.FILTER_SEARCH)}
         editable
         onChangeText={text => setValue(text)}
         value={value}
@@ -103,7 +99,7 @@ const SearchResults = () => {
         _renderEmpty()
       )}
     </View>
-  );
-};
+  )
+}
 
-export default SearchResults;
+export default SearchResults

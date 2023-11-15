@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../../../../utils/reponsive';
-import {COLORS} from '../../../../../constants';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperCondition: {},
@@ -18,5 +18,5 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.border,
     borderRadius: getSize.s(5),
   },
-});
-export default styles;
+})
+export default styles

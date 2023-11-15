@@ -1,45 +1,45 @@
-import Texting from './Texting';
-import FormInput from './FormInput';
-import ButtonPrimary from './ButtonPrimary';
-import ButtonSocial from './ButtonSocial';
-import ProductsHorizontal from './Common/ProductsHorizontal';
-import Titling from './Titling';
-import Searching from './Searching';
-import Header from './Header';
-import ReviewsProduct from './Common/ReviewsProduct';
-import StarRating from './StarRating';
-import Charting from './Charting';
-import Categories from './Common/Categories';
-import NotifList from './Common/NotifList';
-import Remind from './Remind';
-import Promotion from './Common/Promotion';
-import RecommendProduct from './Common/RecomendProduct';
-import Cart from './Common/Cart';
-import Iteming from './Common/Iteming';
-import Eventlist from './Common/Eventlist';
-import CardATM from './Common/CardATM';
-import Addressing from './Common/Addressing';
+import ButtonPrimary from './ButtonPrimary'
+import ButtonSocial from './ButtonSocial'
+import Charting from './Charting'
+import Addressing from './Common/Addressing'
+import CardATM from './Common/CardATM'
+import Cart from './Common/Cart'
+import Categories from './Common/Categories'
+import EventList from './Common/EventList'
+import Iteming from './Common/Iteming'
+import NotifList from './Common/NotifList'
+import ProductsHorizontal from './Common/ProductsHorizontal'
+import Promotion from './Common/Promotion'
+import RecommendProduct from './Common/RecomendProduct'
+import ReviewsProduct from './Common/ReviewsProduct'
+import FormInput from './FormInput'
+import Header from './Header'
+import Remind from './Remind'
+import Searching from './Searching'
+import StarRating from './StarRating'
+import Texting from './Texting'
+import Titling from './Titling'
 
 export {
-  Texting,
-  FormInput,
+  Addressing,
   ButtonPrimary,
   ButtonSocial,
-  Header,
-  Searching,
-  Titling,
-  ProductsHorizontal,
-  ReviewsProduct,
-  StarRating,
-  Charting,
+  CardATM,
+  Cart,
   Categories,
+  Charting,
+  EventList,
+  FormInput,
+  Header,
+  Iteming,
   NotifList,
-  Remind,
+  ProductsHorizontal,
   Promotion,
   RecommendProduct,
-  Cart,
-  Iteming,
-  Eventlist,
-  CardATM,
-  Addressing,
-};
+  Remind,
+  ReviewsProduct,
+  Searching,
+  StarRating,
+  Texting,
+  Titling,
+}

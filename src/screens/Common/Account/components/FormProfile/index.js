@@ -1,9 +1,9 @@
-import React from 'react';
-import {View} from 'react-native';
-import {Birthday, DownPress, PhoneNumber} from '../../../../../assets/svg';
-import {FormInput, Titling} from '../../../../../components';
-import {getSize} from '../../../../../utils/reponsive';
-import styles from './styles';
+import React from 'react'
+import { View } from 'react-native'
+import { Birthday, DownPress, PhoneNumber } from '@/assets'
+import { FormInput, Titling } from '@/components'
+import { getSize } from '@/utils'
+import styles from './styles'
 
 const FormProfile = ({
   FirstName,
@@ -13,12 +13,12 @@ const FormProfile = ({
   Email,
   PhoneNumbers,
 }) => {
-  const [firstName, setFirstName] = FirstName;
-  const [lastName, setLastName] = LastName;
-  const [gender, setGender] = Gender;
-  const [birthday, setBirthday] = Birthdayng;
-  const [email, setEmail] = Email;
-  const [phoneNumber, setPhoneNumber] = PhoneNumbers;
+  const [firstName, setFirstName] = FirstName
+  const [lastName, setLastName] = LastName
+  const [gender, setGender] = Gender
+  const [birthday, setBirthday] = Birthdayng
+  const [email, setEmail] = Email
+  const [phoneNumber, setPhoneNumber] = PhoneNumbers
 
   return (
     <View style={styles.wrapperContent}>
@@ -65,7 +65,7 @@ const FormProfile = ({
         onChangeText={text => setPhoneNumber(text)}
       />
     </View>
-  );
-};
+  )
+}
 
-export default FormProfile;
+export default FormProfile

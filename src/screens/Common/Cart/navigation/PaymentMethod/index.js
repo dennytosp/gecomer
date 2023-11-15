@@ -1,32 +1,31 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
-import styles from './styles';
-import {Eventlist} from '../../../../../components';
-import {DATA_PAYMENT} from '../../../../../assets/data';
-import {getSize, width} from '../../../../../utils/reponsive';
-import {Header} from '../../../../../components';
-import {useNavigation} from '@react-navigation/core';
+import { DATA_PAYMENT } from '@/assets'
+import { EventList, Header } from '@/components'
+import { getSize, width } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import styles from './styles'
 
 const PaymentMethod = () => {
-  const navigation = useNavigation();
-  const _renderCenter = ({item}) => {
+  const navigation = useNavigation()
+  const _renderCenter = ({ item }) => {
     return (
       <View style={styles.wrapperCenter}>
-        <Eventlist
+        <EventList
           icon={item.icon}
           title={item.name}
           widthing={width}
           backgroundColor={item.backgroundColor}
           paddingHorizontal={getSize.m(16)}
-          handleOnpress={() => navigation.navigate(item.navigation)}
+          onPress={() => navigation.navigate(item.navigation)}
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
-      <Header title="Payment" topline paddingHorizontal={getSize.m(16)} />
+      <Header title="Payment" topLine paddingHorizontal={getSize.m(16)} />
       <FlatList
         showsVerticalScrollIndicator={false}
         data={DATA_PAYMENT}
@@ -34,7 +33,7 @@ const PaymentMethod = () => {
         keyExtractor={item => item.id.toString()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default PaymentMethod;
+export default PaymentMethod

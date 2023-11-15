@@ -1,9 +1,9 @@
-import React from 'react';
-import {Pressable} from 'react-native';
-import styles from './styles';
-import {FONTS} from '../../constants/theme';
-import Texting from '../Texting';
-import {getSize} from '../../utils/reponsive';
+import { FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { Pressable } from 'react-native'
+import Texting from '../Texting'
+import styles from './styles'
 
 const ButtonSocial = ({
   icon,
@@ -19,12 +19,12 @@ const ButtonSocial = ({
   paddingRight,
   paddingTop,
   paddingBottom,
-  handleOnpress,
+  onPress,
   style,
 }) => {
   return (
     <Pressable
-      onPress={handleOnpress}
+      onPress={onPress}
       style={{
         ...style,
         ...styles.wrapperSocial(
@@ -40,7 +40,8 @@ const ButtonSocial = ({
           paddingTop,
           paddingBottom,
         ),
-      }}>
+      }}
+    >
       <Pressable style={styles.wrapperIconSocial}>{icon}</Pressable>
       <Texting
         title={title}
@@ -48,7 +49,7 @@ const ButtonSocial = ({
         paddingVertical={getSize.m(14)}
       />
     </Pressable>
-  );
-};
+  )
+}
 
-export default ButtonSocial;
+export default ButtonSocial

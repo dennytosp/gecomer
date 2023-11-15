@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {getSize, height, width} from '../../../utils/reponsive';
+import { getSize, height, width } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperRecommendProduct: {
@@ -22,5 +22,5 @@ export const styles = StyleSheet.create({
     left: getSize.m(24),
     bottom: getSize.m(48),
   },
-});
-export default styles;
+})
+export default styles

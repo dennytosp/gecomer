@@ -1,16 +1,15 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
-import styles from './styles';
-import {ProductsHorizontal, Header} from '../../../../../components';
-import {DATA_MEGA_SALE} from '../../../../../assets/data';
-import {Search} from '../../../../../assets/svg';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
-import {getSize} from '../../../../../utils/reponsive';
+import { DATA_MEGA_SALE, Search } from '@/assets'
+import { Header, ProductsHorizontal } from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import styles from './styles'
 
 const MegaSale = () => {
-  const navigation = useNavigation();
-  const _renderMegaSale = ({item, index}) => {
+  const navigation = useNavigation()
+  const _renderMegaSale = ({ item, index }) => {
     return (
       <View style={styles.wrapperMegaSale(index)}>
         <ProductsHorizontal
@@ -21,19 +20,19 @@ const MegaSale = () => {
           price={item.price}
           promotion={item.promotion}
           columns
-          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
+          onPress={() => navigation.navigate(routes.DETAILS, { item })}
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Header
-        topline
+        topLine
         title="Mega Sale"
         iconRight02={Search}
-        handleOnpressRight02={() => navigation.navigate(routes.SEARCH_PAGE)}
+        onPressRight02={() => navigation.navigate(routes.SEARCH_PAGE)}
       />
       <FlatList
         keyboardDismissMode="on-drag"
@@ -45,7 +44,7 @@ const MegaSale = () => {
         keyExtractor={item => item.id.toString()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default MegaSale;
+export default MegaSale

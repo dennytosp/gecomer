@@ -1,27 +1,28 @@
-import React, {useState} from 'react';
-import {ScrollView, View} from 'react-native';
-import styles from './styles';
-import {ButtonPrimary, Header} from '../../../../../components';
-import {useNavigation} from '@react-navigation/core';
-import {getSize} from '../../../../../utils/reponsive';
-import FormAddress from '../../components/FormAddress';
+import { ButtonPrimary, Header } from '@/components'
+import { useNavigation } from '@react-navigation/native'
+import React, { useState } from 'react'
+import { ScrollView, View } from 'react-native'
+import { getSize } from '@/utils'
+import { FormAddress } from '../../components'
+import styles from './styles'
 
-const AddAddress = ({route}) => {
-  const navigation = useNavigation();
-  const {add_address, edit_address} = route.params;
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName] = useState();
-  const [address, setAddress] = useState();
-  const [addressBackup, setAddressBackup] = useState();
-  const [zipCode, setZipCode] = useState();
-  const [phoneNumber, setPhoneNumber] = useState();
+const AddAddress = ({ route }) => {
+  const navigation = useNavigation()
+  const { add_address, edit_address } = route.params
+  const [firstName, setFirstName] = useState()
+  const [lastName, setLastName] = useState()
+  const [address, setAddress] = useState()
+  const [addressBackup, setAddressBackup] = useState()
+  const [zipCode, setZipCode] = useState()
+  const [phoneNumber, setPhoneNumber] = useState()
 
   return (
     <View style={styles.container}>
-      <Header title={add_address ? add_address : edit_address} topline />
+      <Header title={add_address ? add_address : edit_address} topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <FormAddress
           FirstName={[firstName, setFirstName]}
           LastName={[lastName, setLastName]}
@@ -33,11 +34,11 @@ const AddAddress = ({route}) => {
         <ButtonPrimary
           title="Save Address"
           marginBottom={getSize.m(16)}
-          handleOnpress={() => navigation.goBack()}
+          onPress={() => navigation.goBack()}
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default AddAddress;
+export default AddAddress

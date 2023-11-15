@@ -1,8 +1,8 @@
-import React from 'react';
-import {View} from 'react-native';
-import {FormInput, Titling} from '../../../../../components';
-import {getSize} from '../../../../../utils/reponsive';
-import styles from './styles';
+import React from 'react'
+import { View } from 'react-native'
+import { FormInput, Titling } from '@/components'
+import { getSize } from '@/utils'
+import styles from './styles'
 
 const FormCarding = ({
   CardNumber,
@@ -10,10 +10,10 @@ const FormCarding = ({
   SecurityCode,
   CardHolder,
 }) => {
-  const [cardNumber, setCardNumber] = CardNumber;
-  const [expirationDate, setExpirationDate] = ExpirationDate;
-  const [securityCode, setSecurityCode] = SecurityCode;
-  const [cardHolder, setCardHolder] = CardHolder;
+  const [cardNumber, setCardNumber] = CardNumber
+  const [expirationDate, setExpirationDate] = ExpirationDate
+  const [securityCode, setSecurityCode] = SecurityCode
+  const [cardHolder, setCardHolder] = CardHolder
 
   return (
     <View style={styles.wrapperContent}>
@@ -51,7 +51,7 @@ const FormCarding = ({
         onChangeText={text => setCardHolder(text)}
       />
     </View>
-  );
-};
+  )
+}
 
-export default FormCarding;
+export default FormCarding

@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../../../../utils/reponsive';
-import {COLORS} from '../../../../../constants';
+import { StyleSheet } from 'react-native'
+import { getSize } from '@/utils'
+import { COLORS } from '@/constants'
 
 export const styles = StyleSheet.create({
   container: {
@@ -23,5 +23,5 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
-});
-export default styles;
+})
+export default styles

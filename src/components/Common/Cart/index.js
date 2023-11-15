@@ -1,16 +1,16 @@
-import React from 'react';
-import {View, Pressable, Image} from 'react-native';
-import {Texting} from '../..';
-import styles from './styles';
-import {getSize, width} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants';
 import {
   CancelFavorite,
   Delete,
   Favorited,
   Less_Cart,
   Plus_Cart,
-} from '../../../assets/svg';
+} from '@/assets'
+import Texting from '@/components/Texting'
+import { COLORS, FONTS } from '@/constants'
+import { getSize, width } from '@/utils'
+import React from 'react'
+import { Image, Pressable, View } from 'react-native'
+import styles from './styles'
 
 const Cart = ({
   image,
@@ -25,7 +25,7 @@ const Cart = ({
   style,
 }) => {
   return (
-    <View style={{...styles.wrapperHeader, ...style}}>
+    <View style={{ ...styles.wrapperHeader, ...style }}>
       <Image source={image} style={styles.product} />
       <View style={styles.wrapperContentCard}>
         <View style={styles.rowColumn01}>
@@ -74,7 +74,7 @@ const Cart = ({
         </View>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart

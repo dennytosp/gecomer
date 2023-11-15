@@ -1,19 +1,19 @@
-import React from 'react';
-import {Pressable, View, Image, FlatList} from 'react-native';
-import styles from './styles';
-import {Header, Texting} from '../../../../../components';
-import {Editing, ForwardNext} from '../../../../../assets/svg';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
-import {photos} from '../../../../../assets';
-import {COLORS, FONTS} from '../../../../../constants';
-import {getSize, width} from '../../../../../utils/reponsive';
-import {DATA_PROFILE} from '../../../../../assets/data';
-import picker from '../../../../../utils/picker';
+import React from 'react'
+import { Pressable, View, Image, FlatList } from 'react-native'
+import styles from './styles'
+import { Header, Texting } from '@/components'
+import { Editing, ForwardNext } from '@/assets'
+import { useNavigation } from '@react-navigation/native'
+import { routes } from '@/navigation/routes'
+import { photos } from '@/assets'
+import { COLORS, FONTS } from '@/constants'
+import { getSize, width } from '@/utils'
+import { DATA_PROFILE } from '@/assets'
+import picker from '@/utils/picker'
 
 const Profile = () => {
-  const navigation = useNavigation();
-  const {openPicker, picture} = picker();
+  const navigation = useNavigation()
+  const { openPicker, picture } = picker()
 
   const _renderHeader = () => {
     return (
@@ -21,7 +21,7 @@ const Profile = () => {
         <Pressable style={styles.wrapperHeaderAvatar}>
           <Pressable onPress={openPicker} style={styles.borderAvatar}>
             <Image
-              source={picture ? {uri: picture.uri} : photos.not_avt}
+              source={picture ? { uri: picture.uri } : photos.not_avt}
               style={styles.avatar}
             />
           </Pressable>
@@ -36,10 +36,10 @@ const Profile = () => {
           </View>
         </Pressable>
       </View>
-    );
-  };
+    )
+  }
 
-  const _renderCenter = ({item}) => {
+  const _renderCenter = ({ item }) => {
     return (
       <View style={styles.wrapperCenter}>
         <View style={styles.leftCenter}>
@@ -56,7 +56,8 @@ const Profile = () => {
         </View>
         <Pressable
           onPress={() => navigation.navigate(item.navigation)}
-          style={styles.rightCenter}>
+          style={styles.rightCenter}
+        >
           <Texting
             title={item.content}
             width={width / 2 - getSize.m(48)}
@@ -66,18 +67,16 @@ const Profile = () => {
           <ForwardNext />
         </Pressable>
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Header
         title="Profile"
-        topline
+        topLine
         iconRight02={Editing}
-        handleOnpressRight02={() =>
-          navigation.navigate(routes.EDIT_USER_INFORMATION)
-        }
+        onPressRight02={() => navigation.navigate(routes.EDIT_USER_INFORMATION)}
       />
       <_renderHeader />
       <FlatList
@@ -87,7 +86,7 @@ const Profile = () => {
         keyExtractor={item => item.id.toString()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

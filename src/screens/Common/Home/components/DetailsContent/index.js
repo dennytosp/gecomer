@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
-import {View, Pressable, FlatList} from 'react-native';
-import styles from './styles';
+import {
+  DATA_COLORS,
+  DATA_SIZES,
+  Favorite,
+  Favorited,
+  PRODUCTS_DATA,
+  photos,
+} from '@/assets'
 import {
   ButtonPrimary,
   ProductsHorizontal,
@@ -8,34 +13,31 @@ import {
   StarRating,
   Texting,
   Titling,
-} from '../../../../../components';
-import {getSize, width} from '../../../../../utils/reponsive';
-import {Favorite, Favorited} from '../../../../../assets/svg';
-import {COLORS, FONTS} from '../../../../../constants';
-import {
-  DATA_SIZES,
-  DATA_COLORS,
-  PRODUCTS_DATA,
-} from './../../../../../assets/data';
-import {photos} from '../../../../../assets';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from './../../../../../navigation/routes';
+} from '@/components'
+import { COLORS, FONTS } from '@/constants'
+import { routes } from '@/navigation/routes'
+import { getSize, width } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React, { useState } from 'react'
+import { FlatList, Pressable, View } from 'react-native'
+import styles from './styles'
 
-const DetailsContent = ({name, price}) => {
-  const navigation = useNavigation();
-  const [like, setLike] = useState(false);
+const DetailsContent = ({ name, price }) => {
+  const navigation = useNavigation()
+  const [like, setLike] = useState(false)
 
   const Liked = () => {
-    setLike(!like);
-  };
+    setLike(!like)
+  }
 
-  const _renderSelectSizes = ({item, index}) => {
+  const _renderSelectSizes = ({ item, index }) => {
     return (
       <Pressable
         style={{
           marginLeft: index === 0 ? getSize.m(0) : getSize.m(16),
           ...styles.wrapperSelectSizes,
-        }}>
+        }}
+      >
         <Texting
           title={item.sizeNumbers}
           fontFamily={FONTS.bold}
@@ -43,19 +45,20 @@ const DetailsContent = ({name, price}) => {
           color={COLORS.secondary}
         />
       </Pressable>
-    );
-  };
+    )
+  }
 
-  const _renderSelectColors = ({item, index}) => {
+  const _renderSelectColors = ({ item, index }) => {
     return (
       <Pressable
         style={{
           marginLeft: index === 0 ? getSize.m(0) : getSize.m(16),
           backgroundColor: item.colors,
           ...styles.wrapperSelectColors,
-        }}></Pressable>
-    );
-  };
+        }}
+      ></Pressable>
+    )
+  }
 
   const _renderSpecification = () => {
     return (
@@ -68,7 +71,9 @@ const DetailsContent = ({name, price}) => {
         <Texting title="Blue/Anthracite/" textAlign="right" />
         <Texting title="Watermelon/White" textAlign="right" />
 
-        <View style={{marginVertical: getSize.m(16), ...styles.wrapperText01}}>
+        <View
+          style={{ marginVertical: getSize.m(16), ...styles.wrapperText01 }}
+        >
           <Texting title="Style:" color={COLORS.secondary} />
           <Texting title="CD0113-400" />
         </View>
@@ -78,8 +83,8 @@ const DetailsContent = ({name, price}) => {
           textAlign="justify"
         />
       </View>
-    );
-  };
+    )
+  }
 
   const _renderReviewProducts = () => {
     return (
@@ -87,7 +92,7 @@ const DetailsContent = ({name, price}) => {
         <Titling
           title="Review Product"
           more="See More"
-          handleOnpress={() => navigation.navigate(routes.REVIEWS)}
+          onPress={() => navigation.navigate(routes.REVIEWS)}
         />
 
         <View style={styles.wrapperSubTitleStar}>
@@ -111,10 +116,10 @@ const DetailsContent = ({name, price}) => {
           imageReviews
         />
       </View>
-    );
-  };
+    )
+  }
 
-  const _renderProducts = ({item, index}) => {
+  const _renderProducts = ({ item, index }) => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
@@ -127,8 +132,8 @@ const DetailsContent = ({name, price}) => {
           marginBottom={1}
         />
       </View>
-    );
-  };
+    )
+  }
   return (
     <View style={styles.wrapperContent}>
       <View style={styles.wrapperTitleTexting}>
@@ -140,8 +145,8 @@ const DetailsContent = ({name, price}) => {
           numberOfLines={2}
           color={COLORS.secondary}
         />
-        <Pressable onPress={() => Liked()} style={{marginTop: getSize.m(5)}}>
-       {like ? Favorited : Favorite}   
+        <Pressable onPress={() => Liked()} style={{ marginTop: getSize.m(5) }}>
+          {like ? Favorited : Favorite}
         </Pressable>
       </View>
 
@@ -195,10 +200,11 @@ const DetailsContent = ({name, price}) => {
       <ButtonPrimary
         title="Add To Cart"
         marginTop={getSize.m(24)}
-        handleOnpress={() => navigation.navigate(routes.CART)}
+        marginBottom={getSize.m(16)}
+        onPress={() => navigation.navigate(routes.CART)}
       />
     </View>
-  );
-};
+  )
+}
 
-export default DetailsContent;
+export default DetailsContent

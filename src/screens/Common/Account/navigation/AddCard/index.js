@@ -1,24 +1,25 @@
-import React, {useState} from 'react';
-import {ScrollView, View} from 'react-native';
-import styles from './styles';
-import {ButtonPrimary, Header} from '../../../../../components';
-import {useNavigation} from '@react-navigation/core';
-import {getSize} from '../../../../../utils/reponsive';
-import FormCard from '../../components/FormCard';
+import React, { useState } from 'react'
+import { ScrollView, View } from 'react-native'
+import styles from './styles'
+import { ButtonPrimary, Header } from '@/components'
+import { useNavigation } from '@react-navigation/native'
+import { getSize } from '@/utils'
+import { FormCard } from '../../components'
 
 const AddCard = () => {
-  const navigation = useNavigation();
-  const [cardNumber, setCardNumber] = useState();
-  const [expirationDate, setExpirationDate] = useState();
-  const [securityCode, setSecurityCode] = useState();
-  const [cardHolder, setCardHolder] = useState();
+  const navigation = useNavigation()
+  const [cardNumber, setCardNumber] = useState()
+  const [expirationDate, setExpirationDate] = useState()
+  const [securityCode, setSecurityCode] = useState()
+  const [cardHolder, setCardHolder] = useState()
 
   return (
     <View style={styles.container}>
-      <Header title="Add Card" topline />
+      <Header title="Add Card" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <FormCard
           CardNumber={[cardNumber, setCardNumber]}
           ExpirationDate={[expirationDate, setExpirationDate]}
@@ -29,10 +30,10 @@ const AddCard = () => {
       <ButtonPrimary
         title="Add Card"
         marginVertical={getSize.m(16)}
-        handleOnpress={() => navigation.goBack()}
+        onPress={() => navigation.goBack()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default AddCard;
+export default AddCard

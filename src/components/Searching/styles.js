@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS, FONTS} from '../../constants';
-import {getSize} from '../../utils/reponsive';
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperHeader: {
@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     borderColor: COLORS.border,
     flex: 1,
     paddingHorizontal: getSize.m(16),
+    paddingVertical: getSize.m(8),
   },
   input: {
     fontFamily: FONTS.regular,
@@ -33,5 +34,5 @@ export const styles = StyleSheet.create({
     marginTop: getSize.m(16),
     marginHorizontal: getSize.m(-16),
   },
-});
-export default styles;
+})
+export default styles

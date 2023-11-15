@@ -1,21 +1,21 @@
-import {useState} from 'react';
-import ImagePicker from 'react-native-image-crop-picker';
+import { useState } from 'react'
+import ImagePicker from 'react-native-image-crop-picker'
 
 const picker = (width = 512, height = 512) => {
-  const [picture, setPicture] = useState(null);
-  const [pictures, setPictures] = useState(null);
-  const [closeModal, setCloseModal] = useState(false);
+  const [picture, setPicture] = useState(null)
+  const [pictures, setPictures] = useState(null)
+  const [closeModal, setCloseModal] = useState(false)
 
   const handleSetImage = image => {
-    setCloseModal(true);
+    setCloseModal(true)
 
     setPicture({
       uri: image.path,
       type: image.mime,
       size: image.size,
       name: Date.now() + '.jpg',
-    });
-  };
+    })
+  }
 
   const openPicker = () => {
     ImagePicker.openPicker({
@@ -24,12 +24,12 @@ const picker = (width = 512, height = 512) => {
       cropping: true,
     })
       .then(image => {
-        handleSetImage(image);
+        handleSetImage(image)
       })
       .then(() => {
-        setCloseModal(false);
-      });
-  };
+        setCloseModal(false)
+      })
+  }
 
   const openMultiPicker = () => {
     ImagePicker.openPicker({
@@ -38,11 +38,11 @@ const picker = (width = 512, height = 512) => {
       multiple: true,
     })
       .then(images => {
-        setCloseModal(true);
-        setPictures(images);
+        setCloseModal(true)
+        setPictures(images)
       })
-      .then(() => setCloseModal(false));
-  };
+      .then(() => setCloseModal(false))
+  }
 
   const openCamera = () => {
     ImagePicker.openCamera({
@@ -51,14 +51,14 @@ const picker = (width = 512, height = 512) => {
       cropping: true,
     })
       .then(image => {
-        handleSetImage(image);
+        handleSetImage(image)
       })
-      .then(() => setCloseModal(false));
-  };
+      .then(() => setCloseModal(false))
+  }
 
   const cleanUp = () => {
-    setPicture(null);
-  };
+    setPicture(null)
+  }
 
   return {
     picture,
@@ -68,7 +68,7 @@ const picker = (width = 512, height = 512) => {
     openMultiPicker,
     openCamera,
     cleanUp,
-  };
-};
+  }
+}
 
-export default picker;
+export default picker

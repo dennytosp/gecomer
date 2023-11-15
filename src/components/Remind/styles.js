@@ -1,10 +1,9 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../constants';
-import {getSize} from '../../utils/reponsive';
+import { StyleSheet } from 'react-native'
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
 
 export const styles = StyleSheet.create({
-  wrapperEmpty: {
-  },
+  wrapperEmpty: {},
   wrapperContentEmpty: {
     alignItems: 'center',
   },
@@ -25,5 +24,5 @@ export const styles = StyleSheet.create({
     borderWidth: getSize.s(3 / 2),
     borderColor: COLORS.border,
   },
-});
-export default styles;
+})
+export default styles

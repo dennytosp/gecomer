@@ -1,16 +1,15 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
-import styles from './styles';
-import {ProductsHorizontal, Header} from '../../../../../components';
-import {PRODUCTS_DATA} from '../../../../../assets/data';
-import {Search} from '../../../../../assets/svg';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
-import {getSize} from '../../../../../utils/reponsive';
+import { PRODUCTS_DATA, Search } from '@/assets'
+import { Header, ProductsHorizontal } from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import styles from './styles'
 
 const FlashSale = () => {
-  const navigation = useNavigation();
-  const _renderFlashSaleProducts = ({item, index}) => {
+  const navigation = useNavigation()
+  const _renderFlashSaleProducts = ({ item, index }) => {
     return (
       <View style={styles.wrapperFlashSale(index)}>
         <ProductsHorizontal
@@ -21,19 +20,19 @@ const FlashSale = () => {
           price={item.price}
           promotion={item.promotion}
           columns
-          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
+          onPress={() => navigation.navigate(routes.DETAILS, { item })}
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Header
-        topline
+        topLine
         title="Flash Sale"
         iconRight02={Search}
-        handleOnpressRight02={() => navigation.navigate(routes.SEARCH_PAGE)}
+        onPressRight02={() => navigation.navigate(routes.SEARCH_PAGE)}
       />
       <FlatList
         keyboardDismissMode="on-drag"
@@ -45,7 +44,7 @@ const FlashSale = () => {
         keyExtractor={index => index}
       />
     </View>
-  );
-};
+  )
+}
 
-export default FlashSale;
+export default FlashSale

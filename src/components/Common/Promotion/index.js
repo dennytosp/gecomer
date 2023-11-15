@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import {View, Pressable, Image} from 'react-native';
-import styles from './styles';
-import {Texting} from '../..';
-import {getSize} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants';
+import Texting from '@/components/Texting'
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React, { useEffect, useState } from 'react'
+import { Image, Pressable, View } from 'react-native'
+import styles from './styles'
 
 const Promotion = ({
   title,
@@ -11,27 +11,28 @@ const Promotion = ({
   minutes,
   seconds,
   image,
-  handleOnpress,
+  onPress,
   marginBottom,
   style,
 }) => {
-  const [count, setCount] = useState(3);
-  const [timerCount, setTimer] = useState(60);
+  const [count, setCount] = useState(3)
+  const [timerCount, setTimer] = useState(60)
 
   useEffect(() => {
     let interval = setInterval(() => {
       setTimer(lastTimerCount => {
-        lastTimerCount <= 1 && clearInterval(interval);
-        return lastTimerCount - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+        lastTimerCount <= 1 && clearInterval(interval)
+        return lastTimerCount - 1
+      })
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <Pressable
-      onPress={handleOnpress}
-      style={{...styles.wrapperPromotion(marginBottom), ...style}}>
+      onPress={onPress}
+      style={{ ...styles.wrapperPromotion(marginBottom), ...style }}
+    >
       <Image source={image} style={styles.imagePromotion} />
       <View style={styles.wrapperContentPromotion}>
         <Texting
@@ -82,7 +83,7 @@ const Promotion = ({
         </Pressable>
       </View>
     </Pressable>
-  );
-};
+  )
+}
 
-export default Promotion;
+export default Promotion

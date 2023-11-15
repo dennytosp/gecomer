@@ -1,9 +1,9 @@
-import React from 'react';
-import {View} from 'react-native';
-import {DownPress} from '../../../../../assets/svg';
-import {FormInput, Titling} from '../../../../../components';
-import {getSize} from '../../../../../utils/reponsive';
-import styles from './styles';
+import React from 'react'
+import { View } from 'react-native'
+import { DownPress } from '@/assets'
+import { FormInput, Titling } from '@/components'
+import { getSize } from '@/utils'
+import styles from './styles'
 
 const FormAddress = ({
   FirstName,
@@ -13,12 +13,12 @@ const FormAddress = ({
   ZipCode,
   PhoneNumber,
 }) => {
-  const [firstName, setFirstName] = FirstName;
-  const [lastName, setLastName] = LastName;
-  const [address, setAddress] = Address;
-  const [addressBackup, setAddressBackup] = AddressBackup;
-  const [zipCode, setZipCode] = ZipCode;
-  const [phoneNumber, setPhoneNumber] = PhoneNumber;
+  const [firstName, setFirstName] = FirstName
+  const [lastName, setLastName] = LastName
+  const [address, setAddress] = Address
+  const [addressBackup, setAddressBackup] = AddressBackup
+  const [zipCode, setZipCode] = ZipCode
+  const [phoneNumber, setPhoneNumber] = PhoneNumber
 
   return (
     <View style={styles.wrapperContent}>
@@ -75,7 +75,7 @@ const FormAddress = ({
         onChangeText={text => setPhoneNumber(text)}
       />
     </View>
-  );
-};
+  )
+}
 
-export default FormAddress;
+export default FormAddress

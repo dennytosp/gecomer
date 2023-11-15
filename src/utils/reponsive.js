@@ -1,25 +1,25 @@
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native'
 
-export const {width, height} = Dimensions.get('screen');
+export const { width, height } = Dimensions.get('screen')
 
 //IPHONE 12
-const DESIGN_WIDTH = 390;
-const DESIGN_HEIGHT = 844;
+const DESIGN_WIDTH = 390
+const DESIGN_HEIGHT = 844
 
-const WIDTH = width > height ? height : width;
-const HEIGHT = width > height ? width : height;
+const WIDTH = width > height ? height : width
+const HEIGHT = width > height ? width : height
 
 const scale = size => {
-  return (WIDTH / DESIGN_WIDTH) * size;
-};
+  return (WIDTH / DESIGN_WIDTH) * size
+}
 
 const verticalScale = size => {
-  return (HEIGHT / DESIGN_HEIGHT) * size;
-};
+  return (HEIGHT / DESIGN_HEIGHT) * size
+}
 
 const moderateScale = (size, factor = 0.5) => {
-  return size + (scale(size) - size) * factor;
-};
+  return size + (scale(size) - size) * factor
+}
 
 /**
  * getSize.m(10) Responsive for padding - margin - fontSize.
@@ -33,4 +33,4 @@ export const getSize = {
   m: moderateScale,
   s: scale,
   v: verticalScale,
-};
+}

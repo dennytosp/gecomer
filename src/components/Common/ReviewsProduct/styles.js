@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperInfor: {
@@ -35,5 +35,5 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: getSize.m(16),
   },
-});
-export default styles;
+})
+export default styles

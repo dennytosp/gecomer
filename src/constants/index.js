@@ -1,3 +1,3 @@
-import {COLORS, SIZES, FONTS} from './theme';
+import { COLORS, SIZES, FONTS } from './theme'
 
-export {COLORS, SIZES, FONTS};
+export { COLORS, SIZES, FONTS }

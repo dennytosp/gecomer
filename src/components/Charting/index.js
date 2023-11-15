@@ -1,11 +1,11 @@
-import React from 'react';
-import {Dimensions, View} from 'react-native';
-import {COLORS} from '../../constants/theme';
-import {BarChart} from 'react-native-chart-kit';
-import styles from './styles';
+import { COLORS } from '@/constants'
+import React from 'react'
+import { Dimensions, View } from 'react-native'
+import { BarChart } from 'react-native-chart-kit'
+import styles from './styles'
 
 const Charting = ({}) => {
-  const screenWidth = Dimensions.get('window').width;
+  const screenWidth = Dimensions.get('window').width
   return (
     <View style={styles.wrapperCenter}>
       <Text>Bezier Line Chart</Text>
@@ -54,7 +54,7 @@ const Charting = ({}) => {
         }}
       />
     </View>
-  );
-};
+  )
+}
 
-export default Charting;
+export default Charting

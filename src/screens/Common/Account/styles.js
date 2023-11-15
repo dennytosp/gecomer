@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../../utils/reponsive';
-import {COLORS} from '../../../constants/theme';
+import { StyleSheet } from 'react-native'
+import { getSize } from '@/utils'
+import { COLORS } from '@/constants'
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,5 +8,5 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   wrapperEvent: {},
-});
-export default styles;
+})
+export default styles

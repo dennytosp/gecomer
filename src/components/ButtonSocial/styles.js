@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../constants/theme';
-import {getSize} from '../../utils/reponsive';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperSocial: (
@@ -38,5 +38,5 @@ export const styles = StyleSheet.create({
     left: getSize.s(16),
     top: getSize.s(13),
   },
-});
-export default styles;
+})
+export default styles

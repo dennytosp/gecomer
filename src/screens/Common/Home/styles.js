@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize, width} from '../../../utils/reponsive';
-import {COLORS} from '../../../constants/theme';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,5 +19,5 @@ export const styles = StyleSheet.create({
   onScroll: {
     marginTop: getSize.m(16),
   },
-});
-export default styles;
+})
+export default styles

@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
-import {View} from 'react-native';
-import styles from './styles';
-import {ButtonPrimary, Header} from '../../../../../components';
-import {getSize} from '../../../../../utils/reponsive';
-import {ScrollView} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
-import FormPassword from '../../components/FormPassword';
+import { ButtonPrimary, Header } from '@/components'
+import { useNavigation } from '@react-navigation/native'
+import React, { useState } from 'react'
+import { ScrollView, View } from 'react-native'
+import { getSize } from '@/utils'
+import { FormPassword } from '../../components'
+import styles from './styles'
 
 const ChangePassword = () => {
-  const navigation = useNavigation();
-  const [oldPassword, setOldPassword] = useState();
-  const [newPassword, setNewPassword] = useState();
+  const navigation = useNavigation()
+  const [oldPassword, setOldPassword] = useState()
+  const [newPassword, setNewPassword] = useState()
 
   return (
     <View style={styles.container}>
-      <Header title="Change Password" topline />
+      <Header title="Change Password" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <FormPassword
           OldPassword={[oldPassword, setOldPassword]}
           NewPassword={[newPassword, setNewPassword]}
@@ -26,10 +26,10 @@ const ChangePassword = () => {
       <ButtonPrimary
         title="Save"
         marginVertical={getSize.m(16)}
-        handleOnpress={() => navigation.goBack()}
+        onPress={() => navigation.goBack()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default ChangePassword;
+export default ChangePassword

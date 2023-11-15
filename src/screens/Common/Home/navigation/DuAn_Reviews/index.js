@@ -1,14 +1,15 @@
-import React from 'react';
-import {View, FlatList, ScrollView, Pressable, Image} from 'react-native';
-import {Header, Titling, StarRating, Texting} from '../../../../../components';
 import {
   DATA_DU_AN_REVIEWS,
   DATA_IMAGES_REVIEWS,
-} from '../../../../../assets/data';
-import {Plus_Ants, Like} from '../../../../../assets/svg';
-import styles from './styles';
-import {getSize} from '../../../../../utils/reponsive';
-import {COLORS} from '../../../../../constants';
+  Like,
+  Plus_Ants,
+} from '@/assets'
+import { Header, StarRating, Texting, Titling } from '@/components'
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { FlatList, Image, Pressable, ScrollView, View } from 'react-native'
+import styles from './styles'
 
 const DuAn_Reviews = () => {
   const _renderTop = () => {
@@ -19,8 +20,8 @@ const DuAn_Reviews = () => {
           <Plus_Ants />
         </Pressable>
       </View>
-    );
-  };
+    )
+  }
 
   const _renderImage = (item, index) => {
     return (
@@ -29,7 +30,8 @@ const DuAn_Reviews = () => {
         style={{
           ...styles.wrapperImage,
           marginLeft: index === 0 ? getSize.m(0) : getSize.m(12),
-        }}>
+        }}
+      >
         <Image
           source={item.image}
           style={{
@@ -39,10 +41,10 @@ const DuAn_Reviews = () => {
           }}
         />
       </View>
-    );
-  };
+    )
+  }
 
-  const _renderCardReviews = ({item}) => {
+  const _renderCardReviews = ({ item }) => {
     return (
       <View style={styles.wrapperCardReviews}>
         {/* inforCard */}
@@ -51,7 +53,7 @@ const DuAn_Reviews = () => {
             <Pressable style={styles.wrapperAvatarInsideCard}>
               <Image source={item.avatar} style={styles.imageAvatar} />
             </Pressable>
-            <View style={{marginHorizontal: getSize.m(24 / 2)}}>
+            <View style={{ marginHorizontal: getSize.m(24 / 2) }}>
               <Titling title={item.name} marginBottom={getSize.m(1 / 100000)} />
               <StarRating startingValue={item.star} imageSize={14} />
             </View>
@@ -60,7 +62,7 @@ const DuAn_Reviews = () => {
             <Texting title={item.time} />
           </View>
         </View>
-        
+
         <Texting
           title={item.description}
           textAlign="justify"
@@ -72,7 +74,8 @@ const DuAn_Reviews = () => {
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          style={{flexDirection: 'row', flex: 1, marginBottom: getSize.m(6)}}>
+          style={{ flexDirection: 'row', flex: 1, marginBottom: getSize.m(6) }}
+        >
           {DATA_IMAGES_REVIEWS.map(_renderImage)}
         </ScrollView>
         <View
@@ -80,24 +83,26 @@ const DuAn_Reviews = () => {
             flexDirection: 'row',
             justifyContent: 'flex-end',
             alignItems: 'center',
-          }}>
+          }}
+        >
           <Texting title={item.like} marginTop={getSize.m(7)} />
           <Like />
         </View>
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Header
-        topline
+        topLine
         title="Đánh giá sản phẩm"
-        handleOnpressRight02={() => console.log('Search')}
+        onPressRight02={() => console.log('Search')}
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <_renderTop />
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -111,7 +116,7 @@ const DuAn_Reviews = () => {
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default DuAn_Reviews;
+export default DuAn_Reviews

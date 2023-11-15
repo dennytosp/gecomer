@@ -1,24 +1,18 @@
-import React, {useState} from 'react';
-import {ScrollView, View} from 'react-native';
-import styles from './styles';
-import {
-  ButtonPrimary,
-  CardATM,
-  FormInput,
-  Header,
-  Titling,
-} from '../../../../../components';
-import {useNavigation} from '@react-navigation/core';
-import {getSize} from '../../../../../utils/reponsive';
-import {Method01} from '../../../../../assets/svg';
-import FormCarding from '../../components/FormCarding';
+import { Method01 } from '@/assets'
+import { ButtonPrimary, CardATM, Header } from '@/components'
+import { useNavigation } from '@react-navigation/native'
+import React, { useState } from 'react'
+import { ScrollView, View } from 'react-native'
+import { getSize } from '@/utils'
+import { FormCarding } from '../../components'
+import styles from './styles'
 
 const CheckCard = () => {
-  const navigation = useNavigation();
-  const [cardNumber, setCardNumber] = useState();
-  const [expirationDate, setExpirationDate] = useState();
-  const [securityCode, setSecurityCode] = useState();
-  const [cardHolder, setCardHolder] = useState();
+  const navigation = useNavigation()
+  const [cardNumber, setCardNumber] = useState()
+  const [expirationDate, setExpirationDate] = useState()
+  const [securityCode, setSecurityCode] = useState()
+  const [cardHolder, setCardHolder] = useState()
 
   const _renderCard = () => {
     return (
@@ -29,15 +23,16 @@ const CheckCard = () => {
         holder="DINH TIEN PHONG"
         time="12/2028"
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
-      <Header title="Lailyfa Febrina Card" topline />
+      <Header title="Lailyfa Febrina Card" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <_renderCard />
         <FormCarding
           CardNumber={[cardNumber, setCardNumber]}
@@ -49,10 +44,10 @@ const CheckCard = () => {
       <ButtonPrimary
         title="Save"
         marginVertical={getSize.m(16)}
-        handleOnpress={() => navigation.goBack()}
+        onPress={() => navigation.goBack()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default CheckCard;
+export default CheckCard

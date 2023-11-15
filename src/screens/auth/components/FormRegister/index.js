@@ -1,13 +1,13 @@
-import React from 'react';
-import {View} from 'react-native';
-import {Email, Fullname, Password} from '../../../../assets/svg';
-import {FormInput} from '../../../../components';
-import {getSize} from '../../../../utils/reponsive';
+import React from 'react'
+import { View } from 'react-native'
+import { Email, Fullname, Password } from '@/assets'
+import { FormInput } from '@/components'
+import { getSize } from '@/utils'
 
-const FormRegister = ({Fullnamemd, Emailing, Passworde}) => {
-  const [fullName, setFulName] = Fullnamemd;
-  const [emai, setEmail] = Emailing;
-  const [password, setPassword] = Passworde;
+const FormRegister = ({ Fullnamemd, Emailing, Passworde }) => {
+  const [fullName, setFulName] = Fullnamemd
+  const [emai, setEmail] = Emailing
+  const [password, setPassword] = Passworde
 
   return (
     <View>
@@ -33,7 +33,7 @@ const FormRegister = ({Fullnamemd, Emailing, Passworde}) => {
       />
       <FormInput icon={Password} placeholder="Password Again" secureTextEntry />
     </View>
-  );
-};
+  )
+}
 
-export default FormRegister;
+export default FormRegister

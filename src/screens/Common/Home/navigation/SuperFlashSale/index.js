@@ -1,17 +1,15 @@
-import React from 'react';
-import {View, FlatList, ScrollView} from 'react-native';
-import styles from './styles';
-import {ProductsHorizontal, Header, Promotion} from '../../../../../components';
-import {PRODUCTS_DATA_VERTICOLUMNS} from '../../../../../assets/data';
-import {Search} from '../../../../../assets/svg';
-import {photos} from '../../../../../assets';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
-import {getSize} from '../../../../../utils/reponsive';
+import { PRODUCTS_DATA_VERTICOLUMNS, Search, photos } from '@/assets'
+import { Header, ProductsHorizontal, Promotion } from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, ScrollView, View } from 'react-native'
+import styles from './styles'
 
 const SuperFlashSale = () => {
-  const navigation = useNavigation();
-  const _renderProductsVerticalColumns = ({item}) => {
+  const navigation = useNavigation()
+  const _renderProductsVerticalColumns = ({ item }) => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
@@ -22,25 +20,26 @@ const SuperFlashSale = () => {
           price={item.price}
           promotion={item.promotion}
           columns
-          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
+          onPress={() => navigation.navigate(routes.DETAILS, { item })}
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Header
-        topline
+        topLine
         title="Super Flash Sale"
         iconRight02={Search}
-        handleOnpressRight02={() => navigation.navigate(routes.SEARCH_PAGE)}
+        onPressRight02={() => navigation.navigate(routes.SEARCH_PAGE)}
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <Promotion
-          style={{marginTop: getSize.m(16)}}
+          style={{ marginTop: getSize.m(16) }}
           marginBottom={16}
           title={'Super Flash Sale\n50% Off'}
           hours="08"
@@ -59,7 +58,7 @@ const SuperFlashSale = () => {
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default SuperFlashSale;
+export default SuperFlashSale

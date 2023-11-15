@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants';
-import {getSize, height, width} from '../../../utils/reponsive';
+import { COLORS } from '@/constants'
+import { getSize, height, width } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperPromotion: marginBottom => ({
@@ -32,5 +32,5 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
   },
   wrapperContent: {},
-});
-export default styles;
+})
+export default styles

@@ -1,10 +1,9 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-  wrapperCategories: {
-  },
+  wrapperCategories: {},
   wrapperHeaderCategories: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -25,5 +24,5 @@ export const styles = StyleSheet.create({
     marginBottom: getSize.m(8),
   },
   imageEvent: {},
-});
-export default styles;
+})
+export default styles

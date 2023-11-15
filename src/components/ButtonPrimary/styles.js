@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../constants/theme';
-import {getSize} from '../../utils/reponsive';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperButton: (
@@ -17,16 +17,16 @@ export const styles = StyleSheet.create({
     paddingBottom,
   ) => ({
     backgroundColor: COLORS.primary,
-    borderRadius: getSize.s(5),
+    borderRadius: getSize.s(4),
     alignItems: 'center',
     shadowColor: COLORS.secondary,
     shadowOffset: {
-      width: getSize.s(12),
+      width: getSize.s(4),
       height: getSize.v(8),
     },
-    shadowOpacity: 0.8,
-    shadowRadius: 12.35,
-    elevation: getSize.m(0),
+    shadowOpacity: 0.2,
+    shadowRadius: getSize.m(8),
+    elevation: getSize.m(4),
     marginVertical: marginVertical,
     paddingHorizontal: paddingHorizontal,
     paddingVertical: paddingVertical,
@@ -39,5 +39,5 @@ export const styles = StyleSheet.create({
     paddingTop: paddingTop,
     paddingBottom: paddingBottom,
   }),
-});
-export default styles;
+})
+export default styles

@@ -1,13 +1,13 @@
-import React from 'react';
-import {View} from 'react-native';
-import styles from './styles';
-import {Remind} from '../../../../../components';
-import {Tick} from '../../../../../assets/svg';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
+import React from 'react'
+import { View } from 'react-native'
+import styles from './styles'
+import { Remind } from '@/components'
+import { Tick } from '@/assets'
+import { useNavigation } from '@react-navigation/native'
+import { routes } from '@/navigation/routes'
 
 const PurchaseSuccess = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Remind
@@ -19,7 +19,7 @@ const PurchaseSuccess = () => {
         justAlign
       />
     </View>
-  );
-};
+  )
+}
 
-export default PurchaseSuccess;
+export default PurchaseSuccess

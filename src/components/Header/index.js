@@ -1,13 +1,12 @@
-import React from 'react';
-import {View, Pressable} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
-import styles from './styles';
-import {COLORS} from '../../constants/theme';
-import {Texting} from '..';
-import {FONTS} from './../../constants/theme';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {getSize} from '../../utils/reponsive';
-import {Forward} from '../../assets/svg';
+import { Forward } from '@/assets'
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { Pressable, View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import Texting from '../Texting'
+import styles from './styles'
 
 const Header = ({
   style,
@@ -21,28 +20,30 @@ const Header = ({
   widthHeader,
   heightHeader,
   maxWidth,
-  handleOnpressRight01,
-  handleOnpressRight02,
+  onPressRight01,
+  onPressRight02,
   paddingHorizontal,
-  topline,
+  topLine,
 }) => {
-  const navigation = useNavigation();
-  const insets = useSafeAreaInsets();
+  const navigation = useNavigation()
+  const insets = useSafeAreaInsets()
 
   return (
-    <View style={{...styles.wrapperFullHeader, ...style}}>
+    <View style={{ ...styles.wrapperFullHeader, ...style }}>
       <View
         style={{
-          marginTop: insets.top + 20,
+          marginTop: insets.top,
           paddingHorizontal: paddingHorizontal,
           ...styles.wrapperHeader,
-        }}>
+        }}
+      >
         <Pressable style={styles.wrapperLeft}>
-          {disableIconLeft ? null : (
+          {!disableIconLeft && (
             <Pressable onPress={() => navigation.goBack()}>
               {iconLeft ? iconLeft : <Forward />}
             </Pressable>
           )}
+
           <Texting
             title={title}
             fontFamily={FONTS.bold}
@@ -57,22 +58,27 @@ const Header = ({
             maxWidth={maxWidth}
           />
         </Pressable>
+
         <View style={styles.wrapperRight}>
           <Pressable
-            onPress={handleOnpressRight01}
-            style={{paddingHorizontal: getSize.m(16)}}>
+            onPress={onPressRight01}
+            style={{ paddingHorizontal: getSize.m(16) }}
+          >
             {iconRight01}
           </Pressable>
-          <Pressable onPress={handleOnpressRight02}>{iconRight02}</Pressable>
+
+          <Pressable onPress={onPressRight02}>{iconRight02}</Pressable>
         </View>
       </View>
+
       <View
         style={{
-          marginBottom: topline ? 0 : getSize.m(16),
+          marginBottom: topLine ? 0 : getSize.m(16),
           ...styles.wrapperLines,
-        }}></View>
+        }}
+      />
     </View>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

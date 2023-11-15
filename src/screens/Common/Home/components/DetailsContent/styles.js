@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../../../../utils/reponsive';
-import {COLORS} from '../../../../../constants';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperContent: {
@@ -44,5 +44,5 @@ export const styles = StyleSheet.create({
   wrapperProducts: {
     marginTop: getSize.m(12),
   },
-});
-export default styles;
+})
+export default styles

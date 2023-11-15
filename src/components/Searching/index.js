@@ -1,9 +1,9 @@
-import React from 'react';
-import {View, Pressable, TextInput} from 'react-native';
-import styles from './styles';
-import {COLORS} from '../../constants/theme';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {SearchPrimary} from '../../assets/svg';
+import { SearchPrimary } from '@/assets'
+import { COLORS } from '@/constants'
+import React from 'react'
+import { Pressable, TextInput, View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import styles from './styles'
 
 const Searching = ({
   style,
@@ -14,16 +14,16 @@ const Searching = ({
   iconRightInput,
   iconRight,
   iconRight01,
-  handleOnpressInput,
-  handleOnpressRight,
-  handleOnpressRightInput,
-  handleOnpressRight01,
+  onPressInput,
+  onPressRight,
+  onPressRightInput,
+  onPressRight01,
 }) => {
-  const insets = useSafeAreaInsets();
+  const insets = useSafeAreaInsets()
   return (
-    <View style={{...style}}>
-      <View style={{marginTop: insets.top + 20, ...styles.wrapperHeader}}>
-        <Pressable onPressIn={handleOnpressInput} style={styles.wrapperSearch}>
+    <View style={{ ...style }}>
+      <View style={{ marginTop: insets.top, ...styles.wrapperHeader }}>
+        <Pressable onPressIn={onPressInput} style={styles.wrapperSearch}>
           <SearchPrimary />
           <TextInput
             placeholder={placeholder}
@@ -33,22 +33,19 @@ const Searching = ({
             editable={!editable ? false : true}
             style={styles.input}
           />
-          <Pressable onPress={handleOnpressRightInput}>
-            {iconRightInput}
-          </Pressable>
+          <Pressable onPress={onPressRightInput}>{iconRightInput}</Pressable>
         </Pressable>
-        <Pressable onPress={handleOnpressRight} style={styles.wrapperFavorite}>
+
+        <Pressable onPress={onPressRight} style={styles.wrapperFavorite}>
           {iconRight}
         </Pressable>
-        <Pressable
-          onPress={handleOnpressRight01}
-          style={styles.wrapperNotification}>
+        <Pressable onPress={onPressRight01} style={styles.wrapperNotification}>
           {iconRight01}
         </Pressable>
       </View>
-      <View style={{...styles.wrapperLines}}></View>
+      <View style={{ ...styles.wrapperLines }}></View>
     </View>
-  );
-};
+  )
+}
 
-export default Searching;
+export default Searching

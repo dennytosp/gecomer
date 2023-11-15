@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
-import {ScrollView, View, Pressable, FlatList, TextInput} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
-import Texting from '../../../components/Texting';
-import styles from './styles';
-import {ButtonPrimary, Cart, Header, Iteming} from '../../../components';
-import {COLORS, FONTS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
-import {DATA_CART} from './../../../assets/data';
-import {routes} from '../../../navigation/routes';
+import { DATA_CART } from '@/assets'
+import { ButtonPrimary, Cart, Header, Iteming } from '@/components'
+import Texting from '@/components/Texting'
+import { COLORS, FONTS } from '@/constants'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React, { useState } from 'react'
+import { FlatList, Pressable, ScrollView, TextInput, View } from 'react-native'
+import styles from './styles'
 
 const Offer = () => {
-  const navigation = useNavigation();
-  const [count, setCount] = useState(1);
-  const [code, setCode] = useState();
+  const navigation = useNavigation()
+  const [count, setCount] = useState(1)
+  const [code, setCode] = useState()
 
-  const _renderHeader = ({item}) => {
+  const _renderHeader = ({ item }) => {
     return (
       <Cart
-        style={{marginTop: getSize.m(16)}}
+        style={{ marginTop: getSize.m(16) }}
         image={item.image}
         title={item.title}
         price={item.price}
@@ -25,14 +25,14 @@ const Offer = () => {
         favorited={item.favorite}
         handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
         hanldePlus={() => {
-          setCount(count + 1);
+          setCount(count + 1)
         }}
         handleLess={() => {
-          count <= 1 ? setCount(1) : setCount(count - 1);
+          count <= 1 ? setCount(1) : setCount(count - 1)
         }}
       />
-    );
-  };
+    )
+  }
 
   const _renderFooter = () => {
     return (
@@ -50,15 +50,16 @@ const Offer = () => {
         colorRight04={COLORS.primary}
         fontRight04={FONTS.bold}
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
-      <Header title="Your Cart" disableIconLeft topline />
+      <Header title="Your Cart" disableIconLeft topLine />
       <ScrollView
         keyboardDismissMode="on-drag"
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+      >
         <FlatList
           showsVerticalScrollIndicator={false}
           data={DATA_CART}
@@ -86,11 +87,11 @@ const Offer = () => {
         <ButtonPrimary
           title="Check Out"
           marginVertical={getSize.m(16)}
-          handleOnpress={() => navigation.navigate(routes.SHIP_TO)}
+          onPress={() => navigation.navigate(routes.SHIP_TO)}
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default Offer;
+export default Offer

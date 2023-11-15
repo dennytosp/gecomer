@@ -1,35 +1,29 @@
-import React from 'react';
-import {View, ScrollView, FlatList} from 'react-native';
-import styles from './styles';
-import {
-  ButtonPrimary,
-  Cart,
-  Header,
-  Iteming,
-  Titling,
-} from '../../../../../components';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
-import {DATA_CART} from '../../../../../assets/data';
-import {getSize} from '../../../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../../../constants';
+import React from 'react'
+import { View, ScrollView, FlatList } from 'react-native'
+import styles from './styles'
+import { ButtonPrimary, Cart, Header, Iteming, Titling } from '@/components'
+import { useNavigation } from '@react-navigation/native'
+import { routes } from '@/navigation/routes'
+import { DATA_CART } from '@/assets'
+import { getSize } from '@/utils'
+import { COLORS, FONTS } from '@/constants'
 
 const OrderDetails = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
-  const _renderProducts = ({item, index}) => {
+  const _renderProducts = ({ item, index }) => {
     return (
       <Cart
         handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
-        style={{marginTop: index === 0 ? getSize.m(0) : getSize.m(8)}}
+        style={{ marginTop: index === 0 ? getSize.m(0) : getSize.m(8) }}
         image={item.image}
         quantity={item.quantity}
         title={item.title}
         price={item.price}
         favorited={item.favorite}
       />
-    );
-  };
+    )
+  }
   const _renderShippingDetails = () => {
     return (
       <Iteming
@@ -42,12 +36,12 @@ const OrderDetails = () => {
         right03="000192848573"
         right04="2727 New  Owerri, Owerri, Imo State 78410"
       />
-    );
-  };
+    )
+  }
   const _renderPaymentDetails = () => {
     return (
       <Iteming
-        style={{marginBottom: getSize.m(24)}}
+        style={{ marginBottom: getSize.m(24) }}
         left01="Items (3)"
         left02="Shipping"
         left03="Import charges"
@@ -61,14 +55,15 @@ const OrderDetails = () => {
         colorRight04={COLORS.primary}
         fontRight04={FONTS.bold}
       />
-    );
-  };
+    )
+  }
   return (
     <View style={styles.container}>
-      <Header title="Order Details" topline />
+      <Header title="Order Details" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <Titling title="Product" marginTop={getSize.m(16)} />
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -84,11 +79,11 @@ const OrderDetails = () => {
         <ButtonPrimary
           title="Notify Me"
           marginBottom={getSize.m(16)}
-          handleOnpress={() => navigation.navigate(routes.COMMON)}
+          onPress={() => navigation.navigate(routes.COMMON)}
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default OrderDetails;
+export default OrderDetails

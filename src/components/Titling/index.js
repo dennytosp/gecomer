@@ -1,9 +1,9 @@
-import React from 'react';
-import {View} from 'react-native';
-import styles from './styles';
-import {COLORS, FONTS} from '../../constants/theme';
-import {Texting} from '..';
-import {getSize} from '../../utils/reponsive';
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { View } from 'react-native'
+import Texting from '../Texting'
+import styles from './styles'
 
 const Titling = ({
   style,
@@ -19,7 +19,7 @@ const Titling = ({
   textAlign,
   color,
   backgroundColor,
-  handleOnpress,
+  onPress,
 }) => {
   return (
     <View
@@ -33,7 +33,8 @@ const Titling = ({
           paddingVertical,
         ),
         ...style,
-      }}>
+      }}
+    >
       <Texting
         title={title}
         color={color ? color : COLORS.secondary}
@@ -45,14 +46,14 @@ const Titling = ({
       {more ? (
         <Texting
           title={more}
-          handleOnpress={handleOnpress}
+          onPress={onPress}
           color={COLORS.primary}
           fontSize={fontSize ? fontSize : getSize.m(14)}
           fontFamily={FONTS.bold}
         />
       ) : null}
     </View>
-  );
-};
+  )
+}
 
-export default Titling;
+export default Titling

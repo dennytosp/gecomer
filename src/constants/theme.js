@@ -1,6 +1,6 @@
-import {Dimensions} from 'react-native';
-import {getSize} from '../utils/reponsive';
-const {width, height} = Dimensions.get('window');
+import { Dimensions } from 'react-native'
+import { getSize } from '@/utils'
+const { width, height } = Dimensions.get('window')
 
 export const COLORS = {
   black: '#303030',
@@ -12,20 +12,20 @@ export const COLORS = {
   green: '#53D1B6',
   red: '#EB001B',
   yellow: '#FFC833',
-  primary: '#83CACD',
+  primary: '#33A0FF',
   pale_red: '#FB7181',
   secondary: '#223263',
   border: '#EBF0FF',
   grey: '#9098B1',
   gray: '#E0E0E0',
-};
+}
 
 export const SIZES = {
   base: getSize.m(10),
   radius: getSize.m(20),
   width,
   height,
-};
+}
 
 export const FONTS = {
   black: 'Poppins-Black',
@@ -45,7 +45,8 @@ export const FONTS = {
   semiboldItalic: 'Poppins-SemiBoldItalic',
   thin: 'Poppins-Thin',
   thinItalic: 'Poppins-ThinItalic',
-};
+}
 
-const theme = {COLORS, SIZES, FONTS};
-export default theme;
+const theme = { COLORS, SIZES, FONTS }
+
+export default theme

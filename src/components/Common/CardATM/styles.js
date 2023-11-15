@@ -1,6 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperCard: {
@@ -14,5 +13,5 @@ export const styles = StyleSheet.create({
   row02: {
     marginHorizontal: getSize.m(32),
   },
-});
-export default styles;
+})
+export default styles

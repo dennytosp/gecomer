@@ -1,6 +1,5 @@
-import Stack from './StackNavigator';
-import TabNavigation from './TabNavigation';
-import CustomTabBar from './CustomTabBar';
+import Stack from './StackNavigator'
+import CustomTabBar from './CustomTabBar'
+import TabNavigation from './TabNavigation'
 
-export const StackStep = {Stack, TabNavigation, CustomTabBar};
-
+export { Stack, TabNavigation, CustomTabBar }

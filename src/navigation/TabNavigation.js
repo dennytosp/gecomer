@@ -1,15 +1,16 @@
-import React from 'react';
-import {common} from './../screens';
-import CustomTabBar from './CustomTabBar';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import React from 'react'
+import { common } from '@/screens'
+import CustomTabBar from './CustomTabBar'
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator()
 
 const BottomTabNavigation = () => {
   return (
     <Tab.Navigator
-      screenOptions={{headerShown: false}}
-      tabBar={props => <CustomTabBar {...props} />}>
+      screenOptions={{ headerShown: false }}
+      tabBar={props => <CustomTabBar {...props} />}
+    >
       <Tab.Screen
         name="Home"
         component={common.Home}
@@ -46,7 +47,7 @@ const BottomTabNavigation = () => {
         }}
       />
     </Tab.Navigator>
-  );
-};
+  )
+}
 
-export default BottomTabNavigation;
+export default BottomTabNavigation

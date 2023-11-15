@@ -1,7 +1,7 @@
-import React from 'react';
-import {View, Pressable, TextInput} from 'react-native';
-import styles from './styles';
-import {COLORS} from '../../constants/theme';
+import { COLORS } from '@/constants'
+import React from 'react'
+import { Pressable, TextInput, View } from 'react-native'
+import styles from './styles'
 
 const FormInput = ({
   icon,
@@ -25,7 +25,8 @@ const FormInput = ({
         ...styles.wrapperFormInput,
         marginBottom: marginBottom,
         ...style,
-      }}>
+      }}
+    >
       <View style={styles.wrapperContentInput}>
         {icon && <Pressable style={styles.wrapperIconInput}>{icon}</Pressable>}
         <TextInput
@@ -47,7 +48,7 @@ const FormInput = ({
         )}
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default FormInput;
+export default FormInput

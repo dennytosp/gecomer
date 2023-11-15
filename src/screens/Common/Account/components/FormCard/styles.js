@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {getSize, width} from '../../../../../utils/reponsive';
+import { StyleSheet } from 'react-native'
+import { getSize, width } from '@/utils'
 
 export const styles = StyleSheet.create({
   wrapperContent: {
@@ -16,5 +16,5 @@ export const styles = StyleSheet.create({
   inputRowRight: {
     width: width / 2 - getSize.m(22),
   },
-});
-export default styles;
+})
+export default styles

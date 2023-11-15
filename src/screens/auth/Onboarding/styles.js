@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {COLORS, FONTS} from '../../../constants';
+import { StyleSheet } from 'react-native'
+import { COLORS, FONTS } from '@/constants'
 
 const styles = StyleSheet.create({
   slide: {
@@ -74,6 +74,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: COLORS.black01,
   },
-});
+})
 
-export default styles;
+export default styles

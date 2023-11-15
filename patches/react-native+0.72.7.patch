@@ -1,0 +1,44 @@
+diff --git a/node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js b/node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js
+index 932d309..2206654 100644
+--- a/node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js
++++ b/node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js
+@@ -171,17 +171,12 @@ class MessageQueue {
+     onFail: ?(...mixed[]) => void,
+     onSucc: ?(...mixed[]) => void,
+   ): mixed {
+-    if (__DEV__) {
+-      invariant(
+-        global.nativeCallSyncHook,
+-        'Calling synchronous methods on native ' +
+-          'modules is not supported in Chrome.\n\n Consider providing alternative ' +
+-          'methods to expose this method in debug mode, e.g. by exposing constants ' +
+-          'ahead-of-time.',
+-      );
+-    }
++    const isDebuggingEnabled = (typeof atob !== 'undefined');
+     this.processCallbacks(moduleID, methodID, params, onFail, onSucc);
+-    return global.nativeCallSyncHook(moduleID, methodID, params);
++    if(!isDebuggingEnabled)
++    {
++      return global.nativeCallSyncHook(moduleID, methodID, params);
++    }
+   }
+ 
+   processCallbacks(
+diff --git a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
+index 7958519..5ecb903 100644
+--- a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
++++ b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
+@@ -409,12 +409,6 @@ JSCRuntime::~JSCRuntime() {
+   // has started.
+   ctxInvalid_ = true;
+   JSGlobalContextRelease(ctx_);
+-#ifndef NDEBUG
+-  assert(
+-      objectCounter_ == 0 && "JSCRuntime destroyed with a dangling API object");
+-  assert(
+-      stringCounter_ == 0 && "JSCRuntime destroyed with a dangling API string");
+-#endif
+ }
+ 
+ std::shared_ptr<const jsi::PreparedJavaScript> JSCRuntime::prepareJavaScript(

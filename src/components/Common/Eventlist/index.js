@@ -1,11 +1,11 @@
-import React from 'react';
-import {Pressable, View} from 'react-native';
-import {Texting} from '../..';
-import {getSize} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants';
-import styles from './styles';
+import Texting from '@/components/Texting'
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { Pressable, View } from 'react-native'
+import styles from './styles'
 
-const Eventlist = ({
+const EventList = ({
   icon,
   title,
   warning,
@@ -14,18 +14,19 @@ const Eventlist = ({
   widthing,
   backgroundColor,
   paddingHorizontal,
-  handleOnpress,
+  onPress,
   style,
 }) => {
   return (
-    <View style={{...styles.wrapperCardTop, ...style}}>
+    <View style={{ ...styles.wrapperCardTop, ...style }}>
       <Pressable
-        onPress={handleOnpress}
+        onPress={onPress}
         style={{
           ...styles.inSideLeftCard,
           backgroundColor: backgroundColor,
           paddingHorizontal: paddingHorizontal,
-        }}>
+        }}
+      >
         <Pressable>{icon}</Pressable>
         <Texting
           title={title}
@@ -49,7 +50,7 @@ const Eventlist = ({
         </Pressable>
       )}
     </View>
-  );
-};
+  )
+}
 
-export default Eventlist;
+export default EventList

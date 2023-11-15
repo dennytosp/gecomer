@@ -1,17 +1,18 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
-import styles from './styles';
-import {Addressing, ButtonPrimary} from '../../../../../components';
-import {DATA_ADDRESS} from '../../../../../assets/data';
-import {getSize} from '../../../../../utils/reponsive';
-import {Header} from '../../../../../components';
-import {Add_Ship} from '../../../../../assets/svg';
-import {routes} from '../../../../../navigation/routes';
-import {useNavigation} from '@react-navigation/core';
+import React from 'react'
+import { View, FlatList } from 'react-native'
+import styles from './styles'
+import { Addressing, ButtonPrimary } from '@/components'
+import { DATA_ADDRESS } from '@/assets'
+import { getSize } from '@/utils'
+import { Header } from '@/components'
+import { Add_Ship } from '@/assets'
+import { routes } from '@/navigation/routes'
+import { useNavigation } from '@react-navigation/native'
 
 const ShipTo = () => {
-  const navigation = useNavigation();
-  const _renderAddress = ({item, index}) => {
+  const navigation = useNavigation()
+
+  const _renderAddress = ({ item, index }) => {
     return (
       <Addressing
         style={{
@@ -19,7 +20,7 @@ const ShipTo = () => {
         }}
         name={item.name}
         address={item.address}
-        phonenumber={item.phonenumber}
+        phoneNumber={item.phoneNumber}
         titleEvent="Edit"
         handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
         handleEventEdit={() =>
@@ -28,17 +29,19 @@ const ShipTo = () => {
           })
         }
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Header
         title="Ship To"
         iconRight02={Add_Ship}
-        topline
-        handleOnpressRight02={() =>
-          navigation.navigate(routes.ADD_ADDRESS, {add_address: 'Add Address'})
+        topLine
+        onPressRight02={() =>
+          navigation.navigate(routes.ADD_ADDRESS, {
+            add_address: 'Add Address',
+          })
         }
       />
       <FlatList
@@ -50,10 +53,10 @@ const ShipTo = () => {
       <ButtonPrimary
         title="Next"
         marginBottom={getSize.m(16)}
-        handleOnpress={() => navigation.navigate(routes.PAYMENT_METHOD)}
+        onPress={() => navigation.navigate(routes.PAYMENT_METHOD)}
       />
     </View>
-  );
-};
+  )
+}
 
-export default ShipTo;
+export default ShipTo

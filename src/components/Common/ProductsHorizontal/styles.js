@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperProducsing: (marginBottom, columns) => ({
@@ -18,5 +18,5 @@ export const styles = StyleSheet.create({
   wrapperRowPrice: {
     flexDirection: 'row',
   },
-});
-export default styles;
+})
+export default styles

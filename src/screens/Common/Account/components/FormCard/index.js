@@ -1,14 +1,14 @@
-import React from 'react';
-import {View} from 'react-native';
-import {FormInput, Titling} from '../../../../../components';
-import {getSize} from '../../../../../utils/reponsive';
-import styles from './styles';
+import React from 'react'
+import { View } from 'react-native'
+import { FormInput, Titling } from '@/components'
+import { getSize } from '@/utils'
+import styles from './styles'
 
-const FormCard = ({CardNumber, ExpirationDate, SecurityCode, CardHolder}) => {
-  const [cardNumber, setCardNumber] = CardNumber;
-  const [expirationDate, setExpirationDate] = ExpirationDate;
-  const [securityCode, setSecurityCode] = SecurityCode;
-  const [cardHolder, setCardHolder] = CardHolder;
+const FormCard = ({ CardNumber, ExpirationDate, SecurityCode, CardHolder }) => {
+  const [cardNumber, setCardNumber] = CardNumber
+  const [expirationDate, setExpirationDate] = ExpirationDate
+  const [securityCode, setSecurityCode] = SecurityCode
+  const [cardHolder, setCardHolder] = CardHolder
 
   return (
     <View style={styles.wrapperContent}>
@@ -46,7 +46,7 @@ const FormCard = ({CardNumber, ExpirationDate, SecurityCode, CardHolder}) => {
         onChangeText={text => setCardHolder(text)}
       />
     </View>
-  );
-};
+  )
+}
 
-export default FormCard;
+export default FormCard

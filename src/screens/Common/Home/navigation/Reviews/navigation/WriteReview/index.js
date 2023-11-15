@@ -1,35 +1,34 @@
-import React, {useState} from 'react';
-import {View, ScrollView, Pressable, TextInput, Image} from 'react-native';
-import styles from './styles';
+import { PlusAdding } from '@/assets'
 import {
   ButtonPrimary,
   Header,
   StarRating,
   Texting,
-} from '../../../../../../../components';
-import {PlusAdding} from '../../../../../../../assets/svg';
-import {COLORS, FONTS} from '../../../../../../../constants';
-import {getSize} from '../../../../../../../utils/reponsive';
-import {Titling} from './../../../../../../../components';
-import {Rating} from 'react-native-elements';
-import picker from './../../../../../../../utils/picker';
+  Titling,
+} from '@/components'
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import picker from '@/utils/picker'
+import React, { useState } from 'react'
+import { Image, Pressable, ScrollView, TextInput, View } from 'react-native'
+import styles from './styles'
 
-const WriteReview = ({navigation}) => {
-  const {openMultiPicker, pictures} = picker();
-  const [rating, setRating] = useState(0);
+const WriteReview = ({ navigation }) => {
+  const { openMultiPicker, pictures } = picker()
+  const [rating, setRating] = useState(0)
 
   const _renderPhotosReviews = (item, index) => {
     return (
       <Image
         key={index}
-        source={{uri: item.path}}
+        source={{ uri: item.path }}
         style={{
           ...styles.photoReviews,
           marginLeft: index === 0 ? getSize.m(0) : getSize.m(12),
         }}
       />
-    );
-  };
+    )
+  }
 
   const _renderCenter = () => {
     return (
@@ -71,9 +70,10 @@ const WriteReview = ({navigation}) => {
           </Pressable>
 
           <ScrollView
-            style={{marginLeft: getSize.m(12)}}
+            style={{ marginLeft: getSize.m(12) }}
             showsHorizontalScrollIndicator={false}
-            horizontal>
+            horizontal
+          >
             <View style={styles.wrapperPhotos}>
               {pictures?.map(_renderPhotosReviews)}
             </View>
@@ -83,22 +83,23 @@ const WriteReview = ({navigation}) => {
           title="Post"
           marginTop={getSize.m(24)}
           marginBottom={getSize.m(16)}
-          handleOnpress={() => navigation.goBack()}
+          onPress={() => navigation.goBack()}
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
-      <Header title="Write Reviews" topline />
+      <Header title="Write Reviews" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <_renderCenter />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default WriteReview;
+export default WriteReview

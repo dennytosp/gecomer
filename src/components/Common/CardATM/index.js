@@ -1,19 +1,21 @@
-import React from 'react';
-import {Pressable, View} from 'react-native';
-import {Texting} from '../..';
-import {getSize} from '../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../constants';
-import styles from './styles';
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { View } from 'react-native'
+import { Texting } from '../..'
+import styles from './styles'
 
-const CardATM = ({backgroundColor, method, code, holder, time, style}) => {
+const CardATM = ({ backgroundColor, method, code, holder, time, style }) => {
   return (
     <View
       style={{
         ...styles.wrapperCard,
         backgroundColor: backgroundColor ? backgroundColor : COLORS.primary,
         ...style,
-      }}>
-      <Pressable>{method}</Pressable>
+      }}
+    >
+      {method}
+
       <Texting
         title={code}
         color={COLORS.white}
@@ -22,6 +24,7 @@ const CardATM = ({backgroundColor, method, code, holder, time, style}) => {
         marginBottom={getSize.m(16)}
         fontSize={getSize.m(24)}
       />
+
       <View style={styles.wrapperRow}>
         <View style={styles.row01}>
           <Texting
@@ -36,6 +39,7 @@ const CardATM = ({backgroundColor, method, code, holder, time, style}) => {
             color={COLORS.white}
           />
         </View>
+
         <View style={styles.row02}>
           <Texting
             title="CARD SAVE"
@@ -51,7 +55,7 @@ const CardATM = ({backgroundColor, method, code, holder, time, style}) => {
         </View>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default CardATM;
+export default CardATM

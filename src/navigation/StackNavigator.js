@@ -1,51 +1,55 @@
-import React, {useState, useEffect} from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {authen, home, explore, cart, account, common} from './../screens';
-import {StatusBar} from 'react-native';
-import {StackStep} from './';
-import {routes} from './routes';
-const Stack = createNativeStackNavigator();
+import { account, authentication, cart, common, explore, home } from '@/screens'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import React, { useEffect, useState } from 'react'
+import { StatusBar } from 'react-native'
+import { TabNavigation } from '.'
+import { routes } from './routes'
+import AuthStack from './stack/AuthStack'
+
+const Stack = createNativeStackNavigator()
+
+const ONBOARDING_ASYNC_KEY = 'ONBOARDING_ASNYC_KEY'
 
 const MainStackNavigator = () => {
-  const [isFirstLaunch, setIsFirstLaunch] = useState(null);
+  const [isFirstLaunch, setIsFirstLaunch] = useState(null)
 
-  let routeName;
+  let routeName
 
   useEffect(() => {
-    let isCancelled = false;
+    let isCancelled = false
     const runAsync = async () => {
       try {
         if (!isCancelled) {
-          AsyncStorage.getItem('Onboardingfirst').then(value => {
+          AsyncStorage.getItem(ONBOARDING_ASYNC_KEY).then(value => {
             if (value == null) {
-              AsyncStorage.setItem('Onboardingfirst', 'true');
-              setIsFirstLaunch(true);
+              AsyncStorage.setItem(ONBOARDING_ASYNC_KEY, 'true')
+              setIsFirstLaunch(true)
             } else {
-              setIsFirstLaunch(false);
+              setIsFirstLaunch(false)
             }
-          });
+          })
         }
       } catch (e) {
         if (!isCancelled) {
-          throw e;
+          throw e
         }
       }
-    };
+    }
 
-    runAsync();
+    runAsync()
 
     return () => {
-      isCancelled = true;
-    };
-  }, []);
+      isCancelled = true
+    }
+  }, [])
 
   if (isFirstLaunch === null) {
-    return null;
+    return null
   } else if (isFirstLaunch == true) {
-    routeName = routes.ONBOARD;
+    routeName = routes.ONBOARD
   } else {
-    routeName = routes.SPLASH;
+    routeName = routes.AUTHENTICATION
   }
 
   return (
@@ -57,18 +61,16 @@ const MainStackNavigator = () => {
       />
       <Stack.Navigator
         initialRouteName={routeName}
-        screenOptions={{headerShown: false}}>
+        screenOptions={{ headerShown: false }}
+      >
         <>
-          <Stack.Screen name={routes.ONBOARD} component={authen.Onboard} />
-          <Stack.Screen name={routes.SPLASH} component={authen.Splash} />
-          <Stack.Screen name={routes.LOGIN} component={authen.Login} />
-          <Stack.Screen name={routes.FORGOT_PASSWORD} component={authen.ForgotPassword} />
-          <Stack.Screen name={routes.REGISTER} component={authen.Register} />
-
           <Stack.Screen
-            name={routes.COMMON}
-            component={StackStep.TabNavigation}
+            name={routes.ONBOARD}
+            component={authentication.Onboard}
           />
+
+          <Stack.Screen name={routes.AUTHENTICATION} component={AuthStack} />
+          <Stack.Screen name={routes.COMMON} component={TabNavigation} />
           <Stack.Screen name={routes.HOME} component={common.Home} />
           <Stack.Screen name={routes.EXPLORE} component={common.Explore} />
           <Stack.Screen name={routes.CART} component={common.Cart} />
@@ -173,6 +175,6 @@ const MainStackNavigator = () => {
         </>
       </Stack.Navigator>
     </>
-  );
-};
-export default MainStackNavigator;
+  )
+}
+export default MainStackNavigator

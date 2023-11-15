@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {getSize, width} from '../../../../../utils/reponsive';
+import { getSize, width } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperPriceRange: {
@@ -16,5 +16,5 @@ export const styles = StyleSheet.create({
   inputRowRight: {
     width: width / 2 - getSize.m(22),
   },
-});
-export default styles;
+})
+export default styles

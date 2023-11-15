@@ -1,9 +1,9 @@
-import React from 'react';
-import {View} from 'react-native';
-import styles from './styles';
-import {getSize} from '../../utils/reponsive';
-import {Rating} from 'react-native-elements';
-import {COLORS} from '../../constants';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { View } from 'react-native'
+import { Rating } from 'react-native-elements'
+import styles from './styles'
 
 const StarRating = ({
   startingValue,
@@ -28,7 +28,7 @@ const StarRating = ({
         }}
       />
     </View>
-  );
-};
+  )
+}
 
-export default StarRating;
+export default StarRating

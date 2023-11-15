@@ -1,9 +1,9 @@
-import React from 'react';
-import {View} from 'react-native';
-import {Texting} from '../..';
-import styles from './styles';
-import {getSize, width} from '../../../utils/reponsive';
-import {COLORS} from '../../../constants';
+import Texting from '@/components/Texting'
+import { COLORS } from '@/constants'
+import { getSize, width } from '@/utils'
+import React from 'react'
+import { View } from 'react-native'
+import styles from './styles'
 const Iteming = ({
   left01,
   left02,
@@ -19,22 +19,22 @@ const Iteming = ({
   fontRight04,
   style,
 }) => {
-  const marginBottom = getSize.m(12);
+  const marginBottom = getSize.m(12)
   return (
-    <View style={{...styles.wrapperFooter, ...style}}>
-      <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
+    <View style={{ ...styles.wrapperFooter, ...style }}>
+      <View style={{ ...styles.rowFooter, marginBottom: marginBottom }}>
         <Texting title={left01} />
         <Texting title={right01} color={COLORS.secondary} />
       </View>
-      <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
+      <View style={{ ...styles.rowFooter, marginBottom: marginBottom }}>
         <Texting title={left02} />
         <Texting title={right02} color={COLORS.secondary} />
       </View>
-      <View style={{...styles.rowFooter, marginBottom: marginBottom}}>
+      <View style={{ ...styles.rowFooter, marginBottom: marginBottom }}>
         <Texting title={left03} />
         <Texting title={right03} color={COLORS.secondary} />
       </View>
-      <View style={{...styles.rowFooter}}>
+      <View style={{ ...styles.rowFooter }}>
         <Texting
           color={colorLeft04 && colorLeft04}
           fontFamily={fontLef04 && fontLef04}
@@ -49,7 +49,7 @@ const Iteming = ({
         />
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default Iteming;
+export default Iteming

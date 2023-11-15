@@ -1,12 +1,11 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
-import styles from './styles';
-import {Header, NotifList} from '../../../../../../../components';
-import {Offer} from '../../../../../../../assets/svg';
-import {DATA_OFFER_NOTI} from './../../../../../../../assets/data';
+import { DATA_OFFER_NOTI, Offer } from '@/assets'
+import { Header, NotifList } from '@/components'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import styles from './styles'
 
 const OfferNotification = () => {
-  const _renderCenter = ({item}) => {
+  const _renderCenter = ({ item }) => {
     return (
       <NotifList
         image={Offer}
@@ -14,8 +13,8 @@ const OfferNotification = () => {
         content={item.content}
         time={item.time}
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
@@ -27,7 +26,7 @@ const OfferNotification = () => {
         keyExtractor={item => item.id.toString()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default OfferNotification;
+export default OfferNotification

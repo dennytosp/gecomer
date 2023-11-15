@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperHeader: {
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     borderColor: COLORS.border,
     borderWidth: getSize.m(3 / 2),
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
 
   product: {
@@ -54,5 +54,5 @@ export const styles = StyleSheet.create({
   iconPlus: {
     marginHorizontal: getSize.m(8),
   },
-});
-export default styles;
+})
+export default styles

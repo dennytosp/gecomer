@@ -1,6 +1,6 @@
-import React from 'react';
-import {Text, View} from 'react-native';
-import styles from './styles';
+import React from 'react'
+import { Text, View } from 'react-native'
+import styles from './styles'
 
 const Texting = ({
   title,
@@ -30,7 +30,7 @@ const Texting = ({
   justifyContent,
   lineHeight,
   flex,
-  handleOnpress,
+  onPress,
   width,
   height,
   textDecorationLine,
@@ -41,9 +41,9 @@ const Texting = ({
   style,
 }) => {
   return (
-    <View style={{...style, ...styles.container}}>
+    <View style={{ ...style, ...styles.container }}>
       <Text
-        onPress={handleOnpress}
+        onPress={onPress}
         numberOfLines={numberOfLines}
         style={styles.text(
           marginHorizontal,
@@ -78,11 +78,12 @@ const Texting = ({
           zIndex,
           flexWrap,
           maxWidth,
-        )}>
+        )}
+      >
         {title}
       </Text>
     </View>
-  );
-};
+  )
+}
 
-export default Texting;
+export default Texting

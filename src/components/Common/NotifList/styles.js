@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../../utils/reponsive';
+import { StyleSheet } from 'react-native'
+import { getSize } from '@/utils'
 
 export const styles = StyleSheet.create({
   wrapperCenter: {
@@ -10,6 +10,5 @@ export const styles = StyleSheet.create({
     marginLeft: getSize.m(12),
     flex: 1,
   },
-
-});
-export default styles;
+})
+export default styles

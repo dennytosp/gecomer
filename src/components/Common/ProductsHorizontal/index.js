@@ -1,9 +1,10 @@
-import React from 'react';
-import {View, Pressable, Image} from 'react-native';
-import {StarRating, Texting} from '../..';
-import styles from './styles';
-import {COLORS, FONTS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
+import StarRating from '@/components/StarRating'
+import Texting from '@/components/Texting'
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { Image, Pressable, View } from 'react-native'
+import styles from './styles'
 
 const ProductsHorizontal = ({
   image,
@@ -14,7 +15,7 @@ const ProductsHorizontal = ({
   columns,
   promotion,
   marginBottom,
-  handleOnpress,
+  onPress,
   style,
 }) => {
   return (
@@ -24,12 +25,15 @@ const ProductsHorizontal = ({
         zIndex: getSize.m(1),
         ...styles.wrapperProducsing(marginBottom, columns),
         ...style,
-      }}>
+      }}
+    >
       <Pressable
-        onPress={handleOnpress}
-        style={{alignItems: !columns ? 'center' : null}}>
+        onPress={onPress}
+        style={{ alignItems: !columns ? 'center' : null }}
+      >
         <Image source={image} style={styles.imageProducts(columns)} />
       </Pressable>
+
       <Texting
         title={name}
         numberOfLines={2}
@@ -39,7 +43,9 @@ const ProductsHorizontal = ({
         fontFamily={FONTS.bold}
         marginBottom={getSize.m(4)}
       />
+
       {columns ? <StarRating startingValue={4} imageSize={12} /> : null}
+
       <Texting
         title={discounted}
         color={COLORS.primary}
@@ -62,7 +68,7 @@ const ProductsHorizontal = ({
         />
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default ProductsHorizontal;
+export default ProductsHorizontal

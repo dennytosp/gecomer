@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../utils/reponsive';
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperHeaderTitling: (
@@ -19,5 +19,5 @@ export const styles = StyleSheet.create({
     paddingHorizontal: paddingHorizontal,
     paddingVertical: paddingVertical,
   }),
-});
-export default styles;
+})
+export default styles

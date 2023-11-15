@@ -1,12 +1,11 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
-import styles from './styles';
-import {Header, NotifList} from '../../../../../../../components';
-import {ActivityListNotifi} from '../../../../../../../assets/svg';
-import {DATA_ACTIVITY_NOTI} from './../../../../../../../assets/data';
+import { ActivityListNotifi, DATA_ACTIVITY_NOTI } from '@/assets'
+import { Header, NotifList } from '@/components'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import styles from './styles'
 
 const ActivityNotification = () => {
-  const _renderCenter = ({item}) => {
+  const _renderCenter = ({ item }) => {
     return (
       <NotifList
         image={ActivityListNotifi}
@@ -14,8 +13,8 @@ const ActivityNotification = () => {
         content={item.content}
         time={item.time}
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
@@ -27,7 +26,7 @@ const ActivityNotification = () => {
         keyExtractor={(item, index) => index}
       />
     </View>
-  );
-};
+  )
+}
 
-export default ActivityNotification;
+export default ActivityNotification

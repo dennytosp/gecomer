@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../utils/reponsive';
-import {COLORS, FONTS} from '../../constants/theme';
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperFormInput: {
@@ -23,10 +23,11 @@ export const styles = StyleSheet.create({
     marginTop: getSize.m(4),
     color: COLORS.secondary,
     flex: 1,
+    padding: getSize.m(16),
   },
   wrapperRightInput: {
     justifyContent: 'flex-end',
     paddingRight: getSize.m(16),
   },
-});
-export default styles;
+})
+export default styles

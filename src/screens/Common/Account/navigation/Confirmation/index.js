@@ -1,14 +1,14 @@
-import React from 'react';
-import {View} from 'react-native';
-import styles from './styles';
-import {Remind} from '../../../../../components';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
-import {Confirmationion} from './../../../../../assets/svg';
-import {COLORS} from '../../../../../constants';
+import React from 'react'
+import { View } from 'react-native'
+import styles from './styles'
+import { Remind } from '@/components'
+import { useNavigation } from '@react-navigation/native'
+import { routes } from '@/navigation/routes'
+import { Confirmationion } from '@/assets'
+import { COLORS } from '@/constants'
 
 const Confirmation = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Remind
@@ -23,7 +23,7 @@ const Confirmation = () => {
         justAlign
       />
     </View>
-  );
-};
+  )
+}
 
-export default Confirmation;
+export default Confirmation

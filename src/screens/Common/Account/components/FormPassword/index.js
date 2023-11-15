@@ -1,13 +1,13 @@
-import React from 'react';
-import {View} from 'react-native';
-import {ChangePasswording} from '../../../../../assets/svg';
-import {FormInput, Titling} from '../../../../../components';
-import {getSize} from '../../../../../utils/reponsive';
-import styles from './styles';
+import React from 'react'
+import { View } from 'react-native'
+import { ChangePasswording } from '@/assets'
+import { FormInput, Titling } from '@/components'
+import { getSize } from '@/utils'
+import styles from './styles'
 
-const FormPassword = ({OldPassword, NewPassword}) => {
-  const [oldPassword, setOldPassword] = OldPassword;
-  const [newPassword, setNewPassword] = NewPassword;
+const FormPassword = ({ OldPassword, NewPassword }) => {
+  const [oldPassword, setOldPassword] = OldPassword
+  const [newPassword, setNewPassword] = NewPassword
 
   return (
     <View style={styles.wrapperContent}>
@@ -35,7 +35,7 @@ const FormPassword = ({OldPassword, NewPassword}) => {
         secureTextEntry
       />
     </View>
-  );
-};
+  )
+}
 
-export default FormPassword;
+export default FormPassword

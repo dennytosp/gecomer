@@ -1,23 +1,17 @@
-import React from 'react';
-import {View, FlatList, ScrollView, Pressable} from 'react-native';
-import styles from './styles';
-import {
-  ButtonPrimary,
-  Header,
-  ReviewsProduct,
-  Texting,
-} from '../../../../../components';
-import {DATA_STAR_REVIEWS, DATA_REVIEWS} from '../../../../../assets/data';
-import {Star} from '../../../../../assets/svg';
-import {routes} from './../../../../../navigation/routes';
-import {COLORS, FONTS} from '../../../../../constants';
-import {getSize} from '../../../../../utils/reponsive';
-import {useNavigation} from '@react-navigation/core';
+import { DATA_REVIEWS, DATA_STAR_REVIEWS, Star } from '@/assets'
+import { ButtonPrimary, Header, ReviewsProduct, Texting } from '@/components'
+import { COLORS, FONTS } from '@/constants'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, Pressable, ScrollView, View } from 'react-native'
+import styles from './styles'
 
 const Reviews = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
-  const _renderReviews = ({item}) => {
+  const _renderReviews = ({ item }) => {
     return (
       <View style={styles.wrapperReviews}>
         <ReviewsProduct
@@ -30,8 +24,8 @@ const Reviews = () => {
           imageReviews
         />
       </View>
-    );
-  };
+    )
+  }
 
   const _renderFirstClose = () => {
     return (
@@ -45,16 +39,17 @@ const Reviews = () => {
           />
         </Pressable>
       </View>
-    );
-  };
+    )
+  }
 
-  const _renderTabReviews = ({item, index}) => {
+  const _renderTabReviews = ({ item, index }) => {
     return (
       <View
         style={{
           marginLeft: index === 0 ? getSize.m(0) : getSize.m(12),
           ...styles.wrapperTabReviews,
-        }}>
+        }}
+      >
         <Star />
         <Texting
           title={item.number}
@@ -62,15 +57,16 @@ const Reviews = () => {
           marginLeft={getSize.m(10)}
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
-      <Header title={DATA_REVIEWS.length + ' Reviews'} topline />
+      <Header title={DATA_REVIEWS.length + ' Reviews'} topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View style={styles.wrapperCardTop}>
             <_renderFirstClose />
@@ -93,11 +89,11 @@ const Reviews = () => {
         <ButtonPrimary
           title="Write Review"
           marginBottom={getSize.m(12)}
-          handleOnpress={() => navigation.navigate(routes.WRITE_REVIEW)}
+          onPress={() => navigation.navigate(routes.WRITE_REVIEW)}
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

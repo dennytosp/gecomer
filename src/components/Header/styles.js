@@ -1,8 +1,9 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../utils/reponsive';
-import {COLORS} from '../../constants/theme';
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
+  wrapperFullHeader: {},
   wrapperHeader: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -22,5 +23,5 @@ export const styles = StyleSheet.create({
     marginTop: getSize.m(20),
     marginHorizontal: getSize.m(-16),
   },
-});
-export default styles;
+})
+export default styles

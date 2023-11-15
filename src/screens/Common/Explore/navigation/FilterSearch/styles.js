@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize, height, width} from '../../../../../utils/reponsive';
-import {COLORS, FONTS} from '../../../../../constants';
+import { StyleSheet } from 'react-native'
+import { getSize, height, width } from '@/utils'
+import { COLORS, FONTS } from '@/constants'
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,5 +8,5 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     paddingHorizontal: getSize.m(16),
   },
-});
-export default styles;
+})
+export default styles

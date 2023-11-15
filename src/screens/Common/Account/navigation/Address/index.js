@@ -1,16 +1,16 @@
-import React from 'react';
-import {FlatList, View} from 'react-native';
-import styles from './styles';
-import {Addressing, ButtonPrimary, Header} from '../../../../../components';
-import {Add_Ship, Editing} from '../../../../../assets/svg';
-import {useNavigation} from '@react-navigation/core';
-import {routes} from '../../../../../navigation/routes';
-import {DATA_ADDRESS} from '../../../../../assets/data';
-import {getSize} from '../../../../../utils/reponsive';
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import styles from './styles'
+import { Addressing, ButtonPrimary, Header } from '@/components'
+import { Add_Ship, Editing } from '@/assets'
+import { useNavigation } from '@react-navigation/native'
+import { routes } from '@/navigation/routes'
+import { DATA_ADDRESS } from '@/assets'
+import { getSize } from '@/utils'
 
-const Address = ({route}) => {
-  const navigation = useNavigation();
-  const _renderAddress = ({item, index}) => {
+const Address = ({ route }) => {
+  const navigation = useNavigation()
+  const _renderAddress = ({ item, index }) => {
     return (
       <Addressing
         style={{
@@ -18,7 +18,7 @@ const Address = ({route}) => {
         }}
         name={item.name}
         address={item.address}
-        phonenumber={item.phonenumber}
+        phoneNumber={item.phoneNumber}
         titleEvent="Edit"
         handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
         handleEventEdit={() =>
@@ -27,12 +27,12 @@ const Address = ({route}) => {
           })
         }
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
-      <Header title="Address" topline />
+      <Header title="Address" topLine />
       <FlatList
         showsVerticalScrollIndicator={false}
         data={DATA_ADDRESS}
@@ -42,12 +42,14 @@ const Address = ({route}) => {
       <ButtonPrimary
         title="Add Address"
         marginBottom={getSize.m(16)}
-        handleOnpress={() =>
-          navigation.navigate(routes.ADD_ADDRESS, {add_address: 'Add Address'})
+        onPress={() =>
+          navigation.navigate(routes.ADD_ADDRESS, {
+            add_address: 'Add Address',
+          })
         }
       />
     </View>
-  );
-};
+  )
+}
 
-export default Address;
+export default Address

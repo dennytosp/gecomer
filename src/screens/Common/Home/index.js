@@ -1,44 +1,45 @@
-import React from 'react';
-import {View, FlatList, ScrollView} from 'react-native';
-import styles from './styles';
 import {
-  ProductsHorizontal,
-  Searching,
-  Titling,
-  Categories,
-  Promotion,
-  RecommendProduct,
-} from '../../../components';
-import {Favorite, Notifications} from './../../../assets/svg';
-import {getSize} from '../../../utils/reponsive';
-import {
-  PRODUCTS_DATA,
-  PRODUCTS_DATA_VERTICOLUMNS,
   CATEGORIES_DATA,
   DATA_MEGA_SALE,
-} from '../../../assets/data';
-import {routes} from './../../../navigation/routes';
-import {photos} from '../../../assets';
-import {useNavigation} from '@react-navigation/core';
+  Favorite,
+  Notifications,
+  PRODUCTS_DATA,
+  PRODUCTS_DATA_VERTICOLUMNS,
+  photos,
+} from '@/assets'
+import {
+  Categories,
+  ProductsHorizontal,
+  Promotion,
+  RecommendProduct,
+  Searching,
+  Titling,
+} from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, ScrollView, View } from 'react-native'
+import styles from './styles'
 
 const Home = () => {
-  const navigation = useNavigation();
-  const _renderCategories = ({item, index}) => {
+  const navigation = useNavigation()
+  const _renderCategories = ({ item, index }) => {
     return (
       <Categories
         image={item.image}
         title={item.title}
         index={index === 0 ? getSize.m(0) : getSize.m(12)}
-        // handleOnpress={() => navigation.navigate(item.navigation)}
+        // onPress={() => navigation.navigate(item.navigation)}
       />
-    );
-  };
+    )
+  }
 
-  const _renderProducts = ({item, index}) => {
+  const _renderProducts = ({ item, index }) => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
-          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
+          onPress={() => navigation.navigate(routes.DETAILS, { item })}
           index={index === 0 ? getSize.m(0) : getSize.m(12)}
           image={item.image}
           name={item.name}
@@ -47,14 +48,14 @@ const Home = () => {
           promotion={item.promotion}
         />
       </View>
-    );
-  };
+    )
+  }
 
-  const _renderProductsVerticalColumns = ({item, index}) => {
+  const _renderProductsVerticalColumns = ({ item, index }) => {
     return (
       <View style={styles.wrapperProducts}>
         <ProductsHorizontal
-          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
+          onPress={() => navigation.navigate(routes.DETAILS, { item })}
           image={item.image}
           name={item.name}
           discounted={item.discounted}
@@ -63,24 +64,25 @@ const Home = () => {
           columns
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <Searching
         iconRight={Favorite}
-        handleOnpressRight={() => navigation.navigate(routes.FAVORITE)}
+        onPressRight={() => navigation.navigate(routes.FAVORITE)}
         iconRight01={Notifications}
-        handleOnpressRight01={() => navigation.navigate(routes.NOTIFICATIONS)}
+        onPressRight01={() => navigation.navigate(routes.NOTIFICATIONS)}
         placeholder="Search Product"
-        handleOnpressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
+        onPressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <Promotion
-          handleOnpress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
+          onPress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
           style={styles.onScroll}
           title={'Super Flash Sale\n50% Off'}
           hours="08"
@@ -92,7 +94,7 @@ const Home = () => {
         <Titling
           title="Category"
           more="More Category"
-          handleOnpress={() => navigation.navigate(routes.EXPLORE)}
+          onPress={() => navigation.navigate(routes.EXPLORE)}
         />
         <FlatList
           horizontal
@@ -106,7 +108,7 @@ const Home = () => {
           title="Flash Sale"
           more="See More"
           marginTop={getSize.m(24)}
-          handleOnpress={() => navigation.navigate(routes.FLASH_SALE)}
+          onPress={() => navigation.navigate(routes.FLASH_SALE)}
         />
         <FlatList
           horizontal
@@ -120,7 +122,7 @@ const Home = () => {
           title="Mega Sale"
           more="See More"
           marginTop={12}
-          handleOnpress={() => navigation.navigate(routes.MEGA_SALE)}
+          onPress={() => navigation.navigate(routes.MEGA_SALE)}
         />
         <FlatList
           horizontal
@@ -146,7 +148,7 @@ const Home = () => {
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

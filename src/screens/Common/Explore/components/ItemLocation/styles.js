@@ -1,7 +1,4 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../../../../utils/reponsive';
-import {COLORS} from '../../../../../constants';
+import { StyleSheet } from 'react-native'
 
-export const styles = StyleSheet.create({
-});
-export default styles;
+export const styles = StyleSheet.create({})
+export default styles

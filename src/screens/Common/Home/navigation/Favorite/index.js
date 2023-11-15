@@ -1,13 +1,13 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
-import styles from './styles';
-import {ProductsHorizontal, Header} from '../../../../../components';
-import {PRODUCTS_DATA_VERTICOLUMNS} from '../../../../../assets/data';
-import {getSize} from '../../../../../utils/reponsive';
-import {routes} from '../../../../../navigation/routes';
+import { PRODUCTS_DATA_VERTICOLUMNS } from '@/assets'
+import { Header, ProductsHorizontal } from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import styles from './styles'
 
-const Favorite = ({navigation}) => {
-  const _renderFavoriteProducts = ({item, index}) => {
+const Favorite = ({ navigation }) => {
+  const _renderFavoriteProducts = ({ item, index }) => {
     return (
       <View style={styles.wrapperFavoriteProducts(index)}>
         <ProductsHorizontal
@@ -18,15 +18,15 @@ const Favorite = ({navigation}) => {
           price={item.price}
           promotion={item.promotion}
           columns
-          handleOnpress={() => navigation.navigate(routes.DETAILS, {item})}
+          onPress={() => navigation.navigate(routes.DETAILS, { item })}
         />
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
-      <Header topline title="Favorite Product" />
+      <Header topLine title="Favorite Product" />
       <FlatList
         columnWrapperStyle={styles.columnWrapperStyle}
         numColumns={2}
@@ -36,7 +36,7 @@ const Favorite = ({navigation}) => {
         keyExtractor={item => item.id.toString()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default Favorite;
+export default Favorite

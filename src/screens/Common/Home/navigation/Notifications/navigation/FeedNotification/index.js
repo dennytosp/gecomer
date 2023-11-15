@@ -1,14 +1,14 @@
-import React from 'react';
-import {View, FlatList, Pressable, Image} from 'react-native';
-import styles from './styles';
-import {Header, Texting} from '../../../../../../../components';
-import {COLORS} from '../../../../../../../constants';
-import {getSize} from '../../../../../../../utils/reponsive';
-import {Titling} from '../../../../../../../components';
-import {DATA_FEED_NOTI} from './../../../../../../../assets/data';
+import React from 'react'
+import { View, FlatList, Pressable, Image } from 'react-native'
+import styles from './styles'
+import { Header, Texting } from '@/components'
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
+import { Titling } from '@/components'
+import { DATA_FEED_NOTI } from '@/assets'
 
 const FeedNotification = () => {
-  const _renderCenter = ({item}) => {
+  const _renderCenter = ({ item }) => {
     return (
       <View style={styles.wrapperCenter}>
         <Pressable>
@@ -28,8 +28,8 @@ const FeedNotification = () => {
           />
         </View>
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
@@ -41,7 +41,7 @@ const FeedNotification = () => {
         keyExtractor={item => item.id.toString()}
       />
     </View>
-  );
-};
+  )
+}
 
-export default FeedNotification;
+export default FeedNotification

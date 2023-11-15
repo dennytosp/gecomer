@@ -1,4 +1,4 @@
-import picker from './picker';
-import {getSize} from './reponsive';
+import picker from './picker'
+export * from './reponsive'
 
-export {picker, getSize};
+export { picker }

@@ -1,9 +1,10 @@
-import React from 'react';
-import {View, Pressable} from 'react-native';
-import styles from './styles';
-import {COLORS, FONTS} from '../../constants';
-import {getSize} from '../../utils/reponsive';
-import {ButtonPrimary, Texting} from '..';
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import React from 'react'
+import { Pressable, View } from 'react-native'
+import ButtonPrimary from '../ButtonPrimary'
+import Texting from '../Texting'
+import styles from './styles'
 
 const Remind = ({
   icon,
@@ -23,13 +24,15 @@ const Remind = ({
         ...style,
         ...styles.wrapperEmpty,
         marginTop: justAlign ? null : getSize.m(132),
-      }}>
+      }}
+    >
       <View style={styles.wrapperContentEmpty}>
         <Pressable
           style={{
             ...styles.wrapperImageTitle,
             backgroundColor: background ? background : COLORS.primary,
-          }}>
+          }}
+        >
           {icon}
         </Pressable>
         <Texting
@@ -44,7 +47,7 @@ const Remind = ({
       <ButtonPrimary
         title={onEvent}
         marginBottom={getSize.m(16)}
-        handleOnpress={handleOnEvent}
+        onPress={handleOnEvent}
       />
       {onCancel && (
         <Pressable onPress={handleOnCancel} style={styles.wrapperCancel}>
@@ -56,7 +59,7 @@ const Remind = ({
         </Pressable>
       )}
     </View>
-  );
-};
+  )
+}
 
-export default Remind;
+export default Remind

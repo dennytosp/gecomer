@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {getSize} from '../../utils/reponsive';
-import {COLORS, FONTS} from '../../constants/theme';
+import { COLORS, FONTS } from '@/constants'
+import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   text: (
@@ -70,5 +70,5 @@ export const styles = StyleSheet.create({
     flexWrap: flexWrap,
     maxWidth: maxWidth,
   }),
-});
-export default styles;
+})
+export default styles

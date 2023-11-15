@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants';
-import {getSize} from '../../../utils/reponsive';
+import { StyleSheet } from 'react-native'
+import { COLORS } from '@/constants'
+import { getSize } from '@/utils'
 
 export const styles = StyleSheet.create({
   wrapperCenter: {
@@ -25,5 +25,5 @@ export const styles = StyleSheet.create({
   onRemove: {
     marginHorizontal: getSize.m(24),
   },
-});
-export default styles;
+})
+export default styles

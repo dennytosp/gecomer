@@ -1,33 +1,37 @@
-import React from 'react';
-import {FlatList, ScrollView, View} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
-import styles from './styles';
-import {Searching, Titling, Categories} from '../../../components';
-import {Favorite, Notifications} from '../../../assets/svg';
-import {routes} from '../../../navigation/routes';
-import {MAN_FASHION_DATA, WOMAN_FASHION_DATA} from './../../../assets/data';
-import { getSize } from '../../../utils/reponsive';
+import {
+  Favorite,
+  MAN_FASHION_DATA,
+  Notifications,
+  WOMAN_FASHION_DATA,
+} from '@/assets'
+import { Categories, Searching, Titling } from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, ScrollView, View } from 'react-native'
+import styles from './styles'
 
 const Explore = () => {
-  const navigation = useNavigation();
-  const numColumns = 4;
+  const navigation = useNavigation()
+  const numColumns = 4
 
   const _renderHeader = () => {
     return (
       <View style={styles.wrapperHeader}>
         <Searching
           iconRight={Favorite}
-          handleOnpressRight={() => navigation.navigate(routes.FAVORITE)}
+          onPressRight={() => navigation.navigate(routes.FAVORITE)}
           iconRight01={Notifications}
-          handleOnpressRight01={() => navigation.navigate(routes.NOTIFICATIONS)}
+          onPressRight01={() => navigation.navigate(routes.NOTIFICATIONS)}
           placeholder="Search Product"
-          handleOnpressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
+          onPressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
         />
       </View>
-    );
-  };
+    )
+  }
 
-  const _renderManFashion = ({item, index}) => {
+  const _renderManFashion = ({ item, index }) => {
     return (
       <Categories
         index={index}
@@ -36,10 +40,10 @@ const Explore = () => {
         vertiColumns
         marginBottom={getSize.m(24)}
       />
-    );
-  };
+    )
+  }
 
-  const _renderWomanFashion = ({item, index}) => {
+  const _renderWomanFashion = ({ item, index }) => {
     return (
       <Categories
         index={index}
@@ -48,16 +52,16 @@ const Explore = () => {
         vertiColumns
         marginBottom={getSize.m(24)}
       />
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.container}>
       <_renderHeader />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        onScrollEndDrag
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <Titling title="Man Fashion" style={styles.onScroll} />
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -77,7 +81,7 @@ const Explore = () => {
         />
       </ScrollView>
     </View>
-  );
-};
+  )
+}
 
-export default Explore;
+export default Explore

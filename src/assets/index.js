@@ -1,3 +1,6 @@
-import {photos, icons} from './img';
+import { photos, icons } from './img'
 
-export {photos, icons};
+export * from './svg'
+export * from './data'
+
+export { photos, icons }
