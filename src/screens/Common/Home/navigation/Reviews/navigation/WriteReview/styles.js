@@ -54,5 +54,8 @@ export const styles = StyleSheet.create({
     height: getSize.v(72),
     borderRadius: getSize.s(5),
   },
+  textStarRating: {
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(14),
+  },
 })
-export default styles

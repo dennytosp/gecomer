@@ -1,12 +1,11 @@
+import { Add_Ship, Method01 } from '@/assets/index'
+import { ButtonPrimary, CardATM, Header } from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
 import styles from './styles'
-import { ButtonPrimary, CardATM } from '@/components'
-import { Header } from '@/components'
-import { Add_Ship, Method01 } from '@/assets/index'
-import { useNavigation } from '@react-navigation/native'
-import { routes } from '@/navigation/routes'
-import { getSize } from '@/utils'
 
 const Card = () => {
   const navigation = useNavigation()
@@ -30,8 +29,8 @@ const Card = () => {
       </ScrollView>
       <ButtonPrimary
         title="Pay $766.86"
-        marginBottom={getSize.m(16)}
         onPress={() => navigation.navigate(routes.PURCHASE_SUCCESS)}
+        style={[{ marginBottom: getSize.m(16) }]}
       />
     </View>
   )

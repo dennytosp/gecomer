@@ -1,9 +1,9 @@
-import React from 'react'
-import { View } from 'react-native'
 import { Birthday, DownPress, PhoneNumber } from '@/assets'
 import { FormInput, Titling } from '@/components'
 import { getSize } from '@/utils'
-import styles from './styles'
+import React from 'react'
+import { View } from 'react-native'
+import { styles } from './styles'
 
 const FormProfile = ({
   FirstName,
@@ -28,12 +28,14 @@ const FormProfile = ({
         marginBottom={getSize.m(24)}
         onChangeText={text => setFirstName(text)}
       />
+
       <Titling title="Last Name" />
       <FormInput
         placeholder="Lonely"
         marginBottom={getSize.m(24)}
         onChangeText={text => setLastName(text)}
       />
+
       <Titling title="Choose Gender" />
       <FormInput
         placeholder="Male"
@@ -41,6 +43,7 @@ const FormProfile = ({
         right={DownPress}
         onChangeText={text => setGender(text)}
       />
+
       <Titling title="Your Birhday" />
       <FormInput
         placeholder="21/08/2001"
@@ -49,6 +52,7 @@ const FormProfile = ({
         keyboardType="numeric"
         onChangeText={text => setBirthday(text)}
       />
+
       <Titling title="Email" />
       <FormInput
         placeholder="ginphone@gmail.com"
@@ -56,6 +60,7 @@ const FormProfile = ({
         keyboardType="email-address"
         onChangeText={text => setEmail(text)}
       />
+
       <Titling title="Phone Number" />
       <FormInput
         placeholder="(307) 555-0133"

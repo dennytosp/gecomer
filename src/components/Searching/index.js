@@ -2,8 +2,9 @@ import { SearchPrimary } from '@/assets'
 import { COLORS } from '@/constants'
 import React from 'react'
 import { Pressable, TextInput, View } from 'react-native'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import styles from './styles'
+import { getSize, isAndroid } from '@/utils'
 
 const Searching = ({
   style,
@@ -22,7 +23,13 @@ const Searching = ({
   const insets = useSafeAreaInsets()
   return (
     <View style={{ ...style }}>
-      <View style={{ marginTop: insets.top, ...styles.wrapperHeader }}>
+      <SafeAreaView
+        edges={['top']}
+        style={[
+          isAndroid && { marginTop: getSize.m(16) },
+          styles.wrapperHeader,
+        ]}
+      >
         <Pressable onPressIn={onPressInput} style={styles.wrapperSearch}>
           <SearchPrimary />
           <TextInput
@@ -42,7 +49,7 @@ const Searching = ({
         <Pressable onPress={onPressRight01} style={styles.wrapperNotification}>
           {iconRight01}
         </Pressable>
-      </View>
+      </SafeAreaView>
       <View style={{ ...styles.wrapperLines }}></View>
     </View>
   )

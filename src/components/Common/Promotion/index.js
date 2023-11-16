@@ -1,9 +1,8 @@
 import Texting from '@/components/Texting'
-import { COLORS, FONTS } from '@/constants'
-import { getSize } from '@/utils'
 import React, { useEffect, useState } from 'react'
 import { Image, Pressable, View } from 'react-native'
-import styles from './styles'
+import { styles } from './styles'
+import { getSize } from '@/utils'
 
 const Promotion = ({
   title,
@@ -34,52 +33,33 @@ const Promotion = ({
       style={{ ...styles.wrapperPromotion(marginBottom), ...style }}
     >
       <Image source={image} style={styles.imagePromotion} />
+
       <View style={styles.wrapperContentPromotion}>
-        <Texting
-          title={title}
-          fontSize={getSize.m(24)}
-          color={COLORS.white}
-          fontFamily={FONTS.bold}
-        />
+        <Texting title={title} textStyle={[styles.textTitle]} />
       </View>
+
       <View style={styles.wrapperTime}>
         <Pressable style={styles.wrapperCardTime}>
-          <Texting
-            title={hours}
-            fontSize={getSize.m(16)}
-            color={COLORS.secondary}
-            fontFamily={FONTS.bold}
-          />
+          <Texting title={hours} textStyle={[styles.textBase]} />
         </Pressable>
+
         <Texting
           title=":"
-          marginHorizontal={getSize.m(4)}
-          fontSize={getSize.m(16)}
-          color={COLORS.white}
-          fontFamily={FONTS.bold}
+          textStyle={[styles.text2Dots]}
+          style={[{ marginHorizontal: getSize.m(4) }]}
         />
+
         <Pressable style={styles.wrapperCardTime}>
-          <Texting
-            title={minutes}
-            fontSize={getSize.m(16)}
-            color={COLORS.secondary}
-            fontFamily={FONTS.bold}
-          />
+          <Texting title={minutes} textStyle={[styles.textBase]} />
         </Pressable>
+
         <Texting
           title=":"
-          fontSize={getSize.m(16)}
-          color={COLORS.white}
-          marginHorizontal={getSize.m(4)}
-          fontFamily={FONTS.bold}
+          textStyle={[styles.text2Dots]}
+          style={[{ marginHorizontal: getSize.m(4) }]}
         />
         <Pressable style={styles.wrapperCardTime}>
-          <Texting
-            title={seconds}
-            fontSize={getSize.m(16)}
-            color={COLORS.secondary}
-            fontFamily={FONTS.bold}
-          />
+          <Texting title={seconds} textStyle={[styles.textSeconds]} />
         </Pressable>
       </View>
     </Pressable>

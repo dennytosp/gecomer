@@ -1,6 +1,5 @@
 import ButtonPrimary from './ButtonPrimary'
 import ButtonSocial from './ButtonSocial'
-import Charting from './Charting'
 import Addressing from './Common/Addressing'
 import CardATM from './Common/CardATM'
 import Cart from './Common/Cart'
@@ -27,7 +26,6 @@ export {
   CardATM,
   Cart,
   Categories,
-  Charting,
   EventList,
   FormInput,
   Header,

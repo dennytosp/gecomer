@@ -38,7 +38,7 @@ const Onboard = ({ navigation }) => {
   const renderDoneButton = () => {
     return (
       <LinearGradient
-        colors={['#EAD6EE', COLORS.primary]}
+        colors={[COLORS.black01, COLORS.black01]}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
         style={[styles.linearGradient, styles.doneButtonWrapper]}

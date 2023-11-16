@@ -1,12 +1,11 @@
 import { Forward } from '@/assets'
-import { COLORS, FONTS } from '@/constants'
-import { getSize } from '@/utils'
+import { getSize, isAndroid } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { Pressable, View } from 'react-native'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import Texting from '../Texting'
-import styles from './styles'
+import { styles } from './styles'
 
 const Header = ({
   style,
@@ -26,18 +25,18 @@ const Header = ({
   topLine,
 }) => {
   const navigation = useNavigation()
-  const insets = useSafeAreaInsets()
 
   return (
-    <View style={{ ...styles.wrapperFullHeader, ...style }}>
-      <View
-        style={{
-          marginTop: insets.top,
-          paddingHorizontal: paddingHorizontal,
-          ...styles.wrapperHeader,
-        }}
+    <View style={[styles.wrapperFullHeader, style]}>
+      <SafeAreaView
+        edges={['top']}
+        style={[
+          isAndroid && { marginTop: getSize.m(16) },
+          { paddingHorizontal: paddingHorizontal },
+          styles.wrapperHeader,
+        ]}
       >
-        <Pressable style={styles.wrapperLeft}>
+        <View style={styles.wrapperLeft}>
           {!disableIconLeft && (
             <Pressable onPress={() => navigation.goBack()}>
               {iconLeft ? iconLeft : <Forward />}
@@ -46,30 +45,42 @@ const Header = ({
 
           <Texting
             title={title}
-            fontFamily={FONTS.bold}
-            fontSize={16}
-            color={COLORS.secondary}
-            marginHorizontal={disableIconLeft ? getSize.m(0) : getSize.m(16)}
-            marginTop={getSize.m(3.5)}
-            numberOfLines={numberOfLines}
-            backgroundColor={backgroundColor}
-            width={widthHeader}
-            height={heightHeader}
-            maxWidth={maxWidth}
+            inputProps={{ numberOfLines }}
+            textStyle={[styles.textHeader]}
+            style={[
+              {
+                marginHorizontal: disableIconLeft
+                  ? getSize.m(0)
+                  : getSize.m(16),
+                width: widthHeader,
+                height: heightHeader,
+                maxWidth,
+                backgroundColor,
+              },
+            ]}
           />
-        </Pressable>
+        </View>
 
         <View style={styles.wrapperRight}>
-          <Pressable
-            onPress={onPressRight01}
-            style={{ paddingHorizontal: getSize.m(16) }}
-          >
-            {iconRight01}
-          </Pressable>
+          {iconRight01 && (
+            <Pressable
+              onPress={onPressRight01}
+              style={{ marginLeft: getSize.m(16) }}
+            >
+              {iconRight01}
+            </Pressable>
+          )}
 
-          <Pressable onPress={onPressRight02}>{iconRight02}</Pressable>
+          {iconRight02 && (
+            <Pressable
+              onPress={onPressRight02}
+              style={{ marginLeft: getSize.m(16) }}
+            >
+              {iconRight02}
+            </Pressable>
+          )}
         </View>
-      </View>
+      </SafeAreaView>
 
       <View
         style={{

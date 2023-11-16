@@ -9,4 +9,3 @@ export const styles = StyleSheet.create({
     paddingHorizontal: getSize.m(16),
   },
 })
-export default styles

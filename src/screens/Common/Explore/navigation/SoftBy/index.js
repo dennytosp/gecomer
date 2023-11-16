@@ -1,27 +1,23 @@
-import React from 'react'
-import { View, FlatList } from 'react-native'
-import styles from './styles'
-import { Texting } from '@/components'
 import { DATA_SOFT_BY } from '@/assets'
+import { Header, Texting } from '@/components'
 import { getSize } from '@/utils'
-import { Header } from '@/components'
-import { FONTS } from '@/constants'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import { styles } from './styles'
 
 const SoftBy = () => {
   const _renderCenter = ({ item }) => {
     return (
       <View
-        style={{
-          ...styles.wrapperCenter,
-          backgroundColor: item.backgroundColor,
-        }}
+        style={[
+          styles.wrapperCenter,
+          { backgroundColor: item.backgroundColor },
+        ]}
       >
         <Texting
-          marginHorizontal={getSize.m(16)}
           title={item.title}
-          fontFamily={FONTS.bold}
-          paddingVertical={getSize.m(16)}
-          color={item.colors}
+          textStyle={[styles.textTitle, { color: item.colors }]}
+          style={[styles.wrapTitle]}
         />
       </View>
     )

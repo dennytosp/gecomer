@@ -1,12 +1,12 @@
+import { Method01, Method02 } from '@/assets'
+import { ButtonPrimary, CardATM, Header } from '@/components'
+import { COLORS } from '@/constants'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
 import styles from './styles'
-import { ButtonPrimary, CardATM, Header } from '@/components'
-import { Method01, Method02 } from '@/assets'
-import { useNavigation } from '@react-navigation/native'
-import { routes } from '@/navigation/routes'
-import { getSize } from '@/utils'
-import { COLORS } from '@/constants'
 
 const CreditCard = () => {
   const navigation = useNavigation()
@@ -42,8 +42,8 @@ const CreditCard = () => {
       <_renderCreditCard />
       <ButtonPrimary
         title="Add Card"
-        marginVertical={getSize.m(16)}
         onPress={() => navigation.navigate(routes.ADD_CARD)}
+        style={[{ marginVertical: getSize.m(16) }]}
       />
     </View>
   )

@@ -20,4 +20,3 @@ export const styles = StyleSheet.create({
     marginTop: getSize.m(16),
   },
 })
-export default styles

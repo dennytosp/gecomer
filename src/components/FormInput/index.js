@@ -21,14 +21,11 @@ const FormInput = ({
 }) => {
   return (
     <View
-      style={{
-        ...styles.wrapperFormInput,
-        marginBottom: marginBottom,
-        ...style,
-      }}
+      style={[styles.wrapperFormInput, { marginBottom: marginBottom }, style]}
     >
       <View style={styles.wrapperContentInput}>
         {icon && <Pressable style={styles.wrapperIconInput}>{icon}</Pressable>}
+
         <TextInput
           placeholder={placeholder}
           onChangeText={onChangeText}
@@ -43,6 +40,7 @@ const FormInput = ({
           editable={!editable ? true : false}
           style={styles.txtInput}
         />
+
         {right && (
           <Pressable style={styles.wrapperRightInput}>{right}</Pressable>
         )}

@@ -1,8 +1,8 @@
 import { ButtonPrimary, Header } from '@/components'
+import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { ScrollView, View } from 'react-native'
-import { getSize } from '@/utils'
 import { FormProfile } from '../../components'
 import styles from './styles'
 
@@ -32,8 +32,8 @@ const EditUserInformation = () => {
         />
         <ButtonPrimary
           title="Save"
-          marginBottom={getSize.m(16)}
           onPress={() => navigation.goBack()}
+          style={[{ marginBottom: getSize.m(16) }]}
         />
       </ScrollView>
     </View>

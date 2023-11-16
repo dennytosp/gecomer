@@ -11,7 +11,9 @@ export const styles = StyleSheet.create({
   wrapperTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     marginTop: getSize.m(16),
+    marginBottom: getSize.m(32),
   },
   wrapperEventAddReviews: {
     width: getSize.s(40),
@@ -26,9 +28,11 @@ export const styles = StyleSheet.create({
     borderRadius: getSize.m(8),
     paddingTop: getSize.m(24),
     shadowColor: COLORS.black,
-    elevation: getSize.m(8),
+    elevation: getSize.m(4),
+    shadowOffset: { width: getSize.m(0), height: getSize.m(4) },
+    shadowOpacity: getSize.m(0.2),
+    shadowRadius: getSize.m(8),
     paddingHorizontal: getSize.m(16),
-    marginHorizontal: getSize.m(-16),
     paddingBottom: getSize.m(16),
     marginBottom: getSize.m(32),
   },
@@ -45,9 +49,21 @@ export const styles = StyleSheet.create({
     height: getSize.v(40),
     borderRadius: getSize.s(40 / 2),
   },
-  wrapperRowRightInfor: {
+  wrapperRowRightInfo: {
     justifyContent: 'flex-end',
   },
+  wrapLike: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
   wrapperImage: {},
+  textDescription: {
+    fontSize: getSize.m(12),
+    color: COLORS.secondary,
+    textAlign: 'justify',
+  },
+  wrapTextDescription: {
+    marginVertical: getSize.m(10),
+  },
 })
-export default styles

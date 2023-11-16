@@ -1,13 +1,12 @@
 import { photos } from '@/assets'
 import { Header, Promotion, RecommendProduct } from '@/components'
 import Texting from '@/components/Texting'
-import { COLORS, FONTS } from '@/constants'
 import { routes } from '@/navigation/routes'
-import { getSize, width } from '@/utils'
+import { width } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
-import styles from './styles'
+import { styles } from './styles'
 
 const Offer = () => {
   const navigation = useNavigation()
@@ -17,10 +16,8 @@ const Offer = () => {
       <View style={styles.wrapperHeader}>
         <Texting
           title="Use “MEGSL” Cupon For Get 90% Off"
-          fontFamily={FONTS.bold}
-          color={COLORS.white}
-          fontSize={getSize.m(16)}
-          width={width / 2}
+          textStyle={[styles.textPromotionCode]}
+          style={[{ width: width / 2 }]}
         />
       </View>
     )

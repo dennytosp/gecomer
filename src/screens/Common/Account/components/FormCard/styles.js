@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native'
 import { getSize, width } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperContent: {
@@ -17,4 +17,3 @@ export const styles = StyleSheet.create({
     width: width / 2 - getSize.m(22),
   },
 })
-export default styles

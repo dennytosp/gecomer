@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
     marginTop: getSize.m(3.5),
     paddingHorizontal: getSize.m(8),
     color: COLORS.secondary,
+    padding: 0,
   },
   wrapperFavorite: {
     paddingHorizontal: getSize.m(16),

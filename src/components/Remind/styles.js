@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 
 export const styles = StyleSheet.create({
@@ -24,5 +24,13 @@ export const styles = StyleSheet.create({
     borderWidth: getSize.s(3 / 2),
     borderColor: COLORS.border,
   },
+  textTitle: {
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(24),
+    color: COLORS.secondary,
+  },
+  textCancel: {
+    fontSize: getSize.m(14),
+    fontFamily: FONTS.bold,
+  },
 })
-export default styles

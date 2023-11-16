@@ -1,13 +1,13 @@
 import { LogoPrimary } from '@/assets'
 import { ButtonPrimary, Texting } from '@/components'
-import { COLORS, FONTS } from '@/constants'
 import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { Pressable, ScrollView, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { FormRegister } from '../components'
-import styles from './styles'
+import { styles } from './styles'
 
 const Register = () => {
   const { top } = useSafeAreaInsets()
@@ -21,14 +21,16 @@ const Register = () => {
       <Pressable style={styles.wrapperLogo}>
         <LogoPrimary />
       </Pressable>
+
       <Texting
-        marginBottom={8}
         title="Let’s Get Started"
-        fontSize={16}
-        fontFamily={FONTS.bold}
-        color={COLORS.secondary}
+        textStyle={[styles.textTitle]}
+        style={[{ marginBottom: getSize.m(8) }]}
       />
-      <Texting title="Create an new account" marginBottom={28} />
+      <Texting
+        title="Create an new account"
+        style={[{ marginBottom: getSize.m(28) }]}
+      />
     </View>
   )
 
@@ -40,7 +42,6 @@ const Register = () => {
             screen: routes.LOGIN,
           })
         }
-        marginTop={16}
         title="Sign Up"
       />
     </View>
@@ -49,7 +50,7 @@ const Register = () => {
   const renderFooter = () => (
     <View style={styles.wrapperFooter}>
       <View style={styles.wrapperTextFooter}>
-        <Texting title="Have an account?" fontSize={12} />
+        <Texting title="Have an account?" />
         <Texting
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
@@ -57,10 +58,8 @@ const Register = () => {
             })
           }
           title="Sign In"
-          fontFamily={FONTS.bold}
-          fontSize={12}
-          color={COLORS.primary}
-          marginHorizontal={5}
+          textStyle={[styles.textBase]}
+          style={[{ marginHorizontal: getSize.m(4) }]}
         />
       </View>
     </View>

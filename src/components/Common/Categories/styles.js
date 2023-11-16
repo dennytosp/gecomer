@@ -24,5 +24,8 @@ export const styles = StyleSheet.create({
     marginBottom: getSize.m(8),
   },
   imageEvent: {},
+  textTitle: {
+    fontSize: getSize.m(10),
+    textAlign: 'center',
+  },
 })
-export default styles

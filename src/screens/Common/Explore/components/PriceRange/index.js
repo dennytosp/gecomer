@@ -1,12 +1,13 @@
 import { FormInput, Titling } from '@/components'
 import React from 'react'
 import { View } from 'react-native'
-import styles from './styles'
+import { styles } from './styles'
 
 const PriceRange = ({ style }) => {
   return (
     <View style={{ ...styles.wrapperPriceRange, ...style }}>
       <Titling title="Price Range" />
+
       <View style={styles.rowInput}>
         <FormInput
           placeholder="$1.245"

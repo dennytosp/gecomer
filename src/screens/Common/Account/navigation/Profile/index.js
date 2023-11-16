@@ -1,15 +1,11 @@
-import React from 'react'
-import { Pressable, View, Image, FlatList } from 'react-native'
-import styles from './styles'
+import { DATA_PROFILE, Editing, ForwardNext, photos } from '@/assets'
 import { Header, Texting } from '@/components'
-import { Editing, ForwardNext } from '@/assets'
-import { useNavigation } from '@react-navigation/native'
 import { routes } from '@/navigation/routes'
-import { photos } from '@/assets'
-import { COLORS, FONTS } from '@/constants'
-import { getSize, width } from '@/utils'
-import { DATA_PROFILE } from '@/assets'
 import picker from '@/utils/picker'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, Image, Pressable, View } from 'react-native'
+import { styles } from './styles'
 
 const Profile = () => {
   const navigation = useNavigation()
@@ -25,13 +21,9 @@ const Profile = () => {
               style={styles.avatar}
             />
           </Pressable>
+
           <View style={styles.rightAvatar}>
-            <Texting
-              title="Gin Phone"
-              color={COLORS.secondary}
-              fontFamily={FONTS.bold}
-              fontSize={getSize.m(14)}
-            />
+            <Texting title="Gin Phone" textStyle={[styles.textPhone]} />
             <Texting title="@ginphone" />
           </View>
         </Pressable>
@@ -46,12 +38,8 @@ const Profile = () => {
           <Pressable>{item.icon}</Pressable>
           <Texting
             title={item.title}
-            fontFamily={FONTS.bold}
-            fontSize={getSize.m(12)}
-            marginLeft={getSize.m(12)}
-            color={COLORS.secondary}
-            paddingVertical={getSize.m(16)}
-            width={width / 2 - getSize.m(60)}
+            style={[styles.wrapTextTitle]}
+            textStyle={[styles.textTitle]}
           />
         </View>
         <Pressable
@@ -60,9 +48,8 @@ const Profile = () => {
         >
           <Texting
             title={item.content}
-            width={width / 2 - getSize.m(48)}
-            textAlign="right"
-            marginRight={getSize.m(12)}
+            textStyle={[styles.textContent]}
+            style={[styles.wrapperCenter]}
           />
           <ForwardNext />
         </Pressable>

@@ -88,8 +88,8 @@ const Reviews = () => {
         />
         <ButtonPrimary
           title="Write Review"
-          marginBottom={getSize.m(12)}
           onPress={() => navigation.navigate(routes.WRITE_REVIEW)}
+          style={[{ marginBottom: getSize.m(12) }]}
         />
       </ScrollView>
     </View>

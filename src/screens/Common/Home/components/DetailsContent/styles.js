@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
@@ -44,5 +44,27 @@ export const styles = StyleSheet.create({
   wrapperProducts: {
     marginTop: getSize.m(12),
   },
+  textSizeNumber: {
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(14),
+    color: COLORS.secondary,
+  },
+  textCountReview: {
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(10),
+  },
+  wrapTextCountStar: {
+    marginLeft: getSize.m(8),
+    marginRight: getSize.m(4),
+  },
+  textNameProduct: {
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(20),
+    color: COLORS.secondary,
+  },
+  textPrice: {
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(20),
+    color: COLORS.primary,
+  },
 })
-export default styles

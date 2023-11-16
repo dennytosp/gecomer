@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
@@ -18,5 +18,9 @@ export const styles = StyleSheet.create({
     marginVertical: getSize.m(16),
   },
   wrapperContent: {},
+  textPromotionCode: {
+    fontSize: getSize.m(16),
+    color: COLORS.white,
+    fontFamily: FONTS.bold,
+  },
 })
-export default styles

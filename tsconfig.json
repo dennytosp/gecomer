@@ -5,6 +5,7 @@
     "types": ["react-native", "jest"],
     "target": "ESNext",
     "baseUrl": ".",
+    "jsx": "react-native",
     "paths": {
       "@/*": ["./src/*"]
     }

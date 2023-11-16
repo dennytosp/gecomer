@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   rightText: {
     color: COLORS.black,
     fontSize: 14,
-    fontFamily: FONTS.semiBold,
+    fontFamily: FONTS.semibold,
   },
   leftTextWrapper: {
     width: 40,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   leftText: {
     color: COLORS.black,
     fontSize: 14,
-    fontFamily: FONTS.semiBold,
+    fontFamily: FONTS.semibold,
   },
   doneButtonWrapper: {
     flex: 1,
@@ -69,10 +69,10 @@ const styles = StyleSheet.create({
     marginRight: -0,
   },
   doneButtonText: {
-    fontFamily: FONTS.semiBold,
+    fontFamily: FONTS.semibold,
     fontSize: 14,
     textAlign: 'center',
-    color: COLORS.black01,
+    color: COLORS.white,
   },
 })
 

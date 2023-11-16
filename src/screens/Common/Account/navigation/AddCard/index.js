@@ -1,10 +1,10 @@
+import { ButtonPrimary, Header } from '@/components'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { ScrollView, View } from 'react-native'
-import styles from './styles'
-import { ButtonPrimary, Header } from '@/components'
-import { useNavigation } from '@react-navigation/native'
-import { getSize } from '@/utils'
 import { FormCard } from '../../components'
+import styles from './styles'
 
 const AddCard = () => {
   const navigation = useNavigation()
@@ -16,6 +16,7 @@ const AddCard = () => {
   return (
     <View style={styles.container}>
       <Header title="Add Card" topLine />
+
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
@@ -27,10 +28,11 @@ const AddCard = () => {
           CardHolder={[cardHolder, setCardHolder]}
         />
       </ScrollView>
+
       <ButtonPrimary
         title="Add Card"
-        marginVertical={getSize.m(16)}
         onPress={() => navigation.goBack()}
+        style={[{ marginVertical: getSize.m(16) }]}
       />
     </View>
   )

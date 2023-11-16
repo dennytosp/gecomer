@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize, height, width } from '@/utils'
 import { StyleSheet } from 'react-native'
 
@@ -32,5 +32,24 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
   },
   wrapperContent: {},
+  textBase: {
+    fontSize: getSize.m(16),
+    color: COLORS.secondary,
+    fontFamily: FONTS.bold,
+  },
+  textTitle: {
+    fontSize: getSize.m(24),
+    color: COLORS.white,
+    fontFamily: FONTS.bold,
+  },
+  text2Dots: {
+    fontSize: getSize.m(16),
+    color: COLORS.white,
+    fontFamily: FONTS.bold,
+  },
+  textSeconds: {
+    fontSize: getSize.m(16),
+    color: COLORS.secondary,
+    fontFamily: FONTS.bold,
+  },
 })
-export default styles

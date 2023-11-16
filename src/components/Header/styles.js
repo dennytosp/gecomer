@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
@@ -23,5 +23,9 @@ export const styles = StyleSheet.create({
     marginTop: getSize.m(20),
     marginHorizontal: getSize.m(-16),
   },
+  textHeader: {
+    color: COLORS.secondary,
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(16),
+  },
 })
-export default styles

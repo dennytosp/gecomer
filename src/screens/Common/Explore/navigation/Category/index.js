@@ -1,11 +1,9 @@
-import React from 'react'
-import { View, FlatList, Pressable } from 'react-native'
-import styles from './styles'
-import { Texting } from '@/components'
 import { DATA_CATEGORY_SOFT } from '@/assets'
+import { Header, Texting } from '@/components'
 import { getSize } from '@/utils'
-import { Header } from '@/components'
-import { COLORS, FONTS } from '@/constants'
+import React from 'react'
+import { FlatList, Pressable, View } from 'react-native'
+import { styles } from './styles'
 
 const Category = () => {
   const _renderCenter = ({ item }) => {
@@ -17,13 +15,11 @@ const Category = () => {
         }}
       >
         <Pressable style={styles.icon}>{item.image}</Pressable>
+
         <Texting
           title={item.title}
-          fontFamily={FONTS.bold}
-          color={COLORS.secondary}
-          paddingHorizontal={getSize.m(16)}
-          paddingVertical={getSize.m(16)}
-          fontSize={getSize.m(12)}
+          textStyle={[styles.textTitle]}
+          style={[styles.wrapTextTitle]}
         />
       </View>
     )

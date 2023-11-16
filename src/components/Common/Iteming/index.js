@@ -1,9 +1,9 @@
 import Texting from '@/components/Texting'
-import { COLORS } from '@/constants'
 import { getSize, width } from '@/utils'
 import React from 'react'
 import { View } from 'react-native'
-import styles from './styles'
+import { styles } from './styles'
+
 const Iteming = ({
   left01,
   left02,
@@ -21,20 +21,23 @@ const Iteming = ({
 }) => {
   const marginBottom = getSize.m(12)
   return (
-    <View style={{ ...styles.wrapperFooter, ...style }}>
-      <View style={{ ...styles.rowFooter, marginBottom: marginBottom }}>
+    <View style={[styles.wrapperFooter, style]}>
+      <View style={[styles.rowFooter, { marginBottom: marginBottom }]}>
         <Texting title={left01} />
-        <Texting title={right01} color={COLORS.secondary} />
+        <Texting title={right01} textStyle={[styles.textBase]} />
       </View>
-      <View style={{ ...styles.rowFooter, marginBottom: marginBottom }}>
+
+      <View style={[styles.rowFooter, { marginBottom: marginBottom }]}>
         <Texting title={left02} />
-        <Texting title={right02} color={COLORS.secondary} />
+        <Texting title={right02} textStyle={[styles.textBase]} />
       </View>
-      <View style={{ ...styles.rowFooter, marginBottom: marginBottom }}>
+
+      <View style={[styles.rowFooter, { marginBottom: marginBottom }]}>
         <Texting title={left03} />
-        <Texting title={right03} color={COLORS.secondary} />
+        <Texting title={right03} textStyle={[styles.textBase]} />
       </View>
-      <View style={{ ...styles.rowFooter }}>
+
+      <View style={[styles.rowFooter]}>
         <Texting
           color={colorLeft04 && colorLeft04}
           fontFamily={fontLef04 && fontLef04}
@@ -42,10 +45,10 @@ const Iteming = ({
         />
         <Texting
           title={right04}
-          color={colorRight04 ? colorRight04 : COLORS.secondary}
-          width={width / 2}
-          textAlign="right"
-          fontFamily={fontRight04 && fontRight04}
+          textStyle={[
+            styles.textRight,
+            { color: colorRight04, fontFamily: fontRight04, width: width / 2 },
+          ]}
         />
       </View>
     </View>

@@ -25,8 +25,8 @@ const ChangePassword = () => {
       </ScrollView>
       <ButtonPrimary
         title="Save"
-        marginVertical={getSize.m(16)}
         onPress={() => navigation.goBack()}
+        style={[{ marginVertical: getSize.m(16) }]}
       />
     </View>
   )

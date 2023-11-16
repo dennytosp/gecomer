@@ -1,3 +1,4 @@
+import { COLORS, FONTS } from '@/constants'
 import { getSize, height, width } from '@/utils'
 import { StyleSheet } from 'react-native'
 
@@ -22,5 +23,10 @@ export const styles = StyleSheet.create({
     left: getSize.m(24),
     bottom: getSize.m(48),
   },
+  textTitle: {
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(24),
+    color: COLORS.white,
+    lineHeight: getSize.m(36),
+  },
 })
-export default styles

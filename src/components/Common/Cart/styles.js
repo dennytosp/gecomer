@@ -1,5 +1,5 @@
-import { COLORS } from '@/constants'
-import { getSize } from '@/utils'
+import { COLORS, FONTS } from '@/constants'
+import { getSize, width } from '@/utils'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-
   product: {
     width: getSize.s(80),
     height: getSize.v(80),
@@ -23,6 +22,11 @@ export const styles = StyleSheet.create({
   rowColumn01: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  textTitle: {
+    fontFamily: FONTS.bold,
+    color: COLORS.secondary,
+    width: (width - 56) / 2,
   },
   rowRight01: {
     flexDirection: 'row',
@@ -40,6 +44,10 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-end',
     flex: 1,
   },
+  textPrice: {
+    color: COLORS.primary,
+    fontFamily: FONTS.bold,
+  },
   rowRight02: {
     flexDirection: 'row',
     borderColor: COLORS.border,
@@ -54,5 +62,9 @@ export const styles = StyleSheet.create({
   iconPlus: {
     marginHorizontal: getSize.m(8),
   },
+  textQuantity: {
+    color: COLORS.secondary,
+    textAlign: 'center',
+    backgroundColor: COLORS.border,
+  },
 })
-export default styles

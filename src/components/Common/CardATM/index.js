@@ -1,56 +1,42 @@
+import Texting from '@/components/Texting'
 import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import React from 'react'
 import { View } from 'react-native'
-import { Texting } from '../..'
-import styles from './styles'
+import { styles } from './styles'
 
 const CardATM = ({ backgroundColor, method, code, holder, time, style }) => {
   return (
     <View
-      style={{
-        ...styles.wrapperCard,
-        backgroundColor: backgroundColor ? backgroundColor : COLORS.primary,
-        ...style,
-      }}
+      style={[
+        styles.wrapperCard,
+        { backgroundColor: backgroundColor ? backgroundColor : COLORS.primary },
+        style,
+      ]}
     >
       {method}
 
       <Texting
         title={code}
-        color={COLORS.white}
-        fontFamily={FONTS.bold}
-        marginTop={getSize.m(32)}
-        marginBottom={getSize.m(16)}
-        fontSize={getSize.m(24)}
+        textStyle={[styles.textCode]}
+        style={[styles.wrapTextCode]}
       />
 
       <View style={styles.wrapperRow}>
         <View style={styles.row01}>
-          <Texting
-            title="CARD HOLDER"
-            fontSize={getSize.m(10)}
-            color={COLORS.white}
-          />
+          <Texting title="CARD HOLDER" textStyle={[styles.textBase]} />
           <Texting
             title={holder}
-            fontSize={getSize.m(10)}
-            fontFamily={FONTS.bold}
-            color={COLORS.white}
+            textStyle={[styles.textBase, { fontFamily: FONTS.bold }]}
           />
         </View>
 
         <View style={styles.row02}>
-          <Texting
-            title="CARD SAVE"
-            fontSize={getSize.m(10)}
-            color={COLORS.white}
-          />
+          <Texting title="CARD SAVE" textStyle={[styles.textBase]} />
           <Texting
             title={time}
             fontSize={getSize.m(10)}
-            fontFamily={FONTS.bold}
-            color={COLORS.white}
+            textStyle={[styles.textBase, { fontFamily: FONTS.bold }]}
           />
         </View>
       </View>

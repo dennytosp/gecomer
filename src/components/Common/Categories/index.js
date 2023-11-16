@@ -1,8 +1,8 @@
+import Texting from '@/components/Texting'
 import { getSize, width } from '@/utils'
 import React from 'react'
 import { Pressable, View } from 'react-native'
-import Texting from '@/components/Texting'
-import styles from './styles'
+import { styles } from './styles'
 
 const Categories = ({
   index,
@@ -10,20 +10,20 @@ const Categories = ({
   title,
   onPress,
   marginBottom,
-  vertiColumns,
+  verticalColumns,
   heightColumns,
   style,
 }) => {
   const paddingHorizonReponsive = 16 * 2 + 6
-  const widthReponsive = (width - paddingHorizonReponsive) / 4
+  const widthResponsive = (width - paddingHorizonReponsive) / 4
   return (
     <View
       style={{
         marginBottom: marginBottom,
         marginLeft: index,
-        width: vertiColumns && widthReponsive,
+        width: verticalColumns && widthResponsive,
         height: heightColumns,
-        marginRight: vertiColumns && getSize.m(11 / 2),
+        marginRight: verticalColumns && getSize.m(11 / 2),
         ...styles.wrapperCategories,
         ...style,
       }}
@@ -33,11 +33,11 @@ const Categories = ({
           <Pressable style={styles.wrapperImageEvent} onPress={onPress}>
             {image}
           </Pressable>
+
           <Texting
             title={title}
-            fontSize={getSize.m(10)}
-            textAlign="center"
-            marginLeft={getSize.m(-12 / 2)}
+            textStyle={[styles.textTitle]}
+            style={[{ marginLeft: getSize.m(-12 / 2) }]}
           />
         </Pressable>
       </View>

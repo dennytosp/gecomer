@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native'
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperCenter: {
@@ -25,5 +25,14 @@ export const styles = StyleSheet.create({
   onRemove: {
     marginHorizontal: getSize.m(24),
   },
+  textName: {
+    fontSize: getSize.m(14),
+    fontFamily: FONTS.bold,
+    color: COLORS.secondary,
+  },
+  textEdit: {
+    fontSize: getSize.m(14),
+    fontFamily: FONTS.bold,
+    color: COLORS.white,
+  },
 })
-export default styles

@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
-import { View, FlatList, Pressable } from 'react-native'
-import styles from './styles'
+import {
+  DownPress,
+  Filterist,
+  PRODUCTS_DATA_VERTICOLUMNS,
+  RemoveEmpty,
+  Soft,
+} from '@/assets'
 import { ProductsHorizontal, Remind, Searching, Texting } from '@/components'
-import { PRODUCTS_DATA_VERTICOLUMNS } from '@/assets'
-import { DownPress, Filterist, Soft } from '@/assets'
 import { COLORS, FONTS } from '@/constants'
-import { getSize } from '@/utils'
-import { RemoveEmpty } from '@/assets'
-import { useNavigation } from '@react-navigation/native'
 import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
+import React, { useState } from 'react'
+import { FlatList, Pressable, View } from 'react-native'
+import { styles } from './styles'
 
 const SearchResults = () => {
   const navigation = useNavigation()
@@ -24,19 +28,20 @@ const SearchResults = () => {
         <Pressable onPress={() => setShow(!show)}>
           <Texting
             title={show ? countLength : emptyLength}
-            fontFamily={FONTS.bold}
+            textStyle={[{ fontFamily: FONTS.bold }]}
           />
         </Pressable>
+
         <Pressable
           onPress={() => navigation.navigate(routes.CATEGORY)}
           style={styles.wrapperRightRows}
         >
           <Texting
             title="Man Shoes"
-            fontFamily={FONTS.bold}
-            color={COLORS.secondary}
-            marginRight={getSize.m(4)}
+            textStyle={[{ fontFamily: FONTS.bold, color: COLORS.secondary }]}
+            style={[{ marginRight: getSize.m(4) }]}
           />
+
           <Pressable onPress={() => navigation.navigate(routes.CATEGORY)}>
             <DownPress />
           </Pressable>

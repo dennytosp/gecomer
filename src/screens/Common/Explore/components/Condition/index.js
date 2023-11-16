@@ -1,13 +1,12 @@
 import { Texting, Titling } from '@/components'
-import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import React from 'react'
 import { Pressable, View } from 'react-native'
-import styles from './styles'
+import { styles } from './styles'
 
 const Condition = ({ style }) => {
   return (
-    <View style={{ ...styles.wrapperCondition, ...style }}>
+    <View style={[styles.wrapperCondition, style]}>
       <Titling title="Condition" />
 
       <View style={styles.wrapperRow}>
@@ -15,22 +14,12 @@ const Condition = ({ style }) => {
           <Texting title="New" />
         </Pressable>
 
-        <Pressable
-          style={{ ...styles.clicked, marginHorizontal: getSize.m(8) }}
-        >
-          <Texting
-            title="Used"
-            fontFamily={FONTS.bold}
-            color={COLORS.primary}
-          />
+        <Pressable style={[styles.clicked, { marginHorizontal: getSize.m(8) }]}>
+          <Texting title="Used" textStyle={[styles.textBase]} />
         </Pressable>
 
         <Pressable style={styles.clicked}>
-          <Texting
-            title="Not Specified"
-            fontFamily={FONTS.bold}
-            color={COLORS.primary}
-          />
+          <Texting title="Not Specified" textStyle={[styles.textBase]} />
         </Pressable>
       </View>
     </View>

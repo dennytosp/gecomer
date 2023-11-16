@@ -1,9 +1,9 @@
-import React from 'react'
-import { View } from 'react-native'
 import { ChangePasswording } from '@/assets'
 import { FormInput, Titling } from '@/components'
 import { getSize } from '@/utils'
-import styles from './styles'
+import React from 'react'
+import { View } from 'react-native'
+import { styles } from './styles'
 
 const FormPassword = ({ OldPassword, NewPassword }) => {
   const [oldPassword, setOldPassword] = OldPassword
@@ -19,6 +19,7 @@ const FormPassword = ({ OldPassword, NewPassword }) => {
         icon={ChangePasswording}
         secureTextEntry
       />
+
       <Titling title="New Password" />
       <FormInput
         placeholder="•••••••••••••••••"
@@ -27,6 +28,7 @@ const FormPassword = ({ OldPassword, NewPassword }) => {
         icon={ChangePasswording}
         secureTextEntry
       />
+
       <Titling title="New Password Again" />
       <FormInput
         placeholder="•••••••••••••••••"

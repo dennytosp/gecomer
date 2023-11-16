@@ -1,9 +1,9 @@
 import { Method01 } from '@/assets'
 import { ButtonPrimary, CardATM, Header } from '@/components'
+import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { ScrollView, View } from 'react-native'
-import { getSize } from '@/utils'
 import { FormCarding } from '../../components'
 import styles from './styles'
 
@@ -43,8 +43,8 @@ const CheckCard = () => {
       </ScrollView>
       <ButtonPrimary
         title="Save"
-        marginVertical={getSize.m(16)}
         onPress={() => navigation.goBack()}
+        style={[{ marginVertical: getSize.m(16) }]}
       />
     </View>
   )

@@ -1,8 +1,8 @@
-import React from 'react'
-import { View } from 'react-native'
 import { FormInput, Titling } from '@/components'
 import { getSize } from '@/utils'
-import styles from './styles'
+import React from 'react'
+import { View } from 'react-native'
+import { styles } from './styles'
 
 const FormCard = ({ CardNumber, ExpirationDate, SecurityCode, CardHolder }) => {
   const [cardNumber, setCardNumber] = CardNumber
@@ -30,7 +30,7 @@ const FormCard = ({ CardNumber, ExpirationDate, SecurityCode, CardHolder }) => {
         </View>
 
         <View>
-          <Titling title="Security Code" textAlign="left" />
+          <Titling title="Security Code" textStyle={[{ textAlign: 'left' }]} />
           <FormInput
             placeholder="Security Code"
             style={styles.inputRowRight}
@@ -40,7 +40,7 @@ const FormCard = ({ CardNumber, ExpirationDate, SecurityCode, CardHolder }) => {
         </View>
       </View>
 
-      <Titling title="Card Holder" marginTop={getSize.m(24)} />
+      <Titling title="Card Holder" style={[{ marginTop: getSize.m(24) }]} />
       <FormInput
         placeholder="Enter Cardholder's name"
         onChangeText={text => setCardHolder(text)}

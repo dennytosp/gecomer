@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
@@ -18,5 +18,8 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.border,
     borderRadius: getSize.s(5),
   },
+  textBase: {
+    fontFamily: FONTS.bold,
+    color: COLORS.primary,
+  },
 })
-export default styles

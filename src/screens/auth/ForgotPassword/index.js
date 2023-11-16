@@ -1,13 +1,12 @@
 import { Email, LogoPrimary } from '@/assets'
 import { ButtonPrimary, FormInput, Texting } from '@/components'
-import { COLORS, FONTS } from '@/constants'
 import { routes } from '@/navigation/routes'
 import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import styles from './styles'
+import { styles } from './styles'
 
 const ForgotPassword = () => {
   const { top } = useSafeAreaInsets()
@@ -21,26 +20,26 @@ const ForgotPassword = () => {
       </View>
 
       <Texting
-        marginBottom={8}
         title="Password recovery"
-        fontSize={16}
-        fontFamily={FONTS.bold}
-        color={COLORS.secondary}
+        textStyle={[styles.textPasswordRecovery]}
+        style={[{ marginBottom: getSize.m(8) }]}
       />
-      <Texting title="Retrieve password to login" marginBottom={28} />
+      <Texting
+        title="Retrieve password to login"
+        textStyle={[{ marginBottom: getSize.m(28) }]}
+      />
     </View>
   )
 
   const renderCenter = () => (
     <View style={styles.wrapperCenter}>
       <ButtonPrimary
+        title="Send"
         onPress={() =>
           navigation.navigate(routes.AUTHENTICATION, {
             screen: routes.LOGIN,
           })
         }
-        marginTop={16}
-        title="Send"
       />
     </View>
   )
@@ -48,18 +47,19 @@ const ForgotPassword = () => {
   const renderFooter = () => (
     <View style={styles.wrapperFooter}>
       <View style={styles.wrapperTextFooter}>
-        <Texting title="Did you remember the password?" fontSize={12} />
         <Texting
+          title="Did you remember the password?"
+          textStyle={[{ fontSize: getSize.m(12) }]}
+        />
+        <Texting
+          title="Sign In"
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
               screen: routes.LOGIN,
             })
           }
-          title="Sign In"
-          fontFamily={FONTS.bold}
-          fontSize={12}
-          color={COLORS.primary}
-          marginHorizontal={5}
+          textStyle={[styles.textSignIn]}
+          style={[{ marginHorizontal: getSize.m(5) }]}
         />
       </View>
     </View>

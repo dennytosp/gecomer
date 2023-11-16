@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
@@ -18,5 +18,24 @@ export const styles = StyleSheet.create({
   wrapperRowPrice: {
     flexDirection: 'row',
   },
+  textName: {
+    color: COLORS.secondary,
+    width: getSize.m(100),
+    lineHeight: getSize.m(18),
+    fontFamily: FONTS.bold,
+    marginBottom: getSize.m(4),
+  },
+  textBase: {
+    color: COLORS.primary,
+    fontFamily: FONTS.bold,
+  },
+  textPrice: {
+    fontSize: getSize.m(10),
+    textDecorationLine: 'line-through',
+  },
+  textPromotion: {
+    color: COLORS.pale_red,
+    fontFamily: FONTS.bold,
+    fontSize: getSize.m(10),
+  },
 })
-export default styles

@@ -3,16 +3,14 @@ import { getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.white,
+  wrapperHeaderTitling: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: getSize.m(12),
   },
-  wrapperCenter: {},
-  textTitle: {
+  textStyle: {
+    color: COLORS.secondary,
+    fontSize: getSize.m(14),
     fontFamily: FONTS.bold,
-  },
-  wrapTitle: {
-    paddingVertical: getSize.m(16),
-    marginHorizontal: getSize.m(16),
   },
 })

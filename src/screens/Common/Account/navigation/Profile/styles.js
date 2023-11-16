@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
-import { getSize } from '@/utils'
-import { COLORS } from '@/constants'
+import { getSize, width } from '@/utils'
+import { COLORS, FONTS } from '@/constants'
 
 export const styles = StyleSheet.create({
   container: {
@@ -47,5 +47,26 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  textPhone: {
+    fontSize: getSize.m(14),
+    fontFamily: FONTS.bold,
+    color: COLORS.secondary,
+  },
+  wrapTextTitle: {
+    marginLeft: getSize.m(12),
+    paddingVertical: getSize.m(16),
+    width: width / 2 - getSize.m(60),
+  },
+  textTitle: {
+    fontSize: getSize.m(12),
+    fontFamily: FONTS.bold,
+    color: COLORS.secondary,
+  },
+  wrapTextContent: {
+    width: width / 2 - getSize.m(48),
+    marginRight: getSize.m(12),
+  },
+  textContent: {
+    textAlign: 'right',
+  },
 })
-export default styles

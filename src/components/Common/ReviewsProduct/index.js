@@ -1,11 +1,10 @@
 import { photos } from '@/assets'
 import StarRating from '@/components/StarRating'
 import Texting from '@/components/Texting'
-import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
 import React from 'react'
 import { Image, Pressable, View } from 'react-native'
-import styles from './styles'
+import { styles } from './styles'
 
 const ReviewsProduct = ({
   name,
@@ -19,10 +18,10 @@ const ReviewsProduct = ({
 }) => {
   return (
     <View
-      style={{
-        ...style,
-        marginBottom: marginBottom ? marginBottom : getSize.m(0),
-      }}
+      style={[
+        { marginBottom: marginBottom ? marginBottom : getSize.m(0) },
+        style,
+      ]}
     >
       <Pressable style={styles.wrapperInfor}>
         <Pressable style={styles.wrapperImagePersonReviews}>
@@ -30,21 +29,15 @@ const ReviewsProduct = ({
         </Pressable>
 
         <View style={styles.rating0}>
-          <Texting
-            title={name}
-            marginBottom={getSize.m(0)}
-            fontFamily={FONTS.bold}
-            fontSize={getSize.m(14)}
-            color={COLORS.secondary}
-          />
+          <Texting title={name} textStyle={[styles.textName]} />
           <StarRating startingValue={star} imageSize={12} type="custom" />
         </View>
       </Pressable>
 
       <Texting
-        textAlign="justify"
-        marginBottom={getSize.m(8)}
         title={description}
+        textStyle={[styles.textDescription]}
+        style={[{ marginBottom: getSize.m(8) }]}
       />
 
       {imageReviews && (
@@ -67,7 +60,7 @@ const ReviewsProduct = ({
         </View>
       )}
 
-      <Texting title={time} fontSize={getSize.m(10)} />
+      <Texting title={time} textStyle={[{ fontSize: getSize.m(10) }]} />
     </View>
   )
 }

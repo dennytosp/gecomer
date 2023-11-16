@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { DownPress } from '@/assets'
 import { FormInput, Titling } from '@/components'
 import { getSize } from '@/utils'
-import styles from './styles'
+import { styles } from './styles'
 
 const FormAddress = ({
   FirstName,
@@ -28,38 +28,45 @@ const FormAddress = ({
         marginBottom={getSize.m(24)}
         right={DownPress}
       />
+
       <Titling title="First Name" />
       <FormInput
         placeholder="Gin"
         marginBottom={getSize.m(24)}
         onChangeText={text => setFirstName(text)}
       />
+
       <Titling title="Last Name" />
       <FormInput
         placeholder="Phone"
         marginBottom={getSize.m(24)}
         onChangeText={text => setLastName(text)}
       />
+
       <Titling title="Street Address" />
       <FormInput
         placeholder="205 Davida"
         marginBottom={getSize.m(24)}
         onChangeText={text => setAddress(text)}
       />
+
       <Titling title="Street Address 2 (Optional)" />
       <FormInput
         placeholder="959 Serbia"
         marginBottom={getSize.m(24)}
         onChangeText={text => setAddressBackup(text)}
       />
+
       <Titling title="City" />
       <FormInput
         placeholder="Ho Chi Minh"
         marginBottom={getSize.m(24)}
         right={DownPress}
       />
+
       <Titling title="State/Province/Region" />
       <FormInput placeholder="Go Vap District" marginBottom={getSize.m(24)} />
+
       <Titling title="Zip Code" />
       <FormInput
         placeholder="57793"

@@ -10,54 +10,48 @@ import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { FlatList, ScrollView, View } from 'react-native'
-import styles from './styles'
+import { styles } from './styles'
 
 const Explore = () => {
   const navigation = useNavigation()
   const numColumns = 4
 
-  const _renderHeader = () => {
-    return (
-      <View style={styles.wrapperHeader}>
-        <Searching
-          iconRight={Favorite}
-          onPressRight={() => navigation.navigate(routes.FAVORITE)}
-          iconRight01={Notifications}
-          onPressRight01={() => navigation.navigate(routes.NOTIFICATIONS)}
-          placeholder="Search Product"
-          onPressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
-        />
-      </View>
-    )
-  }
-
-  const _renderManFashion = ({ item, index }) => {
-    return (
-      <Categories
-        index={index}
-        image={item.image}
-        title={item.title}
-        vertiColumns
-        marginBottom={getSize.m(24)}
+  const renderHeader = () => (
+    <View style={styles.wrapperHeader}>
+      <Searching
+        iconRight={Favorite}
+        onPressRight={() => navigation.navigate(routes.FAVORITE)}
+        iconRight01={Notifications}
+        onPressRight01={() => navigation.navigate(routes.NOTIFICATIONS)}
+        placeholder="Search Product"
+        onPressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
       />
-    )
-  }
+    </View>
+  )
 
-  const _renderWomanFashion = ({ item, index }) => {
-    return (
-      <Categories
-        index={index}
-        image={item.image}
-        title={item.title}
-        vertiColumns
-        marginBottom={getSize.m(24)}
-      />
-    )
-  }
+  const renderManFashion = ({ item, index }) => (
+    <Categories
+      index={index}
+      image={item.image}
+      title={item.title}
+      verticalColumns
+      marginBottom={getSize.m(24)}
+    />
+  )
+
+  const renderWomanFashion = ({ item, index }) => (
+    <Categories
+      index={index}
+      image={item.image}
+      title={item.title}
+      verticalColumns
+      marginBottom={getSize.m(24)}
+    />
+  )
 
   return (
     <View style={styles.container}>
-      <_renderHeader />
+      {renderHeader()}
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="on-drag"
@@ -67,7 +61,7 @@ const Explore = () => {
           showsVerticalScrollIndicator={false}
           numColumns={numColumns}
           data={MAN_FASHION_DATA}
-          renderItem={_renderManFashion}
+          renderItem={renderManFashion}
           keyExtractor={(item, index) => item.id.toString()}
         />
 
@@ -76,7 +70,7 @@ const Explore = () => {
           showsVerticalScrollIndicator={false}
           numColumns={numColumns}
           data={WOMAN_FASHION_DATA}
-          renderItem={_renderWomanFashion}
+          renderItem={renderWomanFashion}
           keyExtractor={(item, index) => item.id.toString()}
         />
       </ScrollView>

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { getSize } from '@/utils'
-import { COLORS } from '@/constants'
+import { COLORS, FONTS } from '@/constants'
 
 export const styles = StyleSheet.create({
   container: {
@@ -24,5 +24,14 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  textPasswordRecovery: {
+    fontSize: getSize.m(16),
+    fontFamily: FONTS.bold,
+    color: COLORS.secondary,
+  },
+  textSignIn: {
+    fontSize: getSize.m(12),
+    fontFamily: FONTS.bold,
+    color: COLORS.primary,
+  },
 })
-export default styles

@@ -1,13 +1,11 @@
-import React from 'react'
-import { View, FlatList } from 'react-native'
-import styles from './styles'
-import { Addressing, ButtonPrimary } from '@/components'
-import { DATA_ADDRESS } from '@/assets'
-import { getSize } from '@/utils'
-import { Header } from '@/components'
-import { Add_Ship } from '@/assets'
+import { Add_Ship, DATA_ADDRESS } from '@/assets'
+import { Addressing, ButtonPrimary, Header } from '@/components'
 import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { FlatList, View } from 'react-native'
+import { styles } from './styles'
 
 const ShipTo = () => {
   const navigation = useNavigation()
@@ -52,8 +50,8 @@ const ShipTo = () => {
       />
       <ButtonPrimary
         title="Next"
-        marginBottom={getSize.m(16)}
         onPress={() => navigation.navigate(routes.PAYMENT_METHOD)}
+        style={[{ marginBottom: getSize.m(16) }]}
       />
     </View>
   )

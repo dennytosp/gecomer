@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native'
+import { COLORS, FONTS } from '@/constants'
 import { getSize } from '@/utils'
-import { COLORS } from '@/constants'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
@@ -14,5 +14,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: getSize.m(16),
   },
+  textTitle: {
+    fontFamily: FONTS.bold,
+    color: COLORS.secondary,
+  },
+  wrapTextTitle: {
+    padding: getSize.m(16),
+  },
 })
-export default styles

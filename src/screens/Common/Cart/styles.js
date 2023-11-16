@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderColor: COLORS.border,
-    borderWidth: getSize.m(2 / 2),
+    borderWidth: getSize.m(1),
     borderRadius: getSize.m(5),
   },
   input: {
@@ -32,5 +32,8 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: getSize.m(5),
     borderBottomRightRadius: getSize.m(5),
   },
+  textApply: {
+    color: COLORS.white,
+    fontFamily: FONTS.bold,
+  },
 })
-export default styles

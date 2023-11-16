@@ -17,4 +17,3 @@ export const styles = StyleSheet.create({
     width: width / 2 - getSize.m(22),
   },
 })
-export default styles

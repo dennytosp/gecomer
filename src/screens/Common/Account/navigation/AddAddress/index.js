@@ -1,8 +1,8 @@
 import { ButtonPrimary, Header } from '@/components'
+import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { ScrollView, View } from 'react-native'
-import { getSize } from '@/utils'
 import { FormAddress } from '../../components'
 import styles from './styles'
 
@@ -33,8 +33,8 @@ const AddAddress = ({ route }) => {
         />
         <ButtonPrimary
           title="Save Address"
-          marginBottom={getSize.m(16)}
           onPress={() => navigation.goBack()}
+          style={[{ marginTop: getSize.m(16) }]}
         />
       </ScrollView>
     </View>

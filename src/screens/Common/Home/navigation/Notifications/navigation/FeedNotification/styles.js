@@ -21,5 +21,8 @@ export const styles = StyleSheet.create({
     marginLeft: getSize.m(12),
     flex: 1,
   },
+  textTime: {
+    fontSize: getSize.m(10),
+    color: COLORS.secondary,
+  },
 })
-export default styles

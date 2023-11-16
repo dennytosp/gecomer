@@ -1,8 +1,8 @@
 import React from 'react'
 import { View } from 'react-native'
 import { FormInput, Titling } from '@/components'
-import { getSize } from '@/utils'
-import styles from './styles'
+import { getSize, width } from '@/utils'
+import { styles } from './styles'
 
 const FormCarding = ({
   CardNumber,
@@ -23,29 +23,28 @@ const FormCarding = ({
         keyboardType="number-pad"
         onChangeText={text => setCardNumber(text)}
       />
-      <View style={styles.rowInput}>
-        <View>
+
+      <View style={[styles.rowInput]}>
+        <View style={[styles.widthRow]}>
           <Titling title="Expiration Date" />
           <FormInput
             placeholder="Expiration Date"
             keyboardType="numeric"
-            style={styles.inputRowLeft}
             onChangeText={text => setExpirationDate(text)}
           />
         </View>
 
-        <View>
-          <Titling title="Security Code" textAlign="left" />
+        <View style={[styles.widthRow]}>
+          <Titling title="Security Code" />
           <FormInput
             placeholder="Security Code"
-            style={styles.inputRowRight}
             keyboardType="number-pad"
             onChangeText={text => setSecurityCode(text)}
           />
         </View>
       </View>
 
-      <Titling title="Card Holder" marginTop={getSize.m(24)} />
+      <Titling title="Card Holder" style={[{ marginTop: getSize.m(24) }]} />
       <FormInput
         placeholder="Enter Card Number"
         onChangeText={text => setCardHolder(text)}

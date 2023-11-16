@@ -1,13 +1,14 @@
 import { Facebook, Google, LogoPrimary } from '@/assets'
 import { ButtonPrimary, ButtonSocial, Texting } from '@/components'
+import { COLORS, FONTS } from '@/constants'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { Pressable, ScrollView, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { COLORS, FONTS } from '@/constants'
 import FormLogin from '../components/FormLogin'
-import { routes } from '@/navigation/routes'
-import styles from './styles'
+import { styles } from './styles'
 
 const Login = () => {
   const { top } = useSafeAreaInsets()
@@ -22,26 +23,31 @@ const Login = () => {
       </Pressable>
 
       <Texting
-        marginBottom={8}
         title="Welcome to Gecomer"
-        fontSize={16}
-        fontFamily={FONTS.bold}
-        color={COLORS.secondary}
+        textStyle={[styles.textTitle]}
+        style={[{ marginBottom: getSize.m(8) }]}
       />
-      <Texting title="Sign in to continue" marginBottom={28} />
+      <Texting
+        title="Sign in to continue"
+        style={[{ marginBottom: getSize.m(28) }]}
+      />
     </View>
   )
 
   const renderCenter = () => (
     <View style={styles.wrapperCenter}>
       <ButtonPrimary
-        onPress={() => navigation.navigate(routes.COMMON)}
-        marginTop={16}
         title="Sign In"
+        onPress={() => navigation.navigate(routes.COMMON)}
       />
+
       <View style={styles.wrapperOr}>
         <View style={styles.line} />
-        <Texting title="OR" fontFamily={FONTS.bold} paddingHorizontal={25} />
+        <Texting
+          title="OR"
+          textStyle={[{ fontFamily: FONTS.bold }]}
+          style={[{ paddingHorizontal: getSize.m(24) }]}
+        />
         <View style={styles.line} />
       </View>
     </View>
@@ -49,23 +55,25 @@ const Login = () => {
 
   const renderFooter = () => (
     <View style={styles.wrapperFooter}>
-      <ButtonSocial icon={Google} title="Login with Google" marginBottom={8} />
+      <ButtonSocial
+        icon={Google}
+        title="Login with Google"
+        style={[{ marginBottom: getSize.m(8) }]}
+      />
       <ButtonSocial
         icon={Facebook}
         title="Login with Facebook"
-        marginBottom={16}
+        style={[{ marginBottom: getSize.m(16) }]}
       />
       <Texting
         onPress={() => navigation.navigate(routes.FORGOT_PASSWORD)}
         title="Forgot Password?"
-        fontFamily={FONTS.bold}
-        fontSize={12}
-        color={COLORS.primary}
-        textAlign="center"
-        marginBottom={8}
+        textStyle={[styles.textBase, { textAlign: 'center' }]}
+        style={[{ marginBottom: getSize.m(8) }]}
       />
+
       <View style={styles.wrapperTextFooter}>
-        <Texting title="Don’t have an account?" fontSize={12} />
+        <Texting title="Don’t have an account?" />
         <Texting
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
@@ -73,10 +81,8 @@ const Login = () => {
             })
           }
           title="Register?"
-          fontFamily={FONTS.bold}
-          fontSize={12}
-          color={COLORS.primary}
-          marginHorizontal={5}
+          textStyle={[styles.textBase]}
+          style={[{ marginHorizontal: getSize.m(4) }]}
         />
       </View>
     </View>

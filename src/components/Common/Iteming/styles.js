@@ -13,5 +13,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  textBase: {
+    color: COLORS.secondary,
+  },
+  textRight: {
+    color: COLORS.secondary,
+    textAlign: 'right',
+  },
 })
-export default styles

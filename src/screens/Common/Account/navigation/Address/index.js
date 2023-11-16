@@ -1,12 +1,11 @@
+import { DATA_ADDRESS } from '@/assets'
+import { Addressing, ButtonPrimary, Header } from '@/components'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { FlatList, View } from 'react-native'
 import styles from './styles'
-import { Addressing, ButtonPrimary, Header } from '@/components'
-import { Add_Ship, Editing } from '@/assets'
-import { useNavigation } from '@react-navigation/native'
-import { routes } from '@/navigation/routes'
-import { DATA_ADDRESS } from '@/assets'
-import { getSize } from '@/utils'
 
 const Address = ({ route }) => {
   const navigation = useNavigation()
@@ -41,12 +40,12 @@ const Address = ({ route }) => {
       />
       <ButtonPrimary
         title="Add Address"
-        marginBottom={getSize.m(16)}
         onPress={() =>
           navigation.navigate(routes.ADD_ADDRESS, {
             add_address: 'Add Address',
           })
         }
+        style={[{ marginBottom: getSize.m(16) }]}
       />
     </View>
   )
