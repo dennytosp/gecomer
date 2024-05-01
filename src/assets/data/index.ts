@@ -5,7 +5,7 @@ import {
   Bank_Transfer,
   Bikini,
   Birthday,
-  ChangePasswording,
+  ChangePassword,
   Credit,
   Dress,
   EmailProfile,
@@ -886,7 +886,7 @@ const DATA_PROFILE = [
   },
   {
     id: '05',
-    icon: ChangePasswording,
+    icon: ChangePassword,
     title: 'Change Password',
     content: '•••••••••••••••••',
     navigation: routes.CHANGE_PASSWORD,

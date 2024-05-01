@@ -61,15 +61,16 @@ const Login = () => {
     <>
       <FormInput
         ref={emailRef}
-        leftIcon={<Email />}
+        leftIcon={Email}
         isRequired={true}
         placeHolder={'Email'}
         inputProps={{ keyboardType: 'email-address', maxLength: 50 }}
+        containerStyle={[{ marginTop: 0 }]}
       />
 
       <FormInput
         ref={passwordRef}
-        leftIcon={<Password />}
+        leftIcon={Password}
         isRequired={true}
         isPassword={true}
         placeHolder={'Password'}

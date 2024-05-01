@@ -10,7 +10,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { TextInput, TouchableOpacity, View } from 'react-native'
+import { Pressable, TextInput, TouchableOpacity, View } from 'react-native'
 import { SpeedImage } from '../SpeedImage'
 import Texting from '../Texting'
 import { styles } from './style'
@@ -147,12 +147,11 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
             { minHeight: getSize.m(24), padding: getSize.m(16) },
           ]}>
           {leftIcon && (
-            <TouchableOpacity
+            <Pressable
               style={[{ marginRight: getSize.m(8) }]}
-              activeOpacity={onPressLeftInput ? 0.2 : 1}
               onPress={onPressLeftInput}>
               {leftIcon}
-            </TouchableOpacity>
+            </Pressable>
           )}
 
           {isDisabled ? (
@@ -184,11 +183,11 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
             {/* {isError && <SpeedImage source={Images.errorWarning} />} */}
 
             {rightIcon && (
-              <TouchableOpacity
+              <Pressable
                 style={[styles.customStyle]}
                 onPress={onPressRightInput || onPressInput}>
                 {rightIcon}
-              </TouchableOpacity>
+              </Pressable>
             )}
 
             {isPassword && (

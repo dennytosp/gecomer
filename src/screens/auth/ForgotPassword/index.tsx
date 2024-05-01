@@ -51,7 +51,7 @@ const ForgotPassword = () => {
   const renderInput = () => (
     <FormInput
       ref={emailRef}
-      leftIcon={<Email />}
+      leftIcon={Email}
       isRequired={true}
       placeHolder={'Your Email'}
       inputProps={{ keyboardType: 'email-address', maxLength: 50 }}

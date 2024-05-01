@@ -1,4 +1,4 @@
-import { ChangePasswording } from '@/assets'
+import { ChangePassword } from '@/assets'
 import { ButtonPrimary, FormInput, Header } from '@/components'
 import { getSize } from '@/utils'
 import {
@@ -10,7 +10,7 @@ import React, { useRef } from 'react'
 import { ScrollView, View } from 'react-native'
 import styles from './styles'
 
-const ChangePassword = () => {
+const ChangePasswordScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   const oldPasswordRef = useRef(null)
@@ -30,7 +30,7 @@ const ChangePassword = () => {
         <FormInput
           ref={oldPasswordRef}
           title="Old Password"
-          leftIcon={<ChangePasswording />}
+          leftIcon={ChangePassword}
           isRequired={true}
           placeHolder={'•••••••••••••••••'}
           isPassword={true}
@@ -41,7 +41,7 @@ const ChangePassword = () => {
         <FormInput
           ref={newPasswordRef}
           title="New Password"
-          leftIcon={<ChangePasswording />}
+          leftIcon={ChangePassword}
           isRequired={true}
           placeHolder={'•••••••••••••••••'}
           isPassword={true}
@@ -50,7 +50,7 @@ const ChangePassword = () => {
         <FormInput
           ref={confirmNewPasswordRef}
           title="New Password Again"
-          leftIcon={<ChangePasswording />}
+          leftIcon={ChangePassword}
           isRequired={true}
           placeHolder={'•••••••••••••••••'}
           isPassword={true}
@@ -68,4 +68,4 @@ const ChangePassword = () => {
   )
 }
 
-export default ChangePassword
+export default ChangePasswordScreen

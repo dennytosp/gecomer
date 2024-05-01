@@ -35,7 +35,7 @@ const AddressSubmitForm = ({ buttonTitle }: Props) => {
       <FormInput
         ref={countryRef}
         title="Country or region"
-        rightIcon={<DownPress />}
+        rightIcon={DownPress}
         isRequired={true}
         placeHolder={'Vietnam'}
         inputProps={{ maxLength: 50 }}

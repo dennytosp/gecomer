@@ -56,15 +56,16 @@ const Register = () => {
     <>
       <FormInput
         ref={fullNameRef}
-        leftIcon={<Fullname />}
+        leftIcon={Fullname}
         isRequired={true}
         placeHolder={'Full Name'}
         inputProps={{ maxLength: 50 }}
+        containerStyle={[{ marginTop: 0 }]}
       />
 
       <FormInput
         ref={emailRef}
-        leftIcon={<Email />}
+        leftIcon={Email}
         isRequired={true}
         placeHolder={'Email'}
         inputProps={{ keyboardType: 'email-address', maxLength: 50 }}
@@ -72,7 +73,7 @@ const Register = () => {
 
       <FormInput
         ref={passwordRef}
-        leftIcon={<Password />}
+        leftIcon={Password}
         isRequired={true}
         isPassword={true}
         placeHolder={'Password'}
@@ -81,7 +82,7 @@ const Register = () => {
 
       <FormInput
         ref={confirmPasswordRef}
-        leftIcon={<Password />}
+        leftIcon={Password}
         isRequired={true}
         isPassword={true}
         placeHolder={'Password Again'}

@@ -16,8 +16,8 @@ interface InputProps {
   isDisableInput?: boolean
   isUsingModal?: boolean
   isPassword?: boolean
-  leftIcon?: Source
-  rightIcon?: Source
+  leftIcon?: () => JSX.Element
+  rightIcon?: () => JSX.Element
   hintError?: string
   hintErrorEmpty?: string
   handleChangeText?: (text: string) => void

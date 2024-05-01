@@ -52,14 +52,14 @@ const EditUserInformation = () => {
         ref={birthdayRef}
         title="Your Birhday"
         isRequired={true}
-        rightIcon={<Birthday />}
+        leftIcon={Birthday}
         placeHolder={'21/08/2001'}
         inputProps={{ keyboardType: 'numeric', maxLength: 10 }}
       />
 
       <FormInput
         ref={emailRef}
-        leftIcon={<Email />}
+        leftIcon={Email}
         isRequired={true}
         placeHolder={'mad.dinh@gmail.com'}
         inputProps={{ keyboardType: 'email-address', maxLength: 50 }}

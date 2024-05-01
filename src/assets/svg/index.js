@@ -1913,7 +1913,7 @@ export const PhoneNumber = () => {
     </Svg>
   )
 }
-export const ChangePasswording = () => {
+export const ChangePassword = () => {
   return (
     <Svg
       width="24"
