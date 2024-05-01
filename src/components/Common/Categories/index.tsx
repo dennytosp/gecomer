@@ -20,14 +20,12 @@ const Categories = ({ image, title, onPress, style }: Props) => {
         { width: columnsSize, margin: getSize.m(16) },
         styles.wrapperCategories,
         style,
-      ]}
-    >
+      ]}>
       <View style={{ width: columnsSize }}>
         <Pressable style={[styles.wrapperEventCategories]}>
           <Pressable
             style={[styles.wrapperImageEvent]}
-            onPress={() => onPress?.()}
-          >
+            onPress={() => onPress?.()}>
             {image}
           </Pressable>
 

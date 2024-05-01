@@ -29,8 +29,7 @@ const CardATM: FC<Props> = ({
         styles.wrapperCard,
         { backgroundColor: backgroundColor ?? COLORS.primary },
         style,
-      ]}
-    >
+      ]}>
       <Pressable>{method}</Pressable>
 
       <Texting

@@ -55,8 +55,7 @@ const Details = ({ route }: Props) => {
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag"
-      >
+        keyboardDismissMode="on-drag">
         {renderImageContent()}
         <DetailsContent name={receive?.name} price={receive?.price} />
       </ScrollView>

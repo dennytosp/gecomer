@@ -61,8 +61,7 @@ const MainStackNavigator = () => {
       />
       <Stack.Navigator
         initialRouteName={routeName}
-        screenOptions={{ headerShown: false }}
-      >
+        screenOptions={{ headerShown: false }}>
         <>
           <Stack.Screen
             name={routes.ONBOARD}

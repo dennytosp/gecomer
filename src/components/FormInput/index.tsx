@@ -138,22 +138,19 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
           styles.enabledBorderWidth,
           inputFocus && styles.shadowFocus,
           style,
-        ]}
-      >
+        ]}>
         <TouchableOpacity
           activeOpacity={1}
           onPress={onPressInput}
           style={[
             AppStyles.rowCenterBetween,
             { minHeight: getSize.m(24), padding: getSize.m(16) },
-          ]}
-        >
+          ]}>
           {leftIcon && (
             <TouchableOpacity
               style={[{ marginRight: getSize.m(8) }]}
               activeOpacity={onPressLeftInput ? 0.2 : 1}
-              onPress={onPressLeftInput}
-            >
+              onPress={onPressLeftInput}>
               {leftIcon}
             </TouchableOpacity>
           )}
@@ -189,8 +186,7 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
             {rightIcon && (
               <TouchableOpacity
                 style={[styles.customStyle]}
-                onPress={onPressRightInput || onPressInput}
-              >
+                onPress={onPressRightInput || onPressInput}>
                 {rightIcon}
               </TouchableOpacity>
             )}

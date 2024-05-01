@@ -37,8 +37,7 @@ const SearchResults = () => {
 
       <Pressable
         onPress={() => navigation.navigate(routes.CATEGORY)}
-        style={[styles.wrapperRightRows]}
-      >
+        style={[styles.wrapperRightRows]}>
         <Texting
           title="Man Shoes"
           textStyle={[{ fontFamily: FONTS.bold, color: COLORS.secondary }]}

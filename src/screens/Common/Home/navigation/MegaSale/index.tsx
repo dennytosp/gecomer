@@ -26,8 +26,7 @@ const MegaSale = () => {
       style={[
         styles.wrapperMegaSale,
         { marginTop: index <= 1 ? getSize.m(16) : getSize.m(0) },
-      ]}
-    >
+      ]}>
       <ProductsHorizontal
         marginBottom={getSize.m(12)}
         image={item.image}

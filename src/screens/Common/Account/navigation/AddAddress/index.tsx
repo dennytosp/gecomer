@@ -18,8 +18,7 @@ const AddAddress = ({ route }: Props) => {
       <Header title={addressTitle} topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
+        keyboardShouldPersistTaps="handled">
         <AddressSubmitForm buttonTitle={addressTitle} />
       </ScrollView>
     </View>

@@ -42,8 +42,7 @@ const Searching = ({
           isAndroid && { marginTop: getSize.m(16) },
           styles.wrapperHeader,
           style,
-        ]}
-      >
+        ]}>
         <Pressable onPressIn={onPressInput} style={[styles.wrapperSearch]}>
           <SearchPrimary />
           <TextInput

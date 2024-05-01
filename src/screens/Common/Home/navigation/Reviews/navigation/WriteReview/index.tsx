@@ -78,8 +78,7 @@ const WriteReview = () => {
         <ScrollView
           style={{ marginLeft: getSize.m(12) }}
           showsHorizontalScrollIndicator={false}
-          horizontal
-        >
+          horizontal>
           <View style={[styles.wrapperPhotos]}>
             {pictures?.map(renderPhotosReviews)}
           </View>
@@ -99,8 +98,7 @@ const WriteReview = () => {
       <Header title="Write Reviews" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag"
-      >
+        keyboardDismissMode="on-drag">
         {renderCenter()}
       </ScrollView>
     </View>

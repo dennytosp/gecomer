@@ -35,8 +35,7 @@ const EventList = ({
     <View style={[styles.wrapperCardTop, style]}>
       <Pressable
         onPress={onPress}
-        style={[{ backgroundColor, paddingHorizontal }, styles.inSideLeftCard]}
-      >
+        style={[{ backgroundColor, paddingHorizontal }, styles.inSideLeftCard]}>
         <Pressable>{icon}</Pressable>
 
         <Texting

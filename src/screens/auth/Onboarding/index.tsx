@@ -31,8 +31,7 @@ const Onboard = () => {
         colors={[COLORS.black01, COLORS.black01]}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
-        style={[styles.linearGradient, styles.doneButtonWrapper]}
-      >
+        style={[styles.linearGradient, styles.doneButtonWrapper]}>
         <Text style={[styles.doneButtonText]}>Go</Text>
       </LinearGradient>
     )

@@ -12,8 +12,7 @@ export const SpeedImage = memo((props: SpeedImageProps) => {
     <FastImage
       style={[{ width: MetricsSizes[imageSize], aspectRatio: 1 }, customStyle]}
       resizeMode={'contain'}
-      {...props}
-    >
+      {...props}>
       {props.children}
     </FastImage>
   )

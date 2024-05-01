@@ -46,8 +46,7 @@ const Explore = () => {
 
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag"
-      >
+        keyboardDismissMode="on-drag">
         <Titling title="Man Fashion" style={[styles.onScroll]} />
 
         <View style={[{ flexDirection: 'row', flexWrap: 'wrap' }]}>

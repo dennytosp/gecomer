@@ -8,8 +8,7 @@ import { styles } from './styles'
 const SoftBy = () => {
   const renderCenter = ({ item }: { item: (typeof DATA_SOFT_BY)[0] }) => (
     <View
-      style={[styles.wrapperCenter, { backgroundColor: item.backgroundColor }]}
-    >
+      style={[styles.wrapperCenter, { backgroundColor: item.backgroundColor }]}>
       <Texting
         title={item.title}
         textStyle={[styles.textTitle, { color: item.colors }]}

@@ -31,7 +31,6 @@ const Iteming = ({
   textRightStyle,
   style,
 }: Props) => {
-  
   const marginBottom = getSize.m(12)
   return (
     <View style={[styles.wrapperFooter, style]}>

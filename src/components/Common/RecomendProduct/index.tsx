@@ -29,8 +29,7 @@ const RecommendProduct = ({
   return (
     <Pressable
       onPress={onPress}
-      style={[styles.wrapperRecommendProduct, style]}
-    >
+      style={[styles.wrapperRecommendProduct, style]}>
       <Image source={image} style={[styles.imageRecommend]} />
 
       <View style={[styles.wrapperTitle]}>

@@ -23,8 +23,7 @@ const EditUserInformation = () => {
   const renderForm = () => (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      keyboardShouldPersistTaps="handled"
-    >
+      keyboardShouldPersistTaps="handled">
       <FormInput
         ref={firstNameRef}
         title="First Name"

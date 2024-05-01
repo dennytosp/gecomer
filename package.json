@@ -14,7 +14,7 @@
     "start-cache": "react-native start --reset-cache",
     "watchman": "watchman watch-del-all",
     "type-check": "tsc",
-    "pretty": "prettier --write \"./**/*.{js, jsx, cjs, ts, tsx}\"",
+    "pretty": "prettier --write ./src/*",
     "pod-clean": "cd ios && pod deintegrate && cd ..",
     "pod-clear": "cd ios && rm -rf Pods && rm -rf Podfile.lock && pod install && cd ..",
     "bundle-install": "cd ios && bundle install && cd ..",

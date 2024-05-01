@@ -29,8 +29,7 @@ const SearchPage = () => {
           paddingVertical: index === 0 ? getSize.m(0) : getSize.m(16),
           marginBottom: index === 0 ? getSize.m(16) : getSize.m(0),
         },
-      ]}
-    >
+      ]}>
       <Texting title={item.name} />
     </Pressable>
   )

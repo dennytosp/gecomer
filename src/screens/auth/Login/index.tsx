@@ -118,8 +118,7 @@ const Login = () => {
     <View style={[styles.container]}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
+        keyboardShouldPersistTaps="handled">
         {renderHeader()}
         {renderInput()}
         {renderCenter()}

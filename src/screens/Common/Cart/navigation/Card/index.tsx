@@ -23,8 +23,7 @@ const Card = () => {
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
+        keyboardShouldPersistTaps="handled">
         <CardATM
           method={Method01}
           code="6326    9124    8124    9875"

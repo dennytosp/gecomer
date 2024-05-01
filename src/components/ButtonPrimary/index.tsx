@@ -23,8 +23,7 @@ const ButtonPrimary = (props: Props) => {
         styles.wrapperButton,
         atBottom && { marginBottom: insets.bottom },
         style,
-      ]}
-    >
+      ]}>
       <Texting title={title} textStyle={[styles.textButton, textButtonStyle]} />
     </TouchableOpacity>
   )

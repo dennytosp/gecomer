@@ -26,8 +26,7 @@ const CustomTabBar = ({
       style={[
         styles.wrapTabBar,
         { paddingBottom: Platform.OS === 'ios' ? bottom : 10 },
-      ]}
-    >
+      ]}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key]
 
@@ -79,8 +78,7 @@ const CustomTabBar = ({
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={onPress}
-            style={[styles.btn]}
-          >
+            style={[styles.btn]}>
             {index === 3 && (
               <Badge
                 status="error"
@@ -98,14 +96,13 @@ const CustomTabBar = ({
               ]}
             />
 
-              <Text
-                style={[
-                  { color: isFocused ? COLORS.primary : COLORS.grey },
-                  styles.textLabel,
-                ]}
-              >
-                {String(label)}
-              </Text>
+            <Text
+              style={[
+                { color: isFocused ? COLORS.primary : COLORS.grey },
+                styles.textLabel,
+              ]}>
+              {String(label)}
+            </Text>
           </Pressable>
         )
       })}

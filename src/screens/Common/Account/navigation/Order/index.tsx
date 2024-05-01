@@ -27,8 +27,7 @@ const Order = () => {
       style={[
         styles.wrapperOrder,
         { marginTop: index === 0 ? getSize.m(16) : 0 },
-      ]}
-    >
+      ]}>
       <Texting title={item.code} textStyle={[styles.textCode]} />
       <Texting
         title={'Order at Gecomer: ' + item.time}

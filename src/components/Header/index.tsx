@@ -57,8 +57,7 @@ const Header: FC<HeaderProps> = ({
           isAndroid && { marginTop: getSize.m(16) },
           { paddingHorizontal: paddingHorizontal },
           styles.wrapperHeader,
-        ]}
-      >
+        ]}>
         <View style={[styles.wrapperLeft]}>
           {!hideLeftIcon && (
             <Pressable onPress={() => navigation.goBack()}>
@@ -83,8 +82,7 @@ const Header: FC<HeaderProps> = ({
           {rightIconStart && (
             <Pressable
               onPress={onPressRightStart}
-              style={{ marginLeft: getSize.m(16) }}
-            >
+              style={{ marginLeft: getSize.m(16) }}>
               {rightIconStart}
             </Pressable>
           )}
@@ -92,8 +90,7 @@ const Header: FC<HeaderProps> = ({
           {rightIconEnd && (
             <Pressable
               onPress={onPressRightEnd}
-              style={{ marginLeft: getSize.m(16) }}
-            >
+              style={{ marginLeft: getSize.m(16) }}>
               {rightIconEnd}
             </Pressable>
           )}

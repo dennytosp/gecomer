@@ -59,13 +59,11 @@ const Reviews = () => {
       <Header title={DATA_REVIEWS.length + ' Reviews'} topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="never"
-      >
+        keyboardShouldPersistTaps="never">
         <ScrollView
           horizontal
           nestedScrollEnabled={true}
-          showsHorizontalScrollIndicator={false}
-        >
+          showsHorizontalScrollIndicator={false}>
           <View style={[styles.wrapperCardTop]}>
             {renderFirstClose()}
             {/* <FlatList

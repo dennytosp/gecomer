@@ -59,8 +59,7 @@ const Offer = () => {
       <Header title="Offer" hideLeftIcon topLine />
       <ScrollView
         keyboardDismissMode="on-drag"
-        showsVerticalScrollIndicator={false}
-      >
+        showsVerticalScrollIndicator={false}>
         {renderPromotionCode()}
         {renderPromotion()}
         {renderRecommend()}

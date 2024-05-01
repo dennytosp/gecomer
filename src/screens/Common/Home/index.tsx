@@ -90,8 +90,7 @@ const Home = () => {
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag"
-      >
+        keyboardDismissMode="on-drag">
         <Promotion
           onPress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
           style={[styles.onScroll, styles.marginBase]}
@@ -112,8 +111,7 @@ const Home = () => {
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          style={[{ marginHorizontal: getSize.m(16 - 12) }]}
-        >
+          style={[{ marginHorizontal: getSize.m(16 - 12) }]}>
           {CATEGORIES_DATA.map(renderCategories)}
         </ScrollView>
 

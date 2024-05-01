@@ -11,8 +11,7 @@ const CheckCard = () => {
       <Header title="Lailyfa Febrina Card" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
+        keyboardShouldPersistTaps="handled">
         <CardATM
           style={[styles.wrapperCard]}
           method={Method01}

@@ -42,8 +42,7 @@ const SuperFlashSale = () => {
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag"
-      >
+        keyboardDismissMode="on-drag">
         <Promotion
           style={[{ marginTop: getSize.m(16) }]}
           marginBottom={16}

@@ -44,8 +44,7 @@ const Offer = () => {
       <Header title="Your Cart" hideLeftIcon topLine />
       <ScrollView
         keyboardDismissMode="on-drag"
-        showsVerticalScrollIndicator={false}
-      >
+        showsVerticalScrollIndicator={false}>
         <FlatList
           nestedScrollEnabled={true}
           scrollEnabled={false}

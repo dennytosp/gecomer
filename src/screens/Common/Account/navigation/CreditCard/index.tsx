@@ -18,8 +18,7 @@ const CreditCard = () => {
   const renderCreditCard = () => (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      keyboardShouldPersistTaps="handled"
-    >
+      keyboardShouldPersistTaps="handled">
       <View style={[styles.wrapperCard]}>
         <CardATM
           style={{ marginBottom: getSize.m(16) }}

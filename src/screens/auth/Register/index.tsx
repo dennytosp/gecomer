@@ -112,8 +112,7 @@ const Register = () => {
     <View style={[styles.container]}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="never"
-      >
+        keyboardShouldPersistTaps="never">
         {renderHeader()}
         {renderInput()}
         {renderCenter()}

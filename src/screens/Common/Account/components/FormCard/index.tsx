@@ -26,8 +26,7 @@ const FormCard: FC<FormCardProps> = ({ type, titleButton }) => {
     <>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
+        keyboardShouldPersistTaps="handled">
         <FormInput
           ref={cardNumberRef}
           title="Card Number"

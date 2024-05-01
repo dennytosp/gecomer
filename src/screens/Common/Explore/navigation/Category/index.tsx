@@ -8,8 +8,10 @@ import { styles } from './styles'
 const Category = () => {
   const renderCenter = ({ item }: { item: (typeof DATA_CATEGORY_SOFT)[0] }) => (
     <View
-      style={[styles.wrapperCenter, { backgroundColor: item?.backgroundColor }]}
-    >
+      style={[
+        styles.wrapperCenter,
+        { backgroundColor: item?.backgroundColor },
+      ]}>
       <Pressable style={[styles.icon]}>{item.image}</Pressable>
 
       <Texting

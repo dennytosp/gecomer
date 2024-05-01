@@ -25,8 +25,7 @@ const Texting = (props: Props) => {
   return (
     <TouchableOpacity
       onPress={() => onPress?.()}
-      style={[styles.container, style]}
-    >
+      style={[styles.container, style]}>
       <Text style={[styles.text, textStyle]} {...inputProps}>
         {title}
       </Text>

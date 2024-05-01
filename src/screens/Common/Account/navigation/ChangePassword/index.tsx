@@ -26,8 +26,7 @@ const ChangePassword = () => {
       <Header title="Change Password" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
+        keyboardShouldPersistTaps="handled">
         <FormInput
           ref={oldPasswordRef}
           title="Old Password"

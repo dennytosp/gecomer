@@ -50,8 +50,7 @@ const DetailsContent = ({ name, price }: Props) => {
       style={[
         { marginLeft: index === 0 ? getSize.m(0) : getSize.m(16) },
         styles.wrapperSelectSizes,
-      ]}
-    >
+      ]}>
       <Texting title={item.sizeNumbers} textStyle={[styles.textSizeNumber]} />
     </View>
   )

@@ -46,8 +46,7 @@ const Profile = () => {
 
       <Pressable
         onPress={() => navigation.navigate(item.navigation)}
-        style={[styles.rightCenter]}
-      >
+        style={[styles.rightCenter]}>
         <Texting
           title={item.content}
           textStyle={[styles.textContent]}

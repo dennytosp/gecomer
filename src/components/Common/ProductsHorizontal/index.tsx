@@ -49,8 +49,7 @@ const ProductsHorizontal = ({
         },
         { marginBottom, marginLeft: index },
         style,
-      ]}
-    >
+      ]}>
       <Pressable onPress={onPress} style={{ alignItems: 'center' }}>
         <Image
           source={image}

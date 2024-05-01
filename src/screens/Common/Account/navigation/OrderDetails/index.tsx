@@ -49,8 +49,7 @@ const OrderDetails = () => {
       <Header title="Order Details" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
+        keyboardShouldPersistTaps="handled">
         <Titling title="Product" style={[{ marginTop: getSize.m(16) }]} />
         <FlatList
           showsVerticalScrollIndicator={false}
