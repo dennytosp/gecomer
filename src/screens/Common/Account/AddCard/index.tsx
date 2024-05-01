@@ -1,7 +1,7 @@
 import { Header } from '@/components'
 import React from 'react'
 import { View } from 'react-native'
-import { FormCard } from '../../components'
+import { FormCard } from '../components'
 import { styles } from './styles'
 
 const AddCard = () => {

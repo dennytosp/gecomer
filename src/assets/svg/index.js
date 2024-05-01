@@ -191,7 +191,7 @@ export const Offer = () => {
   )
 }
 
-export const ActivityListNotifi = () => {
+export const ActivityListNotification = () => {
   return (
     <Svg
       width="24"

@@ -44,8 +44,7 @@ const SuperFlashSale = () => {
         showsVerticalScrollIndicator={false}
         keyboardDismissMode="on-drag">
         <Promotion
-          style={[{ marginTop: getSize.m(16) }]}
-          marginBottom={16}
+          style={[{ marginVertical: getSize.m(16) }]}
           title={'Super Flash Sale\n50% Off'}
           hours="08"
           minutes="34"

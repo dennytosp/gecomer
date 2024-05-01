@@ -16,7 +16,7 @@ import {
   ScrollView,
   View,
 } from 'react-native'
-import DetailsContent from '../../components/DetailsContent'
+import DetailsContent from '../components/DetailsContent'
 import { styles } from './styles'
 
 type Props = {

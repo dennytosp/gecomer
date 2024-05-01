@@ -79,9 +79,10 @@ const MainStackNavigator = () => {
             name={routes.SUPER_FLASH_SALE}
             component={home.SuperFlashSale}
           />
-          <Stack.Screen name={routes.FLASH_SALE} component={home.FlashSale} />
-          <Stack.Screen name={routes.MEGA_SALE} component={home.MegaSale} />
-          <Stack.Screen name={routes.FAVORITE} component={home.Favorite} />
+          <Stack.Screen
+            name={routes.PRODUCT_SEE_MORE}
+            component={home.ProductSeeMore}
+          />
           <Stack.Screen name={routes.DETAILS} component={home.Details} />
           <Stack.Screen name={routes.REVIEWS} component={home.Reviews} />
           <Stack.Screen

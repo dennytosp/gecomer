@@ -2,7 +2,7 @@ import { Method01 } from '@/assets'
 import { CreditCardItem, Header } from '@/components'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
-import { FormCard } from '../../components'
+import { FormCard } from '../components'
 import { styles } from './styles'
 
 const CheckCard = () => {

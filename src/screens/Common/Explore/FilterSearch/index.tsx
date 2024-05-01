@@ -7,7 +7,7 @@ import {
 } from '@react-navigation/native'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
-import { Condition, PriceRange } from '../../components'
+import { Condition, PriceRange } from '../components'
 import { styles } from './styles'
 
 const FilterSearch = () => {

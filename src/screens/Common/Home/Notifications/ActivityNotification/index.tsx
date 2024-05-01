@@ -1,4 +1,4 @@
-import { ActivityListNotifi, DATA_ACTIVITY_NOTIFICATIONS } from '@/assets'
+import { ActivityListNotification, DATA_ACTIVITY_NOTIFICATIONS } from '@/assets'
 import { Header, NotificationItem } from '@/components'
 import React from 'react'
 import { FlatList, View } from 'react-native'
@@ -14,7 +14,7 @@ const ActivityNotification = () => {
         data={DATA_ACTIVITY_NOTIFICATIONS}
         renderItem={({ item }) => (
           <NotificationItem
-            image={ActivityListNotifi}
+            image={ActivityListNotification}
             title={item.title}
             content={item.content}
             time={item.time}

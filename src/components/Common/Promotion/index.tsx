@@ -46,7 +46,7 @@ const Promotion = ({
   }, [])
 
   return (
-    <Pressable onPress={onPress} style={[{ marginBottom }, style]}>
+    <Pressable onPress={onPress} style={[style]}>
       <Image source={image} style={[styles.imagePromotion]} />
 
       <View style={[styles.wrapperContentPromotion]}>

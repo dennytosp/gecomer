@@ -5,25 +5,36 @@ import { getSize } from '@/utils'
 import {
   NavigationProp,
   ParamListBase,
+  RouteProp,
   useNavigation,
+  useRoute,
 } from '@react-navigation/native'
 import React from 'react'
 import { FlatList, View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './styles'
 
-const FlashSale = () => {
+type Props = {}
+
+const ProductSeeMore = ({}: Props) => {
+  const route = useRoute<RouteProp<ParamListBase>>()
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const insets = useSafeAreaInsets()
+
+  const params = route.params as {
+    data: any
+  }
+
   const numColumns = 2
 
-  const renderFlashSaleProducts = ({
+  const renderProductSeeMore = ({
     item,
     index,
   }: {
-    item: (typeof PRODUCTS_DATA)[0]
+    item: any
     index: number
   }) => (
     <ProductsHorizontal
-      marginBottom={getSize.m(12)}
       image={item.image}
       name={item.name}
       discounted={item.discounted}
@@ -31,7 +42,7 @@ const FlashSale = () => {
       promotion={item.promotion}
       columns={numColumns}
       onPress={() => navigation.navigate(routes.DETAILS, { item })}
-      style={[{ marginTop: index <= 1 ? getSize.m(16) : getSize.m(0) }]}
+      style={[{ marginTop: getSize.m(16) }]}
     />
   )
 
@@ -49,12 +60,13 @@ const FlashSale = () => {
         columnWrapperStyle={[styles.columnWrapperStyle]}
         numColumns={numColumns}
         showsVerticalScrollIndicator={false}
-        data={PRODUCTS_DATA}
-        renderItem={renderFlashSaleProducts}
-        keyExtractor={(item, index) => `flash-sale-${index}`}
+        data={params?.data}
+        renderItem={renderProductSeeMore}
+        contentContainerStyle={[{ paddingBottom: insets.bottom }]}
+        keyExtractor={(item, index) => `flash-sale-${item.name}${index}`}
       />
     </View>
   )
 }
 
-export default FlashSale
+export default ProductSeeMore

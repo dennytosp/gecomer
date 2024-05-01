@@ -81,7 +81,11 @@ const Home = () => {
     <View style={[styles.container]}>
       <Searching
         rightIcon={Favorite}
-        onPressRight={() => navigation.navigate(routes.FAVORITE)}
+        onPressRight={() =>
+          navigation.navigate(routes.PRODUCT_SEE_MORE, {
+            data: PRODUCTS_DATA_VERTICOLUMNS,
+          })
+        }
         rightIconStart={Notifications}
         onPressRightStart={() => navigation.navigate(routes.NOTIFICATIONS)}
         placeholder="Search Product"
@@ -93,13 +97,16 @@ const Home = () => {
         keyboardDismissMode="on-drag">
         <Promotion
           onPress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
-          style={[styles.onScroll, styles.marginBase]}
+          style={[
+            styles.onScroll,
+            styles.marginBase,
+            { marginBottom: getSize.m(24) },
+          ]}
           title={'Super Flash Sale\n50% Off'}
           hours="08"
           minutes="34"
           seconds="52"
           image={photos.promotion01}
-          marginBottom={getSize.m(24)}
         />
         <Titling
           title="Category"
@@ -121,7 +128,11 @@ const Home = () => {
           style={[
             { marginTop: getSize.m(24 - 12), marginHorizontal: getSize.m(16) },
           ]}
-          onPress={() => navigation.navigate(routes.FLASH_SALE)}
+          onPress={() => {
+            navigation.navigate(routes.PRODUCT_SEE_MORE, {
+              data: PRODUCTS_DATA.reverse(),
+            })
+          }}
         />
         <FlatList
           horizontal
@@ -138,7 +149,11 @@ const Home = () => {
           style={[
             { marginTop: getSize.m(24), marginHorizontal: getSize.m(16) },
           ]}
-          onPress={() => navigation.navigate(routes.MEGA_SALE)}
+          onPress={() => {
+            navigation.navigate(routes.PRODUCT_SEE_MORE, {
+              data: DATA_MEGA_SALE,
+            })
+          }}
         />
 
         <FlatList

@@ -1,6 +1,5 @@
 import { DATA_LIST_NOTIFICATIONS } from '@/assets'
 import { EventList, Header } from '@/components'
-import { width } from '@/utils'
 import {
   NavigationProp,
   ParamListBase,

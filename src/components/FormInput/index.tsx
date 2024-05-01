@@ -89,19 +89,12 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
   }
 
   const onActionPassword = () => setIsShowPassword(prev => !prev)
-
   const onFocus = () => inputRef.current?.focus()
-
   const changeErrorStatus = (status: boolean) => setIsError(status)
-
   const getErrorStatus = () => isError
-
   const changeValue = (val: string) => setInputValue(val)
-
   const getValue = () => inputValue
-
   const clearValue = () => setInputValue('')
-
   const getLengthCharacter = () => inputValue.length
 
   const renderError = () => {

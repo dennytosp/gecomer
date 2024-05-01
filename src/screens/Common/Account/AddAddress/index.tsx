@@ -1,7 +1,7 @@
 import { Header } from '@/components'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
-import { AddressSubmitForm } from '../../components'
+import { AddressSubmitForm } from '../components'
 import { styles } from './styles'
 import { ParamListBase, RouteProp } from '@react-navigation/native'
 
