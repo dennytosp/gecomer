@@ -8,7 +8,7 @@ import {
   useNavigation,
 } from '@react-navigation/native'
 import React, { useRef } from 'react'
-import { Pressable, ScrollView, View } from 'react-native'
+import { Pressable, ScrollView, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './styles'
 
@@ -95,16 +95,18 @@ const Register = () => {
     <View style={[styles.wrapperFooter]}>
       <View style={[styles.wrapperTextFooter]}>
         <Texting title="Have an account?" />
-        <Texting
+        <TouchableOpacity
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
               screen: routes.LOGIN,
             })
-          }
-          title="Sign In"
-          textStyle={[styles.textBase]}
-          style={[{ marginHorizontal: getSize.m(4) }]}
-        />
+          }>
+          <Texting
+            title="Sign In"
+            textStyle={[styles.textBase]}
+            style={[{ marginHorizontal: getSize.m(4) }]}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   )

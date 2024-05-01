@@ -19,11 +19,10 @@ const Notifications = () => {
     item: (typeof DATA_LIST_NOTIFICATIONS)[0]
   }) => (
     <EventList
-      onPress={() => navigation.navigate(item.navigation)}
       icon={item.image}
       title={item.name}
-      notifNumber={String(item.number)}
-      widthing={width / 1.5}
+      onPress={() => navigation.navigate(item.navigation)}
+      numberOfNotification={String(item.number)}
     />
   )
 

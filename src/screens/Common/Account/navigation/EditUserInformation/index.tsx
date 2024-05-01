@@ -52,7 +52,7 @@ const EditUserInformation = () => {
         ref={birthdayRef}
         title="Your Birhday"
         isRequired={true}
-        leftIcon={Birthday}
+        leftIcon={() => <Birthday stroke={'#9098B1'} />}
         placeHolder={'21/08/2001'}
         inputProps={{ keyboardType: 'numeric', maxLength: 10 }}
       />

@@ -1,6 +1,6 @@
 import Texting from '@/components/Texting'
 import { COLORS, FONTS } from '@/constants'
-import { getSize } from '@/utils'
+import { AppStyles, getSize } from '@/utils'
 import React, { FC } from 'react'
 import { ColorValue, StyleProp, View, ViewStyle } from 'react-native'
 import { styles } from './styles'
@@ -15,7 +15,7 @@ type Props = {
   style?: StyleProp<ViewStyle>
 }
 
-const CardATM: FC<Props> = ({
+const CreditCardItem: FC<Props> = ({
   backgroundColor,
   method,
   code,
@@ -23,6 +23,21 @@ const CardATM: FC<Props> = ({
   time,
   style,
 }) => {
+  const convertStringToArray = (input: string, step: number = 4) => {
+    const array: string[] = [...input].reduce<string[]>((acc, _, index) => {
+      if (index % step === 0) {
+        const item: string = input.substring(index, index + step)
+        acc.push(item)
+      }
+      return acc
+    }, [])
+
+    // const array = input.match(/.{1,4}/g) || []
+    return array
+  }
+
+  const newCode = convertStringToArray(code)
+
   return (
     <View
       style={[
@@ -32,11 +47,16 @@ const CardATM: FC<Props> = ({
       ]}>
       <Pressable>{method}</Pressable>
 
-      <Texting
-        title={code}
-        textStyle={[styles.textCode]}
-        style={[styles.wrapTextCode]}
-      />
+      <View style={[AppStyles.rowCenterBetween]}>
+        {newCode.map((item, index) => (
+          <Texting
+            key={'code-' + index}
+            title={item}
+            textStyle={[styles.textCode]}
+            style={[styles.wrapTextCode]}
+          />
+        ))}
+      </View>
 
       <View style={[styles.wrapperRow]}>
         <View style={[styles.row01]}>
@@ -62,4 +82,4 @@ const CardATM: FC<Props> = ({
   )
 }
 
-export default CardATM
+export default CreditCardItem

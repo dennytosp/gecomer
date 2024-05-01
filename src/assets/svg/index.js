@@ -1846,7 +1846,8 @@ export const Gender = () => {
     </Svg>
   )
 }
-export const Birthday = () => {
+
+export const Birthday = ({ stroke = COLORS.primary }) => {
   return (
     <Svg
       width="24"
@@ -1856,7 +1857,7 @@ export const Birthday = () => {
       xmlns="http://www.w3.org/2000/svg">
       <Path
         d="M3 10.875H21M16.5 7.5V3M7.5 7.5V3M3 5.25H21V21H3V5.25Z"
-        stroke={COLORS.primary}
+        stroke={stroke}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"

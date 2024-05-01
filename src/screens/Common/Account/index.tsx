@@ -1,6 +1,6 @@
 import { DATA_ACCOUNT } from '@/assets'
 import { EventList, Header } from '@/components'
-import { getSize, width } from '@/utils'
+import { getSize } from '@/utils'
 import {
   NavigationProp,
   ParamListBase,
@@ -18,10 +18,13 @@ const Account = () => {
       <EventList
         icon={item.icon}
         title={item.name}
-        widthing={width}
-        backgroundColor={item.backgroundColor}
-        paddingHorizontal={getSize.m(16)}
         onPress={() => navigation.navigate(item.navigation)}
+        style={[
+          {
+            backgroundColor: item.backgroundColor,
+            paddingHorizontal: getSize.m(16),
+          },
+        ]}
       />
     </View>
   )

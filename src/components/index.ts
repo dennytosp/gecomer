@@ -1,7 +1,7 @@
 import ButtonPrimary from './ButtonPrimary'
 import ButtonSocial from './ButtonSocial'
 import AddressItem from './Common/AddressItem'
-import CardATM from './Common/CardATM'
+import CreditCardItem from './Common/CreditCardItem'
 import Cart from './Common/Cart'
 import Categories from './Common/Categories'
 import EventList from './Common/EventList'
@@ -24,7 +24,7 @@ export {
   AddressItem,
   ButtonPrimary,
   ButtonSocial,
-  CardATM,
+  CreditCardItem,
   Cart,
   Categories,
   EventList,

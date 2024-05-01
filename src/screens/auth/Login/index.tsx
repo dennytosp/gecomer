@@ -9,7 +9,7 @@ import {
   useNavigation,
 } from '@react-navigation/native'
 import React, { useRef } from 'react'
-import { Pressable, ScrollView, View } from 'react-native'
+import { Pressable, ScrollView, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './styles'
 
@@ -91,26 +91,30 @@ const Login = () => {
         title="Login with Facebook"
         style={[{ marginBottom: getSize.m(16) }]}
       />
-
-      <Texting
-        onPress={() => navigation.navigate(routes.FORGOT_PASSWORD)}
-        title="Forgot Password?"
-        textStyle={[styles.textBase, { textAlign: 'center' }]}
-        style={[{ marginBottom: getSize.m(8) }]}
-      />
+      <TouchableOpacity
+        onPress={() => navigation.navigate(routes.FORGOT_PASSWORD)}>
+        <Texting
+          title="Forgot Password?"
+          textStyle={[styles.textBase, { textAlign: 'center' }]}
+          style={[{ marginBottom: getSize.m(8) }]}
+        />
+      </TouchableOpacity>
 
       <View style={[styles.wrapperTextFooter]}>
         <Texting title="Don’t have an account?" />
-        <Texting
+
+        <TouchableOpacity
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
               screen: routes.REGISTER,
             })
-          }
-          title="Register?"
-          textStyle={[styles.textBase]}
-          style={[{ marginHorizontal: getSize.m(4) }]}
-        />
+          }>
+          <Texting
+            title="Register?"
+            textStyle={[styles.textBase]}
+            style={[{ marginHorizontal: getSize.m(4) }]}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   )

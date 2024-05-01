@@ -71,7 +71,7 @@ const Offer = () => {
         <View style={[styles.wrapperCenter]}>
           <TextInput
             style={[styles.input]}
-            placeholder="Enter Cupon Code"
+            placeholder="Enter Coupon Code"
             placeholderTextColor={COLORS.grey}
             onChangeText={text => setCode(text)}
           />
@@ -84,7 +84,12 @@ const Offer = () => {
 
         <ButtonPrimary
           title="Check Out"
-          onPress={() => navigation.navigate(routes.SHIP_TO)}
+          onPress={() =>
+            navigation.navigate(routes.ADDRESS, {
+              type: 'address-on-cart',
+              headerTitle: 'Ship To',
+            })
+          }
           style={[{ marginTop: getSize.m(16) }]}
           atBottom={true}
         />

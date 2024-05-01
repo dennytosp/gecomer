@@ -1,5 +1,5 @@
 import { AddShip, Method01 } from '@/assets/index'
-import { ButtonPrimary, CardATM, Header } from '@/components'
+import { ButtonPrimary, CreditCardItem, Header } from '@/components'
 import { routes } from '@/navigation/routes'
 import { getSize } from '@/utils'
 import {
@@ -24,9 +24,9 @@ const Card = () => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
-        <CardATM
+        <CreditCardItem
           method={Method01}
-          code="6326    9124    8124    9875"
+          code="6326912481249875"
           holder="DINH TIEN PHONG"
           time="12/2028"
         />
@@ -36,7 +36,7 @@ const Card = () => {
         title="Pay $766.86"
         atBottom={true}
         onPress={() => navigation.navigate(routes.PURCHASE_SUCCESS)}
-        style={[{ marginBottom: getSize.m(16) }]}
+        style={[{ marginTop: getSize.m(16) }]}
       />
     </View>
   )

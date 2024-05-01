@@ -5,8 +5,8 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   wrapperCenter: {
     borderColor: COLORS.border,
-    borderWidth: getSize.m(1),
-    borderRadius: getSize.s(5),
+    borderWidth: 1,
+    borderRadius: 5,
     padding: getSize.m(24),
     marginBottom: getSize.m(16),
   },

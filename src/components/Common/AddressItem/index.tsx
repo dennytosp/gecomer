@@ -6,9 +6,7 @@ import { Pressable, StyleProp, View, ViewStyle } from 'react-native'
 import { styles } from './styles'
 
 type Props = {
-  name: string
-  address: string
-  phoneNumber: string
+  item: { name: string; address: string; phoneNumber: string }
   buttonTitle: string
   handleButton: () => void
   handleDelete: () => void
@@ -16,14 +14,14 @@ type Props = {
 }
 
 const AddressItem = ({
-  name,
-  address,
-  phoneNumber,
+  item,
   buttonTitle,
   handleButton,
   handleDelete,
   style,
 }: Props) => {
+  const { name, address, phoneNumber } = item
+
   return (
     <View style={[styles.wrapperCenter, style]}>
       <Texting title={name} textStyle={[styles.textName]} />

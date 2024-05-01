@@ -8,7 +8,7 @@ import {
   useNavigation,
 } from '@react-navigation/native'
 import React, { useRef } from 'react'
-import { View } from 'react-native'
+import { TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './styles'
 
@@ -65,16 +65,19 @@ const ForgotPassword = () => {
           title="Did you remember the password?"
           textStyle={[{ fontSize: getSize.m(12) }]}
         />
-        <Texting
-          title="Sign In"
+
+        <TouchableOpacity
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
               screen: routes.LOGIN,
             })
-          }
-          textStyle={[styles.textSignIn]}
-          style={[{ marginHorizontal: getSize.m(5) }]}
-        />
+          }>
+          <Texting
+            title="Sign In"
+            textStyle={[styles.textSignIn]}
+            style={[{ marginHorizontal: getSize.m(5) }]}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   )

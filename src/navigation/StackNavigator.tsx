@@ -124,7 +124,6 @@ const MainStackNavigator = () => {
             name={routes.FILTER_SEARCH}
             component={explore.FilterSearch}
           />
-          <Stack.Screen name={routes.SHIP_TO} component={cart.ShipTo} />
           <Stack.Screen
             name={routes.PAYMENT_METHOD}
             component={cart.PaymentMethod}

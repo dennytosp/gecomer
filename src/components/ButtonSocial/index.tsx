@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  Pressable,
-  StyleProp,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-} from 'react-native'
+import { StyleProp, TouchableOpacity, View, ViewStyle } from 'react-native'
 import Texting from '../Texting'
 import styles from './styles'
 
@@ -18,6 +12,7 @@ type Props = {
 
 const ButtonSocial = (props: Props) => {
   const { icon, title, onPress, style } = props
+
   return (
     <TouchableOpacity onPress={onPress} style={[styles.wrapperSocial, style]}>
       <View style={[styles.wrapperIconSocial]} children={icon} />

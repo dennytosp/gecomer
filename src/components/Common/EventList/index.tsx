@@ -1,22 +1,12 @@
 import Texting from '@/components/Texting'
 import React from 'react'
-import {
-  ColorValue,
-  DimensionValue,
-  Pressable,
-  StyleProp,
-  View,
-  ViewStyle,
-} from 'react-native'
+import { Pressable, StyleProp, View, ViewStyle } from 'react-native'
 import { styles } from './styles'
 
 type Props = {
   icon?: () => JSX.Element
   title: string
-  notifNumber?: string
-  widthing?: DimensionValue | undefined
-  backgroundColor?: ColorValue | undefined
-  paddingHorizontal?: DimensionValue | undefined
+  numberOfNotification?: string
   onPress: () => void
   style?: StyleProp<ViewStyle>
 }
@@ -24,31 +14,26 @@ type Props = {
 const EventList = ({
   icon,
   title,
-  notifNumber,
-  widthing,
-  backgroundColor,
-  paddingHorizontal,
+  numberOfNotification,
   onPress,
   style,
 }: Props) => {
   return (
     <View style={[styles.wrapperCardTop, style]}>
-      <Pressable
-        onPress={onPress}
-        style={[{ backgroundColor, paddingHorizontal }, styles.inSideLeftCard]}>
+      <Pressable onPress={onPress} style={[styles.inSideLeftCard]}>
         <Pressable>{icon}</Pressable>
 
         <Texting
           title={title}
           textStyle={[styles.textTitle]}
-          style={[styles.wrapTextTitle, { width: widthing }]}
+          style={[styles.wrapTextTitle]}
         />
       </Pressable>
 
-      {notifNumber && (
+      {numberOfNotification && (
         <Pressable style={[styles.inSideRightCard]}>
           <Texting
-            title={notifNumber}
+            title={numberOfNotification}
             textStyle={[styles.textNotificationNumber]}
           />
         </Pressable>

@@ -1,35 +1,35 @@
-import { DATA_ADDRESS } from '@/assets'
+import { AddShip, DATA_ADDRESS } from '@/assets'
 import { AddressItem, ButtonPrimary, Header } from '@/components'
 import { routes } from '@/navigation/routes'
 import { getSize } from '@/utils'
 import {
   NavigationProp,
   ParamListBase,
+  RouteProp,
   useNavigation,
+  useRoute,
 } from '@react-navigation/native'
 import React from 'react'
 import { FlatList, View } from 'react-native'
 import { styles } from './styles'
 
 type Props = {}
+type Params = {
+  type: 'address-on-cart' | 'personal-address'
+  headerTitle: string
+}
 
 const Address = ({}: Props) => {
+  const route = useRoute<RouteProp<ParamListBase>>()
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
-  const renderAddress = ({
-    item,
-    index,
-  }: {
-    item: (typeof DATA_ADDRESS)[0]
-    index: number
-  }) => (
+  const params = route?.params as Params
+  const addressOnCart = params?.type === 'address-on-cart'
+  const personalAddress = params?.type === 'personal-address'
+
+  const renderAddress = ({ item }: { item: (typeof DATA_ADDRESS)[0] }) => (
     <AddressItem
-      style={{
-        marginTop: index === 0 ? getSize.m(16) : getSize.m(0),
-      }}
-      name={item.name}
-      address={item.address}
-      phoneNumber={item.phoneNumber}
+      item={item}
       buttonTitle="Edit"
       handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
       handleButton={() =>
@@ -42,7 +42,19 @@ const Address = ({}: Props) => {
 
   return (
     <View style={[styles.container]}>
-      <Header title="Address" topLine />
+      <Header
+        title={params?.headerTitle ?? 'Address'}
+        topLine
+        style={[{ marginBottom: getSize.m(16) }]}
+        rightIconEnd={addressOnCart ? AddShip : undefined}
+        onPressRightEnd={() => {
+          if (addressOnCart) {
+            navigation.navigate(routes.ADD_ADDRESS, {
+              addressTitle: 'Add Address',
+            })
+          }
+        }}
+      />
 
       <FlatList
         showsVerticalScrollIndicator={false}
@@ -52,7 +64,7 @@ const Address = ({}: Props) => {
       />
 
       <ButtonPrimary
-        title="Add Address"
+        title={personalAddress ? 'Add Address' : 'Next'}
         atBottom={true}
         onPress={() =>
           navigation.navigate(routes.ADD_ADDRESS, {

@@ -1,25 +1,22 @@
 import { COLORS, FONTS } from '@/constants'
-import { getSize } from '@/utils'
+import { AppStyles, getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperCardTop: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    ...AppStyles.rowCenterBetween,
   },
   inSideLeftCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    ...AppStyles.rowVCenter,
+    flex: 1,
   },
   inSideRightCard: {
-    flexDirection: 'row',
+    ...AppStyles.rowCenter,
     backgroundColor: COLORS.pale_red,
     width: getSize.s(20),
     height: getSize.v(20),
     borderRadius: getSize.s(20 / 2),
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginLeft: getSize.m(16),
   },
   wrapTextTitle: {
     marginHorizontal: getSize.m(16),

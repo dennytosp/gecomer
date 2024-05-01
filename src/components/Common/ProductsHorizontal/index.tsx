@@ -38,14 +38,14 @@ const ProductsHorizontal = ({
   onPress,
   style,
 }: Props) => {
-  const columnsSize = width / columns - getSize.m(20 + 32)
+  const columnsSize = width / Number(columns) - getSize.m(20 + 32)
 
   return (
     <View
       style={[
         styles.wrapperProduct,
-        columns > 1 && {
-          width: width / columns - getSize.m(16 + 6),
+        Number(columns) > 1 && {
+          width: width / Number(columns) - getSize.m(16 + 6),
         },
         { marginBottom, marginLeft: index },
         style,
@@ -87,11 +87,13 @@ const ProductsHorizontal = ({
 
       <View style={[styles.wrapperRowPrice]}>
         <Texting title={price} textStyle={[styles.textPrice]} />
-        <Texting
-          title={promotion}
-          textStyle={[styles.textPromotion]}
-          style={[{ marginLeft: getSize.m(8) }]}
-        />
+        {promotion && (
+          <Texting
+            title={promotion}
+            textStyle={[styles.textPromotion]}
+            style={[{ marginLeft: getSize.m(8) }]}
+          />
+        )}
       </View>
     </View>
   )

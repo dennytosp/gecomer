@@ -1,5 +1,5 @@
 import { Method01 } from '@/assets'
-import { CardATM, Header } from '@/components'
+import { CreditCardItem, Header } from '@/components'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
 import { FormCard } from '../../components'
@@ -12,10 +12,10 @@ const CheckCard = () => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
-        <CardATM
+        <CreditCardItem
           style={[styles.wrapperCard]}
           method={Method01}
-          code="6326    9124    8124    9875"
+          code="6326912481249875"
           holder="DINH TIEN PHONG"
           time="12/2028"
         />

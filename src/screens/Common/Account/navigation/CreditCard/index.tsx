@@ -1,5 +1,5 @@
 import { Method01, Method02 } from '@/assets'
-import { ButtonPrimary, CardATM, Header } from '@/components'
+import { ButtonPrimary, CreditCardItem, Header } from '@/components'
 import { COLORS } from '@/constants'
 import { routes } from '@/navigation/routes'
 import { getSize } from '@/utils'
@@ -20,17 +20,17 @@ const CreditCard = () => {
       showsVerticalScrollIndicator={false}
       keyboardShouldPersistTaps="handled">
       <View style={[styles.wrapperCard]}>
-        <CardATM
+        <CreditCardItem
           style={{ marginBottom: getSize.m(16) }}
           method={Method01}
-          code="6326    9124    8124    9875"
+          code="6326912481249875"
           holder="DINH TIEN PHONG"
           time="12/2028"
         />
-        <CardATM
+        <CreditCardItem
           backgroundColor={COLORS.secondary}
           method={Method02}
-          code="5578    4758    4715    6327"
+          code="5578475847156327"
           holder="HOANG QUOC VIET"
           time="05/2029"
         />
