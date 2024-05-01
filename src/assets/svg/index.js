@@ -1,23 +1,16 @@
+import { COLORS } from '@/constants'
 import React from 'react'
 import Svg, {
-  Path,
   Circle,
-  Rect,
-  G,
-  Defs,
-  LinearGradient,
-  Stop,
-  Line,
   ClipPath,
-  Pattern,
-  Use,
-  Image,
-  Mask,
-  Ellipse,
+  Defs,
+  G,
+  Line,
+  Path,
+  Rect,
 } from 'react-native-svg'
-import { COLORS } from '@/constants'
 
-export const Back = ({ width = 25, height = 24 }) => {
+export const Back = () => {
   return (
     <Svg
       width="12"
@@ -37,7 +30,7 @@ export const Back = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Logo = ({ width = 25, height = 24 }) => {
+export const Logo = () => {
   return (
     <Svg
       width="72"
@@ -57,7 +50,7 @@ export const Logo = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Like = ({ width = 25, height = 24 }) => {
+export const Like = () => {
   return (
     <Svg
       width="24"
@@ -76,7 +69,7 @@ export const Like = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Plus_Ants = ({ width = 25, height = 24 }) => {
+export const PlusAnts = () => {
   return (
     <Svg
       width="24"
@@ -95,7 +88,7 @@ export const Plus_Ants = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const LogoPrimary = ({ width = 25, height = 24 }) => {
+export const LogoPrimary = () => {
   return (
     <Svg
       width="72"
@@ -115,7 +108,7 @@ export const LogoPrimary = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Plus = ({ width = 25, height = 24 }) => {
+export const Plus = () => {
   return (
     <Svg
       width="14"
@@ -132,7 +125,7 @@ export const Plus = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Add_Ship = ({ width = 25, height = 24 }) => {
+export const AddShip = () => {
   return (
     <Svg
       width="24"
@@ -159,7 +152,7 @@ export const Add_Ship = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Editing = ({ width = 25, height = 24 }) => {
+export const Editing = () => {
   return (
     <Svg
       width="24"
@@ -178,7 +171,7 @@ export const Editing = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Offer = ({ width = 25, height = 24 }) => {
+export const Offer = () => {
   return (
     <Svg
       width="24"
@@ -207,7 +200,7 @@ export const Offer = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const ActivityListNotifi = ({ width = 25, height = 24 }) => {
+export const ActivityListNotifi = () => {
   return (
     <Svg
       width="24"
@@ -252,7 +245,7 @@ export const ActivityListNotifi = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Feed = ({ width = 25, height = 24 }) => {
+export const Feed = () => {
   return (
     <Svg
       width="24"
@@ -297,7 +290,7 @@ export const Feed = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Activity = ({ width = 25, height = 24 }) => {
+export const Activity = () => {
   return (
     <Svg
       width="24"
@@ -322,7 +315,7 @@ export const Activity = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Trash = ({ width = 25, height = 24 }) => {
+export const Trash = () => {
   return (
     <Svg
       width="20"
@@ -356,7 +349,7 @@ export const Trash = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const More = ({ width = 25, height = 24 }) => {
+export const More = () => {
   return (
     <Svg
       width="24"
@@ -390,7 +383,7 @@ export const More = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Search = ({ width = 25, height = 24 }) => {
+export const Search = () => {
   return (
     <Svg
       width="20"
@@ -416,7 +409,7 @@ export const Search = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Forward = ({ width = 25, height = 24 }) => {
+export const Forward = () => {
   return (
     <Svg
       width="8"
@@ -436,7 +429,7 @@ export const Forward = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Favorite = ({ width = 25, height = 24 }) => {
+export const Favorite = () => {
   return (
     <Svg
       width="24"
@@ -456,7 +449,7 @@ export const Favorite = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Notifications = ({ width = 25, height = 24 }) => {
+export const Notifications = () => {
   return (
     <Svg
       width="18"
@@ -481,7 +474,7 @@ export const Notifications = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Star = ({ width = 25, height = 24 }) => {
+export const Star = () => {
   return (
     <Svg
       width="16"
@@ -497,7 +490,7 @@ export const Star = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const SearchPrimary = ({ width = 25, height = 24 }) => {
+export const SearchPrimary = () => {
   return (
     <Svg
       width="14"
@@ -522,7 +515,7 @@ export const SearchPrimary = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Email = ({ width = 25, height = 24 }) => {
+export const Email = () => {
   return (
     <Svg
       width="20"
@@ -547,7 +540,7 @@ export const Email = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Password = ({ width = 25, height = 24 }) => {
+export const Password = () => {
   return (
     <Svg
       width="20"
@@ -577,7 +570,7 @@ export const Password = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const ManShirt = ({ width = 25, height = 24 }) => {
+export const ManShirt = () => {
   return (
     <Svg
       width="20"
@@ -622,7 +615,7 @@ export const ManShirt = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Dress = ({ width = 25, height = 24 }) => {
+export const Dress = () => {
   return (
     <Svg
       width="20"
@@ -667,7 +660,7 @@ export const Dress = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const ManWorkEquipment = ({ width = 25, height = 24 }) => {
+export const ManWorkEquipment = () => {
   return (
     <Svg
       width="20"
@@ -708,7 +701,7 @@ export const ManWorkEquipment = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const WomanBag = ({ width = 25, height = 24 }) => {
+export const WomanBag = () => {
   return (
     <Svg
       width="20"
@@ -742,7 +735,7 @@ export const WomanBag = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const ManTShirt = ({ width = 25, height = 24 }) => {
+export const ManTShirt = () => {
   return (
     <Svg
       width="24"
@@ -762,7 +755,7 @@ export const ManTShirt = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const ManPant = ({ width = 25, height = 24 }) => {
+export const ManPant = () => {
   return (
     <Svg
       width="24"
@@ -789,7 +782,7 @@ export const ManPant = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const ManUnderwear = ({ width = 25, height = 24 }) => {
+export const ManUnderwear = () => {
   return (
     <Svg
       width="24"
@@ -816,7 +809,7 @@ export const ManUnderwear = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const WomanTShirt = ({ width = 25, height = 24 }) => {
+export const WomanTShirt = () => {
   return (
     <Svg
       width="24"
@@ -836,7 +829,7 @@ export const WomanTShirt = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const WomanPants = ({ width = 25, height = 24 }) => {
+export const WomanPants = () => {
   return (
     <Svg
       width="24"
@@ -856,7 +849,7 @@ export const WomanPants = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Skirt = ({ width = 25, height = 24 }) => {
+export const Skirt = () => {
   return (
     <Svg
       width="24"
@@ -897,7 +890,7 @@ export const Skirt = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Bikini = ({ width = 25, height = 24 }) => {
+export const Bikini = () => {
   return (
     <Svg
       width="24"
@@ -931,7 +924,7 @@ export const Bikini = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const ManShoes = ({ width = 25, height = 24 }) => {
+export const ManShoes = () => {
   return (
     <Svg
       width="24"
@@ -965,7 +958,7 @@ export const ManShoes = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const HighHeels = ({ width = 25, height = 24 }) => {
+export const HighHeels = () => {
   return (
     <Svg
       width="24"
@@ -985,7 +978,7 @@ export const HighHeels = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Fullname = ({ width = 25, height = 24 }) => {
+export const Fullname = () => {
   return (
     <Svg
       width="20"
@@ -1010,7 +1003,7 @@ export const Fullname = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Google = ({ width = 25, height = 24 }) => {
+export const Google = () => {
   return (
     <Svg
       width="16"
@@ -1038,7 +1031,7 @@ export const Google = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Facebook = ({ width = 25, height = 24 }) => {
+export const Facebook = () => {
   return (
     <Svg
       width="11"
@@ -1055,7 +1048,7 @@ export const Facebook = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Less = ({ width = 25, height = 24 }) => {
+export const Less = () => {
   return (
     <Svg
       width="14"
@@ -1069,7 +1062,7 @@ export const Less = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Remove = ({ width = 25, height = 24 }) => {
+export const Remove = () => {
   return (
     <Svg
       width="8"
@@ -1088,7 +1081,7 @@ export const Remove = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Edit = ({ width = 25, height = 24 }) => {
+export const Edit = () => {
   return (
     <Svg
       width="24"
@@ -1107,7 +1100,7 @@ export const Edit = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Method01 = ({ width = 25, height = 24 }) => {
+export const Method01 = () => {
   return (
     <Svg
       width="32"
@@ -1143,7 +1136,7 @@ export const Method01 = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Method02 = ({ width = 25, height = 24 }) => {
+export const Method02 = () => {
   return (
     <Svg
       width="50"
@@ -1160,7 +1153,7 @@ export const Method02 = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const PlusAdding = ({ width = 25, height = 24 }) => {
+export const PlusAdding = () => {
   return (
     <Svg
       width="24"
@@ -1187,7 +1180,7 @@ export const PlusAdding = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const Eye = ({ width = 25, height = 24 }) => {
+export const Eye = () => {
   return (
     <Svg
       width="20"
@@ -1221,7 +1214,7 @@ export const Eye = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const MasterCard = ({ width = 25, height = 24 }) => {
+export const MasterCard = () => {
   return (
     <Svg
       width="32"
@@ -1250,7 +1243,7 @@ export const MasterCard = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const DeliveryDHL = ({ width = 25, height = 24 }) => {
+export const DeliveryDHL = () => {
   return (
     <Svg
       width="89"
@@ -1328,7 +1321,7 @@ export const DeliveryDHL = ({ width = 25, height = 24 }) => {
   )
 }
 
-export const PurchaseSuccess = ({ width = 25, height = 24 }) => {
+export const PurchaseSuccess = () => {
   return (
     <Svg
       width="269"
@@ -1378,7 +1371,7 @@ export const PurchaseSuccess = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Mic = ({ width = 25, height = 24 }) => {
+export const Mic = () => {
   return (
     <Svg
       width="24"
@@ -1414,7 +1407,7 @@ export const Mic = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Filterist = ({ width = 25, height = 24 }) => {
+export const Filterist = () => {
   return (
     <Svg
       width="24"
@@ -1434,7 +1427,7 @@ export const Filterist = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Soft = ({ width = 25, height = 24 }) => {
+export const Soft = () => {
   return (
     <Svg
       width="24"
@@ -1481,7 +1474,7 @@ export const Soft = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const DownPress = ({ width = 25, height = 24 }) => {
+export const DownPress = () => {
   return (
     <Svg
       width="24"
@@ -1500,7 +1493,7 @@ export const DownPress = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const RemoveEmpty = ({ width = 25, height = 24 }) => {
+export const RemoveEmpty = () => {
   return (
     <Svg
       width="22"
@@ -1526,7 +1519,7 @@ export const RemoveEmpty = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Tick = ({ width = 25, height = 24 }) => {
+export const Tick = () => {
   return (
     <Svg
       width="29"
@@ -1545,7 +1538,7 @@ export const Tick = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Delete = ({ width = 25, height = 24 }) => {
+export const Delete = () => {
   return (
     <Svg
       width="24"
@@ -1578,7 +1571,7 @@ export const Delete = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Favorited = ({ width = 25, height = 24 }) => {
+export const Favorited = () => {
   return (
     <Svg
       width="24"
@@ -1598,7 +1591,7 @@ export const Favorited = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const CancelFavorite = ({ width = 25, height = 24 }) => {
+export const CancelFavorite = () => {
   return (
     <Svg
       width="24"
@@ -1617,7 +1610,7 @@ export const CancelFavorite = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Plus_Cart = ({ width = 25, height = 24 }) => {
+export const Plus_Cart = () => {
   return (
     <Svg
       width="16"
@@ -1643,7 +1636,7 @@ export const Plus_Cart = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Less_Cart = ({ width = 25, height = 24 }) => {
+export const Less_Cart = () => {
   return (
     <Svg
       width="16"
@@ -1662,7 +1655,7 @@ export const Less_Cart = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Credit = ({ width = 25, height = 24 }) => {
+export const Credit = () => {
   return (
     <Svg
       width="24"
@@ -1688,7 +1681,7 @@ export const Credit = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Paypal = ({ width = 25, height = 24 }) => {
+export const Paypal = () => {
   return (
     <Svg
       width="24"
@@ -1712,7 +1705,7 @@ export const Paypal = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Bank_Transfer = ({ width = 25, height = 24 }) => {
+export const Bank_Transfer = () => {
   return (
     <Svg
       width="24"
@@ -1759,7 +1752,7 @@ export const Bank_Transfer = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Method = ({ width = 25, height = 24 }) => {
+export const Method = () => {
   return (
     <Svg
       width="36"
@@ -1777,7 +1770,7 @@ export const Method = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Profile = ({ width = 25, height = 24 }) => {
+export const Profile = () => {
   return (
     <Svg
       width="24"
@@ -1801,7 +1794,7 @@ export const Profile = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Order = ({ width = 25, height = 24 }) => {
+export const Order = () => {
   return (
     <Svg
       width="24"
@@ -1837,7 +1830,7 @@ export const Order = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Address = ({ width = 25, height = 24 }) => {
+export const Address = () => {
   return (
     <Svg
       width="24"
@@ -1862,7 +1855,7 @@ export const Address = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Payment = ({ width = 25, height = 24 }) => {
+export const Payment = () => {
   return (
     <Svg
       width="24"
@@ -1888,7 +1881,7 @@ export const Payment = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Gender = ({ width = 25, height = 24 }) => {
+export const Gender = () => {
   return (
     <Svg
       width="24"
@@ -1921,7 +1914,7 @@ export const Gender = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Birthday = ({ width = 25, height = 24 }) => {
+export const Birthday = () => {
   return (
     <Svg
       width="24"
@@ -1941,7 +1934,7 @@ export const Birthday = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const EmailProfile = ({ width = 25, height = 24 }) => {
+export const EmailProfile = () => {
   return (
     <Svg
       width="24"
@@ -1965,7 +1958,7 @@ export const EmailProfile = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const PhoneNumber = ({ width = 25, height = 24 }) => {
+export const PhoneNumber = () => {
   return (
     <Svg
       width="24"
@@ -1991,7 +1984,7 @@ export const PhoneNumber = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const ChangePasswording = ({ width = 25, height = 24 }) => {
+export const ChangePasswording = () => {
   return (
     <Svg
       width="24"
@@ -2021,7 +2014,7 @@ export const ChangePasswording = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const ForwardNext = ({ width = 25, height = 24 }) => {
+export const ForwardNext = () => {
   return (
     <Svg
       width="24"
@@ -2040,7 +2033,7 @@ export const ForwardNext = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Confirmationion = ({ width = 25, height = 24 }) => {
+export const Confirmationion = () => {
   return (
     <Svg
       width="6"
@@ -2064,7 +2057,7 @@ export const Confirmationion = ({ width = 25, height = 24 }) => {
     </Svg>
   )
 }
-export const Lineborder = ({ width = 25, height = 24 }) => {
+export const Lineborder = () => {
   return (
     <Svg
       width="312"
