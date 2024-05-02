@@ -10,11 +10,11 @@ import {
 } from '@react-navigation/native'
 
 type FormCardProps = {
-  titleButton: string
+  buttonTitle: string
   type: 'add' | 'edit'
 }
 
-const FormCard: FC<FormCardProps> = ({ type, titleButton }) => {
+const FormCard: FC<FormCardProps> = ({ type, buttonTitle }) => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   const cardNumberRef = useRef(null)
@@ -67,7 +67,7 @@ const FormCard: FC<FormCardProps> = ({ type, titleButton }) => {
       </ScrollView>
 
       <ButtonPrimary
-        title={titleButton}
+        title={buttonTitle}
         atBottom={true}
         onPress={() => navigation.goBack()}
         style={[{ marginVertical: getSize.m(16) }]}

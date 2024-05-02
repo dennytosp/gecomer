@@ -36,7 +36,7 @@ const Profile = () => {
   const renderCenter = ({ item }: { item: (typeof DATA_PROFILE)[0] }) => (
     <View style={[styles.wrapperCenter]}>
       <View style={[styles.leftCenter]}>
-        <Pressable>{item.icon}</Pressable>
+        <Pressable>{item.icon({})}</Pressable>
         <Texting
           title={item.title}
           style={[styles.wrapTextTitle]}
@@ -46,7 +46,8 @@ const Profile = () => {
 
       <Pressable
         onPress={() => navigation.navigate(item.navigation)}
-        style={[styles.rightCenter]}>
+        style={[styles.rightCenter]}
+      >
         <Texting
           title={item.content}
           textStyle={[styles.textContent]}

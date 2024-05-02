@@ -26,10 +26,10 @@ const SearchPage = () => {
       style={[
         styles.wrapperCenter,
         {
-          paddingVertical: index === 0 ? getSize.m(0) : getSize.m(16),
-          marginBottom: index === 0 ? getSize.m(16) : getSize.m(0),
+          paddingVertical: getSize.m(16),
         },
-      ]}>
+      ]}
+    >
       <Texting title={item.name} />
     </Pressable>
   )

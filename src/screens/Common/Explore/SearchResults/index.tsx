@@ -5,7 +5,7 @@ import {
   RemoveEmpty,
   Soft,
 } from '@/assets'
-import { ProductsHorizontal, Remind, Searching, Texting } from '@/components'
+import { ProductItem, Remind, Searching, Texting } from '@/components'
 import { COLORS, FONTS } from '@/constants'
 import { routes } from '@/navigation/routes'
 import { getSize } from '@/utils'
@@ -56,13 +56,9 @@ const SearchResults = () => {
   }: {
     item: (typeof PRODUCTS_DATA_VERTICOLUMNS)[0]
   }) => (
-    <ProductsHorizontal
+    <ProductItem
       marginBottom={getSize.m(12)}
-      image={item.image}
-      name={item.name}
-      discounted={item.discounted}
-      price={item.price}
-      promotion={item.promotion}
+      item={item}
       columns={numColumns}
       onPress={() => navigation.navigate(routes.DETAILS, { item })}
     />
@@ -75,6 +71,7 @@ const SearchResults = () => {
       subtitle="Thank you for shopping using Gecomer"
       eventTitle="Back to Home"
       handleOnEvent={() => navigation.navigate(routes.COMMON)}
+      isAlign={false}
     />
   )
 

@@ -14,30 +14,29 @@ import {
 import { styles } from './styles'
 
 type Props = {
-  image: ImageSourcePropType
-  name: string
-  discounted: string
-  price: string
+  item: {
+    image: ImageSourcePropType
+    name: string
+    discounted: string
+    price: string
+    promotion?: string
+  }
   index?: number
   columns?: number
-  promotion?: string
   marginBottom?: DimensionValue | undefined
   onPress?: () => void
   style?: StyleProp<ViewStyle>
 }
 
-const ProductsHorizontal = ({
-  image,
-  name,
-  discounted,
-  price,
+const ProductItem = ({
+  item,
+  marginBottom,
   index,
   columns,
-  promotion,
-  marginBottom,
   onPress,
   style,
 }: Props) => {
+  const { image, name, discounted, price, promotion } = item
   const columnsSize = width / Number(columns) - getSize.m(20 + 32)
 
   return (
@@ -47,9 +46,10 @@ const ProductsHorizontal = ({
         Number(columns) > 1 && {
           width: width / Number(columns) - getSize.m(16 + 6),
         },
-        { marginBottom, marginLeft: index },
+        { marginBottom },
         style,
-      ]}>
+      ]}
+    >
       <Pressable onPress={onPress} style={{ alignItems: 'center' }}>
         <Image
           source={image}
@@ -99,4 +99,4 @@ const ProductsHorizontal = ({
   )
 }
 
-export default ProductsHorizontal
+export default ProductItem

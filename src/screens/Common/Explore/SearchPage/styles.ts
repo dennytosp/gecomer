@@ -12,6 +12,6 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   onScroll: {
-    marginTop: getSize.m(16),
+    // marginTop: getSize.m(16),
   },
 })

@@ -36,7 +36,6 @@ import OfferNotification from './common/Home/Notifications/OfferNotification'
 import ProductSeeMore from './common/Home/ProductSeeMore'
 import Reviews from './common/Home/Reviews'
 import WriteReview from './common/Home/Reviews/WriteReview'
-import SuperFlashSale from './common/Home/SuperFlashSale'
 import Offer from './common/Offer'
 
 export const common = {
@@ -48,7 +47,6 @@ export const common = {
 }
 
 export const home = {
-  SuperFlashSale,
   ProductSeeMore,
   Details,
   Reviews,

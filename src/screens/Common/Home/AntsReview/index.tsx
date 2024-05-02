@@ -29,7 +29,8 @@ const AntsReview = () => {
       style={[
         { marginLeft: index === 0 ? getSize.m(0) : getSize.m(12) },
         styles.wrapperImage,
-      ]}>
+      ]}
+    >
       <Image
         source={item.image}
         style={{
@@ -71,7 +72,8 @@ const AntsReview = () => {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={{ flexDirection: 'row', flex: 1, marginBottom: getSize.m(6) }}>
+        style={{ flexDirection: 'row', flex: 1, marginBottom: getSize.m(6) }}
+      >
         {DATA_IMAGES_REVIEWS.map(renderImage)}
       </ScrollView>
 

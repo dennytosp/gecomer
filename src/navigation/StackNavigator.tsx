@@ -76,10 +76,6 @@ const MainStackNavigator = () => {
           <Stack.Screen name={routes.OFFER} component={common.Offer} />
           <Stack.Screen name={routes.ACCOUNT} component={common.Account} />
           <Stack.Screen
-            name={routes.SUPER_FLASH_SALE}
-            component={home.SuperFlashSale}
-          />
-          <Stack.Screen
             name={routes.PRODUCT_SEE_MORE}
             component={home.ProductSeeMore}
           />

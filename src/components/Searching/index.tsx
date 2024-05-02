@@ -2,11 +2,18 @@ import { SearchPrimary } from '@/assets'
 import { COLORS } from '@/constants'
 import { getSize, isAndroid } from '@/utils'
 import React from 'react'
-import { Pressable, StyleProp, TextInput, View, ViewStyle } from 'react-native'
+import {
+  Pressable,
+  StyleProp,
+  TextInput,
+  TextInputProps,
+  View,
+  ViewStyle,
+} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { styles } from './styles'
 
-type Props = {
+interface Props extends TextInputProps {
   placeholder?: string
   value?: string
   onChangeText?: (text: string) => void
@@ -23,10 +30,7 @@ type Props = {
 
 const Searching = ({
   style,
-  placeholder,
-  value,
   onChangeText,
-  editable,
   rightIconInput,
   rightIcon,
   rightIconStart,
@@ -34,6 +38,7 @@ const Searching = ({
   onPressRight,
   onPressRightInput,
   onPressRightStart,
+  ...rest
 }: Props) => {
   return (
     <SafeAreaView edges={['top']}>
@@ -46,12 +51,9 @@ const Searching = ({
         <Pressable onPressIn={onPressInput} style={[styles.wrapperSearch]}>
           <SearchPrimary />
           <TextInput
-            placeholder={placeholder}
-            onChangeText={onChangeText}
-            value={value}
             placeholderTextColor={COLORS.grey}
-            editable={editable}
             style={[styles.input]}
+            {...rest}
           />
           <Pressable onPress={onPressRightInput}>{rightIconInput}</Pressable>
         </Pressable>

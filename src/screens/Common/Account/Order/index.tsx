@@ -10,9 +10,11 @@ import {
 } from '@react-navigation/native'
 import React from 'react'
 import { FlatList, Pressable, View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './styles'
 
 const Order = () => {
+  const insets = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   const renderOrder = ({
@@ -24,10 +26,8 @@ const Order = () => {
   }) => (
     <Pressable
       onPress={() => navigation.navigate(routes.ORDER_DETAILS)}
-      style={[
-        styles.wrapperOrder,
-        { marginTop: index === 0 ? getSize.m(16) : 0 },
-      ]}>
+      style={[styles.wrapperOrder]}
+    >
       <Texting title={item.code} textStyle={[styles.textCode]} />
       <Texting
         title={'Order at Gecomer: ' + item.time}
@@ -62,11 +62,16 @@ const Order = () => {
     <View style={[styles.container]}>
       <Header title="Order" topLine />
       <FlatList
-        // style={{marginTop: getSize.m(16)}}
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
         data={DATA_ORDER}
         renderItem={renderOrder}
+        ItemSeparatorComponent={() => (
+          <View style={[{ marginTop: getSize.m(16) }]} />
+        )}
+        contentContainerStyle={[
+          { paddingBottom: insets.bottom, paddingTop: getSize.m(16) },
+        ]}
         keyExtractor={(item, index) => `order-item-${index}`}
       />
     </View>

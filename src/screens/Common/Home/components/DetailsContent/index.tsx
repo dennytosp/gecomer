@@ -8,7 +8,7 @@ import {
 } from '@/assets'
 import {
   ButtonPrimary,
-  ProductsHorizontal,
+  ProductItem,
   ReviewsProduct,
   StarRating,
   Texting,
@@ -46,11 +46,7 @@ const DetailsContent = ({ name, price }: Props) => {
     item: (typeof DATA_SIZES)[0]
     index: number
   }) => (
-    <View
-      style={[
-        { marginLeft: index === 0 ? getSize.m(0) : getSize.m(16) },
-        styles.wrapperSelectSizes,
-      ]}>
+    <View style={[styles.wrapperSelectSizes]}>
       <Texting title={item.sizeNumbers} textStyle={[styles.textSizeNumber]} />
     </View>
   )
@@ -63,13 +59,7 @@ const DetailsContent = ({ name, price }: Props) => {
     index: number
   }) => (
     <View
-      style={[
-        {
-          marginLeft: index === 0 ? getSize.m(0) : getSize.m(16),
-          backgroundColor: item.colors,
-        },
-        styles.wrapperSelectColors,
-      ]}
+      style={[{ backgroundColor: item.colors }, styles.wrapperSelectColors]}
     />
   )
 
@@ -135,15 +125,7 @@ const DetailsContent = ({ name, price }: Props) => {
     index: number
   }) => (
     <View style={[styles.wrapperProducts]}>
-      <ProductsHorizontal
-        index={index === 0 ? getSize.m(0) : getSize.m(12)}
-        image={item.image}
-        name={item.name}
-        discounted={item.discounted}
-        price={item.price}
-        promotion={item.promotion}
-        marginBottom={1}
-      />
+      <ProductItem item={item} />
     </View>
   )
 
@@ -175,6 +157,9 @@ const DetailsContent = ({ name, price }: Props) => {
         showsHorizontalScrollIndicator={false}
         data={DATA_SIZES}
         renderItem={renderSelectSizes}
+        ItemSeparatorComponent={() => (
+          <View style={[{ marginLeft: getSize.m(16) }]} />
+        )}
         keyExtractor={(item, index) => `detail-select-size-${index}`}
       />
 
@@ -184,6 +169,9 @@ const DetailsContent = ({ name, price }: Props) => {
         showsHorizontalScrollIndicator={false}
         data={DATA_COLORS}
         renderItem={renderSelectColors}
+        ItemSeparatorComponent={() => (
+          <View style={[{ marginLeft: getSize.m(16) }]} />
+        )}
         keyExtractor={(item, index) => `detail-select-color--${index}`}
       />
 
@@ -202,6 +190,9 @@ const DetailsContent = ({ name, price }: Props) => {
         showsHorizontalScrollIndicator={false}
         data={PRODUCTS_DATA}
         renderItem={renderProducts}
+        ItemSeparatorComponent={() => (
+          <View style={[{ marginLeft: getSize.m(12) }]} />
+        )}
         keyExtractor={(item, index) => `detail-product--${index}`}
       />
 

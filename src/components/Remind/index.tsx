@@ -13,7 +13,7 @@ type Props = {
   subtitle: string
   eventTitle: string
   cancelTitle?: string
-  justAlign?: boolean
+  isAlign?: boolean
   handleOnEvent?: () => void
   handleOnCancel?: () => void
   style?: StyleProp<ViewStyle>
@@ -26,7 +26,7 @@ const Remind = ({
   subtitle,
   eventTitle,
   cancelTitle,
-  justAlign,
+  isAlign = true,
   handleOnEvent,
   handleOnCancel,
   style,
@@ -35,7 +35,7 @@ const Remind = ({
     <View
       style={[
         styles.wrapperEmpty,
-        { marginTop: justAlign ? null : getSize.m(132) },
+        !isAlign && { marginTop: getSize.m(160) },
         style,
       ]}>
       <View style={[styles.wrapperContentEmpty]}>

@@ -8,7 +8,7 @@ const AddCard = () => {
   return (
     <View style={[styles.container]}>
       <Header title="Add Card" topLine />
-      <FormCard titleButton="Add Card" type="add" />
+      <FormCard buttonTitle="Add Card" type="add" />
     </View>
   )
 }

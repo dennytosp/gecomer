@@ -21,7 +21,6 @@ const PurchaseSuccess = () => {
         subtitle="Thank you for shopping using Gecomer"
         eventTitle="Back To Order"
         handleOnEvent={() => navigation.navigate(routes.COMMON)}
-        justAlign
       />
     </View>
   )

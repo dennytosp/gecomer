@@ -19,7 +19,6 @@ type Props = {
   seconds: string
   image: ImageSourcePropType
   onPress?: () => void
-  marginBottom?: DimensionValue | undefined
   style?: StyleProp<ViewStyle>
 }
 
@@ -30,7 +29,6 @@ const Promotion = ({
   seconds,
   image,
   onPress,
-  marginBottom,
   style,
 }: Props) => {
   const [timerCount, setTimer] = useState(60)

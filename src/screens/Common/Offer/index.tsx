@@ -1,4 +1,4 @@
-import { photos } from '@/assets'
+import { photos, PRODUCTS_DATA_VERTICOLUMNS } from '@/assets'
 import { Header, Promotion, RecommendProduct } from '@/components'
 import Texting from '@/components/Texting'
 import { routes } from '@/navigation/routes'
@@ -31,7 +31,13 @@ const Offer = () => {
     return (
       <View style={[styles.wrapperCenter]}>
         <Promotion
-          onPress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
+          onPress={() =>
+            navigation.navigate(routes.PRODUCT_SEE_MORE, {
+              title: 'Super Flash Sale',
+              data: PRODUCTS_DATA_VERTICOLUMNS.reverse(),
+              isFlashSale: true,
+            })
+          }
           title={'Super Flash Sale\n50% Off'}
           hours="08"
           minutes="34"

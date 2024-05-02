@@ -59,11 +59,13 @@ const Reviews = () => {
       <Header title={DATA_REVIEWS.length + ' Reviews'} topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="never">
+        keyboardShouldPersistTaps="never"
+      >
         <ScrollView
           horizontal
           nestedScrollEnabled={true}
-          showsHorizontalScrollIndicator={false}>
+          showsHorizontalScrollIndicator={false}
+        >
           <View style={[styles.wrapperCardTop]}>
             {renderFirstClose()}
             {/* <FlatList
@@ -86,13 +88,13 @@ const Reviews = () => {
           renderItem={renderReviews}
           keyExtractor={(item, index) => `reviews--${index}`}
         />
-
-        <ButtonPrimary
-          title="Write Review"
-          onPress={() => navigation.navigate(routes.WRITE_REVIEW)}
-          style={[{ marginBottom: insets.bottom }]}
-        />
       </ScrollView>
+
+      <ButtonPrimary
+        title="Write Review"
+        onPress={() => navigation.navigate(routes.WRITE_REVIEW)}
+        style={[{ marginBottom: insets.bottom }]}
+      />
     </View>
   )
 }

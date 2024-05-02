@@ -37,7 +37,6 @@ const ChangePasswordScreen = () => {
           inputProps={{ keyboardType: 'visible-password', maxLength: 50 }}
           containerStyle={[{ marginTop: getSize.m(16) }]}
         />
-
         <FormInput
           ref={newPasswordRef}
           title="New Password"

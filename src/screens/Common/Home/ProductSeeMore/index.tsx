@@ -1,5 +1,5 @@
-import { PRODUCTS_DATA, Search } from '@/assets'
-import { Header, ProductsHorizontal } from '@/components'
+import { photos, PRODUCTS_DATA, Search } from '@/assets'
+import { Header, ProductItem, Promotion } from '@/components'
 import { routes } from '@/navigation/routes'
 import { getSize } from '@/utils'
 import {
@@ -22,7 +22,9 @@ const ProductSeeMore = ({}: Props) => {
   const insets = useSafeAreaInsets()
 
   const params = route.params as {
+    title: string
     data: any
+    isFlashSale?: boolean
   }
 
   const numColumns = 2
@@ -34,12 +36,8 @@ const ProductSeeMore = ({}: Props) => {
     item: any
     index: number
   }) => (
-    <ProductsHorizontal
-      image={item.image}
-      name={item.name}
-      discounted={item.discounted}
-      price={item.price}
-      promotion={item.promotion}
+    <ProductItem
+      item={item}
       columns={numColumns}
       onPress={() => navigation.navigate(routes.DETAILS, { item })}
       style={[{ marginTop: getSize.m(16) }]}
@@ -50,7 +48,7 @@ const ProductSeeMore = ({}: Props) => {
     <View style={[styles.container]}>
       <Header
         topLine
-        title="Flash Sale"
+        title={params?.title ?? 'Flash Sale'}
         rightIconEnd={Search}
         onPressRightEnd={() => navigation.navigate(routes.SEARCH_PAGE)}
       />
@@ -61,6 +59,20 @@ const ProductSeeMore = ({}: Props) => {
         numColumns={numColumns}
         showsVerticalScrollIndicator={false}
         data={params?.data}
+        ListHeaderComponent={() => (
+          <>
+            {params?.isFlashSale && (
+              <Promotion
+                style={[{ marginTop: getSize.m(16) }]}
+                title={'Super Flash Sale\n50% Off'}
+                hours="08"
+                minutes="34"
+                seconds="52"
+                image={photos.promotion01}
+              />
+            )}
+          </>
+        )}
         renderItem={renderProductSeeMore}
         contentContainerStyle={[{ paddingBottom: insets.bottom }]}
         keyExtractor={(item, index) => `flash-sale-${item.name}${index}`}

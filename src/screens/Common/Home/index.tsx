@@ -9,7 +9,7 @@ import {
 } from '@/assets'
 import {
   Categories,
-  ProductsHorizontal,
+  ProductItem,
   Promotion,
   RecommendProduct,
   Searching,
@@ -49,14 +49,9 @@ const Home = () => {
     item: (typeof PRODUCTS_DATA)[0]
     index: number
   }) => (
-    <ProductsHorizontal
+    <ProductItem
       onPress={() => navigation.navigate(routes.DETAILS, { item })}
-      index={index === 0 ? getSize.m(0) : getSize.m(12)}
-      image={item.image}
-      name={item.name}
-      discounted={item.discounted}
-      price={item.price}
-      promotion={item.promotion}
+      item={item}
     />
   )
 
@@ -65,13 +60,9 @@ const Home = () => {
   }: {
     item: (typeof PRODUCTS_DATA_VERTICOLUMNS)[0]
   }) => (
-    <ProductsHorizontal
+    <ProductItem
       onPress={() => navigation.navigate(routes.DETAILS, { item })}
-      image={item.image}
-      name={item.name}
-      discounted={item.discounted}
-      price={item.price}
-      promotion={item.promotion}
+      item={item}
       columns={numColumns}
       marginBottom={getSize.m(12)}
     />
@@ -83,6 +74,7 @@ const Home = () => {
         rightIcon={Favorite}
         onPressRight={() =>
           navigation.navigate(routes.PRODUCT_SEE_MORE, {
+            title: 'Favorite',
             data: PRODUCTS_DATA_VERTICOLUMNS,
           })
         }
@@ -94,9 +86,16 @@ const Home = () => {
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <Promotion
-          onPress={() => navigation.navigate(routes.SUPER_FLASH_SALE)}
+          onPress={() =>
+            navigation.navigate(routes.PRODUCT_SEE_MORE, {
+              title: 'Super Flash Sale',
+              data: PRODUCTS_DATA_VERTICOLUMNS.reverse(),
+              isFlashSale: true,
+            })
+          }
           style={[
             styles.onScroll,
             styles.marginBase,
@@ -118,7 +117,8 @@ const Home = () => {
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          style={[{ marginHorizontal: getSize.m(16 - 12) }]}>
+          style={[{ marginHorizontal: getSize.m(16 - 12) }]}
+        >
           {CATEGORIES_DATA.map(renderCategories)}
         </ScrollView>
 
@@ -130,6 +130,7 @@ const Home = () => {
           ]}
           onPress={() => {
             navigation.navigate(routes.PRODUCT_SEE_MORE, {
+              title: 'Flash Sale',
               data: PRODUCTS_DATA.reverse(),
             })
           }}
@@ -139,6 +140,9 @@ const Home = () => {
           showsHorizontalScrollIndicator={false}
           data={PRODUCTS_DATA.reverse()}
           renderItem={renderProducts}
+          ItemSeparatorComponent={() => (
+            <View style={[{ marginLeft: getSize.m(12) }]} />
+          )}
           keyExtractor={(item, index) => `prod-home-${item.id}`}
           style={[styles.marginBase]}
         />
@@ -151,6 +155,7 @@ const Home = () => {
           ]}
           onPress={() => {
             navigation.navigate(routes.PRODUCT_SEE_MORE, {
+              title: 'Mega Sale',
               data: DATA_MEGA_SALE,
             })
           }}
@@ -161,6 +166,9 @@ const Home = () => {
           showsHorizontalScrollIndicator={false}
           data={DATA_MEGA_SALE}
           renderItem={renderProducts}
+          ItemSeparatorComponent={() => (
+            <View style={[{ marginLeft: getSize.m(12) }]} />
+          )}
           keyExtractor={(item, index) => `prod-mega-home-${item.id}`}
           style={[styles.marginBase]}
         />

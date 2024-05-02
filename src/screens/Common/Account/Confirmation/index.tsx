@@ -24,7 +24,6 @@ const Confirmation = () => {
         cancelTitle="Cancel"
         handleOnEvent={() => navigation.goBack()}
         handleOnCancel={() => navigation.goBack()}
-        justAlign
       />
     </View>
   )

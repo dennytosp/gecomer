@@ -20,7 +20,7 @@ const CheckCard = () => {
           time="12/2028"
         />
 
-        <FormCard titleButton="Save" type="edit" />
+        <FormCard buttonTitle="Save" type="edit" />
       </ScrollView>
     </View>
   )

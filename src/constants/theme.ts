@@ -1,5 +1,6 @@
 import { Dimensions } from 'react-native'
 import { getSize } from '@/utils/responsive'
+
 const { width, height } = Dimensions.get('window')
 
 export const COLORS = {

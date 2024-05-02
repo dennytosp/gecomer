@@ -7,7 +7,7 @@ import Categories from './Common/Categories'
 import EventList from './Common/EventList'
 import Iteming from './Common/Iteming'
 import NotificationItem from './Common/NotificationItem'
-import ProductsHorizontal from './Common/ProductsHorizontal'
+import ProductItem from './Common/ProductItem'
 import Promotion from './Common/Promotion'
 import RecommendProduct from './Common/RecomendProduct'
 import ReviewsProduct from './Common/ReviewsProduct'
@@ -32,7 +32,7 @@ export {
   Header,
   Iteming,
   NotificationItem,
-  ProductsHorizontal,
+  ProductItem,
   Promotion,
   RecommendProduct,
   Remind,

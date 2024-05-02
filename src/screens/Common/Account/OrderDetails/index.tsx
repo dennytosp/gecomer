@@ -49,7 +49,8 @@ const OrderDetails = () => {
       <Header title="Order Details" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <Titling title="Product" style={[{ marginTop: getSize.m(16) }]} />
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -57,13 +58,15 @@ const OrderDetails = () => {
           renderItem={({ item, index }) => (
             <Cart
               handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
-              style={{ marginTop: index === 0 ? getSize.m(0) : getSize.m(8) }}
               image={item.image}
               quantity={item.quantity}
               title={item.title}
               price={item.price}
               favorited={item.favorite}
             />
+          )}
+          ItemSeparatorComponent={() => (
+            <View style={[{ marginTop: getSize.m(8) }]} />
           )}
           keyExtractor={(item, index) => `order-details-${index}`}
         />
@@ -84,8 +87,9 @@ const OrderDetails = () => {
 
         <ButtonPrimary
           title="Notify Me"
+          atBottom={true}
           onPress={() => navigation.navigate(routes.COMMON)}
-          style={[{ marginBottom: getSize.m(16) }]}
+          style={[{ marginTop: getSize.m(16) }]}
         />
       </ScrollView>
     </View>
