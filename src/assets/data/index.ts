@@ -774,7 +774,7 @@ const DATA_CART = [
     title: 'Nike Air Max 270 React VIE',
     price: '$299,00',
     quantity: 1,
-    favorite: true,
+    isFavorite: true,
   },
   {
     id: '02',
@@ -782,7 +782,7 @@ const DATA_CART = [
     title: 'Nike Provie Alan 200',
     price: '$359,00',
     quantity: 1,
-    favorite: false,
+    isFavorite: false,
   },
   {
     id: '03',
@@ -790,7 +790,7 @@ const DATA_CART = [
     title: 'Nike Sunies Rovin 205',
     price: '$445,00',
     quantity: 1,
-    favorite: true,
+    isFavorite: true,
   },
   {
     id: '04',
@@ -798,7 +798,7 @@ const DATA_CART = [
     title: 'Nike Sunshet Join 207',
     price: '$447,00',
     quantity: 1,
-    favorite: true,
+    isFavorite: true,
   },
 ]
 

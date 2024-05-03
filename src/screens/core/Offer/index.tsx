@@ -39,9 +39,7 @@ const Offer = () => {
             })
           }
           title={'Super Flash Sale\n50% Off'}
-          hours="08"
-          minutes="34"
-          seconds="52"
+          duration={23 * 60 * 60 * 1000}
           image={photos.promotion01}
         />
       </View>
@@ -65,7 +63,8 @@ const Offer = () => {
       <Header title="Offer" hideLeftIcon topLine />
       <ScrollView
         keyboardDismissMode="on-drag"
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+      >
         {renderPromotionCode()}
         {renderPromotion()}
         {renderRecommend()}

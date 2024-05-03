@@ -114,7 +114,13 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
   }
 
   return (
-    <View style={[styles.container, containerStyle]}>
+    <View
+      style={[
+        styles.container,
+        inputFocus && !title && styles.shadowFocus,
+        containerStyle,
+      ]}
+    >
       {title && (
         <Texting title={title} textStyle={[styles.titleStyle, titleStyle]} />
       )}
@@ -129,7 +135,6 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
                 : COLORS.border,
           },
           styles.enabledBorderWidth,
-          inputFocus && styles.shadowFocus,
           style,
         ]}
       >

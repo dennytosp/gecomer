@@ -21,7 +21,6 @@ import { styles } from './styles'
 
 const Offer = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
-  const [count, setCount] = useState<number>(1)
   const [code, setCode] = useState<string>()
 
   const renderFooter = () => (
@@ -53,17 +52,9 @@ const Offer = () => {
           data={DATA_CART}
           renderItem={({ item, index }) => (
             <Cart
+              item={item}
+              index={index}
               style={{ marginTop: getSize.m(16) }}
-              image={item.image}
-              title={item.title}
-              price={item.price}
-              quantity={item.quantity ?? count}
-              favorited={item.favorite}
-              handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
-              handlePlus={() => setCount(count + 1)}
-              handleLess={() => {
-                count <= 1 ? setCount(1) : setCount(count - 1)
-              }}
             />
           )}
           keyExtractor={(item, index) => `cart-${index}`}

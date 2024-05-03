@@ -99,6 +99,26 @@ const connectToRemoteDebugger = (isDebugging: boolean) => {
   NativeDevSettings.setIsDebuggingRemotely(isDebugging)
 }
 
+const getLeadingZeros = (num: number) => {
+  if (num < 10) {
+    return '0' + num
+  }
+  return num.toString()
+}
+
+const getFormattedTime = (milliseconds: number) => {
+  const totalSeconds = Math.floor(milliseconds / 1000)
+  const totalMinutes = Math.floor(totalSeconds / 60)
+  const totalHours = Math.floor(totalMinutes / 60)
+
+  let days = getLeadingZeros(Math.floor(totalHours / 24))
+  let seconds = getLeadingZeros(totalSeconds % 60)
+  let minutes = getLeadingZeros(totalMinutes % 60)
+  let hours = getLeadingZeros(totalHours % 24)
+
+  return { days, hours, minutes, seconds }
+}
+
 export {
   connectToRemoteDebugger,
   convertNumeric,
@@ -109,4 +129,6 @@ export {
   mockArray,
   removeHTMLTags,
   truncateText,
+  getLeadingZeros,
+  getFormattedTime,
 }

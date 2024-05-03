@@ -1,10 +1,10 @@
+import React, { useEffect, useState } from 'react'
+import { StatusBar } from 'react-native'
 import { account, authentication, cart, common, explore, home } from '@/screens'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import React, { useEffect, useState } from 'react'
-import { StatusBar } from 'react-native'
-import { routes } from '../routes'
 import { AuthStack, TabStack } from '.'
+import { routes } from '../routes'
 
 const Stack = createNativeStackNavigator()
 

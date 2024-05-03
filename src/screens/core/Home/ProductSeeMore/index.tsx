@@ -64,9 +64,7 @@ const ProductSeeMore = ({}: Props) => {
               <Promotion
                 style={[{ marginTop: getSize.m(16) }]}
                 title={'Super Flash Sale\n50% Off'}
-                hours="08"
-                minutes="34"
-                seconds="52"
+                duration={23 * 60 * 60 * 1000}
                 image={photos.promotion01}
               />
             )}

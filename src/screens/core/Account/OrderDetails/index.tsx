@@ -55,16 +55,7 @@ const OrderDetails = () => {
         <FlatList
           showsVerticalScrollIndicator={false}
           data={DATA_CART}
-          renderItem={({ item, index }) => (
-            <Cart
-              handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
-              image={item.image}
-              quantity={item.quantity}
-              title={item.title}
-              price={item.price}
-              favorited={item.favorite}
-            />
-          )}
+          renderItem={({ item, index }) => <Cart item={item} index={index} />}
           ItemSeparatorComponent={() => (
             <View style={[{ marginTop: getSize.m(8) }]} />
           )}

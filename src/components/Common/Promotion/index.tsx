@@ -1,8 +1,5 @@
-import Texting from '@/components/Texting'
-import { getSize } from '@/utils'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {
-  DimensionValue,
   Image,
   ImageSourcePropType,
   Pressable,
@@ -10,43 +7,25 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
+import Texting from '@/components/Texting'
+import { useBackgroundTimer } from '@/context'
+import { getSize } from '@/utils'
 import { styles } from './styles'
 
 type Props = {
   title: string
-  hours: string
-  minutes: string
-  seconds: string
+  duration: number
   image: ImageSourcePropType
   onPress?: () => void
   style?: StyleProp<ViewStyle>
 }
 
-const Promotion = ({
-  title,
-  hours,
-  minutes,
-  seconds,
-  image,
-  onPress,
-  style,
-}: Props) => {
-  const [timerCount, setTimer] = useState(60)
-
-  useEffect(() => {
-    let interval = setInterval(() => {
-      setTimer(lastTimerCount => {
-        lastTimerCount <= 1 && clearInterval(interval)
-        return lastTimerCount - 1
-      })
-    }, 1000)
-    return () => clearInterval(interval)
-  }, [])
+const Promotion = ({ title, duration, image, onPress, style }: Props) => {
+  const { days, hours, minutes, seconds } = useBackgroundTimer()
 
   return (
     <Pressable onPress={onPress} style={[style]}>
       <Image source={image} style={[styles.imagePromotion]} />
-
       <View style={[styles.wrapperContentPromotion]}>
         <Texting title={title} textStyle={[styles.textTitle]} />
       </View>
@@ -61,7 +40,6 @@ const Promotion = ({
           textStyle={[styles.text2Dots]}
           style={[{ marginHorizontal: getSize.m(4) }]}
         />
-
         <Pressable style={[styles.wrapperCardTime]}>
           <Texting title={minutes} textStyle={[styles.textBase]} />
         </Pressable>

@@ -10,7 +10,7 @@ import {
 import { styles } from './style'
 
 type Props = {
-  title: string
+  title: React.ReactNode | undefined
   textStyle?: StyleProp<TextStyle>
   style?: StyleProp<ViewStyle>
   inputProps?: TextInputProps
