@@ -107,11 +107,7 @@ const AddressSubmitForm = ({ buttonTitle }: Props) => {
         inputProps={{ keyboardType: 'numeric', maxLength: 11 }}
       />
 
-      <ButtonPrimary
-        title={buttonTitle}
-        onPress={onSaveAddress}
-        atBottom={true}
-      />
+      <ButtonPrimary title={buttonTitle} onPress={onSaveAddress} />
     </View>
   )
 }

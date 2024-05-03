@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
   container: {
     marginTop: MetricsSizes.large,
     backgroundColor: COLORS.white,
-    borderRadius: getSize.m(6),
     justifyContent: 'center',
   },
   titleStyle: {
@@ -26,6 +25,7 @@ export const styles = StyleSheet.create({
   },
   enabledBorderWidth: {
     borderWidth: 1,
+    borderRadius: getSize.m(5),
   },
   shadowFocus: {
     shadowOffset: { width: getSize.m(4), height: getSize.m(4) },

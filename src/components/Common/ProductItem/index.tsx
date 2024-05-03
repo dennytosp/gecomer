@@ -1,6 +1,12 @@
 import StarRating from '@/components/StarRating'
 import Texting from '@/components/Texting'
+import { routes } from '@/navigation/routes'
 import { getSize, width } from '@/utils'
+import {
+  NavigationProp,
+  ParamListBase,
+  useNavigation,
+} from '@react-navigation/native'
 import React from 'react'
 import {
   DimensionValue,
@@ -38,9 +44,16 @@ const ProductItem = ({
 }: Props) => {
   const { image, name, discounted, price, promotion } = item
   const columnsSize = width / Number(columns) - getSize.m(20 + 32)
+  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+
+  const onHandleProductItem = () => {
+    if (onPress) return onPress()
+    navigation.navigate(routes.DETAILS, { item })
+  }
 
   return (
-    <View
+    <Pressable
+      onPress={onHandleProductItem}
       style={[
         styles.wrapperProduct,
         Number(columns) > 1 && {
@@ -50,7 +63,7 @@ const ProductItem = ({
         style,
       ]}
     >
-      <Pressable onPress={onPress} style={{ alignItems: 'center' }}>
+      <View style={{ alignItems: 'center' }}>
         <Image
           source={image}
           style={[
@@ -61,7 +74,7 @@ const ProductItem = ({
             },
           ]}
         />
-      </Pressable>
+      </View>
 
       <Texting
         title={name}
@@ -95,7 +108,7 @@ const ProductItem = ({
           />
         )}
       </View>
-    </View>
+    </Pressable>
   )
 }
 

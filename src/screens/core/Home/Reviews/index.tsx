@@ -1,32 +1,32 @@
-import { DATA_REVIEWS, DATA_STAR_REVIEWS, Star } from '@/assets'
-import { ButtonPrimary, Header, ReviewsProduct, Texting } from '@/components'
-import { COLORS, FONTS } from '@/constants'
-import { routes } from '@/navigation/routes'
-import { getSize } from '@/utils'
+import React from 'react'
+import { FlatList, Pressable, ScrollView, View } from 'react-native'
 import {
   NavigationProp,
   ParamListBase,
   useNavigation,
 } from '@react-navigation/native'
-import React from 'react'
-import { FlatList, Pressable, ScrollView, View } from 'react-native'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { DATA_REVIEWS, DATA_STAR_REVIEWS, REVIEWS, Star } from '@/assets'
+import { ButtonPrimary, Header, ReviewsProduct, Texting } from '@/components'
+import { COLORS, FONTS } from '@/constants'
+import { routes } from '@/navigation/routes'
+import { getSize } from '@/utils'
+
 import { styles } from './styles'
+import { faker } from '@faker-js/faker'
 
 const Reviews = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
-  const insets = useSafeAreaInsets()
 
-  const renderReviews = ({ item }: { item: (typeof DATA_REVIEWS)[0] }) => (
+  const renderReviews = ({ item }: { item: (typeof REVIEWS)[0] }) => (
     <View style={[styles.wrapperReviews]}>
       <ReviewsProduct
         name={item.name}
         star={Number(item.star)}
         description={item.description}
         avatar={item.avatar}
-        time={item.time}
+        time={String(item.time)}
         marginBottom={getSize.m(24)}
-        imageReviews
+        imageReviews={true}
       />
     </View>
   )
@@ -56,7 +56,7 @@ const Reviews = () => {
 
   return (
     <View style={[styles.container]}>
-      <Header title={DATA_REVIEWS.length + ' Reviews'} topLine />
+      <Header title={REVIEWS.length + ' Reviews'} topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="never"
@@ -68,14 +68,6 @@ const Reviews = () => {
         >
           <View style={[styles.wrapperCardTop]}>
             {renderFirstClose()}
-            {/* <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={DATA_STAR_REVIEWS}
-              renderItem={renderTabReviews}
-              keyExtractor={(item, index) => `tab-reviews--${index}`}
-            /> */}
-
             {DATA_STAR_REVIEWS.map(renderTabReviews)}
           </View>
         </ScrollView>
@@ -84,7 +76,7 @@ const Reviews = () => {
           nestedScrollEnabled={true}
           scrollEnabled={false}
           showsVerticalScrollIndicator={false}
-          data={DATA_REVIEWS}
+          data={REVIEWS}
           renderItem={renderReviews}
           keyExtractor={(item, index) => `reviews--${index}`}
         />
@@ -93,7 +85,6 @@ const Reviews = () => {
       <ButtonPrimary
         title="Write Review"
         onPress={() => navigation.navigate(routes.WRITE_REVIEW)}
-        style={[{ marginBottom: insets.bottom }]}
       />
     </View>
   )

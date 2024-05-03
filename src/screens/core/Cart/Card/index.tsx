@@ -23,7 +23,8 @@ const Card = () => {
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <CreditCardItem
           method={Method01}
           code="6326912481249875"
@@ -34,7 +35,6 @@ const Card = () => {
 
       <ButtonPrimary
         title="Pay $766.86"
-        atBottom={true}
         onPress={() => navigation.navigate(routes.PURCHASE_SUCCESS)}
         style={[{ marginTop: getSize.m(16) }]}
       />

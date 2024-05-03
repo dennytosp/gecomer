@@ -13,12 +13,10 @@ export const styles = StyleSheet.create({
   wrapperOnEvent: {
     ...AppStyles.rowVCenter,
   },
-  onEdit: {
-    width: getSize.s(77),
-    height: getSize.v(57),
-    backgroundColor: COLORS.primary,
-    borderRadius: getSize.s(5),
-    ...AppStyles.columnCenter,
+  editButton: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: getSize.m(24),
+    marginTop: 0,
   },
   onRemove: {
     marginHorizontal: getSize.m(24),
@@ -27,10 +25,5 @@ export const styles = StyleSheet.create({
     fontSize: getSize.m(14),
     fontFamily: FONTS.bold,
     color: COLORS.secondary,
-  },
-  textEdit: {
-    fontSize: getSize.m(14),
-    fontFamily: FONTS.bold,
-    color: COLORS.white,
   },
 })

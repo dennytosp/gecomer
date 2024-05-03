@@ -1,15 +1,14 @@
 import { COLORS, FONTS } from '@/constants'
-import { getSize } from '@/utils'
+import { AppStyles, getSize } from '@/utils'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   wrapperContent: {
-    paddingHorizontal: getSize.m(16),
     marginBottom: getSize.m(12),
   },
   wrapperTitleTexting: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    paddingHorizontal: getSize.m(16),
+    ...AppStyles.rowTopBetween,
   },
   wrapperSelectSizes: {
     marginBottom: getSize.m(24),
@@ -18,8 +17,7 @@ export const styles = StyleSheet.create({
     width: getSize.s(48),
     height: getSize.v(48),
     borderRadius: getSize.s(60 / 2),
-    alignItems: 'center',
-    justifyContent: 'center',
+    ...AppStyles.columnCenter,
   },
   wrapperSelectColors: {
     marginBottom: getSize.m(24),
@@ -30,13 +28,16 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   wrapperSpecification: {
+    paddingHorizontal: getSize.m(16),
     marginBottom: getSize.m(24),
   },
   wrapperText01: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  wrapperReviewProducts: {},
+  wrapperReviewProducts: {
+    paddingHorizontal: getSize.m(16),
+  },
   wrapperSubTitleStar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -67,5 +68,10 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.bold,
     fontSize: getSize.m(20),
     color: COLORS.primary,
+  },
+  titleYouMight: {
+    marginTop: getSize.m(24),
+    marginBottom: getSize.m(0),
+    paddingHorizontal: getSize.m(16),
   },
 })

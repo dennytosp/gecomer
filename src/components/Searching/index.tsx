@@ -12,12 +12,11 @@ import {
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { styles } from './styles'
+import Texting from '../Texting'
 
 interface Props extends TextInputProps {
-  placeholder?: string
-  value?: string
+  disableInput?: boolean
   onChangeText?: (text: string) => void
-  editable?: boolean
   rightIconInput?: () => JSX.Element
   rightIcon?: () => JSX.Element
   rightIconStart?: () => JSX.Element
@@ -29,7 +28,7 @@ interface Props extends TextInputProps {
 }
 
 const Searching = ({
-  style,
+  disableInput,
   onChangeText,
   rightIconInput,
   rightIcon,
@@ -38,6 +37,7 @@ const Searching = ({
   onPressRight,
   onPressRightInput,
   onPressRightStart,
+  style,
   ...rest
 }: Props) => {
   return (
@@ -47,14 +47,20 @@ const Searching = ({
           isAndroid && { marginTop: getSize.m(16) },
           styles.wrapperHeader,
           style,
-        ]}>
+        ]}
+      >
         <Pressable onPressIn={onPressInput} style={[styles.wrapperSearch]}>
           <SearchPrimary />
-          <TextInput
-            placeholderTextColor={COLORS.grey}
-            style={[styles.input]}
-            {...rest}
-          />
+          {disableInput ? (
+            <Texting title={rest?.placeholder || ''} style={[styles.input]} />
+          ) : (
+            <TextInput
+              placeholderTextColor={COLORS.grey}
+              style={[styles.input]}
+              {...rest}
+            />
+          )}
+
           <Pressable onPress={onPressRightInput}>{rightIconInput}</Pressable>
         </Pressable>
 

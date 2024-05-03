@@ -26,7 +26,8 @@ const FormCard: FC<FormCardProps> = ({ type, buttonTitle }) => {
     <>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <FormInput
           ref={cardNumberRef}
           title="Card Number"
@@ -68,7 +69,6 @@ const FormCard: FC<FormCardProps> = ({ type, buttonTitle }) => {
 
       <ButtonPrimary
         title={buttonTitle}
-        atBottom={true}
         onPress={() => navigation.goBack()}
         style={[{ marginVertical: getSize.m(16) }]}
       />

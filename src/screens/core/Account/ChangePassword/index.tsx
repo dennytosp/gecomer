@@ -26,7 +26,8 @@ const ChangePasswordScreen = () => {
       <Header title="Change Password" topLine />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         <FormInput
           ref={oldPasswordRef}
           title="Old Password"
@@ -59,7 +60,6 @@ const ChangePasswordScreen = () => {
 
       <ButtonPrimary
         title="Save"
-        atBottom={true}
         onPress={onChangePassword}
         style={[{ marginVertical: getSize.m(16) }]}
       />

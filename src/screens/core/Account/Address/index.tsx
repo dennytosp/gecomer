@@ -65,7 +65,6 @@ const Address = ({}: Props) => {
 
       <ButtonPrimary
         title={personalAddress ? 'Add Address' : 'Next'}
-        atBottom={true}
         onPress={() =>
           navigation.navigate(routes.ADD_ADDRESS, {
             addressTitle: 'Add Address',

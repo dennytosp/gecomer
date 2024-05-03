@@ -31,6 +31,7 @@ import {
 } from '@/assets/svg'
 import { COLORS } from '@/constants'
 import { routes } from '@/navigation/routes'
+import { faker } from '@faker-js/faker'
 
 const ONBOARD_DATA = [
   {
@@ -317,6 +318,19 @@ const DATA_COLORS = [
     colors: COLORS.grey,
   },
 ]
+
+faker.seed(50)
+
+export const REVIEWS = [...Array(15).keys()].map((_, i) => {
+  return {
+    userId: faker.string.uuid(),
+    name: faker.person.fullName(),
+    avatar: faker.image.avatar(),
+    time: faker.date.anytime().toDateString(),
+    description: faker.lorem.paragraph(),
+    star: 4,
+  }
+})
 
 const DATA_REVIEWS = [
   {

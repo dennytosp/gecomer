@@ -39,6 +39,7 @@ const ForgotPassword = () => {
     <View style={[styles.wrapperCenter]}>
       <ButtonPrimary
         title="Send"
+        atBottom={false}
         onPress={() =>
           navigation.navigate(routes.AUTHENTICATION, {
             screen: routes.LOGIN,
@@ -71,7 +72,8 @@ const ForgotPassword = () => {
             navigation.navigate(routes.AUTHENTICATION, {
               screen: routes.LOGIN,
             })
-          }>
+          }
+        >
           <Texting
             title="Sign In"
             textStyle={[styles.textSignIn]}

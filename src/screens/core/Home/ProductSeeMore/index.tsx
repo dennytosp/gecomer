@@ -39,7 +39,6 @@ const ProductSeeMore = ({}: Props) => {
     <ProductItem
       item={item}
       columns={numColumns}
-      onPress={() => navigation.navigate(routes.DETAILS, { item })}
       style={[{ marginTop: getSize.m(16) }]}
     />
   )

@@ -4,6 +4,7 @@ import {
   Favorite,
   Favorited,
   PRODUCTS_DATA,
+  REVIEWS,
   photos,
 } from '@/assets'
 import {
@@ -107,25 +108,19 @@ const DetailsContent = ({ name, price }: Props) => {
       </View>
 
       <ReviewsProduct
-        name="Nguyen Tuyet Trinh"
-        star={4}
-        description="Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites."
-        avatar={photos.user8}
-        time="December 10, 2016"
-        imageReviews
+        name={REVIEWS[0].name}
+        star={REVIEWS[0].star}
+        description={REVIEWS[0].description}
+        avatar={REVIEWS[0].avatar}
+        time={REVIEWS[0].time}
+        imageReviews={true}
       />
     </View>
   )
 
-  const renderProducts = ({
-    item,
-    index,
-  }: {
-    item: (typeof PRODUCTS_DATA)[0]
-    index: number
-  }) => (
+  const renderProducts = ({ item }: { item: (typeof PRODUCTS_DATA)[0] }) => (
     <View style={[styles.wrapperProducts]}>
-      <ProductItem item={item} />
+      <ProductItem item={item} onPress={() => {}} />
     </View>
   )
 
@@ -143,15 +138,17 @@ const DetailsContent = ({ name, price }: Props) => {
         </Pressable>
       </View>
 
-      <StarRating startingValue={5} marginVertical={12} imageSize={16} />
+      <View style={[{ paddingHorizontal: getSize.m(16) }]}>
+        <StarRating startingValue={5} marginVertical={12} imageSize={16} />
+        <Texting
+          title={price}
+          textStyle={[styles.textPrice]}
+          style={[{ marginBottom: getSize.m(24) }]}
+        />
 
-      <Texting
-        title={price}
-        textStyle={[styles.textPrice]}
-        style={[{ marginBottom: getSize.m(24) }]}
-      />
+        <Titling title="Select Size" />
+      </View>
 
-      <Titling title="Select Size" />
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -160,10 +157,14 @@ const DetailsContent = ({ name, price }: Props) => {
         ItemSeparatorComponent={() => (
           <View style={[{ marginLeft: getSize.m(16) }]} />
         )}
+        contentContainerStyle={[{ paddingHorizontal: getSize.m(16) }]}
         keyExtractor={(item, index) => `detail-select-size-${index}`}
       />
 
-      <Titling title="Select Color" />
+      <Titling
+        title="Select Color"
+        style={[{ paddingHorizontal: getSize.m(16) }]}
+      />
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -172,18 +173,19 @@ const DetailsContent = ({ name, price }: Props) => {
         ItemSeparatorComponent={() => (
           <View style={[{ marginLeft: getSize.m(16) }]} />
         )}
+        contentContainerStyle={[{ paddingHorizontal: getSize.m(16) }]}
         keyExtractor={(item, index) => `detail-select-color--${index}`}
       />
 
-      <Titling title="Specification" />
+      <Titling
+        title="Specification"
+        style={[{ paddingHorizontal: getSize.m(16) }]}
+      />
 
       {renderSpecification()}
       {renderReviewProducts()}
 
-      <Titling
-        title="You Might Also Like"
-        style={[{ marginTop: getSize.m(24), marginBottom: getSize.m(0) }]}
-      />
+      <Titling title="You Might Also Like" style={[styles.titleYouMight]} />
 
       <FlatList
         horizontal
@@ -193,14 +195,8 @@ const DetailsContent = ({ name, price }: Props) => {
         ItemSeparatorComponent={() => (
           <View style={[{ marginLeft: getSize.m(12) }]} />
         )}
+        contentContainerStyle={[{ paddingHorizontal: getSize.m(16) }]}
         keyExtractor={(item, index) => `detail-product--${index}`}
-      />
-
-      <ButtonPrimary
-        title="Add To Cart"
-        atBottom={true}
-        onPress={() => navigation.navigate(routes.CART)}
-        style={[{ marginTop: getSize.m(16) }]}
       />
     </View>
   )

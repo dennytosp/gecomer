@@ -44,7 +44,8 @@ const Offer = () => {
       <Header title="Your Cart" hideLeftIcon topLine />
       <ScrollView
         keyboardDismissMode="on-drag"
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+      >
         <FlatList
           nestedScrollEnabled={true}
           scrollEnabled={false}
@@ -91,7 +92,6 @@ const Offer = () => {
             })
           }
           style={[{ marginTop: getSize.m(16) }]}
-          atBottom={true}
         />
       </ScrollView>
     </View>

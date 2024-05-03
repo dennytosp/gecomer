@@ -18,7 +18,8 @@ const CreditCard = () => {
   const renderCreditCard = () => (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      keyboardShouldPersistTaps="handled">
+      keyboardShouldPersistTaps="handled"
+    >
       <View style={[styles.wrapperCard]}>
         <CreditCardItem
           style={{ marginBottom: getSize.m(16) }}
@@ -45,7 +46,6 @@ const CreditCard = () => {
 
       <ButtonPrimary
         title="Add Card"
-        atBottom={true}
         onPress={() => navigation.navigate(routes.ADD_CARD)}
         style={[{ marginVertical: getSize.m(16) }]}
       />

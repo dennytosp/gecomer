@@ -1,5 +1,5 @@
 import { More, Search } from '@/assets'
-import { Header } from '@/components'
+import { ButtonPrimary, Header } from '@/components'
 import { routes } from '@/navigation/routes'
 import { getSize } from '@/utils'
 import {
@@ -29,7 +29,7 @@ const Details = ({ route }: Props) => {
     item: {
       image: ImageSourcePropType
       name: string
-      price: string
+      discounted: string
     }
   }
 
@@ -55,10 +55,17 @@ const Details = ({ route }: Props) => {
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         {renderImageContent()}
-        <DetailsContent name={receive?.name} price={receive?.price} />
+        <DetailsContent name={receive?.name} price={receive?.discounted} />
       </ScrollView>
+
+      <ButtonPrimary
+        title="Add To Cart"
+        onPress={() => navigation.navigate(routes.CART)}
+        style={[{ marginTop: getSize.m(16), marginHorizontal: getSize.m(16) }]}
+      />
     </View>
   )
 }

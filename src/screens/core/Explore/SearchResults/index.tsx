@@ -37,7 +37,8 @@ const SearchResults = () => {
 
       <Pressable
         onPress={() => navigation.navigate(routes.CATEGORY)}
-        style={[styles.wrapperRightRows]}>
+        style={[styles.wrapperRightRows]}
+      >
         <Texting
           title="Man Shoes"
           textStyle={[{ fontFamily: FONTS.bold, color: COLORS.secondary }]}
@@ -60,7 +61,6 @@ const SearchResults = () => {
       marginBottom={getSize.m(12)}
       item={item}
       columns={numColumns}
-      onPress={() => navigation.navigate(routes.DETAILS, { item })}
     />
   )
 
@@ -84,7 +84,6 @@ const SearchResults = () => {
         onPressRightStart={() => navigation.navigate(routes.FILTER_SEARCH)}
         onChangeText={text => setValue(text)}
         value={value}
-        editable={true}
       />
 
       {renderCenter()}

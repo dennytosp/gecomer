@@ -87,7 +87,6 @@ const OrderDetails = () => {
 
         <ButtonPrimary
           title="Notify Me"
-          atBottom={true}
           onPress={() => navigation.navigate(routes.COMMON)}
           style={[{ marginTop: getSize.m(16) }]}
         />

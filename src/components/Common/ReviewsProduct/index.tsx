@@ -19,7 +19,7 @@ type Props = {
   star: number
   description: string
   time: string
-  avatar: ImageSourcePropType
+  avatar: string
   marginBottom?: DimensionValue | undefined
   imageReviews?: boolean
   style?: StyleProp<ViewStyle>
@@ -39,7 +39,11 @@ const ReviewsProduct = ({
     <View style={[{ marginBottom }, style]}>
       <Pressable style={[styles.wrapperInfor]}>
         <Pressable style={[styles.wrapperImagePersonReviews]}>
-          <Image source={avatar} style={[styles.imagePersonReviews]} />
+          <Image
+            source={{ uri: avatar }}
+            fadeDuration={0}
+            style={[styles.imagePersonReviews]}
+          />
         </Pressable>
 
         <View style={[styles.rating0]}>
@@ -74,7 +78,7 @@ const ReviewsProduct = ({
         </View>
       )}
 
-      <Texting title={time} textStyle={[{ fontSize: getSize.m(10) }]} />
+      <Texting title={String(time)} textStyle={[{ fontSize: getSize.m(10) }]} />
     </View>
   )
 }

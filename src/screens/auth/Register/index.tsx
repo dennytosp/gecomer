@@ -42,12 +42,13 @@ const Register = () => {
   const renderCenter = () => (
     <View style={[styles.wrapperCenter]}>
       <ButtonPrimary
+        title="Sign Up"
+        atBottom={false}
         onPress={() =>
           navigation.navigate(routes.AUTHENTICATION, {
             screen: routes.LOGIN,
           })
         }
-        title="Sign Up"
       />
     </View>
   )
@@ -100,7 +101,8 @@ const Register = () => {
             navigation.navigate(routes.AUTHENTICATION, {
               screen: routes.LOGIN,
             })
-          }>
+          }
+        >
           <Texting
             title="Sign In"
             textStyle={[styles.textBase]}
@@ -115,7 +117,8 @@ const Register = () => {
     <View style={[styles.container]}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="never">
+        keyboardShouldPersistTaps="never"
+      >
         {renderHeader()}
         {renderInput()}
         {renderCenter()}

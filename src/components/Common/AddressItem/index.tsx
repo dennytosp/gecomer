@@ -2,8 +2,15 @@ import { Delete } from '@/assets'
 import Texting from '@/components/Texting'
 import { getSize } from '@/utils'
 import React from 'react'
-import { Pressable, StyleProp, View, ViewStyle } from 'react-native'
+import {
+  Pressable,
+  StyleProp,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native'
 import { styles } from './styles'
+import ButtonPrimary from '@/components/ButtonPrimary'
 
 type Props = {
   item: { name: string; address: string; phoneNumber: string }
@@ -29,13 +36,15 @@ const AddressItem = ({
       <Texting title={phoneNumber} style={[{ marginBottom: getSize.m(16) }]} />
 
       <View style={[styles.wrapperOnEvent]}>
-        <Pressable style={[styles.onEdit]} onPress={handleButton}>
-          <Texting title={buttonTitle} textStyle={[styles.textEdit]} />
-        </Pressable>
-
-        <Pressable onPress={handleDelete} style={[styles.onRemove]}>
+        <ButtonPrimary
+          title={buttonTitle}
+          onPress={handleButton}
+          atBottom={false}
+          style={[styles.editButton]}
+        />
+        <TouchableOpacity onPress={handleDelete} style={[styles.onRemove]}>
           <Delete />
-        </Pressable>
+        </TouchableOpacity>
       </View>
     </View>
   )

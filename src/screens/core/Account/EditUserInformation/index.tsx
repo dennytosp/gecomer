@@ -23,7 +23,8 @@ const EditUserInformation = () => {
   const renderForm = () => (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      keyboardShouldPersistTaps="handled">
+      keyboardShouldPersistTaps="handled"
+    >
       <FormInput
         ref={firstNameRef}
         title="First Name"
@@ -82,7 +83,6 @@ const EditUserInformation = () => {
 
       <ButtonPrimary
         title="Save"
-        atBottom={true}
         onPress={() => navigation.goBack()}
         style={[{ marginVertical: getSize.m(16) }]}
       />

@@ -39,7 +39,6 @@ const SearchPage = () => {
       <Searching
         rightIconStart={Mic}
         rightIconInput={Remove}
-        editable
         onChangeText={value => setContentSearch(value)}
         placeholder="Enter your search term"
         onPressRightInput={() => Keyboard.dismiss()}

@@ -42,6 +42,7 @@ const Login = () => {
     <View style={[styles.wrapperCenter]}>
       <ButtonPrimary
         title="Sign In"
+        atBottom={false}
         onPress={() => navigation.navigate(routes.COMMON)}
       />
 
@@ -92,7 +93,8 @@ const Login = () => {
         style={[{ marginBottom: getSize.m(16) }]}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate(routes.FORGOT_PASSWORD)}>
+        onPress={() => navigation.navigate(routes.FORGOT_PASSWORD)}
+      >
         <Texting
           title="Forgot Password?"
           textStyle={[styles.textBase, { textAlign: 'center' }]}
@@ -108,7 +110,8 @@ const Login = () => {
             navigation.navigate(routes.AUTHENTICATION, {
               screen: routes.REGISTER,
             })
-          }>
+          }
+        >
           <Texting
             title="Register?"
             textStyle={[styles.textBase]}
@@ -123,7 +126,8 @@ const Login = () => {
     <View style={[styles.container]}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled">
+        keyboardShouldPersistTaps="handled"
+      >
         {renderHeader()}
         {renderInput()}
         {renderCenter()}

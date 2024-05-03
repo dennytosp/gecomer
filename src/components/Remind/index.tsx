@@ -60,13 +60,16 @@ const Remind = ({
       <ButtonPrimary
         title={eventTitle}
         onPress={handleOnEvent}
-        style={[{ marginBottom: getSize.m(16) }]}
+        atBottom={false}
       />
 
       {cancelTitle && (
-        <Pressable onPress={handleOnCancel} style={[styles.wrapperCancel]}>
-          <Texting title={cancelTitle} textStyle={[styles.textCancel]} />
-        </Pressable>
+        <ButtonPrimary
+          title={cancelTitle}
+          onPress={handleOnCancel}
+          outline={true}
+          atBottom={false}
+        />
       )}
     </View>
   )

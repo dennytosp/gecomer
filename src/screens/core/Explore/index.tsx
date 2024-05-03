@@ -2,6 +2,7 @@ import {
   Favorite,
   MAN_FASHION_DATA,
   Notifications,
+  PRODUCTS_DATA_VERTICOLUMNS,
   WOMAN_FASHION_DATA,
 } from '@/assets'
 import { Categories, Searching, Titling } from '@/components'
@@ -23,7 +24,12 @@ const Explore = () => {
     <View style={[styles.wrapperHeader]}>
       <Searching
         rightIcon={Favorite}
-        onPressRight={() => navigation.navigate(routes.FAVORITE)}
+        onPressRight={() => {
+          navigation.navigate(routes.PRODUCT_SEE_MORE, {
+            title: 'Favorite',
+            data: PRODUCTS_DATA_VERTICOLUMNS,
+          })
+        }}
         rightIconStart={Notifications}
         onPressRightStart={() => navigation.navigate(routes.NOTIFICATIONS)}
         placeholder="Search Product"
@@ -46,7 +52,8 @@ const Explore = () => {
 
       <ScrollView
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag">
+        keyboardDismissMode="on-drag"
+      >
         <Titling title="Man Fashion" style={[styles.onScroll]} />
 
         <View style={[{ flexDirection: 'row', flexWrap: 'wrap' }]}>

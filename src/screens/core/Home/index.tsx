@@ -48,12 +48,7 @@ const Home = () => {
   }: {
     item: (typeof PRODUCTS_DATA)[0]
     index: number
-  }) => (
-    <ProductItem
-      onPress={() => navigation.navigate(routes.DETAILS, { item })}
-      item={item}
-    />
-  )
+  }) => <ProductItem item={item} />
 
   const renderProductsVerticalColumns = ({
     item,
@@ -81,6 +76,7 @@ const Home = () => {
         rightIconStart={Notifications}
         onPressRightStart={() => navigation.navigate(routes.NOTIFICATIONS)}
         placeholder="Search Product"
+        disableInput={true}
         onPressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
         style={[styles.marginBase]}
       />
@@ -144,7 +140,7 @@ const Home = () => {
             <View style={[{ marginLeft: getSize.m(12) }]} />
           )}
           keyExtractor={(item, index) => `prod-home-${item.id}`}
-          style={[styles.marginBase]}
+          contentContainerStyle={[styles.marginBase]}
         />
 
         <Titling
@@ -170,7 +166,7 @@ const Home = () => {
             <View style={[{ marginLeft: getSize.m(12) }]} />
           )}
           keyExtractor={(item, index) => `prod-mega-home-${item.id}`}
-          style={[styles.marginBase]}
+          contentContainerStyle={[styles.marginBase]}
         />
 
         <RecommendProduct

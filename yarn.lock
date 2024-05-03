@@ -1629,6 +1629,11 @@
     "@types/hoist-non-react-statics" "^3.3.1"
     hoist-non-react-statics "^3.3.0"
 
+"@faker-js/faker@^8.4.1":
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-8.4.1.tgz#5d5e8aee8fce48f5e189bf730ebd1f758f491451"
+  integrity sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==
+
 "@gorhom/bottom-sheet@^4.5.1":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@gorhom/bottom-sheet/-/bottom-sheet-4.5.1.tgz#1ac4b234a80e7dff263f0b7ac207f92e41562849"
@@ -2683,6 +2688,11 @@
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.12.tgz#d70faba7039d5fca54c83c7dbab41051d2b6f6cb"
   integrity sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==
+
+"@types/lodash@^4.17.0":
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.0.tgz#d774355e41f372d5350a4d0714abb48194a489c3"
+  integrity sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==
 
 "@types/node@*":
   version "20.4.5"

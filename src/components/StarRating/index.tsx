@@ -1,7 +1,7 @@
 import { COLORS } from '@/constants'
 import { getSize } from '@/utils'
 import React from 'react'
-import { DimensionValue, View } from 'react-native'
+import { DimensionValue, StyleProp, View, ViewStyle } from 'react-native'
 import { Rating } from 'react-native-elements'
 import { styles } from './styles'
 
@@ -11,6 +11,7 @@ type Props = {
   readonly?: boolean
   marginVertical?: DimensionValue | undefined
   onFinishRating?: (star: number) => void
+  style?: StyleProp<ViewStyle>
 }
 
 const StarRating = ({
@@ -19,6 +20,7 @@ const StarRating = ({
   readonly,
   marginVertical,
   onFinishRating,
+  style,
 }: Props) => {
   return (
     <View style={[styles.wrapperStar]}>
@@ -30,10 +32,10 @@ const StarRating = ({
         ratingBackgroundColor={COLORS.border}
         onFinishRating={onFinishRating}
         readonly={!readonly}
-        style={{
-          alignItems: 'flex-start',
-          marginVertical: marginVertical ?? 0,
-        }}
+        style={[
+          { alignItems: 'flex-start', marginVertical: marginVertical ?? 0 },
+          style,
+        ]}
       />
     </View>
   )
