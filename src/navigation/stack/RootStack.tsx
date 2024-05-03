@@ -3,9 +3,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'react-native'
-import { TabNavigation } from '.'
-import { routes } from './routes'
-import AuthStack from './stack/AuthStack'
+import { routes } from '../routes'
+import { AuthStack, TabStack } from '.'
 
 const Stack = createNativeStackNavigator()
 
@@ -61,7 +60,8 @@ const MainStackNavigator = () => {
       />
       <Stack.Navigator
         initialRouteName={routeName}
-        screenOptions={{ headerShown: false }}>
+        screenOptions={{ headerShown: false }}
+      >
         <>
           <Stack.Screen
             name={routes.ONBOARD}
@@ -69,7 +69,7 @@ const MainStackNavigator = () => {
           />
 
           <Stack.Screen name={routes.AUTHENTICATION} component={AuthStack} />
-          <Stack.Screen name={routes.COMMON} component={TabNavigation} />
+          <Stack.Screen name={routes.COMMON} component={TabStack} />
           <Stack.Screen name={routes.HOME} component={common.Home} />
           <Stack.Screen name={routes.EXPLORE} component={common.Explore} />
           <Stack.Screen name={routes.CART} component={common.Cart} />
@@ -101,7 +101,7 @@ const MainStackNavigator = () => {
             name={routes.ACTIVITY_NOTIFICATION}
             component={home.ActivityNotification}
           />
-          {/* Dự án từ Ants - Reviews */}
+          {/* A project from Ants - Reviews */}
           <Stack.Screen
             name={routes.ANTS_REVIEWS}
             component={home.AntsReview}
@@ -130,7 +130,6 @@ const MainStackNavigator = () => {
             name={routes.PURCHASE_SUCCESS}
             component={cart.PurchaseSuccess}
           />
-          {/* Dự án từ Ants - Reviews */}
           <Stack.Screen
             name={routes.ADD_ADDRESS}
             component={account.AddAddress}

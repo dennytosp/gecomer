@@ -37,13 +37,15 @@ const Remind = ({
         styles.wrapperEmpty,
         !isAlign && { marginTop: getSize.m(160) },
         style,
-      ]}>
+      ]}
+    >
       <View style={[styles.wrapperContentEmpty]}>
         <Pressable
           style={[
             { backgroundColor: background ?? COLORS.primary },
             styles.wrapperImageTitle,
-          ]}>
+          ]}
+        >
           {icon}
         </Pressable>
 

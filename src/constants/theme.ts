@@ -22,8 +22,8 @@ export const COLORS = {
 }
 
 export const SIZES = {
-  base: getSize.m(10),
-  radius: getSize.m(20),
+  base: getSize.m(16),
+  radius: getSize.m(8),
   width,
   height,
 }

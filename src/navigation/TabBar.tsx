@@ -14,11 +14,7 @@ import {
 import { Badge } from 'react-native-elements'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
-const CustomTabBar = ({
-  state,
-  descriptors,
-  navigation,
-}: BottomTabBarProps) => {
+const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
   const { bottom } = useSafeAreaInsets()
 
   return (
@@ -26,7 +22,8 @@ const CustomTabBar = ({
       style={[
         styles.wrapTabBar,
         { paddingBottom: Platform.OS === 'ios' ? bottom : 10 },
-      ]}>
+      ]}
+    >
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key]
 
@@ -78,7 +75,8 @@ const CustomTabBar = ({
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={onPress}
-            style={[styles.btn]}>
+            style={[styles.btn]}
+          >
             {index === 3 && (
               <Badge
                 status="error"
@@ -100,7 +98,8 @@ const CustomTabBar = ({
               style={[
                 { color: isFocused ? COLORS.primary : COLORS.grey },
                 styles.textLabel,
-              ]}>
+              ]}
+            >
               {String(label)}
             </Text>
           </Pressable>
@@ -109,7 +108,8 @@ const CustomTabBar = ({
     </View>
   )
 }
-export default CustomTabBar
+
+export default TabBar
 
 const styles = StyleSheet.create({
   btn: { flex: 1, alignItems: 'center' },
