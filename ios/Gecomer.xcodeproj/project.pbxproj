@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* GecomerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GecomerTests.m */; };
+		0569763894EE13BED5107748 /* libPods-Gecomer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BA321124F323BEA2DFAB5A /* libPods-Gecomer.a */; };
 		0998A87C48DB408094D1EB7E /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5AD3A15FD1146E580AB915C /* Poppins-ExtraLight.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -21,11 +21,9 @@
 		44AD85C9D51F4856BA0367B1 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0906D9BC3B494D1E98056230 /* Poppins-ExtraBold.ttf */; };
 		4968CF2978BD42EE8E726D13 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D7CD492D9574A84A6FC9909 /* Poppins-Bold.ttf */; };
 		5FB588F700FD4C3B9CA89A52 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FC54F7CB3F4841A42B09DB /* Poppins-Medium.ttf */; };
-		765362BEEA8062E2DCD07DAB /* libPods-Gecomer-GecomerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6820FE834850AD9052076A1A /* libPods-Gecomer-GecomerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		ACDE239D9E5546E9B821FA9D /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF75EB01A5914CAFB4292978 /* Poppins-LightItalic.ttf */; };
 		ADEE62FC989347AE8705EC2A /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EEBA12D174E44B483E0E25E /* Poppins-MediumItalic.ttf */; };
-		B047F27C9189A3BBACE7112F /* libPods-Gecomer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47842DD2CAD77C9944F5D10E /* libPods-Gecomer.a */; };
 		B6FDF27F0B7F477299FFE6FC /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1E61CA56DEE4D3DB950901D /* Poppins-Italic.ttf */; };
 		CB81BA3F2BE5F268003F824A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CB81BA3E2BE5F268003F824A /* PrivacyInfo.xcprivacy */; };
 		D673405A26584D98BC86BA66 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57D881FD517A42EE8FF98DC1 /* Poppins-Regular.ttf */; };
@@ -35,21 +33,7 @@
 		F899B76722FA4C7DB499EB94 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0D03E8DBE294E8692C929B5 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Gecomer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* GecomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GecomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* GecomerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GecomerTests.m; sourceTree = "<group>"; };
-		0296750E8E3F683C4ABDC065 /* Pods-Gecomer-GecomerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gecomer-GecomerTests.debug.xcconfig"; path = "Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0906D9BC3B494D1E98056230 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Gecomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gecomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Gecomer/AppDelegate.h; sourceTree = "<group>"; };
@@ -58,18 +42,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Gecomer/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Gecomer/main.m; sourceTree = "<group>"; };
 		1CA4F6C5913D4EFABA12565C /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		24BA321124F323BEA2DFAB5A /* libPods-Gecomer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gecomer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2733E2593BEF4DD9ABC3909B /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
-		2F0DA8ED0E152A0A8D1EFFBB /* Pods-Gecomer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gecomer.release.xcconfig"; path = "Target Support Files/Pods-Gecomer/Pods-Gecomer.release.xcconfig"; sourceTree = "<group>"; };
 		315288D9759A4F25B5187EF3 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BoldItalic.ttf"; path = "../src/assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		3D7CD492D9574A84A6FC9909 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		47842DD2CAD77C9944F5D10E /* libPods-Gecomer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gecomer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B3B558884BDF6DF4417C87C /* Pods-Gecomer-GecomerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gecomer-GecomerTests.release.xcconfig"; path = "Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E6357FF9FB74570A62C48A0 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../src/assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		57D881FD517A42EE8FF98DC1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		6820FE834850AD9052076A1A /* libPods-Gecomer-GecomerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gecomer-GecomerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB9D6638967AD6D6636476C /* Pods-Gecomer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gecomer.release.xcconfig"; path = "Target Support Files/Pods-Gecomer/Pods-Gecomer.release.xcconfig"; sourceTree = "<group>"; };
 		7EEBA12D174E44B483E0E25E /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		80F6F77BCE2F4CEB8EB7F8AD /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
-		812159977F64F23DA3CA08BC /* Pods-Gecomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gecomer.debug.xcconfig"; path = "Target Support Files/Pods-Gecomer/Pods-Gecomer.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Gecomer/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88C473DEEB384EF0A3FCC33A /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		AF75EB01A5914CAFB4292978 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../src/assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -79,48 +60,24 @@
 		CB81BA3E2BE5F268003F824A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Gecomer/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		D5AD3A15FD1146E580AB915C /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		E0D03E8DBE294E8692C929B5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		E1753719718F325EE75B83F3 /* Pods-Gecomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gecomer.debug.xcconfig"; path = "Target Support Files/Pods-Gecomer/Pods-Gecomer.debug.xcconfig"; sourceTree = "<group>"; };
 		E4FC54F7CB3F4841A42B09DB /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		E9E3E58FB7D64C07B89AFA42 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				765362BEEA8062E2DCD07DAB /* libPods-Gecomer-GecomerTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B047F27C9189A3BBACE7112F /* libPods-Gecomer.a in Frameworks */,
+				0569763894EE13BED5107748 /* libPods-Gecomer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* GecomerTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* GecomerTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = GecomerTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* Gecomer */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				47842DD2CAD77C9944F5D10E /* libPods-Gecomer.a */,
-				6820FE834850AD9052076A1A /* libPods-Gecomer-GecomerTests.a */,
+				24BA321124F323BEA2DFAB5A /* libPods-Gecomer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,7 +113,6 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* Gecomer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* GecomerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -172,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* Gecomer.app */,
-				00E356EE1AD99517003FC87E /* GecomerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,10 +159,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				812159977F64F23DA3CA08BC /* Pods-Gecomer.debug.xcconfig */,
-				2F0DA8ED0E152A0A8D1EFFBB /* Pods-Gecomer.release.xcconfig */,
-				0296750E8E3F683C4ABDC065 /* Pods-Gecomer-GecomerTests.debug.xcconfig */,
-				4B3B558884BDF6DF4417C87C /* Pods-Gecomer-GecomerTests.release.xcconfig */,
+				E1753719718F325EE75B83F3 /* Pods-Gecomer.debug.xcconfig */,
+				6EB9D6638967AD6D6636476C /* Pods-Gecomer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -216,39 +168,18 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* GecomerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GecomerTests" */;
-			buildPhases = (
-				B5D19EA2836D6284B314F4B1 /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				DB0236063A06567AA14FA20F /* [CP] Embed Pods Frameworks */,
-				3D076C741A1DDA43CD23A791 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = GecomerTests;
-			productName = GecomerTests;
-			productReference = 00E356EE1AD99517003FC87E /* GecomerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* Gecomer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Gecomer" */;
 			buildPhases = (
-				3EC833FEA3911D37A2B7F0BD /* [CP] Check Pods Manifest.lock */,
+				EFC2790C5D64E774B987CE71 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				0DAD21923369CE0B48D2FD6D /* [CP] Embed Pods Frameworks */,
-				BDE15829275316AAE9995FA5 /* [CP] Copy Pods Resources */,
+				1262014014353219F14A4787 /* [CP] Embed Pods Frameworks */,
+				E44124C4A2DF81D50AAAB3FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,10 +198,6 @@
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
 					};
@@ -290,19 +217,11 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* Gecomer */,
-				00E356ED1AD99517003FC87E /* GecomerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,7 +269,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		0DAD21923369CE0B48D2FD6D /* [CP] Embed Pods Frameworks */ = {
+		1262014014353219F14A4787 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,24 +286,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gecomer/Pods-Gecomer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D076C741A1DDA43CD23A791 /* [CP] Copy Pods Resources */ = {
+		E44124C4A2DF81D50AAAB3FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gecomer/Pods-Gecomer-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gecomer/Pods-Gecomer-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gecomer/Pods-Gecomer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3EC833FEA3911D37A2B7F0BD /* [CP] Check Pods Manifest.lock */ = {
+		EFC2790C5D64E774B987CE71 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,62 +323,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5D19EA2836D6284B314F4B1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Gecomer-GecomerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BDE15829275316AAE9995FA5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gecomer/Pods-Gecomer-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gecomer/Pods-Gecomer-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gecomer/Pods-Gecomer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB0236063A06567AA14FA20F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gecomer-GecomerTests/Pods-Gecomer-GecomerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -484,14 +347,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* GecomerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,71 +358,10 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Gecomer */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0296750E8E3F683C4ABDC065 /* Pods-Gecomer-GecomerTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 7UGGY7566G;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GecomerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ocean.gecomer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gecomer.app/Gecomer";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B3B558884BDF6DF4417C87C /* Pods-Gecomer-GecomerTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 7UGGY7566G;
-				INFOPLIST_FILE = GecomerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ocean.gecomer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gecomer.app/Gecomer";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 812159977F64F23DA3CA08BC /* Pods-Gecomer.debug.xcconfig */;
+			baseConfigurationReference = E1753719718F325EE75B83F3 /* Pods-Gecomer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -599,7 +393,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F0DA8ED0E152A0A8D1EFFBB /* Pods-Gecomer.release.xcconfig */;
+			baseConfigurationReference = 6EB9D6638967AD6D6636476C /* Pods-Gecomer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -786,15 +580,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GecomerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Gecomer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

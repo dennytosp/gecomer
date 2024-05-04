@@ -43,7 +43,6 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-
 target 'Gecomer' do
   # React Native Maps dependencies
   rn_maps_path = '../node_modules/react-native-maps'
@@ -55,11 +54,6 @@ target 'Gecomer' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
-
-  target 'GecomerTests' do
-    inherit! :complete
-    # Pods for testing
-  end
 
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
