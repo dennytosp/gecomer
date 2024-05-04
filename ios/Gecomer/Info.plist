@@ -26,56 +26,53 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>localhost</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-		</dict>
+	<!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
 	</dict>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>Allows ${APP_NAME} to access Apple Music to play music and display information about artists, albums, and songs.</string>
+	<string>Allows ${PRODUCT_NAME} to access Apple Music to play music and display information about artists, albums, and songs.</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Allows ${APP_NAME} to access Bluetooth to connect with other peripherals.</string>
+	<string>Allows ${PRODUCT_NAME} to access Bluetooth to connect with other peripherals.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Allows ${APP_NAME} to access Bluetooth to connect with other peripherals.</string>
+	<string>Allows ${PRODUCT_NAME} to access Bluetooth to connect with other peripherals.</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's calendar to display events and related information.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's calendar to display events and related information.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's camera to capture photos or record videos.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's camera to capture photos or record videos.</string>
 	<key>NSContactsUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's contacts to display information related to contacts.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's contacts to display information related to contacts.</string>
 	<key>NSFaceIDUsageDescription</key>
-	<string>Allows ${APP_NAME} to use Face ID to authenticate the user.</string>
+	<string>Allows ${PRODUCT_NAME} to use Face ID to authenticate the user.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Allow $(APP_NAME) to access this device's location? We will send you the locations about the ${APP_NAME} stores at the nearby you.</string>
+	<string>Allow $(PRODUCT_NAME) to access this device's location? We will send you the locations about the ${PRODUCT_NAME} stores at the nearby you.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Allow $(APP_NAME) to access this device's location? We will send you the locations about the ${APP_NAME} stores at the nearby you.</string>
+	<string>Allow $(PRODUCT_NAME) to access this device's location? We will send you the locations about the ${PRODUCT_NAME} stores at the nearby you.</string>
 	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
 	<dict>
 		<key>YOUR-PURPOSE-KEY</key>
 		<string>YOUR TEXT</string>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow $(APP_NAME) to access this device's location? We will send you the locations about the ${APP_NAME} stores at the nearby you.</string>
+	<string>Allow $(PRODUCT_NAME) to access this device's location? We will send you the locations about the ${PRODUCT_NAME} stores at the nearby you.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's microphone to record audio or use voice recognition features.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's microphone to record audio or use voice recognition features.</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's motion sensor to use motion-related features.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's motion sensor to use motion-related features.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Allows ${APP_NAME} to save photos to the device's photo library.</string>
+	<string>Allows ${PRODUCT_NAME} to save photos to the device's photo library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's photo library to display and manage photos.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's photo library to display and manage photos.</string>
 	<key>NSRemindersUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's reminder list to display events and related information.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's reminder list to display events and related information.</string>
 	<key>NSSiriUsageDescription</key>
-	<string>Allows ${APP_NAME} to access Siri to understand and execute user commands.</string>
+	<string>Allows ${PRODUCT_NAME} to access Siri to understand and execute user commands.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Allows ${APP_NAME} to access the device's speech recognition feature to understand user commands.</string>
+	<string>Allows ${PRODUCT_NAME} to access the device's speech recognition feature to understand user commands.</string>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>Allows ${APP_NAME} to track users on the device to provide and display relevant advertising.</string>
+	<string>Allows ${PRODUCT_NAME} to track users on the device to provide and display relevant advertising.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Black.ttf</string>
@@ -101,7 +98,7 @@
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7</string>
+		<string>arm64</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

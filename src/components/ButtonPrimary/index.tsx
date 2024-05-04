@@ -1,9 +1,10 @@
 import React from 'react'
-import { StyleProp, TouchableOpacity, ViewStyle } from 'react-native'
+import { Platform, StyleProp, TouchableOpacity, ViewStyle } from 'react-native'
 import Texting from '../Texting'
 import { styles } from './styles'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { COLORS } from '@/constants'
+import { getSize, isIos } from '@/utils'
 
 type Props = {
   title: string
@@ -31,7 +32,7 @@ const ButtonPrimary = (props: Props) => {
       style={[
         styles.wrapperButton,
         outline ? styles.outline : styles.shadow,
-        atBottom && { marginBottom: insets.bottom },
+        atBottom && { marginBottom: isIos ? insets.bottom : getSize.m(16) },
         style,
       ]}
     >
