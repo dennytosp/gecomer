@@ -6,7 +6,6 @@ import React from 'react'
 import {
   DimensionValue,
   Image,
-  ImageSourcePropType,
   Pressable,
   StyleProp,
   View,
@@ -15,26 +14,21 @@ import {
 import { styles } from './styles'
 
 type Props = {
-  name: string
-  star: number
-  description: string
-  time: string
-  avatar: string
+  item: {
+    name: string
+    star: number
+    description: string
+    time: string
+    avatar: string
+  }
   marginBottom?: DimensionValue | undefined
   imageReviews?: boolean
   style?: StyleProp<ViewStyle>
 }
 
-const ReviewsProduct = ({
-  name,
-  star,
-  description,
-  time,
-  avatar,
-  imageReviews,
-  marginBottom,
-  style,
-}: Props) => {
+const ReviewsProduct = ({ item, imageReviews, marginBottom, style }: Props) => {
+  const { name, star, description, time, avatar } = item
+
   return (
     <View style={[{ marginBottom }, style]}>
       <Pressable style={[styles.wrapperInfor]}>

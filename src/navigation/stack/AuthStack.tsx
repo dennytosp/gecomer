@@ -7,10 +7,7 @@ const Stack = createNativeStackNavigator()
 
 const AuthStack = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{ headerShown: false }}
-      initialRouteName={routes.SPLASH}>
-      <Stack.Screen name={routes.SPLASH} component={authentication.Splash} />
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name={routes.LOGIN} component={authentication.Login} />
       <Stack.Screen
         name={routes.FORGOT_PASSWORD}

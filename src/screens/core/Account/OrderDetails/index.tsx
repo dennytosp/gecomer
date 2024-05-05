@@ -53,6 +53,8 @@ const OrderDetails = () => {
       >
         <Titling title="Product" style={[{ marginTop: getSize.m(16) }]} />
         <FlatList
+          nestedScrollEnabled
+          scrollEnabled={false}
           showsVerticalScrollIndicator={false}
           data={DATA_CART}
           renderItem={({ item, index }) => <Cart item={item} index={index} />}

@@ -15,6 +15,7 @@
     "pretty": "prettier --write ./src/*",
     "pod-clean": "cd ios && pod deintegrate && cd ..",
     "pod-clear": "cd ios && rm -rf Pods && rm -rf Podfile.lock && pod install && cd ..",
+    "xc": "cd ios && open *.xcworkspace && cd ..",
     "bundle-install": "cd ios && bundle install && cd ..",
     "fresh-install": "watchman watch-del-all && rm -rf ios/build/ && rm -rf node_modules/ && rm -rf ios/Pods/ && yarn cache clean && yarn install && cd ios && xcodebuild clean && rm -rf ~/Library/Caches/CocoaPods && rm -rf Pods && rm -rf ~/Library/Developer/Xcode/DerivedData/* && pod cache clean --all && pod deintegrate && pod setup && pod install && cd ..",
     "fresh-start": "yarn run fresh-install && yarn run reset",

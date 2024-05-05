@@ -12,10 +12,10 @@
 set -e
 
 # Define variables
-logo_file="assets/svgs/light_logo.svg"
-background_color="F5FCFF"
-logo_width=100
-assets_output="assets"
+logo_file="src/assets/images/icons/splash-icon.png"
+background_color="33A0FF"
+logo_width=72
+assets_output="src/assets/images/icons/bootsplash_logo"
 flavor="main"
 html_file="index.html"
 

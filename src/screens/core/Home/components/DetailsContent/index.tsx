@@ -107,14 +107,7 @@ const DetailsContent = ({ name, price }: Props) => {
         />
       </View>
 
-      <ReviewsProduct
-        name={REVIEWS[0].name}
-        star={REVIEWS[0].star}
-        description={REVIEWS[0].description}
-        avatar={REVIEWS[0].avatar}
-        time={REVIEWS[0].time}
-        imageReviews={true}
-      />
+      <ReviewsProduct item={REVIEWS[0]} imageReviews={true} />
     </View>
   )
 

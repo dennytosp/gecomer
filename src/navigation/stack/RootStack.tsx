@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'react-native'
+import BootSplash from 'react-native-bootsplash'
 import { account, authentication, cart, common, explore, home } from '@/screens'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -14,6 +15,18 @@ const MainStackNavigator = () => {
   const [isFirstLaunch, setIsFirstLaunch] = useState<boolean | null>(null)
 
   let routeName
+
+  useEffect(() => {
+    const onInitialized = async () => {}
+    StatusBar.setBarStyle('light-content')
+
+    onInitialized().finally(async () => {
+      setTimeout(async () => {
+        StatusBar.setBarStyle('dark-content')
+        await BootSplash.hide({ fade: true })
+      }, 500)
+    })
+  }, [])
 
   useEffect(() => {
     let isCancelled = false
@@ -53,11 +66,7 @@ const MainStackNavigator = () => {
 
   return (
     <>
-      <StatusBar
-        barStyle="dark-content"
-        translucent={true}
-        backgroundColor="transparent"
-      />
+      <StatusBar translucent={true} backgroundColor="transparent" />
       <Stack.Navigator
         initialRouteName={routeName}
         screenOptions={{ headerShown: false }}
