@@ -1,5 +1,5 @@
-import AuthStack from './AuthStack'
-import RootStack from './RootStack'
-import TabStack from './TabStack'
+import AuthStack from './auth-stack'
+import RootStack from './root-stack'
+import TabStack from './tab-stack'
 
 export { AuthStack, RootStack, TabStack }
