@@ -1,27 +1,28 @@
-import StarRating from '@/components/star-rating/star-rating.component'
-import Texting from '@/components/text/text.component'
-import { routes } from '@/navigation/routes'
-import { getSize, width } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import {
   DimensionValue,
-  Image,
-  ImageSourcePropType,
+  ImageRequireSource,
   Pressable,
   StyleProp,
   View,
   ViewStyle,
 } from 'react-native'
+import { SpeedImage } from '@/components/speed-image/speed-image.component'
+import {
+  NavigationProp,
+  ParamListBase,
+  useNavigation,
+} from '@react-navigation/native'
+import StarRating from '@/components/star-rating/star-rating.component'
+import Text from '@/components/text/text.component'
+import { routes } from '@/navigators/routes'
+import { getSize, width } from '@/utils'
+import { Source } from 'react-native-fast-image'
 import { styles } from './product-item.style'
 
 type Props = {
   item: {
-    image: ImageSourcePropType
+    image: Source | ImageRequireSource
     name: string
     discounted: string
     price: string
@@ -64,7 +65,7 @@ const ProductItem = ({
       ]}
     >
       <View style={{ alignItems: 'center' }}>
-        <Image
+        <SpeedImage
           source={image}
           style={[
             styles.imageProducts,
@@ -76,7 +77,7 @@ const ProductItem = ({
         />
       </View>
 
-      <Texting
+      <Text
         title={name}
         textStyle={[
           styles.textName,
@@ -87,7 +88,7 @@ const ProductItem = ({
 
       {columns && <StarRating startingValue={4} imageSize={12} />}
 
-      <Texting
+      <Text
         title={discounted}
         textStyle={[styles.textBase]}
         style={[
@@ -99,9 +100,9 @@ const ProductItem = ({
       />
 
       <View style={[styles.wrapperRowPrice]}>
-        <Texting title={price} textStyle={[styles.textPrice]} />
+        <Text title={price} textStyle={[styles.textPrice]} />
         {promotion && (
-          <Texting
+          <Text
             title={promotion}
             textStyle={[styles.textPromotion]}
             style={[{ marginLeft: getSize.m(8) }]}

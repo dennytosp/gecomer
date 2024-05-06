@@ -1,6 +1,6 @@
 import { photos } from '@/assets'
 import StarRating from '@/components/star-rating/star-rating.component'
-import Texting from '@/components/text/text.component'
+import Text from '@/components/text/text.component'
 import { getSize } from '@/utils'
 import React from 'react'
 import {
@@ -46,12 +46,12 @@ const ProductReviewItem = ({
         </Pressable>
 
         <View style={[styles.rating0]}>
-          <Texting title={name} textStyle={[styles.textName]} />
+          <Text title={name} textStyle={[styles.textName]} />
           <StarRating startingValue={star} imageSize={12} />
         </View>
       </Pressable>
 
-      <Texting
+      <Text
         title={description}
         textStyle={[styles.textDescription]}
         style={[{ marginBottom: getSize.m(8) }]}
@@ -77,7 +77,7 @@ const ProductReviewItem = ({
         </View>
       )}
 
-      <Texting title={String(time)} textStyle={[{ fontSize: getSize.m(10) }]} />
+      <Text title={String(time)} textStyle={[{ fontSize: getSize.m(10) }]} />
     </View>
   )
 }

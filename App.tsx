@@ -4,7 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 import { NavigationContainer } from '@react-navigation/native'
 import { BackgroundTimerProvider } from '@/context/background-timer-provider.context'
-import RootStack from '@/navigation/stack/root-stack'
+import RootStack from '@/navigators/stack/root-stack'
 import { AppStyles } from '@/styles'
 
 const App = () => {

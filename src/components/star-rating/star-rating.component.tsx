@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS } from '@/theme'
 import { getSize } from '@/utils'
 import React from 'react'
 import { DimensionValue, StyleProp, View, ViewStyle } from 'react-native'

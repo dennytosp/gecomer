@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { MetricsSizes } from '../utils/responsive'
+import { MetricsSizes } from '../utils/scale'
 
 export const AppStyles = StyleSheet.create({
   // column

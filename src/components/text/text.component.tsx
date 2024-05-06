@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   StyleProp,
-  Text,
+  Text as RNText,
   TextInputProps,
   TextStyle,
   View,
@@ -16,16 +16,16 @@ type Props = {
   inputProps?: TextInputProps
 }
 
-const Texting = (props: Props) => {
+const Text = (props: Props) => {
   const { title, textStyle, style, inputProps } = props
 
   return (
     <View style={[styles.container, style]}>
-      <Text style={[styles.text, textStyle]} {...inputProps}>
+      <RNText style={[styles.text, textStyle]} {...inputProps}>
         {title}
-      </Text>
+      </RNText>
     </View>
   )
 }
 
-export default Texting
+export default Text

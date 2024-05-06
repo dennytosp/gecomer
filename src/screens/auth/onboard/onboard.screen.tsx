@@ -1,13 +1,14 @@
 import { ONBOARD_DATA } from '@/assets'
-import { COLORS } from '@/constants'
-import { routes } from '@/navigation/routes'
+import { Text } from '@/components'
+import { routes } from '@/navigators/routes'
+import { COLORS } from '@/theme'
 import {
   NavigationProp,
   ParamListBase,
   useNavigation,
 } from '@react-navigation/native'
 import React from 'react'
-import { Image, StatusBar, Text, View } from 'react-native'
+import { Image, StatusBar, View } from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'
 import LinearGradient from 'react-native-linear-gradient'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -20,7 +21,7 @@ const Onboard = () => {
   const renderNextButton = () => {
     return (
       <View style={[styles.rightTextWrapper]}>
-        <Text style={[styles.rightText]}>Next</Text>
+        <Text textStyle={[styles.rightText]} title="Next" />
       </View>
     )
   }
@@ -31,8 +32,9 @@ const Onboard = () => {
         colors={[COLORS.black01, COLORS.black01]}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
-        style={[styles.linearGradient, styles.doneButtonWrapper]}>
-        <Text style={[styles.doneButtonText]}>Go</Text>
+        style={[styles.linearGradient, styles.doneButtonWrapper]}
+      >
+        <Text textStyle={[styles.doneButtonText]} title="Go" />
       </LinearGradient>
     )
   }
@@ -40,14 +42,14 @@ const Onboard = () => {
   const renderPrevButton = () => {
     return (
       <View style={[styles.leftTextWrapper]}>
-        <Text style={[styles.leftText]}>Back</Text>
+        <Text textStyle={[styles.leftText]} title="Back" />
       </View>
     )
   }
 
   const handleDone = () => {
     navigation.navigate(routes.AUTHENTICATION, {
-      screen: routes.REGISTER,
+      screen: routes.SIGN_UP,
     })
   }
 
@@ -63,8 +65,8 @@ const Onboard = () => {
               style={[styles.image, { marginTop: top + 125 }]}
             />
             <View>
-              <Text style={[styles.title]}>{item.title}</Text>
-              <Text style={[styles.text]}>{item.text}</Text>
+              <Text textStyle={[styles.title]} title={item.title} />
+              <Text textStyle={[styles.text]} title={item.text} />
             </View>
           </View>
         )}

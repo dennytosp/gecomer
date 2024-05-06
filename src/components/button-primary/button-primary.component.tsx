@@ -1,10 +1,10 @@
-import React from 'react'
-import { Platform, StyleProp, TouchableOpacity, ViewStyle } from 'react-native'
-import Texting from '../text/text.component'
-import { styles } from './button-primary.style'
+import { StyleProp, TouchableOpacity, ViewStyle } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { COLORS } from '@/constants'
+import { COLORS } from '@/theme'
 import { getSize, isIos } from '@/utils'
+import React from 'react'
+import Text from '../text/text.component'
+import { styles } from './button-primary.style'
 
 type Props = {
   title: string
@@ -36,7 +36,7 @@ const ButtonPrimary = (props: Props) => {
         style,
       ]}
     >
-      <Texting
+      <Text
         title={title}
         textStyle={[
           styles.textButton,

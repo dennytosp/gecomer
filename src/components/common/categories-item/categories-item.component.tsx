@@ -1,4 +1,4 @@
-import Texting from '@/components/text/text.component'
+import Text from '@/components/text/text.component'
 import { getSize, width } from '@/utils'
 import React from 'react'
 import { Pressable, StyleProp, View, ViewStyle } from 'react-native'
@@ -31,7 +31,7 @@ const CategoriesItem = ({ image, title, onPress, style }: Props) => {
             {image}
           </Pressable>
 
-          <Texting title={title} textStyle={[styles.textTitle]} />
+          <Text title={title} textStyle={[styles.textTitle]} />
         </Pressable>
       </View>
     </View>

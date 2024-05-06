@@ -1,5 +1,5 @@
-import Texting from '@/components/text/text.component'
-import Titling from '@/components/title/title.component'
+import Text from '@/components/text/text.component'
+import Title from '@/components/title/title.component'
 import { getSize } from '@/utils'
 import React from 'react'
 import { Pressable, StyleProp, View, ViewStyle } from 'react-native'
@@ -19,14 +19,14 @@ const NotificationItem = ({ image, title, content, time, style }: Props) => {
       <Pressable>{image}</Pressable>
 
       <View style={[styles.wrapperContentCenter]}>
-        <Titling title={title} style={[{ marginBottom: getSize.m(8) }]} />
+        <Title title={title} style={[{ marginBottom: getSize.m(8) }]} />
 
-        <Texting
+        <Text
           title={content}
           textStyle={[styles.textContent]}
           style={[{ marginBottom: getSize.m(8) }]}
         />
-        <Texting title={time} textStyle={[styles.textTime]} />
+        <Text title={time} textStyle={[styles.textTime]} />
       </View>
     </View>
   )
