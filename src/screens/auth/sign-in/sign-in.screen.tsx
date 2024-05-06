@@ -1,7 +1,7 @@
 import { Email, Facebook, Google, LogoPrimary, Password } from '@/assets'
-import { ButtonPrimary, ButtonSocial, FormInput, Texting } from '@/components'
-import { FONTS } from '@/constants'
-import { routes } from '@/navigation/routes'
+import { ButtonPrimary, ButtonSocial, FormInput, Text } from '@/components'
+import { FONTS } from '@/theme'
+import { routes } from '@/navigators/routes'
 import { getSize } from '@/utils'
 import {
   NavigationProp,
@@ -13,7 +13,7 @@ import { Pressable, ScrollView, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './sign-in.style'
 
-const Login = () => {
+const SignIn = () => {
   const { top } = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
@@ -26,12 +26,12 @@ const Login = () => {
         <LogoPrimary />
       </Pressable>
 
-      <Texting
+      <Text
         title="Welcome to Gecomer"
         textStyle={[styles.textTitle]}
         style={[{ marginBottom: getSize.m(8) }]}
       />
-      <Texting
+      <Text
         title="Sign in to continue"
         style={[{ marginBottom: getSize.m(28) }]}
       />
@@ -48,7 +48,7 @@ const Login = () => {
 
       <View style={[styles.wrapperOr]}>
         <View style={[styles.line]} />
-        <Texting
+        <Text
           title="OR"
           textStyle={[{ fontFamily: FONTS.bold }]}
           style={[{ paddingHorizontal: getSize.m(24) }]}
@@ -95,7 +95,7 @@ const Login = () => {
       <TouchableOpacity
         onPress={() => navigation.navigate(routes.FORGOT_PASSWORD)}
       >
-        <Texting
+        <Text
           title="Forgot Password?"
           textStyle={[styles.textBase, { textAlign: 'center' }]}
           style={[{ marginBottom: getSize.m(8) }]}
@@ -103,16 +103,16 @@ const Login = () => {
       </TouchableOpacity>
 
       <View style={[styles.wrapperTextFooter]}>
-        <Texting title="Don’t have an account?" />
+        <Text title="Don’t have an account?" />
 
         <TouchableOpacity
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
-              screen: routes.REGISTER,
+              screen: routes.SIGN_UP,
             })
           }
         >
-          <Texting
+          <Text
             title="Register?"
             textStyle={[styles.textBase]}
             style={[{ marginHorizontal: getSize.m(4) }]}
@@ -137,4 +137,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default SignIn

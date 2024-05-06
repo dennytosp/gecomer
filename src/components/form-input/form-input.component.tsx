@@ -1,6 +1,6 @@
 import { Pressable, TextInput, TouchableOpacity, View } from 'react-native'
 import { icons } from '@/assets'
-import { COLORS } from '@/constants'
+import { COLORS } from '@/theme'
 import { AppStyles } from '@/styles'
 import { getSize } from '@/utils'
 import React, {
@@ -13,7 +13,7 @@ import React, {
   useState,
 } from 'react'
 import { SpeedImage } from '../speed-image/speed-image.component'
-import Texting from '../text/text.component'
+import Text from '../text/text.component'
 import { styles } from './form-input.style'
 import { InputProps, InputRef } from './form-input.type'
 
@@ -105,7 +105,7 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
     if (isError && (isHintError || isHintErrorEmpty)) {
       return (
         <>
-          <Texting
+          <Text
             title={inputValue ? hintError : hintErrorEmpty}
             textStyle={[styles.textErrorWarning]}
           />
@@ -123,7 +123,7 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
       ]}
     >
       {title && (
-        <Texting title={title} textStyle={[styles.titleStyle, titleStyle]} />
+        <Text title={title} textStyle={[styles.titleStyle, titleStyle]} />
       )}
 
       <View
@@ -160,7 +160,7 @@ const FormInput = forwardRef((props: InputProps, ref: Ref<InputRef>) => {
           )}
 
           {isDisabled ? (
-            <Texting title={inputValue} style={[styles.textInput]} />
+            <Text title={inputValue} style={[styles.textInput]} />
           ) : (
             <TextInput
               ref={inputRef}

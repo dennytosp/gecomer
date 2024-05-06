@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { getSize } from '@/utils'
-import { COLORS } from '@/constants'
+import { COLORS } from '@/theme'
 
 export const styles = StyleSheet.create({
   wrapperCenter: {

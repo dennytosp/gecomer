@@ -1,7 +1,7 @@
-import Texting from '@/components/text/text.component'
-import { getSize, width } from '@/utils'
 import React from 'react'
 import { StyleProp, TextStyle, View, ViewStyle } from 'react-native'
+import Text from '@/components/text/text.component'
+import { getSize, width } from '@/utils'
 import { styles } from './bill-text-item.style'
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
   style?: StyleProp<ViewStyle>
 }
 
-const Iteming = ({
+const BillTextItem = ({
   left01,
   left02,
   left03,
@@ -35,23 +35,23 @@ const Iteming = ({
   return (
     <View style={[styles.wrapperFooter, style]}>
       <View style={[styles.rowFooter, { marginBottom: marginBottom }]}>
-        <Texting title={left01} />
-        <Texting title={right01} textStyle={[styles.textBase]} />
+        <Text title={left01} />
+        <Text title={right01} textStyle={[styles.textBase]} />
       </View>
 
       <View style={[styles.rowFooter, { marginBottom: marginBottom }]}>
-        <Texting title={left02} />
-        <Texting title={right02} textStyle={[styles.textBase]} />
+        <Text title={left02} />
+        <Text title={right02} textStyle={[styles.textBase]} />
       </View>
 
       <View style={[styles.rowFooter, { marginBottom: marginBottom }]}>
-        <Texting title={left03} />
-        <Texting title={right03} textStyle={[styles.textBase]} />
+        <Text title={left03} />
+        <Text title={right03} textStyle={[styles.textBase]} />
       </View>
 
       <View style={[styles.rowFooter]}>
-        <Texting title={left04} textStyle={[textLeftStyle]} />
-        <Texting
+        <Text title={left04} textStyle={[textLeftStyle]} />
+        <Text
           title={right04}
           textStyle={[styles.textRight, { width: width / 2 }, textRightStyle]}
         />
@@ -60,4 +60,4 @@ const Iteming = ({
   )
 }
 
-export default Iteming
+export default BillTextItem

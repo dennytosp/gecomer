@@ -1,4 +1,4 @@
-import { COLORS } from '@/constants'
+import { COLORS } from '@/theme'
 import React from 'react'
 import {
   StyleProp,
@@ -7,7 +7,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
-import Texting from '../text/text.component'
+import Text from '../text/text.component'
 import { styles } from './title.style'
 
 type Props = {
@@ -19,16 +19,16 @@ type Props = {
   style?: StyleProp<ViewStyle>
 }
 
-const Titling = (props: Props) => {
+const Title = (props: Props) => {
   const { title, more, onPress, textStyle, textMoreStyle, style } = props
 
   return (
     <View style={[styles.wrapperHeaderTitling, style]}>
-      <Texting title={title} textStyle={[styles.textStyle, textStyle]} />
+      <Text title={title} textStyle={[styles.textStyle, textStyle]} />
 
       {more && (
         <TouchableOpacity onPress={onPress}>
-          <Texting
+          <Text
             title={more}
             textStyle={[
               styles.textStyle,
@@ -42,4 +42,4 @@ const Titling = (props: Props) => {
   )
 }
 
-export default Titling
+export default Title

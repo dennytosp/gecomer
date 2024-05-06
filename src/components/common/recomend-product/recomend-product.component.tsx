@@ -1,5 +1,5 @@
-import Texting from '@/components/text/text.component'
-import { COLORS } from '@/constants'
+import Text from '@/components/text/text.component'
+import { COLORS } from '@/theme'
 import React from 'react'
 import {
   Image,
@@ -34,11 +34,11 @@ const RecommendProduct = ({
       <Image source={image} style={[styles.imageRecommend]} />
 
       <View style={[styles.wrapperTitle]}>
-        <Texting title={title} textStyle={[styles.textTitle]} />
+        <Text title={title} textStyle={[styles.textTitle]} />
       </View>
 
       <View style={[styles.wrapperSubTitle]}>
-        <Texting title={subtitle} textStyle={[{ color: COLORS.white }]} />
+        <Text title={subtitle} textStyle={[{ color: COLORS.white }]} />
       </View>
     </Pressable>
   )

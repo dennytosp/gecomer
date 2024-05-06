@@ -29,8 +29,8 @@ import {
   WomanPants,
   WomanTShirt,
 } from '@/assets/svg'
-import { COLORS } from '@/constants'
-import { routes } from '@/navigation/routes'
+import { routes } from '@/navigators/routes'
+import { COLORS } from '@/theme'
 import { faker } from '@faker-js/faker'
 
 const ONBOARD_DATA = [
@@ -332,45 +332,6 @@ export const REVIEWS = [...Array(15).keys()].map((_, i) => {
   }
 })
 
-const DATA_REVIEWS = [
-  {
-    id: '01',
-    name: 'Nguyen Tuyet Trinh',
-    avatar: photos.user8,
-    star: '4.5',
-    time: 'December 05, 2020',
-    description:
-      'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
-  },
-  {
-    id: '02',
-    name: 'Nguyen Van Tam',
-    avatar: photos.user2,
-    star: '4',
-    time: 'December 06, 2020',
-    description:
-      'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
-  },
-  {
-    id: '03',
-    name: 'Le Chi Vinh',
-    avatar: photos.user3,
-    star: '3.5',
-    time: 'December 07, 2020',
-    description:
-      'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
-  },
-  {
-    id: '04',
-    name: 'Le Huynh Yen Nhi',
-    avatar: photos.user4,
-    star: '4',
-    time: 'December 08, 2020',
-    description:
-      'Air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.',
-  },
-]
-
 const DATA_STAR_REVIEWS = [
   {
     id: '01',
@@ -498,48 +459,48 @@ const DATA_DU_AN_REVIEWS = [
     star: '4',
     time: 'August 05, 2021',
     like: '24',
-    image01: photos.user5,
-    image02: photos.user6,
-    image03: photos.user3,
+    image01: photos.product01,
+    image02: photos.product02,
+    image03: photos.product03,
     description:
       'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
   },
   {
     id: '02',
     name: 'Nguyen Van Tam',
-    avatar: photos.user2,
+    avatar: photos.avatar,
     star: '5',
     time: 'August 06, 2021',
     like: '25',
-    image01: photos.user8,
-    image02: photos.user3,
-    image03: photos.user4,
+    image01: photos.product01,
+    image02: photos.product02,
+    image03: photos.product03,
     description:
       'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
   },
   {
     id: '03',
     name: 'Le Chi Vinh',
-    avatar: photos.user3,
+    avatar: photos.avatar,
     star: '5',
     time: 'August 07, 2021',
     like: '26',
-    image01: photos.user7,
-    image02: photos.user4,
-    image03: photos.user,
+    image01: photos.product01,
+    image02: photos.product02,
+    image03: photos.product03,
     description:
       'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
   },
   {
     id: '04',
     name: 'Le Huynh Yen Nhi',
-    avatar: photos.user4,
+    avatar: photos.avatar,
     star: '4',
     time: 'August 08, 2021',
     like: '28',
-    image01: photos.user3,
-    image02: photos.user,
-    image03: photos.user2,
+    image01: photos.product01,
+    image02: photos.product02,
+    image03: photos.product03,
     description:
       'I loved this dress so much as soon as I tried it on I knew I had to buy it in another color. I am 53 about 155lbs and I carry all my weight in my upper body. When I put it on I felt like it thinned me put and I got so many compliments.',
   },
@@ -547,16 +508,16 @@ const DATA_DU_AN_REVIEWS = [
 
 const DATA_IMAGES_REVIEWS = [
   {
-    image: photos.user5,
+    image: photos.product01,
   },
   {
-    image: photos.user6,
+    image: photos.product02,
   },
   {
-    image: photos.user7,
+    image: photos.product03,
   },
   {
-    image: photos.user8,
+    image: photos.product02,
   },
 ]
 
@@ -875,28 +836,28 @@ const DATA_PROFILE = [
     icon: Gender,
     title: 'Gender',
     content: 'Male',
-    navigation: routes.EDIT_USER_INFORMATION,
+    navigation: routes.EDIT_PROFILE,
   },
   {
     id: '02',
     icon: Birthday,
     title: 'Birthday',
     content: '21/08/2001',
-    navigation: routes.EDIT_USER_INFORMATION,
+    navigation: routes.EDIT_PROFILE,
   },
   {
     id: '03',
     icon: EmailProfile,
     title: 'Email ',
     content: 'ginphone@gmail.com',
-    navigation: routes.EDIT_USER_INFORMATION,
+    navigation: routes.EDIT_PROFILE,
   },
   {
     id: '04',
     icon: PhoneNumber,
     title: 'Phone Number',
     content: '(307) 555-0133',
-    navigation: routes.EDIT_USER_INFORMATION,
+    navigation: routes.EDIT_PROFILE,
   },
   {
     id: '05',
@@ -950,7 +911,6 @@ export {
   DATA_CART,
   DATA_CATEGORY_SOFT,
   DATA_COLORS,
-  DATA_REVIEWS,
   DATA_DU_AN_REVIEWS,
   DATA_FEED_NOTICATIONS,
   DATA_IMAGES_REVIEWS,

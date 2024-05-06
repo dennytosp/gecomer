@@ -1,16 +1,10 @@
-import { Delete } from '@/assets'
-import Texting from '@/components/text/text.component'
-import { getSize } from '@/utils'
 import React from 'react'
-import {
-  Pressable,
-  StyleProp,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-} from 'react-native'
-import { styles } from './address-item.style'
+import { StyleProp, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { Delete } from '@/assets'
+import Text from '@/components/text/text.component'
 import ButtonPrimary from '@/components/button-primary/button-primary.component'
+import { getSize } from '@/utils'
+import { styles } from './address-item.style'
 
 type Props = {
   item: { name: string; address: string; phoneNumber: string }
@@ -31,9 +25,9 @@ const AddressItem = ({
 
   return (
     <View style={[styles.wrapperCenter, style]}>
-      <Texting title={name} textStyle={[styles.textName]} />
-      <Texting title={address} style={[{ marginVertical: getSize.m(16) }]} />
-      <Texting title={phoneNumber} style={[{ marginBottom: getSize.m(16) }]} />
+      <Text title={name} textStyle={[styles.textName]} />
+      <Text title={address} style={[{ marginVertical: getSize.m(16) }]} />
+      <Text title={phoneNumber} style={[{ marginBottom: getSize.m(16) }]} />
 
       <View style={[styles.wrapperOnEvent]}>
         <ButtonPrimary

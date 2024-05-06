@@ -1,6 +1,6 @@
 import { Email, LogoPrimary } from '@/assets'
-import { ButtonPrimary, FormInput, Texting } from '@/components'
-import { routes } from '@/navigation/routes'
+import { ButtonPrimary, FormInput, Text } from '@/components'
+import { routes } from '@/navigators/routes'
 import { getSize } from '@/utils'
 import {
   NavigationProp,
@@ -12,7 +12,7 @@ import { TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './forgot-password.style'
 
-const ForgotPassword = () => {
+const ForgotPasswordScreen = () => {
   const { top } = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
   const emailRef = useRef(null)
@@ -23,12 +23,12 @@ const ForgotPassword = () => {
         <LogoPrimary />
       </View>
 
-      <Texting
+      <Text
         title="Password recovery"
         textStyle={[styles.textPasswordRecovery]}
         style={[{ marginBottom: getSize.m(8) }]}
       />
-      <Texting
+      <Text
         title="Retrieve password to login"
         textStyle={[{ marginBottom: getSize.m(28) }]}
       />
@@ -42,7 +42,7 @@ const ForgotPassword = () => {
         atBottom={false}
         onPress={() =>
           navigation.navigate(routes.AUTHENTICATION, {
-            screen: routes.LOGIN,
+            screen: routes.SIGN_IN,
           })
         }
       />
@@ -62,7 +62,7 @@ const ForgotPassword = () => {
   const renderFooter = () => (
     <View style={[styles.wrapperFooter]}>
       <View style={[styles.wrapperTextFooter]}>
-        <Texting
+        <Text
           title="Did you remember the password?"
           textStyle={[{ fontSize: getSize.m(12) }]}
         />
@@ -70,11 +70,11 @@ const ForgotPassword = () => {
         <TouchableOpacity
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
-              screen: routes.LOGIN,
+              screen: routes.SIGN_IN,
             })
           }
         >
-          <Texting
+          <Text
             title="Sign In"
             textStyle={[styles.textSignIn]}
             style={[{ marginHorizontal: getSize.m(5) }]}
@@ -94,4 +94,4 @@ const ForgotPassword = () => {
   )
 }
 
-export default ForgotPassword
+export default ForgotPasswordScreen

@@ -1,5 +1,5 @@
 import { CancelFavorite, Delete, Favorited, LessCart, PlusCart } from '@/assets'
-import Texting from '@/components/text/text.component'
+import Text from '@/components/text/text.component'
 import { getSize } from '@/utils'
 import React, { useState } from 'react'
 import {
@@ -16,7 +16,7 @@ import {
   ParamListBase,
   useNavigation,
 } from '@react-navigation/native'
-import { routes } from '@/navigation/routes'
+import { routes } from '@/navigators/routes'
 
 type Props = {
   item: {
@@ -63,7 +63,7 @@ const CartItem = ({ item, index, style }: Props) => {
       <View style={[styles.wrapperContentCard]}>
         <View style={[styles.rowColumn01]}>
           <View style={[]}>
-            <Texting
+            <Text
               title={item.title}
               textStyle={[styles.textTitle]}
               style={[{ marginRight: getSize.m(4) }]}
@@ -82,14 +82,14 @@ const CartItem = ({ item, index, style }: Props) => {
         </View>
 
         <View style={[styles.rowColumn02]}>
-          <Texting title={item.price} textStyle={[styles.textPrice]} />
+          <Text title={item.price} textStyle={[styles.textPrice]} />
 
           <View style={[styles.rowRight02]}>
             <Pressable onPress={onLess} style={[styles.iconLess]}>
               <LessCart />
             </Pressable>
 
-            <Texting title={Number(amount)} textStyle={[styles.textQuantity]} />
+            <Text title={Number(amount)} textStyle={[styles.textQuantity]} />
 
             <Pressable onPress={onPlus} style={[styles.iconPlus]}>
               <PlusCart />

@@ -1,4 +1,4 @@
-import Texting from '@/components/text/text.component'
+import Text from '@/components/text/text.component'
 import React from 'react'
 import { Pressable, StyleProp, View, ViewStyle } from 'react-native'
 import { styles } from './event-item.style'
@@ -23,7 +23,7 @@ const EventItem = ({
       <Pressable onPress={onPress} style={[styles.inSideLeftCard]}>
         <Pressable>{icon}</Pressable>
 
-        <Texting
+        <Text
           title={title}
           textStyle={[styles.textTitle]}
           style={[styles.wrapTextTitle]}
@@ -32,7 +32,7 @@ const EventItem = ({
 
       {numberOfNotification && (
         <Pressable style={[styles.inSideRightCard]}>
-          <Texting
+          <Text
             title={numberOfNotification}
             textStyle={[styles.textNotificationNumber]}
           />

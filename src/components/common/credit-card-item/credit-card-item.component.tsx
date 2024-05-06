@@ -1,6 +1,6 @@
 import { ColorValue, Pressable, StyleProp, View, ViewStyle } from 'react-native'
-import Texting from '@/components/text/text.component'
-import { COLORS, FONTS } from '@/constants'
+import Text from '@/components/text/text.component'
+import { COLORS, FONTS } from '@/theme'
 import { AppStyles } from '@/styles'
 import { getSize } from '@/utils'
 import React, { FC } from 'react'
@@ -50,7 +50,7 @@ const CreditCardItem: FC<Props> = ({
 
       <View style={[AppStyles.rowCenterBetween]}>
         {newCode.map((item, index) => (
-          <Texting
+          <Text
             key={'code-' + index}
             title={item}
             textStyle={[styles.textCode]}
@@ -61,16 +61,16 @@ const CreditCardItem: FC<Props> = ({
 
       <View style={[styles.wrapperRow]}>
         <View style={[styles.row01]}>
-          <Texting title="CARD HOLDER" textStyle={[styles.textBase]} />
-          <Texting
+          <Text title="CARD HOLDER" textStyle={[styles.textBase]} />
+          <Text
             title={holder}
             textStyle={[styles.textBase, { fontFamily: FONTS.bold }]}
           />
         </View>
 
         <View style={[styles.row02]}>
-          <Texting title="CARD SAVE" textStyle={[styles.textBase]} />
-          <Texting
+          <Text title="CARD SAVE" textStyle={[styles.textBase]} />
+          <Text
             title={time}
             textStyle={[
               styles.textBase,

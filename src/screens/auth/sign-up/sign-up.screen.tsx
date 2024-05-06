@@ -1,6 +1,6 @@
 import { Email, Fullname, LogoPrimary, Password } from '@/assets'
-import { ButtonPrimary, FormInput, Texting } from '@/components'
-import { routes } from '@/navigation/routes'
+import { ButtonPrimary, FormInput, Text } from '@/components'
+import { routes } from '@/navigators/routes'
 import { getSize } from '@/utils'
 import {
   NavigationProp,
@@ -12,7 +12,7 @@ import { Pressable, ScrollView, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { styles } from './sign-up.style'
 
-const Register = () => {
+const SignUp = () => {
   const { top } = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
@@ -27,12 +27,12 @@ const Register = () => {
         <LogoPrimary />
       </Pressable>
 
-      <Texting
+      <Text
         title="Let’s Get Started"
         textStyle={[styles.textTitle]}
         style={[{ marginBottom: getSize.m(8) }]}
       />
-      <Texting
+      <Text
         title="Create an new account"
         style={[{ marginBottom: getSize.m(28) }]}
       />
@@ -46,7 +46,7 @@ const Register = () => {
         atBottom={false}
         onPress={() =>
           navigation.navigate(routes.AUTHENTICATION, {
-            screen: routes.LOGIN,
+            screen: routes.SIGN_IN,
           })
         }
       />
@@ -95,15 +95,15 @@ const Register = () => {
   const renderFooter = () => (
     <View style={[styles.wrapperFooter]}>
       <View style={[styles.wrapperTextFooter]}>
-        <Texting title="Have an account?" />
+        <Text title="Have an account?" />
         <TouchableOpacity
           onPress={() =>
             navigation.navigate(routes.AUTHENTICATION, {
-              screen: routes.LOGIN,
+              screen: routes.SIGN_IN,
             })
           }
         >
-          <Texting
+          <Text
             title="Sign In"
             textStyle={[styles.textBase]}
             style={[{ marginHorizontal: getSize.m(4) }]}
@@ -128,4 +128,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default SignUp
