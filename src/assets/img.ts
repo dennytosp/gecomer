@@ -13,21 +13,10 @@ export const photos = {
   product09: require('./images/photos/product09.png'),
   promotion01: require('./images/photos/promotion01.png'),
   promotion02: require('./images/photos/promotion02.png'),
-  product_reviews01: require('./images/photos/product_reviews01.png'),
-  product_reviews02: require('./images/photos/product_reviews02.png'),
-  product_reviews03: require('./images/photos/product_reviews03.png'),
-  avatar: require('./images/photos/avatar.jpg'),
-  avatar01: require('./images/photos/avatar01.jpg'),
-  avatar02: require('./images/photos/avatar02.jpg'),
-  user: require('./images/photos/user.jpg'),
-  user2: require('./images/photos/user02.jpg'),
-  user3: require('./images/photos/user03.jpg'),
-  user4: require('./images/photos/user04.jpg'),
-  user5: require('./images/photos/user05.jpg'),
-  user6: require('./images/photos/user06.jpg'),
-  user7: require('./images/photos/user07.jpg'),
-  user8: require('./images/photos/user08.jpg'),
-  not_avt: require('./images/photos/not_avt.png'),
+  productReviews01: require('./images/photos/product-reviews01.png'),
+  productReviews02: require('./images/photos/product-reviews02.png'),
+  productReviews03: require('./images/photos/product-reviews03.png'),
+  avatar: require('./images/photos/avatar.png'),
 }
 
 export const icons = {
@@ -36,8 +25,8 @@ export const icons = {
   favorite: require('./images/icons/heart.png'),
   profile: require('./images/icons/profile.png'),
   product: require('./images/icons/product.png'),
-  eyeOpen: require('./images/icons/eyeOpen/eyeOpen.png'),
-  eyeClose: require('./images/icons/eyeClose/eyeClose.png'),
+  eyeOpen: require('./images/icons/eye-open/eye-open.png'),
+  eyeClose: require('./images/icons/eye-close/eye-close.png'),
 }
 
 const img = { photos, icons }

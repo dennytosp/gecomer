@@ -1,1 +1,1 @@
-export * from './BackgroundTimerProvider'
+export * from './background-timer-provider.context'
