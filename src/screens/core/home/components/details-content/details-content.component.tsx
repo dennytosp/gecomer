@@ -1,3 +1,6 @@
+import React, { useState } from 'react'
+import { FlatList, Pressable, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import {
   DATA_COLORS,
   DATA_SIZES,
@@ -5,26 +8,17 @@ import {
   Favorited,
   PRODUCTS_DATA,
   REVIEWS,
-  photos,
 } from '@/assets'
 import {
-  ButtonPrimary,
   ProductItem,
   ProductReviewItem,
   StarRating,
   Text,
   Title,
 } from '@/components'
+import { RoutesMainStack, RoutesProductDetailStack } from '@/navigators/routes'
 import { COLORS } from '@/theme'
-import { routes } from '@/navigators/routes'
 import { getSize, width } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
-import React, { useState } from 'react'
-import { FlatList, Pressable, View } from 'react-native'
 import { styles } from './details-content.style'
 
 type Props = {
@@ -32,8 +26,11 @@ type Props = {
   price: string
 }
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.PRODUCT_DETAIL_STACK>
+
 const DetailsContent = ({ name, price }: Props) => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
   const [like, setLike] = useState(false)
 
   const Liked = () => {
@@ -91,7 +88,11 @@ const DetailsContent = ({ name, price }: Props) => {
       <Title
         title="Review Product"
         more="See More"
-        onPress={() => navigation.navigate(routes.REVIEWS)}
+        onPress={() =>
+          navigation.navigate(RoutesMainStack.PRODUCT_DETAIL_STACK, {
+            screen: RoutesProductDetailStack.REVIEWS,
+          })
+        }
       />
 
       <View style={[styles.wrapperSubTitleStar]}>

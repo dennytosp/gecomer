@@ -1,21 +1,20 @@
-import { DATA_ORDER } from '@/assets'
-import { Header, Text } from '@/components'
-import { COLORS } from '@/theme'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
-import React from 'react'
 import { FlatList, Pressable, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
+import { DATA_ORDER } from '@/assets'
+import { Header, Text } from '@/components'
+import { RoutesAccountStack, RoutesMainStack } from '@/navigators/routes'
+import { COLORS } from '@/theme'
+import { getSize } from '@/utils'
+import React from 'react'
 import { styles } from './order.style'
+
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.ACCOUNT_STACK>
 
 const Order = () => {
   const insets = useSafeAreaInsets()
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderOrder = ({
     item,
@@ -25,7 +24,11 @@ const Order = () => {
     index: number
   }) => (
     <Pressable
-      onPress={() => navigation.navigate(routes.ORDER_DETAILS)}
+      onPress={() =>
+        navigation.navigate(RoutesMainStack.ACCOUNT_STACK, {
+          screen: RoutesAccountStack.ORDER_DETAILS,
+        })
+      }
       style={[styles.wrapperOrder]}
     >
       <Text title={item.code} textStyle={[styles.textCode]} />

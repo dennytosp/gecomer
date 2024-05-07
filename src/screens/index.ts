@@ -31,7 +31,7 @@ import Notifications from './core/home/notification'
 import ActivityNotification from './core/home/notification/activity-notification/activity-Notification.screen'
 import FeedNotification from './core/home/notification/feed-notification/feed-notification.screen'
 import OfferNotification from './core/home/notification/offer-notification/offer-notification.screen'
-import Details from './core/home/product-details/product-details.screen'
+import ProductDetail from './core/home/product-detail/product-detail.screen'
 import ProductSeeMore from './core/home/product-see-more/product-see-more.screen'
 import Reviews from './core/home/reviews/reviews.screen'
 import WriteReview from './core/home/reviews/write-review/write-review.screen'
@@ -47,7 +47,7 @@ export const common = {
 
 export const home = {
   ProductSeeMore,
-  Details,
+  ProductDetail,
   Reviews,
   WriteReview,
   Notifications,

@@ -1,21 +1,24 @@
-import { Email, Facebook, Google, LogoPrimary, Password } from '@/assets'
-import { ButtonPrimary, ButtonSocial, FormInput, Text } from '@/components'
-import { FONTS } from '@/theme'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React, { useRef } from 'react'
 import { Pressable, ScrollView, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
+import { Email, Facebook, Google, LogoPrimary, Password } from '@/assets'
+import { ButtonPrimary, ButtonSocial, FormInput, Text } from '@/components'
+import {
+  RoutesAuthStack,
+  RoutesMainStack,
+  RoutesTabStack,
+} from '@/navigators/routes'
+import { FONTS } from '@/theme'
+import { getSize } from '@/utils'
 import { styles } from './sign-in.style'
+
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.AUTH_STACK>
 
 const SignIn = () => {
   const { top } = useSafeAreaInsets()
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const emailRef = useRef(null)
   const passwordRef = useRef(null)
@@ -43,7 +46,11 @@ const SignIn = () => {
       <ButtonPrimary
         title="Sign In"
         atBottom={false}
-        onPress={() => navigation.navigate(routes.COMMON)}
+        onPress={() => {
+          navigation.navigate(RoutesMainStack.TAB_STACK, {
+            screen: RoutesTabStack.HOME_TAB,
+          })
+        }}
       />
 
       <View style={[styles.wrapperOr]}>
@@ -93,7 +100,11 @@ const SignIn = () => {
         style={[{ marginBottom: getSize.m(16) }]}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate(routes.FORGOT_PASSWORD)}
+        onPress={() =>
+          navigation.navigate(RoutesMainStack.AUTH_STACK, {
+            screen: RoutesAuthStack.FORGOT_PASSWORD,
+          })
+        }
       >
         <Text
           title="Forgot Password?"
@@ -107,8 +118,8 @@ const SignIn = () => {
 
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate(routes.AUTHENTICATION, {
-              screen: routes.SIGN_UP,
+            navigation.navigate(RoutesMainStack.AUTH_STACK, {
+              screen: RoutesAuthStack.SIGN_UP,
             })
           }
         >

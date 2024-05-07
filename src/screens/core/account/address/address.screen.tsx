@@ -1,29 +1,25 @@
-import { AddShip, DATA_ADDRESS } from '@/assets'
-import { AddressItem, ButtonPrimary, Header } from '@/components'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  RouteProp,
-  useNavigation,
-  useRoute,
-} from '@react-navigation/native'
 import React from 'react'
 import { FlatList, View } from 'react-native'
+import { useNavigation, useRoute } from '@react-navigation/native'
+import { AddShip, DATA_ADDRESS } from '@/assets'
+import { AddressItem, ButtonPrimary, Header } from '@/components'
+import { RoutesCommonStack, RoutesMainStack } from '@/navigators/routes'
+import { getSize } from '@/utils'
 import { styles } from './address.style'
 
-type Props = {}
 type Params = {
   type: 'address-on-cart' | 'personal-address'
   headerTitle: string
 }
 
-const Address = ({}: Props) => {
-  const route = useRoute<RouteProp<ParamListBase>>()
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
 
-  const params = route?.params as Params
+const Address = () => {
+  const navigation = useNavigation<NavigationProps['navigation']>()
+  const route = useRoute<NavigationProps['route']>()
+
+  const params = route?.params as unknown as Params
   const addressOnCart = params?.type === 'address-on-cart'
   const personalAddress = params?.type === 'personal-address'
 
@@ -31,12 +27,19 @@ const Address = ({}: Props) => {
     <AddressItem
       item={item}
       buttonTitle="Edit"
-      handleDelete={() => navigation.navigate(routes.CONFIRMATION)}
-      handleButton={() =>
-        navigation.navigate(routes.ADDRESS_INPUT, {
-          addressTitle: 'Edit Address',
+      handleDelete={() => {
+        navigation.navigate(RoutesMainStack.COMMON_STACK, {
+          screen: RoutesCommonStack.CONFIRMATION,
         })
-      }
+      }}
+      handleButton={() => {
+        navigation.navigate(RoutesMainStack.COMMON_STACK, {
+          screen: RoutesCommonStack.ADDRESS_INPUT,
+          params: {
+            addressTitle: 'Edit Address',
+          },
+        })
+      }}
     />
   )
 
@@ -49,8 +52,11 @@ const Address = ({}: Props) => {
         rightIconEnd={addressOnCart ? AddShip : undefined}
         onPressRightEnd={() => {
           if (addressOnCart) {
-            navigation.navigate(routes.ADDRESS_INPUT, {
-              addressTitle: 'Add Address',
+            navigation.navigate(RoutesMainStack.COMMON_STACK, {
+              screen: RoutesCommonStack.ADDRESS_INPUT,
+              params: {
+                addressTitle: 'Add Address',
+              },
             })
           }
         }}
@@ -66,8 +72,11 @@ const Address = ({}: Props) => {
       <ButtonPrimary
         title={personalAddress ? 'Add Address' : 'Next'}
         onPress={() =>
-          navigation.navigate(routes.ADDRESS_INPUT, {
-            addressTitle: 'Add Address',
+          navigation.navigate(RoutesMainStack.COMMON_STACK, {
+            screen: RoutesCommonStack.ADDRESS_INPUT,
+            params: {
+              addressTitle: 'Add Address',
+            },
           })
         }
         style={[{ marginVertical: getSize.m(16) }]}

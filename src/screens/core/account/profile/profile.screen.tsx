@@ -1,18 +1,17 @@
-import { DATA_PROFILE, Editing, ForwardNext, photos } from '@/assets'
-import { Header, Text } from '@/components'
-import { routes } from '@/navigators/routes'
-import picker from '@/utils/picker'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import { FlatList, Image, Pressable, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { DATA_PROFILE, Editing, ForwardNext, photos } from '@/assets'
+import { Header, Text } from '@/components'
+import { RoutesAccountStack, RoutesMainStack } from '@/navigators/routes'
+import picker from '@/utils/picker'
 import { styles } from './profile.style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.ACCOUNT_STACK>
+
 const Profile = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
   const { openPicker, picture } = picker()
 
   const renderHeader = () => (
@@ -45,7 +44,11 @@ const Profile = () => {
       </View>
 
       <Pressable
-        onPress={() => navigation.navigate(item.navigation)}
+        onPress={() =>
+          navigation.navigate(RoutesMainStack.ACCOUNT_STACK, {
+            screen: item.navigation,
+          })
+        }
         style={[styles.rightCenter]}
       >
         <Text
@@ -64,7 +67,11 @@ const Profile = () => {
         title="Profile"
         topLine
         rightIconEnd={Editing}
-        onPressRightEnd={() => navigation.navigate(routes.EDIT_PROFILE)}
+        onPressRightEnd={() =>
+          navigation.navigate(RoutesMainStack.ACCOUNT_STACK, {
+            screen: RoutesAccountStack.EDIT_PROFILE,
+          })
+        }
       />
 
       {renderHeader()}

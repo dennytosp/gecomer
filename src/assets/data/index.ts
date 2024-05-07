@@ -29,8 +29,16 @@ import {
   WomanPants,
   WomanTShirt,
 } from '@/assets/svg'
-import { routes } from '@/navigators/routes'
+import {
+  RoutesAccountStack,
+  RoutesCommonStack,
+  RoutesMainStack,
+  RoutesNotificationStack,
+  RoutesPaymentStack,
+  RoutesSearchStack,
+} from '@/navigators/routes'
 import { COLORS } from '@/theme'
+import { navigate } from '@/utils/holder'
 import { faker } from '@faker-js/faker'
 
 const ONBOARD_DATA = [
@@ -59,7 +67,6 @@ const CATEGORIES_DATA = [
     id: '01',
     image: ManShirt,
     title: 'Man Shirt',
-    navigation: routes.ANTS_REVIEWS,
   },
   {
     id: '02',
@@ -361,21 +368,21 @@ const DATA_LIST_NOTIFICATIONS = [
     name: 'Offer',
     image: Offer,
     number: 3,
-    navigation: routes.OFFER_NOTIFICATION,
+    navigation: RoutesNotificationStack.OFFER_NOTIFICATION,
   },
   {
     id: '02',
     name: 'Feed',
     image: Feed,
     number: 3,
-    navigation: routes.FEED_NOTIFICATION,
+    navigation: RoutesNotificationStack.FEED_NOTIFICATION,
   },
   {
     id: '03',
     name: 'Activity',
     image: Activity,
     number: 3,
-    navigation: routes.ACTIVITY_NOTIFICATION,
+    navigation: RoutesNotificationStack.ACTIVITY_NOTIFICATION,
   },
 ]
 
@@ -596,32 +603,32 @@ const DATA_SEARCH = [
   {
     id: '01',
     name: 'Nike Air Max 270 React ENG',
-    navigation: routes.SEARCH_RESULT,
+    navigation: RoutesSearchStack.SEARCH_RESULT,
   },
   {
     id: '02',
     name: 'Nike Air Vapormax 360',
-    navigation: routes.SEARCH_RESULT,
+    navigation: RoutesSearchStack.SEARCH_RESULT,
   },
   {
     id: '03',
     name: 'Nike Air Max 335 Flut VIE',
-    navigation: routes.SEARCH_RESULT,
+    navigation: RoutesSearchStack.SEARCH_RESULT,
   },
   {
     id: '04',
     name: 'Nike Air Max 320 Sonsine',
-    navigation: routes.SEARCH_RESULT,
+    navigation: RoutesSearchStack.SEARCH_RESULT,
   },
   {
     id: '05',
     name: 'Nike Air VaporMax Flyknit 3',
-    navigation: routes.SEARCH_RESULT,
+    navigation: RoutesSearchStack.SEARCH_RESULT,
   },
   {
     id: '06',
     name: 'Nike Air Max 97 Utility',
-    navigation: routes.SEARCH_RESULT,
+    navigation: RoutesSearchStack.SEARCH_RESULT,
   },
 ]
 
@@ -786,19 +793,19 @@ const DATA_PAYMENT = [
     icon: Credit,
     name: 'Credit Card Or Debit',
     backgroundColor: COLORS.border,
-    navigation: routes.CREDIT_CARD,
+    navigation: RoutesPaymentStack.CREDIT_CARD,
   },
   {
     id: '02',
     icon: Paypal,
     name: 'Paypal',
-    navigation: routes.CARD,
+    navigation: RoutesPaymentStack.CARD,
   },
   {
     id: '03',
     icon: Bank_Transfer,
     name: 'Bank Transfer',
-    navigation: routes.CHECK_CARD,
+    navigation: RoutesPaymentStack.CHECK_CARD,
   },
 ]
 
@@ -807,26 +814,38 @@ const DATA_ACCOUNT = [
     id: '01',
     icon: Profile,
     name: 'Profile',
-    navigation: routes.PROFILE,
+    onPress: () =>
+      navigate(RoutesMainStack.ACCOUNT_STACK, {
+        screen: RoutesAccountStack.PROFILE,
+      }),
   },
   {
     id: '02',
     icon: Order,
     name: 'Order',
     backgroundColor: COLORS.border,
-    navigation: routes.ORDER,
+    onPress: () =>
+      navigate(RoutesMainStack.ACCOUNT_STACK, {
+        screen: RoutesAccountStack.ORDER,
+      }),
   },
   {
     id: '03',
     icon: Address,
     name: 'Address',
-    navigation: routes.ADDRESS,
+    onPress: () =>
+      navigate(RoutesMainStack.COMMON_STACK, {
+        screen: RoutesCommonStack.ADDRESS,
+      }),
   },
   {
     id: '04',
     icon: Payment,
     name: 'Payment',
-    navigation: routes.PAYMENT_METHOD,
+    onPress: () =>
+      navigate(RoutesMainStack.PAYMENT_STACK, {
+        screen: RoutesPaymentStack.PAYMENT_METHOD,
+      }),
   },
 ]
 
@@ -836,35 +855,35 @@ const DATA_PROFILE = [
     icon: Gender,
     title: 'Gender',
     content: 'Male',
-    navigation: routes.EDIT_PROFILE,
+    navigation: RoutesAccountStack.EDIT_PROFILE,
   },
   {
     id: '02',
     icon: Birthday,
     title: 'Birthday',
     content: '21/08/2001',
-    navigation: routes.EDIT_PROFILE,
+    navigation: RoutesAccountStack.EDIT_PROFILE,
   },
   {
     id: '03',
     icon: EmailProfile,
     title: 'Email ',
     content: 'ginphone@gmail.com',
-    navigation: routes.EDIT_PROFILE,
+    navigation: RoutesAccountStack.EDIT_PROFILE,
   },
   {
     id: '04',
     icon: PhoneNumber,
     title: 'Phone Number',
     content: '(307) 555-0133',
-    navigation: routes.EDIT_PROFILE,
+    navigation: RoutesAccountStack.EDIT_PROFILE,
   },
   {
     id: '05',
     icon: ChangePassword,
     title: 'Change Password',
     content: '•••••••••••••••••',
-    navigation: routes.CHANGE_PASSWORD,
+    navigation: RoutesAccountStack.CHANGE_PASSWORD,
   },
 ]
 

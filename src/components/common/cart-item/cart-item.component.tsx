@@ -1,6 +1,3 @@
-import { CancelFavorite, Delete, Favorited, LessCart, PlusCart } from '@/assets'
-import Text from '@/components/text/text.component'
-import { getSize } from '@/utils'
 import React, { useState } from 'react'
 import {
   Image,
@@ -10,13 +7,12 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { CancelFavorite, Delete, Favorited, LessCart, PlusCart } from '@/assets'
+import Text from '@/components/text/text.component'
+import { RoutesCommonStack, RoutesMainStack } from '@/navigators/routes'
+import { getSize } from '@/utils'
 import { styles } from './cart-item.style'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
-import { routes } from '@/navigators/routes'
 
 type Props = {
   item: {
@@ -30,8 +26,11 @@ type Props = {
   style?: StyleProp<ViewStyle>
 }
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
+
 const CartItem = ({ item, index, style }: Props) => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
   const [amount, setAmount] = useState(item.quantity)
   const [isFavorite, setIsFavorite] = useState(item.isFavorite)
 
@@ -40,7 +39,9 @@ const CartItem = ({ item, index, style }: Props) => {
   }
 
   const onDelete = () => {
-    navigation.navigate(routes.CONFIRMATION)
+    navigation.navigate(RoutesMainStack.COMMON_STACK, {
+      screen: RoutesCommonStack.CONFIRMATION,
+    })
   }
 
   const onLess = () => {

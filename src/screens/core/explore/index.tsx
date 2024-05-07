@@ -1,3 +1,5 @@
+import React from 'react'
+import { ScrollView, View } from 'react-native'
 import {
   Favorite,
   MAN_FASHION_DATA,
@@ -6,34 +8,48 @@ import {
   WOMAN_FASHION_DATA,
 } from '@/assets'
 import { CategoriesItem, SearchBar, Title } from '@/components'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
 import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
-import React from 'react'
-import { ScrollView, View } from 'react-native'
+  RoutesCommonStack,
+  RoutesMainStack,
+  RoutesNotificationStack,
+  RoutesSearchStack,
+} from '@/navigators/routes'
+import { getSize } from '@/utils'
 import { styles } from './style'
+import { useNavigation } from '@react-navigation/native'
+
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.EXPLORE_STACK>
 
 const Explore = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderHeader = () => (
     <View style={[styles.wrapperHeader]}>
       <SearchBar
+        placeholder="Search Product"
+        disableInput={true}
         rightIcon={Favorite}
         onPressRight={() => {
-          navigation.navigate(routes.PRODUCT_SEE_MORE, {
-            title: 'Favorite',
-            data: PRODUCTS_DATA_VERTICOLUMNS,
+          navigation.navigate(RoutesMainStack.COMMON_STACK, {
+            screen: RoutesCommonStack.PRODUCT_SEE_MORE,
+            params: {
+              title: 'Favorite',
+              data: PRODUCTS_DATA_VERTICOLUMNS,
+            },
           })
         }}
         rightIconStart={Notifications}
-        onPressRightStart={() => navigation.navigate(routes.NOTIFICATIONS)}
-        placeholder="Search Product"
-        onPressInput={() => navigation.navigate(routes.SEARCH_PAGE)}
+        onPressRightStart={() =>
+          navigation.navigate(RoutesMainStack.NOTIFICATION_STACK, {
+            screen: RoutesNotificationStack.NOTIFICATIONS,
+          })
+        }
+        onPressInput={() =>
+          navigation.navigate(RoutesMainStack.SEARCH_STACK, {
+            screen: RoutesSearchStack.SEARCH_PAGE,
+          })
+        }
       />
     </View>
   )

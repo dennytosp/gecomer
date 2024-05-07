@@ -1,20 +1,18 @@
+import React from 'react'
+import { FlatList, Pressable, ScrollView, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { DATA_STAR_REVIEWS, REVIEWS, Star } from '@/assets'
 import { ButtonPrimary, Header, ProductReviewItem, Text } from '@/components'
 import { COLORS, FONTS } from '@/theme'
-import { routes } from '@/navigators/routes'
 import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
-import React from 'react'
-import { FlatList, Pressable, ScrollView, View } from 'react-native'
-
+import { RoutesMainStack, RoutesProductDetailStack } from '@/navigators/routes'
 import { styles } from './review.style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
+
 const Reviews = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderReviews = ({ item }: { item: (typeof REVIEWS)[0] }) => (
     <View style={[styles.wrapperReviews]}>
@@ -85,7 +83,11 @@ const Reviews = () => {
 
       <ButtonPrimary
         title="Write Review"
-        onPress={() => navigation.navigate(routes.WRITE_REVIEW)}
+        onPress={() =>
+          navigation.navigate(RoutesMainStack.PRODUCT_DETAIL_STACK, {
+            screen: RoutesProductDetailStack.WRITE_REVIEW,
+          })
+        }
       />
     </View>
   )

@@ -7,17 +7,13 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
+import { Source } from 'react-native-fast-image'
+import { useNavigation } from '@react-navigation/native'
 import { SpeedImage } from '@/components/speed-image/speed-image.component'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import StarRating from '@/components/star-rating/star-rating.component'
 import Text from '@/components/text/text.component'
-import { routes } from '@/navigators/routes'
+import { RoutesMainStack, RoutesProductDetailStack } from '@/navigators/routes'
 import { getSize, width } from '@/utils'
-import { Source } from 'react-native-fast-image'
 import { styles } from './product-item.style'
 
 type Props = {
@@ -35,6 +31,8 @@ type Props = {
   style?: StyleProp<ViewStyle>
 }
 
+type NavigationProps = ReactNavigation.RootStackNavigationProps
+
 const ProductItem = ({
   item,
   marginBottom,
@@ -45,11 +43,14 @@ const ProductItem = ({
 }: Props) => {
   const { image, name, discounted, price, promotion } = item
   const columnsSize = width / Number(columns) - getSize.m(20 + 32)
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const onHandleProductItem = () => {
     if (onPress) return onPress()
-    navigation.navigate(routes.DETAILS, { item })
+    navigation.navigate(RoutesMainStack.PRODUCT_DETAIL_STACK, {
+      screen: RoutesProductDetailStack.PRODUCT_DETAIL,
+      params: { item },
+    })
   }
 
   return (
@@ -66,6 +67,7 @@ const ProductItem = ({
     >
       <View style={{ alignItems: 'center' }}>
         <SpeedImage
+          resizeMode="cover"
           source={image}
           style={[
             styles.imageProducts,

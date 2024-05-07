@@ -1,25 +1,24 @@
+import React from 'react'
+import { FlatList, ScrollView, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { DATA_CART } from '@/assets'
 import {
+  BillTextItem,
   ButtonPrimary,
   CartItem,
   Header,
-  BillTextItem,
   Title,
 } from '@/components'
+import { RoutesMainStack } from '@/navigators/routes'
 import { COLORS, FONTS } from '@/theme'
-import { routes } from '@/navigators/routes'
 import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
-import React from 'react'
-import { FlatList, ScrollView, View } from 'react-native'
 import { styles } from './order-details.style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.ACCOUNT_STACK>
+
 const OrderDetails = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderShippingDetails = () => (
     <BillTextItem
@@ -85,7 +84,7 @@ const OrderDetails = () => {
 
         <ButtonPrimary
           title="Notify Me"
-          onPress={() => navigation.navigate(routes.COMMON)}
+          onPress={() => navigation.navigate(RoutesMainStack.TAB_STACK)}
           style={[{ marginTop: getSize.m(16) }]}
         />
       </ScrollView>

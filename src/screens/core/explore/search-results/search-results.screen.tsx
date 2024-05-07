@@ -1,3 +1,6 @@
+import React, { useState } from 'react'
+import { FlatList, Pressable, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import {
   DownPress,
   Filterist,
@@ -6,20 +9,16 @@ import {
   Soft,
 } from '@/assets'
 import { ProductItem, Remind, SearchBar, Text } from '@/components'
+import { RoutesMainStack, RoutesSearchStack } from '@/navigators/routes'
 import { COLORS, FONTS } from '@/theme'
-import { routes } from '@/navigators/routes'
 import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
-import React, { useState } from 'react'
-import { FlatList, Pressable, View } from 'react-native'
 import { styles } from './search-results.style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.SEARCH_STACK>
+
 const SearchResults = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
   const numColumns = 2
   const emptyLength = [].length + ' Result'
   const countLength = PRODUCTS_DATA_VERTICOLUMNS.length + ' Result'
@@ -36,7 +35,11 @@ const SearchResults = () => {
       </Pressable>
 
       <Pressable
-        onPress={() => navigation.navigate(routes.CATEGORY)}
+        onPress={() =>
+          navigation.navigate(RoutesMainStack.SEARCH_STACK, {
+            screen: RoutesSearchStack.CATEGORY,
+          })
+        }
         style={[styles.wrapperRightRows]}
       >
         <Text
@@ -45,7 +48,13 @@ const SearchResults = () => {
           style={[{ marginRight: getSize.m(4) }]}
         />
 
-        <Pressable onPress={() => navigation.navigate(routes.CATEGORY)}>
+        <Pressable
+          onPress={() =>
+            navigation.navigate(RoutesMainStack.SEARCH_STACK, {
+              screen: RoutesSearchStack.CATEGORY,
+            })
+          }
+        >
           <DownPress />
         </Pressable>
       </Pressable>
@@ -70,7 +79,7 @@ const SearchResults = () => {
       title="Product Not Found"
       subtitle="Thank you for shopping using Gecomer"
       eventTitle="Back to Home"
-      handleOnEvent={() => navigation.navigate(routes.COMMON)}
+      handleOnEvent={() => navigation.navigate(RoutesMainStack.TAB_STACK)}
       isAlign={false}
     />
   )
@@ -80,8 +89,16 @@ const SearchResults = () => {
       <SearchBar
         rightIcon={Soft}
         rightIconStart={Filterist}
-        onPressRight={() => navigation.navigate(routes.SOFT_BY)}
-        onPressRightStart={() => navigation.navigate(routes.FILTER_SEARCH)}
+        onPressRight={() =>
+          navigation.navigate(RoutesMainStack.SEARCH_STACK, {
+            screen: RoutesSearchStack.SOFT_BY,
+          })
+        }
+        onPressRightStart={() =>
+          navigation.navigate(RoutesMainStack.SEARCH_STACK, {
+            screen: RoutesSearchStack.FILTER_SEARCH,
+          })
+        }
         onChangeText={text => setValue(text)}
         value={value}
       />

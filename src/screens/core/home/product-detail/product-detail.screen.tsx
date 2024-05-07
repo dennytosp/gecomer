@@ -1,13 +1,3 @@
-import { More, Search } from '@/assets'
-import { ButtonPrimary, Header } from '@/components'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  RouteProp,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import {
   Image,
@@ -16,16 +6,26 @@ import {
   ScrollView,
   View,
 } from 'react-native'
+import { useNavigation, useRoute } from '@react-navigation/native'
+import { More, Search } from '@/assets'
+import { ButtonPrimary, Header } from '@/components'
+import {
+  RoutesAccountStack,
+  RoutesCartStack,
+  RoutesMainStack,
+  RoutesSearchStack,
+} from '@/navigators/routes'
+import { getSize } from '@/utils'
 import DetailsContent from '../components/details-content/details-content.component'
-import { styles } from './product-details.style'
+import { styles } from './product-detail.style'
 
-type Props = {
-  route: RouteProp<ParamListBase>
-}
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.PRODUCT_DETAIL_STACK>
 
-const Details = ({ route }: Props) => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
-  const { item: receive } = route?.params as {
+const ProductDetail = () => {
+  const navigation = useNavigation<NavigationProps['navigation']>()
+  const route = useRoute<NavigationProps['route']>()
+  const { item: receive } = route?.params as unknown as {
     item: {
       image: ImageSourcePropType
       name: string
@@ -50,8 +50,16 @@ const Details = ({ route }: Props) => {
         title={receive?.name.slice(0, 20) + '...'}
         rightIconStart={Search}
         rightIconEnd={More}
-        onPressRightStart={() => navigation.navigate(routes.SEARCH_PAGE)}
-        onPressRightEnd={() => navigation.navigate(routes.ACCOUNT)}
+        onPressRightStart={() =>
+          navigation.navigate(RoutesMainStack.SEARCH_STACK, {
+            screen: RoutesSearchStack.SEARCH_PAGE,
+          })
+        }
+        onPressRightEnd={() =>
+          navigation.navigate(RoutesMainStack.ACCOUNT_STACK, {
+            screen: RoutesAccountStack.PROFILE,
+          })
+        }
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -63,11 +71,15 @@ const Details = ({ route }: Props) => {
 
       <ButtonPrimary
         title="Add To Cart"
-        onPress={() => navigation.navigate(routes.CART)}
+        onPress={() =>
+          navigation.navigate(RoutesMainStack.CART_STACK, {
+            screen: RoutesCartStack.CART,
+          })
+        }
         style={[{ marginTop: getSize.m(16), marginHorizontal: getSize.m(16) }]}
       />
     </View>
   )
 }
 
-export default Details
+export default ProductDetail

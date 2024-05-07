@@ -3,6 +3,10 @@ import { getSize, height, width } from '@/utils'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
+  container: {
+    width: width - getSize.m(32),
+    height: height / getSize.m(4),
+  },
   wrapperContentPromotion: {
     position: 'absolute',
     left: getSize.m(24),
