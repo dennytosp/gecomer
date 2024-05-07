@@ -9,7 +9,7 @@ type Props = {
   route: RouteProp<ParamListBase>
 }
 
-const AddressInput = ({ route }: Props) => {
+const AddressInputScreen = ({ route }: Props) => {
   const params = route.params
   const { addressTitle } = params as { addressTitle: string }
 
@@ -26,4 +26,4 @@ const AddressInput = ({ route }: Props) => {
   )
 }
 
-export default AddressInput
+export default AddressInputScreen

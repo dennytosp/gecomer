@@ -12,7 +12,7 @@ import React, { useState } from 'react'
 import { Image, Pressable, ScrollView, TextInput, View } from 'react-native'
 import { styles } from './write-review.style'
 
-const WriteReview = () => {
+const WriteReviewScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
   const { openMultiPicker, pictures } = picker()
   const [rating, setRating] = useState(0)
@@ -100,4 +100,4 @@ const WriteReview = () => {
   )
 }
 
-export default WriteReview
+export default WriteReviewScreen

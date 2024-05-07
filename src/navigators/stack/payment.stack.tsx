@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { account, cart } from '@/screens'
+import { PAYMENT_SCREEN } from '@/screens'
 import { RoutesPaymentStack } from '../routes'
 import { PaymentStackParamsList } from '../types'
 
@@ -11,24 +11,27 @@ const PaymentStack = () => {
     <Payment.Navigator screenOptions={{ headerShown: false }}>
       <Payment.Screen
         name={RoutesPaymentStack.PAYMENT_METHOD}
-        component={cart.PaymentMethod}
+        component={PAYMENT_SCREEN.PaymentMethod}
       />
-      <Payment.Screen name={RoutesPaymentStack.CARD} component={cart.Card} />
+      <Payment.Screen
+        name={RoutesPaymentStack.CARD}
+        component={PAYMENT_SCREEN.Card}
+      />
       <Payment.Screen
         name={RoutesPaymentStack.PURCHASE_SUCCESS}
-        component={cart.PurchaseSuccess}
+        component={PAYMENT_SCREEN.PurchaseSuccess}
       />
       <Payment.Screen
         name={RoutesPaymentStack.ADD_CARD}
-        component={account.AddCard}
+        component={PAYMENT_SCREEN.AddCard}
       />
       <Payment.Screen
         name={RoutesPaymentStack.CREDIT_CARD}
-        component={account.CreditCard}
+        component={PAYMENT_SCREEN.CreditCard}
       />
       <Payment.Screen
         name={RoutesPaymentStack.CHECK_CARD}
-        component={account.CheckCard}
+        component={PAYMENT_SCREEN.CheckCard}
       />
     </Payment.Navigator>
   )

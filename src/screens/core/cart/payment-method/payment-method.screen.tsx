@@ -10,7 +10,7 @@ import React from 'react'
 import { FlatList, View } from 'react-native'
 import { styles } from './payment-method.style'
 
-const PaymentMethod = () => {
+const PaymentMethodScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   const renderCenter = ({ item }: { item: (typeof DATA_PAYMENT)[0] }) => (
@@ -42,4 +42,4 @@ const PaymentMethod = () => {
   )
 }
 
-export default PaymentMethod
+export default PaymentMethodScreen

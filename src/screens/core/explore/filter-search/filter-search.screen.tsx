@@ -10,7 +10,7 @@ import { ScrollView, View } from 'react-native'
 import { Condition, PriceRange } from '../components'
 import { styles } from './filter-search.style'
 
-const FilterSearch = () => {
+const FilterSearchScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   return (
@@ -27,4 +27,4 @@ const FilterSearch = () => {
   )
 }
 
-export default FilterSearch
+export default FilterSearchScreen

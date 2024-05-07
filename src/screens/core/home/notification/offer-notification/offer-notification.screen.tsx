@@ -4,7 +4,7 @@ import React from 'react'
 import { FlatList, View } from 'react-native'
 import { styles } from './offer-notification.style'
 
-const OfferNotification = () => {
+const OfferNotificationScreen = () => {
   return (
     <View style={[styles.container]}>
       <Header title="Offer" />
@@ -25,4 +25,4 @@ const OfferNotification = () => {
   )
 }
 
-export default OfferNotification
+export default OfferNotificationScreen

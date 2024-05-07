@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { home } from '@/screens'
+import { PRODUCT_DETAIL_SCREEN } from '@/screens'
 import { RoutesProductDetailStack } from '../routes'
 import { ProductDetailStackParamsList } from '../types'
 
@@ -11,15 +11,15 @@ const ProductDetailStack = () => {
     <ProductDetail.Navigator screenOptions={{ headerShown: false }}>
       <ProductDetail.Screen
         name={RoutesProductDetailStack.PRODUCT_DETAIL}
-        component={home.ProductDetail}
+        component={PRODUCT_DETAIL_SCREEN.ProductDetail}
       />
       <ProductDetail.Screen
         name={RoutesProductDetailStack.REVIEWS}
-        component={home.Reviews}
+        component={PRODUCT_DETAIL_SCREEN.Reviews}
       />
       <ProductDetail.Screen
         name={RoutesProductDetailStack.WRITE_REVIEW}
-        component={home.WriteReview}
+        component={PRODUCT_DETAIL_SCREEN.WriteReview}
       />
     </ProductDetail.Navigator>
   )

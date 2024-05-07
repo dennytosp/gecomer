@@ -11,7 +11,7 @@ import { styles } from './style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.OFFER_STACK>
 
-const Offer = () => {
+const OfferScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderPromotionCode = () => {
@@ -75,4 +75,4 @@ const Offer = () => {
   )
 }
 
-export default Offer
+export default OfferScreen

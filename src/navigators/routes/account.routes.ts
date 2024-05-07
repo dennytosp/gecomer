@@ -1,4 +1,5 @@
 export enum RoutesAccountStack {
+  ACCOUNT = 'ACCOUNT',
   PROFILE = 'PROFILE',
   EDIT_PROFILE = 'EDIT_PROFILE',
   CHANGE_PASSWORD = 'CHANGE_PASSWORD',

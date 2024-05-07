@@ -13,7 +13,7 @@ import { styles } from './onboard.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
 
-const Onboard = () => {
+const OnboardScreen = () => {
   const { top } = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProps['navigation']>()
 
@@ -82,4 +82,4 @@ const Onboard = () => {
   )
 }
 
-export default Onboard
+export default OnboardScreen

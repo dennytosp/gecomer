@@ -11,7 +11,7 @@ import { styles } from './product-see-more.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
 
-const ProductSeeMore = () => {
+const ProductSeeMoreScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
   const route = useRoute<NavigationProps['route']>()
 
@@ -78,4 +78,4 @@ const ProductSeeMore = () => {
   )
 }
 
-export default ProductSeeMore
+export default ProductSeeMoreScreen

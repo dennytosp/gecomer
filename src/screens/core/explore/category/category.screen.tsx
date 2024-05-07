@@ -5,7 +5,7 @@ import React from 'react'
 import { FlatList, Pressable, View } from 'react-native'
 import { styles } from './category.style'
 
-const Category = () => {
+const CategoryScreen = () => {
   const renderCenter = ({ item }: { item: (typeof DATA_CATEGORY_SOFT)[0] }) => (
     <View
       style={[styles.wrapperCenter, { backgroundColor: item?.backgroundColor }]}
@@ -33,4 +33,4 @@ const Category = () => {
   )
 }
 
-export default Category
+export default CategoryScreen

@@ -7,9 +7,10 @@ import { RoutesMainStack } from '@/navigators/routes'
 import { getSize } from '@/utils'
 import { styles } from './style'
 
-type NavigationProps = ReactNavigation.RootStackNavigationProps
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.ACCOUNT_STACK>
 
-const Account = () => {
+const AccountScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderEvent = ({ item }: { item: (typeof DATA_ACCOUNT)[0] }) => (
@@ -46,4 +47,4 @@ const Account = () => {
   )
 }
 
-export default Account
+export default AccountScreen

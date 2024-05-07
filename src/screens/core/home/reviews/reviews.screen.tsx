@@ -11,7 +11,7 @@ import { styles } from './review.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
 
-const Reviews = () => {
+const ReviewsScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderReviews = ({ item }: { item: (typeof REVIEWS)[0] }) => (
@@ -93,4 +93,4 @@ const Reviews = () => {
   )
 }
 
-export default Reviews
+export default ReviewsScreen

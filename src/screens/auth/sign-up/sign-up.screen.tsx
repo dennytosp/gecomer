@@ -11,7 +11,7 @@ import { styles } from './sign-up.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.AUTH_STACK>
 
-const SignUp = () => {
+const SignUpScreen = () => {
   const { top } = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProps['navigation']>()
 
@@ -127,4 +127,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default SignUpScreen

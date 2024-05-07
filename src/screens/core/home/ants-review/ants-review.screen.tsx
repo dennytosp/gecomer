@@ -10,7 +10,7 @@ import React from 'react'
 import { FlatList, Image, Pressable, ScrollView, View } from 'react-native'
 import { styles } from './ants-review.style'
 
-const AntsReview = () => {
+const AntsReviewScreen = () => {
   const renderHeader = () => (
     <View style={[styles.wrapperTop]}>
       <Title title="2 đánh giá" textStyle={[{ fontSize: getSize.m(24) }]} />
@@ -106,4 +106,4 @@ const AntsReview = () => {
   )
 }
 
-export default AntsReview
+export default AntsReviewScreen

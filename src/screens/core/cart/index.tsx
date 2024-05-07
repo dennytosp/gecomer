@@ -21,7 +21,7 @@ import { RoutesCommonStack, RoutesMainStack } from '@/navigators/routes'
 import { styles } from './style'
 
 type NavigationProps =
-  ReactNavigation.RootStackScreenProps<RoutesMainStack.OFFER_STACK>
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.TAB_STACK>
 
 const Offer = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()

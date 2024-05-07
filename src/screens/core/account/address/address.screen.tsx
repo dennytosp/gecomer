@@ -15,7 +15,7 @@ type Params = {
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
 
-const Address = () => {
+const AddressScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
   const route = useRoute<NavigationProps['route']>()
 
@@ -85,4 +85,4 @@ const Address = () => {
   )
 }
 
-export default Address
+export default AddressScreen

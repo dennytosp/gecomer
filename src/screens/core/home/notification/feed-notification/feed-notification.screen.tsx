@@ -5,7 +5,7 @@ import React from 'react'
 import { FlatList, Image, Pressable, View } from 'react-native'
 import { styles } from './feed-notification.style'
 
-const FeedNotification = () => {
+const FeedNotificationScreen = () => {
   const renderItem = ({
     item,
   }: {
@@ -42,4 +42,4 @@ const FeedNotification = () => {
   )
 }
 
-export default FeedNotification
+export default FeedNotificationScreen

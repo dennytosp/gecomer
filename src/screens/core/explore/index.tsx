@@ -21,7 +21,7 @@ import { useNavigation } from '@react-navigation/native'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.EXPLORE_STACK>
 
-const Explore = () => {
+const ExploreScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderHeader = () => (
@@ -89,4 +89,4 @@ const Explore = () => {
   )
 }
 
-export default Explore
+export default ExploreScreen

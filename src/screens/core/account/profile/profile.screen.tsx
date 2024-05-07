@@ -10,7 +10,7 @@ import { styles } from './profile.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.ACCOUNT_STACK>
 
-const Profile = () => {
+const ProfileScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
   const { openPicker, picture } = picker()
 
@@ -86,4 +86,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default ProfileScreen

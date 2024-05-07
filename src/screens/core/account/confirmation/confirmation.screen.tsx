@@ -10,7 +10,7 @@ import React from 'react'
 import { View } from 'react-native'
 import styles from './confirmation.style'
 
-const Confirmation = () => {
+const ConfirmationScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   return (
@@ -29,4 +29,4 @@ const Confirmation = () => {
   )
 }
 
-export default Confirmation
+export default ConfirmationScreen

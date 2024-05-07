@@ -9,7 +9,7 @@ import React from 'react'
 import { FlatList, View } from 'react-native'
 import { styles } from './style'
 
-const Notifications = () => {
+const NotificationScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   const renderCardTop = ({
@@ -38,4 +38,4 @@ const Notifications = () => {
   )
 }
 
-export default Notifications
+export default NotificationScreen

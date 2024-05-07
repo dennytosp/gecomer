@@ -9,7 +9,7 @@ import styles from './purchase-success.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.PAYMENT_STACK>
 
-const PurchaseSuccess = () => {
+const PurchaseSuccessScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   return (
@@ -25,4 +25,4 @@ const PurchaseSuccess = () => {
   )
 }
 
-export default PurchaseSuccess
+export default PurchaseSuccessScreen
