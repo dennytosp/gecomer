@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { home } from '@/screens'
+import { NOTIFICATION_SCREEN } from '@/screens'
 import { RoutesNotificationStack } from '../routes'
 import { NotificationStackParamsList } from '../types'
 
@@ -11,19 +11,19 @@ const NotificationStack = () => {
     <Notification.Navigator screenOptions={{ headerShown: false }}>
       <Notification.Screen
         name={RoutesNotificationStack.NOTIFICATIONS}
-        component={home.Notifications}
+        component={NOTIFICATION_SCREEN.Notification}
       />
       <Notification.Screen
         name={RoutesNotificationStack.OFFER_NOTIFICATION}
-        component={home.OfferNotification}
+        component={NOTIFICATION_SCREEN.OfferNotification}
       />
       <Notification.Screen
         name={RoutesNotificationStack.FEED_NOTIFICATION}
-        component={home.FeedNotification}
+        component={NOTIFICATION_SCREEN.FeedNotification}
       />
       <Notification.Screen
         name={RoutesNotificationStack.ACTIVITY_NOTIFICATION}
-        component={home.ActivityNotification}
+        component={NOTIFICATION_SCREEN.ActivityNotification}
       />
     </Notification.Navigator>
   )

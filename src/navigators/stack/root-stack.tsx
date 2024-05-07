@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native'
 import BootSplash from 'react-native-bootsplash'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { RoutesCommonStack, RoutesMainStack } from '../routes'
+import { RoutesMainStack } from '../routes'
 import {
   AccountStack,
   AuthStack,

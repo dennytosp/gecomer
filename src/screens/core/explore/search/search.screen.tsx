@@ -10,7 +10,7 @@ import React, { useState } from 'react'
 import { FlatList, Keyboard, Pressable, View } from 'react-native'
 import { styles } from './search.style'
 
-const SearchPage = () => {
+const SearchPageScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
   const [contentSearch, setContentSearch] = useState<string>()
 
@@ -55,4 +55,4 @@ const SearchPage = () => {
   )
 }
 
-export default SearchPage
+export default SearchPageScreen

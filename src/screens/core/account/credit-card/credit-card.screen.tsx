@@ -11,7 +11,7 @@ import styles from './credit-card.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.PAYMENT_STACK>
 
-const CreditCard = () => {
+const CreditCardScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderCreditCard = () => (
@@ -56,4 +56,4 @@ const CreditCard = () => {
   )
 }
 
-export default CreditCard
+export default CreditCardScreen

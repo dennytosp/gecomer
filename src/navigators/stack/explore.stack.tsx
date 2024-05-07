@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { common } from '@/screens'
+import { TAB_SCREEN } from '@/screens'
 import { RoutesExploreStack } from '../routes'
 import { ExploreStackParamsList } from '../types'
 
@@ -11,7 +11,7 @@ const ExploreStack = () => {
     <Explore.Navigator screenOptions={{ headerShown: false }}>
       <Explore.Screen
         name={RoutesExploreStack.EXPLORE}
-        component={common.Explore}
+        component={TAB_SCREEN.Explore}
       />
     </Explore.Navigator>
   )

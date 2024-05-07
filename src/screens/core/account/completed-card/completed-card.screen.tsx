@@ -8,7 +8,7 @@ import React from 'react'
 import { View } from 'react-native'
 import styles from './completed-card.style'
 
-const CompletedCard = () => {
+const CompletedCardScreen = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>()
 
   const renderContent = () => {
@@ -22,4 +22,4 @@ const CompletedCard = () => {
   )
 }
 
-export default CompletedCard
+export default CompletedCardScreen

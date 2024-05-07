@@ -22,7 +22,7 @@ import { styles } from './product-detail.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.PRODUCT_DETAIL_STACK>
 
-const ProductDetail = () => {
+const ProductDetailScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
   const route = useRoute<NavigationProps['route']>()
   const { item: receive } = route?.params as unknown as {
@@ -57,7 +57,7 @@ const ProductDetail = () => {
         }
         onPressRightEnd={() =>
           navigation.navigate(RoutesMainStack.ACCOUNT_STACK, {
-            screen: RoutesAccountStack.PROFILE,
+            screen: RoutesAccountStack.ACCOUNT,
           })
         }
       />
@@ -82,4 +82,4 @@ const ProductDetail = () => {
   )
 }
 
-export default ProductDetail
+export default ProductDetailScreen

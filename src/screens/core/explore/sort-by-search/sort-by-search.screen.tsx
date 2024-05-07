@@ -5,7 +5,7 @@ import React from 'react'
 import { FlatList, View } from 'react-native'
 import { styles } from './sort-by-search.style'
 
-const SoftBy = () => {
+const SoftByScreen = () => {
   const renderCenter = ({ item }: { item: (typeof DATA_SOFT_BY)[0] }) => (
     <View
       style={[styles.wrapperCenter, { backgroundColor: item.backgroundColor }]}
@@ -31,4 +31,4 @@ const SoftBy = () => {
   )
 }
 
-export default SoftBy
+export default SoftByScreen

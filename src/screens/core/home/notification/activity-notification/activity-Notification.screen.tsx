@@ -4,7 +4,7 @@ import React from 'react'
 import { FlatList, View } from 'react-native'
 import { styles } from './activity-Notification.style'
 
-const ActivityNotification = () => {
+const ActivityNotificationScreen = () => {
   return (
     <View style={[styles.container]}>
       <Header title="Activity" />
@@ -26,4 +26,4 @@ const ActivityNotification = () => {
   )
 }
 
-export default ActivityNotification
+export default ActivityNotificationScreen

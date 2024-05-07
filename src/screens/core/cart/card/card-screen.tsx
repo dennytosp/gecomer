@@ -10,7 +10,7 @@ import styles from './card.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.PAYMENT_STACK>
 
-const Card = () => {
+const CardScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   return (
@@ -49,4 +49,4 @@ const Card = () => {
   )
 }
 
-export default Card
+export default CardScreen

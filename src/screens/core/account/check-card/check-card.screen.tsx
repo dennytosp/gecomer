@@ -5,7 +5,7 @@ import { ScrollView, View } from 'react-native'
 import { FormCard } from '../components'
 import { styles } from './check-card.style'
 
-const CheckCard = () => {
+const CheckCardScreen = () => {
   return (
     <View style={[styles.container]}>
       <Header title="Lailyfa Febrina Card" topLine />
@@ -27,4 +27,4 @@ const CheckCard = () => {
   )
 }
 
-export default CheckCard
+export default CheckCardScreen

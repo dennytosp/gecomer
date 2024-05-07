@@ -17,7 +17,7 @@ import { styles } from './search-results.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.SEARCH_STACK>
 
-const SearchResults = () => {
+const SearchResultsScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
   const numColumns = 2
   const emptyLength = [].length + ' Result'
@@ -121,4 +121,4 @@ const SearchResults = () => {
   )
 }
 
-export default SearchResults
+export default SearchResultsScreen

@@ -16,7 +16,7 @@ import { styles } from './sign-in.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.AUTH_STACK>
 
-const SignIn = () => {
+const SignInScreen = () => {
   const { top } = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProps['navigation']>()
 
@@ -148,4 +148,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default SignInScreen

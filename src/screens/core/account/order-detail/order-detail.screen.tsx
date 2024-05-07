@@ -12,12 +12,12 @@ import {
 import { RoutesMainStack } from '@/navigators/routes'
 import { COLORS, FONTS } from '@/theme'
 import { getSize } from '@/utils'
-import { styles } from './order-details.style'
+import { styles } from './order-detail.style'
 
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.ACCOUNT_STACK>
 
-const OrderDetails = () => {
+const OrderDetailScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderShippingDetails = () => (
@@ -92,4 +92,4 @@ const OrderDetails = () => {
   )
 }
 
-export default OrderDetails
+export default OrderDetailScreen

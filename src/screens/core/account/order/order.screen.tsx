@@ -12,7 +12,7 @@ import { styles } from './order.style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.ACCOUNT_STACK>
 
-const Order = () => {
+const OrderScreen = () => {
   const insets = useSafeAreaInsets()
   const navigation = useNavigation<NavigationProps['navigation']>()
 
@@ -75,4 +75,4 @@ const Order = () => {
   )
 }
 
-export default Order
+export default OrderScreen

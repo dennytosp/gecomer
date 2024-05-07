@@ -31,7 +31,7 @@ import { styles } from './style'
 type NavigationProps =
   ReactNavigation.RootStackScreenProps<RoutesMainStack.TAB_STACK>
 
-const Home = () => {
+const HomeScreen = () => {
   const navigation = useNavigation<NavigationProps['navigation']>()
   const numColumns = 2
 
@@ -224,4 +224,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeScreen

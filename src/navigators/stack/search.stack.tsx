@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { explore } from '@/screens'
+import { SEARCH_SCREEN } from '@/screens'
 import { RoutesSearchStack } from '../routes'
 import { SearchStackParamsList } from '../types'
 
@@ -11,23 +11,23 @@ const SearchStack = () => {
     <Search.Navigator screenOptions={{ headerShown: false }}>
       <Search.Screen
         name={RoutesSearchStack.SEARCH_PAGE}
-        component={explore.SearchPage}
+        component={SEARCH_SCREEN.Search}
       />
       <Search.Screen
         name={RoutesSearchStack.SEARCH_RESULT}
-        component={explore.SearchResults}
+        component={SEARCH_SCREEN.SearchResults}
       />
       <Search.Screen
         name={RoutesSearchStack.CATEGORY}
-        component={explore.Category}
+        component={SEARCH_SCREEN.Category}
       />
       <Search.Screen
         name={RoutesSearchStack.SOFT_BY}
-        component={explore.SoftBy}
+        component={SEARCH_SCREEN.SoftBy}
       />
       <Search.Screen
         name={RoutesSearchStack.FILTER_SEARCH}
-        component={explore.FilterSearch}
+        component={SEARCH_SCREEN.FilterSearch}
       />
     </Search.Navigator>
   )

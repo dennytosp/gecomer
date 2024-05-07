@@ -4,7 +4,7 @@ import { View } from 'react-native'
 import { FormCard } from '../components'
 import { styles } from './add-card.style'
 
-const AddCard = () => {
+const AddCardScreen = () => {
   return (
     <View style={[styles.container]}>
       <Header title="Add Card" topLine />
@@ -13,4 +13,4 @@ const AddCard = () => {
   )
 }
 
-export default AddCard
+export default AddCardScreen

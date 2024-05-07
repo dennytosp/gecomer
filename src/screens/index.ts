@@ -1,97 +1,112 @@
-import ForgotPassword from './auth/forgot-password/forgot-password.screen'
-import Onboard from './auth/onboard/onboard.screen'
-import SignIn from './auth/sign-in/sign-in.screen'
-import SignUp from './auth/sign-up/sign-up.screen'
-import Account from './core/account'
-import AddCard from './core/account/add-card/add-card.screen'
-import AddressInput from './core/account/address-input/address-input.screen'
-import Address from './core/account/address/address.screen'
-import ChangePassword from './core/account/change-password/change-password.screen'
-import CheckCard from './core/account/check-card/check-card.screen'
-import CompletedCard from './core/account/completed-card/completed-card.screen'
-import Confirmation from './core/account/confirmation/confirmation.screen'
-import CreditCard from './core/account/credit-card/credit-card.screen'
-import EditProfile from './core/account/edit-profile/edit-profile.screen'
-import OrderDetails from './core/account/order-details/order-details.screen'
-import Order from './core/account/order/order.screen'
-import Profile from './core/account/profile/profile.screen'
-import Cart from './core/cart'
-import Card from './core/cart/card/card-screen'
-import PaymentMethod from './core/cart/payment-method/payment-method.screen'
-import PurchaseSuccess from './core/cart/purchase-success/purchase-success.screen'
-import Explore from './core/explore'
-import Category from './core/explore/category/category.screen'
-import FilterSearch from './core/explore/filter-search/filter-search.screen'
-import SearchResults from './core/explore/search-results/search-results.screen'
-import SearchPage from './core/explore/search/search.screen'
-import SoftBy from './core/explore/sort-by-search/sort-by-search.screen'
-import Home from './core/home'
-import AntsReview from './core/home/ants-review/ants-review.screen'
-import Notifications from './core/home/notification'
-import ActivityNotification from './core/home/notification/activity-notification/activity-Notification.screen'
-import FeedNotification from './core/home/notification/feed-notification/feed-notification.screen'
-import OfferNotification from './core/home/notification/offer-notification/offer-notification.screen'
-import ProductDetail from './core/home/product-detail/product-detail.screen'
-import ProductSeeMore from './core/home/product-see-more/product-see-more.screen'
-import Reviews from './core/home/reviews/reviews.screen'
-import WriteReview from './core/home/reviews/write-review/write-review.screen'
-import Offer from './core/offer'
+import ForgotPasswordScreen from './auth/forgot-password/forgot-password.screen'
+import OnboardScreen from './auth/onboard/onboard.screen'
+import SignInScreen from './auth/sign-in/sign-in.screen'
+import SignUpScreen from './auth/sign-up/sign-up.screen'
+import AccountScreen from './core/account'
+import AddCardScreen from './core/account/add-card/add-card.screen'
+import AddressInputScreen from './core/account/address-input/address-input.screen'
+import AddressScreen from './core/account/address/address.screen'
+import ChangePasswordScreen from './core/account/change-password/change-password.screen'
+import CheckCardScreen from './core/account/check-card/check-card.screen'
+import CompletedCardScreen from './core/account/completed-card/completed-card.screen'
+import ConfirmationScreen from './core/account/confirmation/confirmation.screen'
+import CreditCardScreen from './core/account/credit-card/credit-card.screen'
+import EditProfileScreen from './core/account/edit-profile/edit-profile.screen'
+import OrderDetailScreen from './core/account/order-detail/order-detail.screen'
+import OrderScreen from './core/account/order/order.screen'
+import ProfileScreen from './core/account/profile/profile.screen'
+import CartScreen from './core/cart'
+import CardScreen from './core/cart/card/card-screen'
+import PaymentMethodScreen from './core/cart/payment-method/payment-method.screen'
+import PurchaseSuccessScreen from './core/cart/purchase-success/purchase-success.screen'
+import ExploreScreen from './core/explore'
+import CategoryScreen from './core/explore/category/category.screen'
+import FilterSearchScreen from './core/explore/filter-search/filter-search.screen'
+import SearchResultsScreen from './core/explore/search-results/search-results.screen'
+import SearchScreen from './core/explore/search/search.screen'
+import SoftByScreen from './core/explore/sort-by-search/sort-by-search.screen'
+import HomeScreen from './core/home'
+import AntsReviewScreen from './core/home/ants-review/ants-review.screen'
+import NotificationScreen from './core/home/notification'
+import ActivityNotificationScreen from './core/home/notification/activity-notification/activity-Notification.screen'
+import FeedNotificationScreen from './core/home/notification/feed-notification/feed-notification.screen'
+import OfferNotificationScreen from './core/home/notification/offer-notification/offer-notification.screen'
+import ProductDetailScreen from './core/home/product-detail/product-detail.screen'
+import ProductSeeMoreScreen from './core/home/product-see-more/product-see-more.screen'
+import ReviewsScreen from './core/home/reviews/reviews.screen'
+import WriteReviewScreen from './core/home/reviews/write-review/write-review.screen'
+import OfferScreen from './core/offer'
 
-export const common = {
-  Home,
-  Explore,
-  Cart,
-  Offer,
-  Account,
+const ACCOUNT_SCREEN = {
+  Account: AccountScreen,
+  Profile: ProfileScreen,
+  EditProfile: EditProfileScreen,
+  ChangePassword: ChangePasswordScreen,
+  Order: OrderScreen,
+  OrderDetail: OrderDetailScreen,
+  CompletedCard: CompletedCardScreen,
 }
 
-export const home = {
-  ProductSeeMore,
-  ProductDetail,
-  Reviews,
-  WriteReview,
-  Notifications,
-  OfferNotification,
-  FeedNotification,
-  ActivityNotification,
-  AntsReview,
+const AUTH_SCREEN = {
+  SignIn: SignInScreen,
+  SignUp: SignUpScreen,
+  ForgotPassword: ForgotPasswordScreen,
 }
 
-export const explore = {
-  SearchPage,
-  SearchResults,
-  Category,
-  SoftBy,
-  FilterSearch,
+const COMMON_SCREEN = {
+  Onboard: OnboardScreen,
+  Address: AddressScreen,
+  AddressInput: AddressInputScreen,
+  ProductSeeMore: ProductSeeMoreScreen,
+  Confirmation: ConfirmationScreen,
 }
 
-export const cart = {
-  PaymentMethod,
-  Card,
-  PurchaseSuccess,
+const NOTIFICATION_SCREEN = {
+  Notification: NotificationScreen,
+  OfferNotification: OfferNotificationScreen,
+  FeedNotification: FeedNotificationScreen,
+  ActivityNotification: ActivityNotificationScreen,
 }
 
-export const offer = {
-  Offer,
+const PAYMENT_SCREEN = {
+  PaymentMethod: PaymentMethodScreen,
+  Card: CardScreen,
+  PurchaseSuccess: PurchaseSuccessScreen,
+  AddCard: AddCardScreen,
+  CreditCard: CreditCardScreen,
+  CheckCard: CheckCardScreen,
 }
 
-export const account = {
-  AddressInput,
-  AddCard,
-  Address,
-  CompletedCard,
-  CreditCard,
-  EditProfile,
-  ChangePassword,
-  Order,
-  OrderDetails,
-  Profile,
-  Confirmation,
-  CheckCard,
+const PRODUCT_DETAIL_SCREEN = {
+  ProductDetail: ProductDetailScreen,
+  Reviews: ReviewsScreen,
+  WriteReview: WriteReviewScreen,
+  AntsReview: AntsReviewScreen,
 }
-export const authentication = {
-  Onboard,
-  SignIn,
-  SignUp,
-  ForgotPassword,
+
+const SEARCH_SCREEN = {
+  Search: SearchScreen,
+  SearchResults: SearchResultsScreen,
+  Category: CategoryScreen,
+  SoftBy: SoftByScreen,
+  FilterSearch: FilterSearchScreen,
+}
+
+const TAB_SCREEN = {
+  Home: HomeScreen,
+  Explore: ExploreScreen,
+  Cart: CartScreen,
+  Offer: OfferScreen,
+  Account: AccountScreen,
+}
+
+export {
+  ACCOUNT_SCREEN,
+  AUTH_SCREEN,
+  COMMON_SCREEN,
+  NOTIFICATION_SCREEN,
+  PAYMENT_SCREEN,
+  PRODUCT_DETAIL_SCREEN,
+  SEARCH_SCREEN,
+  TAB_SCREEN,
 }
