@@ -1,25 +1,28 @@
-import { AddShip, Method01 } from '@/assets/index'
-import { ButtonPrimary, CreditCardItem, Header } from '@/components'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { AddShip, Method01 } from '@/assets'
+import { ButtonPrimary, CreditCardItem, Header } from '@/components'
+import { RoutesMainStack, RoutesPaymentStack } from '@/navigators/routes'
+import { getSize } from '@/utils'
 import styles from './card.style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.PAYMENT_STACK>
+
 const Card = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   return (
     <View style={[styles.container]}>
       <Header
         title="Choose Card"
         rightIconEnd={AddShip}
-        onPressRightEnd={() => navigation.navigate(routes.ADD_CARD)}
+        onPressRightEnd={() =>
+          navigation.navigate(RoutesMainStack.PAYMENT_STACK, {
+            screen: RoutesPaymentStack.ADD_CARD,
+          })
+        }
       />
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -35,7 +38,11 @@ const Card = () => {
 
       <ButtonPrimary
         title="Pay $766.86"
-        onPress={() => navigation.navigate(routes.PURCHASE_SUCCESS)}
+        onPress={() =>
+          navigation.navigate(RoutesMainStack.PAYMENT_STACK, {
+            screen: RoutesPaymentStack.PURCHASE_SUCCESS,
+          })
+        }
         style={[{ marginTop: getSize.m(16) }]}
       />
     </View>

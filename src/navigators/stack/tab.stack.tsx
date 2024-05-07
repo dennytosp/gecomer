@@ -1,9 +1,11 @@
-import { common } from '@/screens'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
-import TabBar from '../tab-bar'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { common } from '@/screens'
+import TabBar from '../components/tab-bar.component'
+import { RoutesTabStack } from '../routes'
+import { TabStackParamsList } from '../types'
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator<TabStackParamsList>()
 
 const TabStack = () => {
   return (
@@ -12,35 +14,35 @@ const TabStack = () => {
       tabBar={props => <TabBar {...props} />}
     >
       <Tab.Screen
-        name="Home"
+        name={RoutesTabStack.HOME_TAB}
         component={common.Home}
         options={{
           tabBarLabel: 'Home',
         }}
       />
       <Tab.Screen
-        name="Explore"
+        name={RoutesTabStack.EXPLORE_TAB}
         component={common.Explore}
         options={{
           tabBarLabel: 'Explore',
         }}
       />
       <Tab.Screen
-        name="Cart"
+        name={RoutesTabStack.CART_TAB}
         component={common.Cart}
         options={{
           tabBarLabel: 'Cart',
         }}
       />
       <Tab.Screen
-        name="Offer"
+        name={RoutesTabStack.OFFER_TAB}
         component={common.Offer}
         options={{
           tabBarLabel: 'Offer',
         }}
       />
       <Tab.Screen
-        name="Account"
+        name={RoutesTabStack.ACCOUNT_TAB}
         component={common.Account}
         options={{
           tabBarLabel: 'Account',

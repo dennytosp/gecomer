@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { BackgroundTimerProvider } from '@/context/background-timer-provider.context'
 import RootStack from '@/navigators/stack/root-stack'
 import { AppStyles } from '@/styles'
+import { navigationRef } from '@/utils/holder'
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       <BackgroundTimerProvider>
         <GestureHandlerRootView style={[AppStyles.fill]}>
           <BottomSheetModalProvider>
-            <NavigationContainer>
+            <NavigationContainer ref={navigationRef}>
               <RootStack />
             </NavigationContainer>
           </BottomSheetModalProvider>

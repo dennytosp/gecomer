@@ -1,3 +1,7 @@
+import { SpeedImage } from '@/components/speed-image/speed-image.component'
+import Text from '@/components/text/text.component'
+import { useBackgroundTimer } from '@/context'
+import { getSize } from '@/utils'
 import React from 'react'
 import {
   ImageRequireSource,
@@ -6,10 +10,6 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
-import { SpeedImage } from '@/components/speed-image/speed-image.component'
-import Text from '@/components/text/text.component'
-import { useBackgroundTimer } from '@/context'
-import { getSize } from '@/utils'
 import { Source } from 'react-native-fast-image'
 import { styles } from './banner-promotion-item.style'
 
@@ -32,7 +32,11 @@ const BannerPromotionItem = ({
 
   return (
     <Pressable onPress={onPress} style={[style]}>
-      <SpeedImage source={image} style={[styles.imagePromotion]} />
+      <SpeedImage
+        source={image}
+        style={[styles.imagePromotion]}
+        resizeMode="cover"
+      />
       <View style={[styles.wrapperContentPromotion]}>
         <Text title={title} textStyle={[styles.textTitle]} />
       </View>

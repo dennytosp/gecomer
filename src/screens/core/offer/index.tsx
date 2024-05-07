@@ -1,19 +1,18 @@
-import { photos, PRODUCTS_DATA_VERTICOLUMNS } from '@/assets'
-import { Header, BannerPromotionItem, RecommendProduct } from '@/components'
-import Text from '@/components/text/text.component'
-import { routes } from '@/navigators/routes'
-import { width } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import { ScrollView, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { photos, PRODUCTS_DATA_VERTICOLUMNS } from '@/assets'
+import { BannerPromotionItem, Header, RecommendProduct } from '@/components'
+import Text from '@/components/text/text.component'
+import { RoutesCommonStack, RoutesMainStack } from '@/navigators/routes'
+import { width } from '@/utils'
 import { styles } from './style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.OFFER_STACK>
+
 const Offer = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderPromotionCode = () => {
     return (
@@ -32,10 +31,13 @@ const Offer = () => {
       <View style={[styles.wrapperCenter]}>
         <BannerPromotionItem
           onPress={() =>
-            navigation.navigate(routes.PRODUCT_SEE_MORE, {
-              title: 'Super Flash Sale',
-              data: PRODUCTS_DATA_VERTICOLUMNS.reverse(),
-              isFlashSale: true,
+            navigation.navigate(RoutesMainStack.COMMON_STACK, {
+              screen: RoutesCommonStack.PRODUCT_SEE_MORE,
+              params: {
+                title: 'Super Flash Sale',
+                data: PRODUCTS_DATA_VERTICOLUMNS.reverse(),
+                isFlashSale: true,
+              },
             })
           }
           title={'Super Flash Sale\n50% Off'}

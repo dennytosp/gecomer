@@ -1,22 +1,21 @@
-import { ONBOARD_DATA } from '@/assets'
-import { Text } from '@/components'
-import { routes } from '@/navigators/routes'
-import { COLORS } from '@/theme'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import { Image, StatusBar, View } from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'
 import LinearGradient from 'react-native-linear-gradient'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
+import { ONBOARD_DATA } from '@/assets'
+import { Text } from '@/components'
+import { RoutesAuthStack, RoutesMainStack } from '@/navigators/routes'
+import { COLORS } from '@/theme'
 import { styles } from './onboard.style'
+
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
 
 const Onboard = () => {
   const { top } = useSafeAreaInsets()
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderNextButton = () => {
     return (
@@ -48,8 +47,8 @@ const Onboard = () => {
   }
 
   const handleDone = () => {
-    navigation.navigate(routes.AUTHENTICATION, {
-      screen: routes.SIGN_UP,
+    navigation.navigate(RoutesMainStack.AUTH_STACK, {
+      screen: RoutesAuthStack.SIGN_UP,
     })
   }
 

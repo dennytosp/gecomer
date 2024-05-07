@@ -1,27 +1,23 @@
-import { photos, PRODUCTS_DATA, Search } from '@/assets'
-import { Header, ProductItem, BannerPromotionItem } from '@/components'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  RouteProp,
-  useNavigation,
-  useRoute,
-} from '@react-navigation/native'
 import React from 'react'
 import { FlatList, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { useNavigation, useRoute } from '@react-navigation/native'
+import { photos, Search } from '@/assets'
+import { BannerPromotionItem, Header, ProductItem } from '@/components'
+import { RoutesMainStack, RoutesSearchStack } from '@/navigators/routes'
+import { getSize } from '@/utils'
 import { styles } from './product-see-more.style'
 
-type Props = {}
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.COMMON_STACK>
 
-const ProductSeeMore = ({}: Props) => {
-  const route = useRoute<RouteProp<ParamListBase>>()
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+const ProductSeeMore = () => {
+  const navigation = useNavigation<NavigationProps['navigation']>()
+  const route = useRoute<NavigationProps['route']>()
+
   const insets = useSafeAreaInsets()
 
-  const params = route.params as {
+  const params = route.params as unknown as {
     title: string
     data: any
     isFlashSale?: boolean
@@ -49,7 +45,11 @@ const ProductSeeMore = ({}: Props) => {
         topLine
         title={params?.title ?? 'Flash Sale'}
         rightIconEnd={Search}
-        onPressRightEnd={() => navigation.navigate(routes.SEARCH_PAGE)}
+        onPressRightEnd={() =>
+          navigation.navigate(RoutesMainStack.SEARCH_STACK, {
+            screen: RoutesSearchStack.SEARCH_PAGE,
+          })
+        }
       />
 
       <FlatList

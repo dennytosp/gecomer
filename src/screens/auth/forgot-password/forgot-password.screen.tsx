@@ -1,20 +1,19 @@
-import { Email, LogoPrimary } from '@/assets'
-import { ButtonPrimary, FormInput, Text } from '@/components'
-import { routes } from '@/navigators/routes'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React, { useRef } from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
+import { Email, LogoPrimary } from '@/assets'
+import { ButtonPrimary, FormInput, Text } from '@/components'
+import { RoutesAuthStack, RoutesMainStack } from '@/navigators/routes'
+import { getSize } from '@/utils'
 import { styles } from './forgot-password.style'
+
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.AUTH_STACK>
 
 const ForgotPasswordScreen = () => {
   const { top } = useSafeAreaInsets()
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
   const emailRef = useRef(null)
 
   const renderHeader = () => (
@@ -41,8 +40,8 @@ const ForgotPasswordScreen = () => {
         title="Send"
         atBottom={false}
         onPress={() =>
-          navigation.navigate(routes.AUTHENTICATION, {
-            screen: routes.SIGN_IN,
+          navigation.navigate(RoutesMainStack.AUTH_STACK, {
+            screen: RoutesAuthStack.SIGN_IN,
           })
         }
       />
@@ -69,8 +68,8 @@ const ForgotPasswordScreen = () => {
 
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate(routes.AUTHENTICATION, {
-              screen: routes.SIGN_IN,
+            navigation.navigate(RoutesMainStack.AUTH_STACK, {
+              screen: RoutesAuthStack.SIGN_IN,
             })
           }
         >

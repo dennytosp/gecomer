@@ -13,10 +13,12 @@ const PriceRange = ({ style }: Props) => {
 
   return (
     <View style={[styles.wrapperPriceRange, style]}>
+      <Title title={'Price Range'} />
+
       <View style={[styles.rowInput]}>
         <FormInput
           ref={rangeStartRef}
-          title={'Price Range'}
+          // title={'Price Range'}
           isRequired={true}
           placeHolder="$1.245"
           inputProps={{ keyboardType: 'numeric', maxLength: 20 }}
@@ -30,6 +32,7 @@ const PriceRange = ({ style }: Props) => {
           placeHolder="$9.355"
           inputProps={{ keyboardType: 'numeric', maxLength: 20 }}
           style={[styles.inputRowRight]}
+          containerStyle={[{ marginTop: 0 }]}
         />
       </View>
     </View>

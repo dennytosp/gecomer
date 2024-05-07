@@ -1,18 +1,12 @@
-import { icons } from '@/assets'
-import { COLORS, FONTS } from '@/theme'
-import { getSize } from '@/utils'
-import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
 import React from 'react'
-import {
-  Image,
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
+import { Image, Platform, Pressable, Text, View } from 'react-native'
 import { Badge } from 'react-native-elements'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
+import { icons } from '@/assets'
+import { COLORS } from '@/theme'
+import { getSize } from '@/utils'
+import { styles } from './tab-bar.style'
 
 const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
   const { bottom } = useSafeAreaInsets()
@@ -21,7 +15,7 @@ const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
     <View
       style={[
         styles.wrapTabBar,
-        { paddingBottom: Platform.OS === 'ios' ? bottom : 10 },
+        { paddingBottom: Platform.OS === 'ios' ? bottom : getSize.m(16) },
       ]}
     >
       {state.routes.map((route, index) => {
@@ -110,29 +104,3 @@ const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
 }
 
 export default TabBar
-
-const styles = StyleSheet.create({
-  btn: { flex: 1, alignItems: 'center' },
-  textLabel: {
-    marginTop: 12.6 / 2,
-    fontSize: 10,
-    fontFamily: FONTS.regular,
-  },
-  iconStyle: {
-    width: getSize.s(20),
-    height: getSize.s(20),
-    resizeMode: 'contain',
-  },
-  containerStyle: {
-    position: 'absolute',
-    zIndex: 10,
-    top: getSize.s(-7),
-    right: getSize.s(21),
-  },
-  wrapTabBar: {
-    flexDirection: 'row',
-    backgroundColor: COLORS.white,
-    paddingTop: 10,
-  },
-  badgeStyle: { borderColor: COLORS.white, borderWidth: 1 },
-})

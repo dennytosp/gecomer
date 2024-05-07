@@ -1,10 +1,3 @@
-import { Forward } from '@/assets'
-import { getSize, isAndroid } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React, { FC } from 'react'
 import {
   ColorValue,
@@ -14,6 +7,9 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { Forward } from '@/assets'
+import { getSize, isAndroid } from '@/utils'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Text from '../text/text.component'
 import { styles } from './header.style'
@@ -33,6 +29,8 @@ type HeaderProps = {
   style?: StyleProp<ViewStyle>
 }
 
+type NavigationProps = ReactNavigation.RootStackNavigationProps
+
 const Header: FC<HeaderProps> = ({
   style,
   title,
@@ -47,7 +45,7 @@ const Header: FC<HeaderProps> = ({
   paddingHorizontal,
   topLine,
 }) => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   return (
     <View style={[styles.wrapperFullHeader, style]}>

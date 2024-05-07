@@ -1,24 +1,23 @@
-import { DATA_ACCOUNT } from '@/assets'
-import { EventItem, Header } from '@/components'
-import { getSize } from '@/utils'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import { FlatList, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { DATA_ACCOUNT } from '@/assets'
+import { EventItem, Header } from '@/components'
+import { RoutesMainStack } from '@/navigators/routes'
+import { getSize } from '@/utils'
 import { styles } from './style'
 
+type NavigationProps = ReactNavigation.RootStackNavigationProps
+
 const Account = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   const renderEvent = ({ item }: { item: (typeof DATA_ACCOUNT)[0] }) => (
     <View style={[styles.wrapperEvent]}>
       <EventItem
         icon={item.icon}
         title={item.name}
-        onPress={() => navigation.navigate(item.navigation)}
+        onPress={item.onPress}
         style={[
           {
             backgroundColor: item.backgroundColor,

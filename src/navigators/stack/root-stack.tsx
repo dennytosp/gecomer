@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'react-native'
 import BootSplash from 'react-native-bootsplash'
-import { account, authentication, cart, common, explore, home } from '@/screens'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { AuthStack, TabStack } from '.'
-import { routes } from '../routes'
+import { RoutesCommonStack, RoutesMainStack } from '../routes'
+import {
+  AccountStack,
+  AuthStack,
+  CartStack,
+  CommonStack,
+  ExploreStack,
+  NotificationStack,
+  OfferStack,
+  PaymentStack,
+  ProductDetailStack,
+  SearchStack,
+  TabStack,
+} from '../stack'
 
-const Stack = createNativeStackNavigator()
+const Root = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
 const ONBOARDING_ASYNC_KEY = 'ONBOARDING_ASNYC_KEY'
 
@@ -59,124 +70,63 @@ const MainStackNavigator = () => {
   if (isFirstLaunch === null) {
     return null
   } else if (isFirstLaunch == true) {
-    routeName = routes.ONBOARD
+    routeName = RoutesMainStack.COMMON_STACK
   } else {
-    routeName = routes.AUTHENTICATION
+    routeName = RoutesMainStack.AUTH_STACK
   }
 
   return (
     <>
       <StatusBar translucent={true} backgroundColor="transparent" />
-      <Stack.Navigator
+      <Root.Navigator
         initialRouteName={routeName}
         screenOptions={{ headerShown: false }}
       >
         <>
-          <Stack.Screen
-            name={routes.ONBOARD}
-            component={authentication.Onboard}
+          <Root.Screen
+            name={RoutesMainStack.ACCOUNT_STACK}
+            component={AccountStack}
           />
 
-          <Stack.Screen name={routes.AUTHENTICATION} component={AuthStack} />
-          <Stack.Screen name={routes.COMMON} component={TabStack} />
-          <Stack.Screen name={routes.HOME} component={common.Home} />
-          <Stack.Screen name={routes.EXPLORE} component={common.Explore} />
-          <Stack.Screen name={routes.CART} component={common.Cart} />
-          <Stack.Screen name={routes.OFFER} component={common.Offer} />
-          <Stack.Screen name={routes.ACCOUNT} component={common.Account} />
-          <Stack.Screen
-            name={routes.PRODUCT_SEE_MORE}
-            component={home.ProductSeeMore}
+          <Root.Screen
+            name={RoutesMainStack.AUTH_STACK}
+            component={AuthStack}
           />
-          <Stack.Screen name={routes.DETAILS} component={home.Details} />
-          <Stack.Screen name={routes.REVIEWS} component={home.Reviews} />
-          <Stack.Screen
-            name={routes.WRITE_REVIEW}
-            component={home.WriteReview}
+          <Root.Screen
+            name={RoutesMainStack.CART_STACK}
+            component={CartStack}
           />
-          <Stack.Screen
-            name={routes.NOTIFICATIONS}
-            component={home.Notifications}
+          <Root.Screen
+            name={RoutesMainStack.COMMON_STACK}
+            component={CommonStack}
           />
-          <Stack.Screen
-            name={routes.OFFER_NOTIFICATION}
-            component={home.OfferNotification}
+          <Root.Screen
+            name={RoutesMainStack.EXPLORE_STACK}
+            component={ExploreStack}
           />
-          <Stack.Screen
-            name={routes.FEED_NOTIFICATION}
-            component={home.FeedNotification}
+          <Root.Screen
+            name={RoutesMainStack.NOTIFICATION_STACK}
+            component={NotificationStack}
           />
-          <Stack.Screen
-            name={routes.ACTIVITY_NOTIFICATION}
-            component={home.ActivityNotification}
+          <Root.Screen
+            name={RoutesMainStack.OFFER_STACK}
+            component={OfferStack}
           />
-          {/* A project from Ants - Reviews */}
-          <Stack.Screen
-            name={routes.ANTS_REVIEWS}
-            component={home.AntsReview}
+          <Root.Screen
+            name={RoutesMainStack.PAYMENT_STACK}
+            component={PaymentStack}
           />
-
-          <Stack.Screen
-            name={routes.SEARCH_PAGE}
-            component={explore.SearchPage}
+          <Root.Screen
+            name={RoutesMainStack.PRODUCT_DETAIL_STACK}
+            component={ProductDetailStack}
           />
-          <Stack.Screen
-            name={routes.SEARCH_RESULT}
-            component={explore.SearchResults}
+          <Root.Screen
+            name={RoutesMainStack.SEARCH_STACK}
+            component={SearchStack}
           />
-          <Stack.Screen name={routes.CATEGORY} component={explore.Category} />
-          <Stack.Screen name={routes.SOFT_BY} component={explore.SoftBy} />
-          <Stack.Screen
-            name={routes.FILTER_SEARCH}
-            component={explore.FilterSearch}
-          />
-          <Stack.Screen
-            name={routes.PAYMENT_METHOD}
-            component={cart.PaymentMethod}
-          />
-          <Stack.Screen name={routes.CARD} component={cart.Card} />
-          <Stack.Screen
-            name={routes.PURCHASE_SUCCESS}
-            component={cart.PurchaseSuccess}
-          />
-          <Stack.Screen
-            name={routes.ADDRESS_INPUT}
-            component={account.AddressInput}
-          />
-          <Stack.Screen name={routes.ADD_CARD} component={account.AddCard} />
-          <Stack.Screen name={routes.ADDRESS} component={account.Address} />
-          <Stack.Screen
-            name={routes.CONFIRMATION}
-            component={account.Confirmation}
-          />
-          <Stack.Screen
-            name={routes.COMPLETED_CARD}
-            component={account.CompletedCard}
-          />
-          <Stack.Screen
-            name={routes.CREDIT_CARD}
-            component={account.CreditCard}
-          />
-          <Stack.Screen
-            name={routes.CHECK_CARD}
-            component={account.CheckCard}
-          />
-          <Stack.Screen
-            name={routes.EDIT_PROFILE}
-            component={account.EditProfile}
-          />
-          <Stack.Screen
-            name={routes.CHANGE_PASSWORD}
-            component={account.ChangePassword}
-          />
-          <Stack.Screen name={routes.ORDER} component={account.Order} />
-          <Stack.Screen
-            name={routes.ORDER_DETAILS}
-            component={account.OrderDetails}
-          />
-          <Stack.Screen name={routes.PROFILE} component={account.Profile} />
+          <Root.Screen name={RoutesMainStack.TAB_STACK} component={TabStack} />
         </>
-      </Stack.Navigator>
+      </Root.Navigator>
     </>
   )
 }

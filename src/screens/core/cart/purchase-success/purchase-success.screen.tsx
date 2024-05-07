@@ -1,17 +1,16 @@
-import { Tick } from '@/assets'
-import { Remind } from '@/components'
-import { routes } from '@/navigators/routes'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
 import React from 'react'
 import { View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { Tick } from '@/assets'
+import { Remind } from '@/components'
+import { RoutesMainStack } from '@/navigators/routes'
 import styles from './purchase-success.style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.PAYMENT_STACK>
+
 const PurchaseSuccess = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
 
   return (
     <View style={[styles.container]}>
@@ -20,7 +19,7 @@ const PurchaseSuccess = () => {
         title="Success"
         subtitle="Thank you for shopping using Gecomer"
         eventTitle="Back To Order"
-        handleOnEvent={() => navigation.navigate(routes.COMMON)}
+        handleOnEvent={() => navigation.navigate(RoutesMainStack.TAB_STACK)}
       />
     </View>
   )

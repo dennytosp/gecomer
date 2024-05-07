@@ -6,11 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import {
-  NavigationProp,
-  ParamListBase,
-  useNavigation,
-} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import { DATA_CART } from '@/assets'
 import {
   BillTextItem,
@@ -19,14 +15,16 @@ import {
   Header,
   Text,
 } from '@/components'
-import { routes } from '@/navigators/routes'
 import { COLORS, FONTS } from '@/theme'
 import { getSize } from '@/utils'
-
+import { RoutesCommonStack, RoutesMainStack } from '@/navigators/routes'
 import { styles } from './style'
 
+type NavigationProps =
+  ReactNavigation.RootStackScreenProps<RoutesMainStack.OFFER_STACK>
+
 const Offer = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>()
+  const navigation = useNavigation<NavigationProps['navigation']>()
   const [code, setCode] = useState<string>()
 
   const renderFooter = () => (
@@ -83,9 +81,12 @@ const Offer = () => {
         <ButtonPrimary
           title="Check Out"
           onPress={() =>
-            navigation.navigate(routes.ADDRESS, {
-              type: 'address-on-cart',
-              headerTitle: 'Ship To',
+            navigation.navigate(RoutesMainStack.COMMON_STACK, {
+              screen: RoutesCommonStack.ADDRESS,
+              params: {
+                type: 'address-on-cart',
+                headerTitle: 'Ship To',
+              },
             })
           }
           style={[{ marginTop: getSize.m(16) }]}
